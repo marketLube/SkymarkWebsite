@@ -9,6 +9,7 @@ export default function MainSwiper() {
     slidesToShow: 4,
     autoplay: true,
     autoplaySpeed: 0,
+    swipeToSlide: true,
     cssEase: "ease-in-out",
     centerMode: true,
     arrows: false,

@@ -12,9 +12,9 @@
 
   &-head {
     height: 10rem;
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
-
+    cursor: pointer;
     @include responsive.respond(smallPhone) {
       width: 100%;
     }
@@ -22,7 +22,9 @@
     & h2 {
       font-size: 3rem;
       font-weight: 500;
+
       margin: 0 auto;
+
       width: 50%;
       color: variables.$color-blue;
       text-align: center;
@@ -62,4 +64,16 @@
       }
     }
   }
+}
+.title-animate {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-out {
+  opacity: 0;
 }

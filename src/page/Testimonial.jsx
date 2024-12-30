@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick/lib/slider";
 
 import img1 from "../../src/assets/Testimonials/one.jpeg";
@@ -47,6 +47,18 @@ const imgArray = [
   img21,
 ];
 
+const titleArray = [
+  "They truly care about their students’ success.",
+  "I’m now pursuing my master’s abroad, all thanks to Skymark",
+  "Skymark’s professionalism and dedication were outstanding.",
+  "Skymark’s counselors were always available to answer my questions",
+  "Skymark changed my life truly.",
+  "Thanks to their help, I got my admission and visa without any hassle.",
+  "I’m now studying abroad at my dream university.",
+
+  "I’m now studying in UK, Thank you Skymark.",
+];
+
 export default function Testimonial() {
   const settings = {
     dots: false,
@@ -72,10 +84,46 @@ export default function Testimonial() {
     ],
   };
 
+  const [title, setTitle] = useState(titleArray[0]);
+  const [isMouseEnter, setIsMouseEnter] = useState(false);
+  const [fadeIn, setFadeIn] = useState(true);
+
+  let i = 1;
+
+  useEffect(() => {
+    if (isMouseEnter) return;
+    const interval = setInterval(() => {
+      setFadeIn(false);
+      setTimeout(() => {
+        setTitle(titleArray[i]);
+        setFadeIn(true);
+        i++;
+        if (i === titleArray.length) {
+          i = 0;
+        }
+      }, 300);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [isMouseEnter]);
+
+  const handleMouseEnter = () => {
+    setIsMouseEnter(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsMouseEnter(false);
+  };
+
   return (
     <section className="testmonial">
-      <div className="testmonial-head">
-        <h2>{`"Skymark Has Changed My Life"`}</h2>
+      <div
+        className="testmonial-head"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <h2 className={`title-animate ${fadeIn ? "fade-in" : "fade-out"}`}>
+          {`"${title}"`}
+        </h2>
       </div>
       <div className="testmonial-body">
         <Slider {...settings}>

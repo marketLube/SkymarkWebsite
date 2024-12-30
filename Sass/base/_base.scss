@@ -7,7 +7,6 @@
 body {
   font-family: "Inter", sans-serif !important;
   overflow-x: hidden;
- 
 }
 .container {
   max-width: 2000px;
@@ -27,4 +26,7 @@ header {
 
 .section-container {
   margin: 0 3rem;
+}
+section {
+  margin-bottom: 15rem;
 }

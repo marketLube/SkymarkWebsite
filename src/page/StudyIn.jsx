@@ -1,32 +1,43 @@
 import React, { useEffect, useState, useRef } from "react";
 import BlackBtn from "../Utils/BlackBtn";
+import img1 from "../assets/Flags/uk.png";
+import img2 from "../assets/Flags/germany.png";
+import img3 from "../assets/Flags/us.png";
+import img4 from "../assets/Flags/canada.png";
+import img5 from "../assets/Flags/ireland.png";
+import img6 from "../assets/Flags/australia.png";
+import img7 from "../assets/Flags/newzeland.png";
+
+const textArray = [
+  "United Kingdom",
+  "Germany",
+  "USA",
+  "Canada",
+  "Ireland",
+  "Australia",
+  "New Zealand",
+];
+
+const paraArray = [
+  "High-quality education and diverse cultural experiences for students.",
+  "World-class education with low or no tuition fees for students.",
+  "World-class education with globally recognized degrees and diverse culture.",
+  "High-quality education and diverse culture for international students.",
+  "High-quality education and vibrant student life with work opportunities.",
+  "World-class education and vibrant multicultural environment for international students",
+  "World-class education with globally recognized qualifications.",
+];
+
+const flagArr = [img1, img2, img3, img4, img5, img6, img7];
 
 export default function StudyIn() {
   const [headingText, setHeadingText] = useState("Research");
   const [paraText, setParaText] = useState(
     "Look for grammar, spelling mistakes, and make sure you proper nouns. A paragraph three parts:"
   );
+  const [flag, setFlag] = useState(img1);
+
   const [animate, setAnimate] = useState(false); // State to trigger animation
-
-  const textArray = [
-    "United Kingdom",
-    "Germany",
-    "USA",
-    "Canada",
-    "Ireland",
-    "Australia",
-    "New Zealand",
-  ];
-
-  const paraArray = [
-    "High-quality education and diverse cultural experiences for students.",
-    "World-class education with low or no tuition fees for students.",
-    "World-class education with globally recognized degrees and diverse culture.",
-    "High-quality education and diverse culture for international students.",
-    "High-quality education and vibrant student life with work opportunities.",
-    "World-class education and vibrant multicultural environment for international students",
-    "World-class education with globally recognized qualifications.",
-  ];
 
   const containerRef = useRef(null);
   const lastScrollTime = useRef(0);
@@ -54,7 +65,7 @@ export default function StudyIn() {
           lastIndex.current = index;
           setHeadingText(textArray[index]);
           setParaText(paraArray[index]);
-
+          setFlag(flagArr[index]);
           setAnimate(false); // Reset animation state
           setTimeout(() => setAnimate(true), 0);
         }
@@ -63,7 +74,7 @@ export default function StudyIn() {
           lastIndex.current = 0;
           setHeadingText(textArray[0]);
           setParaText(paraArray[0]);
-
+          setFlag(flagArr[0]);
           setAnimate(false); // Reset animation state
           setTimeout(() => setAnimate(true), 0); // Reapply animation
         }
@@ -76,7 +87,7 @@ export default function StudyIn() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [textArray, paraArray]);
+  }, [flagArr]);
 
   return (
     <div className="research" ref={containerRef}>
@@ -93,10 +104,11 @@ export default function StudyIn() {
           {paraText}
         </p>
         <div className="research-bttn">
-          <BlackBtn style={{ padding: "1rem 2.3rem" }}>The Process</BlackBtn>
+          <img src={flag} alt="flag" />
         </div>
-
-        <div className="research-enrolled">1,11,11,131 Students Enrolled</div>
+        <div className="research-scrol-bg">
+          <img src="/UpdatedUIsky-17.svg" alt="bg" />
+        </div>
       </div>
     </div>
   );

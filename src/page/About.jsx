@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import AboutLeftContent from "./components/AboutLeftContent";
 import AboutRIghtContent from "./components/AboutRIghtContent";
 import { useInView } from "motion/react";
+
+import img0 from "../../src/assets/About/DSC00692.jpg";
 import img1 from "../../src/assets/About/5000andcounting.jpeg";
 import img2 from "../../src/assets/About/expandhorizon.png";
 
@@ -46,29 +48,43 @@ export default function About() {
   const isExpand = useInView(expandRef, { amount: 1 });
   const isCounting = useInView(countingRef, { amount: 1 });
   const isPrime = useInView(primeRef, { amount: 1 });
-
   const [content, setContent] = useState(contentOne);
+  const [lastActive, setLastActive] = useState("prime");
 
   useEffect(() => {
     if (isExpand) {
       setContent(contentTwo);
+      setLastActive("expand");
     } else if (isCounting) {
       setContent(contentThree);
+      setLastActive("counting");
     } else if (isPrime) {
       setContent(contentOne);
+      setLastActive("prime");
+    } else {
+      switch (lastActive) {
+        case "expand":
+          setContent(contentTwo);
+          break;
+        case "counting":
+          setContent(contentThree);
+          break;
+        default:
+          setContent(contentOne);
+      }
     }
-  }, [isExpand, isCounting, isPrime]);
+  }, [isExpand, isCounting, isPrime, lastActive]);
 
   return (
     <section className="about">
       <div className="about-scroll-container">
         <div className="about-scroll-container-left">
-          {isPrime && <AboutLeftContent content={content} />}
           {isExpand && <AboutLeftContent content={content} />}
           {isCounting && <AboutLeftContent content={content} />}
+          {!isExpand && !isCounting && <AboutLeftContent content={content} />}
         </div>
         <div className="about-scroll-container-right">
-          <AboutRIghtContent refs={primeRef} img={""} />
+          <AboutRIghtContent refs={primeRef} img={img0} />
           <AboutRIghtContent refs={expandRef} img={img1} />
           <AboutRIghtContent refs={countingRef} img={img2} />
         </div>

@@ -15,6 +15,7 @@ function App() {
   return (
     <div className="container">
       <Header />
+      <div className="research-enrolled">1,11,11,131 Students Enrolled</div>
       <Main>
         <Home></Home>
         <About></About>

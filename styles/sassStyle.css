@@ -30,6 +30,10 @@ header {
   margin: 0 3rem;
 }
 
+section {
+  margin-bottom: 15rem;
+}
+
 .sec-btn,
 .black-btn {
   background-color: #000;
@@ -343,7 +347,7 @@ li a {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 0.7fr;
+  grid-template-columns: 1fr 0.6fr;
   gap: 2rem;
   position: relative;
   padding: 0 5rem;
@@ -366,13 +370,16 @@ li a {
   flex-direction: column;
   gap: 1rem;
   height: 30rem;
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
+  background-color: yellow;
+  overflow: hidden;
 }
 .about-scroll-container-right-content .img-container {
   flex: 1;
   width: 100%;
-  background-color: blue;
+  background-color: rgb(194, 194, 194);
+  border-radius: 1rem;
+  overflow: hidden;
 }
 .about-scroll-container-right-content .img-container img {
   width: 100%;
@@ -425,10 +432,6 @@ li a {
 .research {
   height: 500vh;
   width: 100%;
-  background-image: url("/UpdatedUIsky-17.svg");
-  background-size: cover;
-  background-position: right center;
-  background-attachment: fixed;
 }
 @media only screen and (max-width: 575.98px) {
   .research {
@@ -438,6 +441,9 @@ li a {
 }
 .research-bttn {
   margin-top: 2rem;
+}
+.research-bttn img {
+  height: 10rem;
 }
 .research-scrol {
   position: sticky;
@@ -449,6 +455,18 @@ li a {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+.research-scrol-bg {
+  position: absolute;
+  top: 0rem;
+  left: 25rem;
+  width: 50rem;
+  height: 50rem;
+  z-index: -1;
+}
+.research-scrol-bg img {
+  width: 100%;
+  height: 100%;
 }
 .research-content {
   width: 100%;
@@ -474,6 +492,7 @@ li a {
   font-weight: 500;
   color: #024060;
   text-align: center;
+  position: relative;
 }
 @media only screen and (max-width: 575.98px) {
   .research-head {
@@ -522,6 +541,11 @@ li a {
   color: #fff;
   border-radius: 5rem;
   margin-top: 8rem;
+  position: fixed;
+  top: 78vh;
+  left: 50%;
+  z-index: 90000000000;
+  transform: translateX(-50%);
 }
 
 @keyframes anim {
@@ -555,8 +579,9 @@ li a {
 }
 .testmonial-head {
   height: 10rem;
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
+  cursor: pointer;
 }
 @media only screen and (max-width: 575.98px) {
   .testmonial-head {
@@ -604,6 +629,19 @@ li a {
   object-fit: contain;
 }
 
+.title-animate {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-out {
+  opacity: 0;
+}
+
 .scroll-card {
   width: 100%;
   height: 600vh;
@@ -621,14 +659,10 @@ li a {
 .main-swiper {
   width: 100%;
   height: 100vh;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-@media only screen and (max-width: 575.98px) {
-  .main-swiper {
-    padding-top: 8rem;
-  }
 }
 .main-swiper .main-swiper-container {
   width: 100%;
@@ -644,8 +678,14 @@ li a {
   height: 100%;
 }
 .main-swiper .main-swiper-container .testmonial-body-item span {
-  height: 42rem;
+  height: 40rem;
+  width: 23rem;
   border-radius: 2rem;
+}
+@media only screen and (max-width: 575.98px) {
+  .main-swiper {
+    padding-top: 8rem;
+  }
 }
 
 .bottom {
@@ -658,6 +698,7 @@ li a {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  margin: 0;
 }
 .bottom::before {
   content: "";
