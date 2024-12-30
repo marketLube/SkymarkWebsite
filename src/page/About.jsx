@@ -57,8 +57,6 @@ export default function About() {
     }
   }, [isExpand, isCounting, isPrime]);
 
-  console.log(isExpand, isCounting);
-
   return (
     <section className="about">
       <div className="about-scroll-container">

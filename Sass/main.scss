@@ -5,7 +5,6 @@
 
 @use "base/typo";
 @use "utils/utils";
-
 @use "layout/navbar";
 @use "layout/footer";
 
@@ -17,4 +16,6 @@
 @use "page/scrollcard";
 @use "page/mainSwiper";
 @use "page/bottom";
+
 @use "components/scrollcardBox";
+@use "base/responsive";
