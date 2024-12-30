@@ -58,7 +58,6 @@ export default function Testimonial() {
     cssEase: "ease-in-out",
     centerMode: true,
     arrows: false,
-
     pauseOnHover: true,
 
     responsive: [

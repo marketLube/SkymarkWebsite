@@ -9,23 +9,23 @@ export default function StudyIn() {
   const [animate, setAnimate] = useState(false); // State to trigger animation
 
   const textArray = [
+    "United Kingdom",
+    "Germany",
     "USA",
-    "UK",
     "Canada",
+    "Ireland",
     "Australia",
     "New Zealand",
-    "Ireland",
-    "Germany",
   ];
 
   const paraArray = [
-    "Look for grammar, spelling mistakes, and make sure you proper nouns. A paragraph three parts:",
-    "Examining data patterns and trends to draw meaningful insights and conclusions.",
-    "Exploring new possibilities and uncovering hidden connections in research.",
-    "Creating new solutions and pushing boundaries through creative thinking.",
-    "Gaining knowledge and understanding through systematic study and practice.",
-    "Finding specific information and resources through methodical investigation.",
-    "Dedicating time to understand complex topics and master new skills.",
+    "High-quality education and diverse cultural experiences for students.",
+    "World-class education with low or no tuition fees for students.",
+    "World-class education with globally recognized degrees and diverse culture.",
+    "High-quality education and diverse culture for international students.",
+    "High-quality education and vibrant student life with work opportunities.",
+    "World-class education and vibrant multicultural environment for international students",
+    "World-class education with globally recognized qualifications.",
   ];
 
   const containerRef = useRef(null);
