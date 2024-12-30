@@ -1,4 +1,5 @@
 @use "../abstract/variables" as variables;
+@use "../base/responive" as responsive;
 
 $border-width: 1px;
 
@@ -59,5 +60,24 @@ $border-width: 1px;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  @include responsive.respond(smallPhone) {
+    flex-direction: column;
+    width: 80%;
+    height: 90vh;
+    padding: 2rem 0;
+
+    &-1 {
+      margin-bottom: 1.5rem;
+    }
+
+    &-1 span {
+      font-size: 2.5rem;
+    }
+
+    &-1 div {
+      font-size: 1.2rem;
+    }
   }
 }

@@ -14,10 +14,10 @@ import Bottom from "./page/Bottom";
 function App() {
   return (
     <div className="container">
-      <Header />
+      {/* <Header /> */}
       <Main>
         <Home></Home>
-        <About></About>
+        {/* <About></About> */}
         <StudyIn></StudyIn>
         <ScrollCard></ScrollCard>
         <Testimonial></Testimonial>

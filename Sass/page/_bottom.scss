@@ -1,4 +1,6 @@
 @use "../abstract/variables";
+@use "../base/responive" as responsive;
+
 .bottom {
   width: 100%;
   height: 80vh;
@@ -32,6 +34,10 @@
     color: white;
     line-height: 1;
     opacity: 0.5;
+
+    @include responsive.respond(smallPhone) {
+      font-size: 10rem;
+    }
   }
 
   &-content {
@@ -48,5 +54,12 @@
     border-radius: 7rem;
     border: 1px solid gray;
     cursor: pointer;
+
+    @include responsive.respond(smallPhone) {
+      font-size: 1.5rem;
+      padding: 1rem 3rem;
+      border-radius: 2rem;
+      margin-top: 12rem;
+    }
   }
 }

@@ -1,4 +1,5 @@
 @use "../abstract/variables";
+@use "../base/responive" as responsive;
 
 .scroll-card-box {
   height: 100vh;
@@ -9,6 +10,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include responsive.respond(smallPhone) {
+    padding: 1px;
+  }
 }
 
 .scroll-card-box-container {
@@ -21,6 +26,16 @@
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
+
+  @include responsive.respond(smallPhone) {
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 1rem;
+  }
 }
 
 .scroll-card-box-left {
@@ -30,6 +45,11 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 2rem;
+
+  @include responsive.respond(smallPhone) {
+    padding: 1rem;
+    width: 150%;
+  }
   & .step {
     display: flex;
     align-items: center;
@@ -37,6 +57,14 @@
     width: 10rem;
     gap: 1rem;
     font-size: 1.2rem;
+
+    @include responsive.respond(smallPhone) {
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      padding-bottom: 1rem;
+    }
+
     & .num {
       background-color: black;
       border-radius: 50%;
@@ -48,6 +76,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @include responsive.respond(smallPhone) {
+        font-size: 15px;
+        height: 2rem;
+        width: 2rem;
+      }
     }
   }
 
@@ -61,12 +95,27 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
     margin-left: 2rem;
+
+    @include responsive.respond(smallPhone) {
+      font-size: 1.5rem;
+      margin-left: 1rem;
+      width: 80%;
+    }
+
+    @include responsive.respond(tablet) {
+      font-size: 2rem;
+    }
   }
 
   & p {
     font-size: 1.2rem;
     font-weight: 300;
     margin-left: 2rem;
+
+    @include responsive.respond(smallPhone) {
+      margin-left: 1rem;
+      font-size: 1rem;
+    }
   }
 }
 
@@ -79,4 +128,10 @@
   margin-bottom: 2rem;
   margin-right: 2rem;
   margin-left: 6rem;
+}
+.scroll-card-box-center {
+  height: 50rem;
+  width: 65%;
+  background-color: rgb(249, 249, 249);
+  border-radius: 1rem;
 }

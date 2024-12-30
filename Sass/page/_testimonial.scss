@@ -1,14 +1,22 @@
 @use "../abstract/variables" as variables;
+@use "../base/responive" as responsive;
+
 .testmonial {
   height: 100vh;
-
   padding-top: 10rem;
+
+  @include responsive.respond(smallPhone) {
+    padding-top: 4rem;
+  }
 
   &-head {
     height: 10rem;
-
     width: 60%;
     margin: 0 auto;
+
+    @include responsive.respond(smallPhone) {
+      width: 100%;
+    }
 
     & h2 {
       font-size: 3rem;
@@ -17,6 +25,12 @@
       width: 50%;
       color: variables.$color-blue;
       text-align: center;
+
+      @include responsive.respond(smallPhone) {
+        font-size: 2rem;
+        font-weight: 600;
+        width: 70%;
+      }
     }
   }
 

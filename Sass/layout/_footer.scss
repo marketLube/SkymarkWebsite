@@ -1,5 +1,5 @@
 @use "../abstract/variables" as variables;
-@use "../base/responsive" as responsive;
+@use "../base/responive" as responsive;
 
 .progress {
   position: fixed;
@@ -14,6 +14,11 @@
   height: 15rem;
   background-color: white;
   padding: 0 5rem;
+
+  @include responsive.respond(smallPhone) {
+    height: 40%;
+  }
+
   &-content {
     display: flex;
     justify-content: space-between;
@@ -21,14 +26,34 @@
     height: 100%;
     width: 100%;
     gap: 1rem;
+
+    @include responsive.respond(smallPhone) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding-top: 3rem;
+    }
+
     &-left {
       flex: 1;
-
       height: 100%;
       padding: 3rem 0;
+      @include responsive.respond(smallPhone) {
+        padding: 0rem;
+      }
 
       & .branches {
         margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap; // Default behavior
+
+        @include responsive.respond(smallPhone) {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+        }
       }
       & .branches span {
         background-color: variables.$color-gray;
@@ -36,6 +61,10 @@
         border-radius: 2rem;
         margin-right: 1rem;
         color: rgb(95, 95, 95);
+
+        @include responsive.respond(smallPhone) {
+          margin-right: 0; // Remove margin for column layout
+        }
       }
     }
 
@@ -45,6 +74,10 @@
       padding: 3rem 0;
       display: flex;
       justify-content: flex-end;
+
+      @include responsive.respond(smallPhone) {
+        padding-top: 1rem;
+      }
 
       &-copyright {
         display: flex;

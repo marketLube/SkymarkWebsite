@@ -6,6 +6,7 @@
 
 body {
   font-family: "Inter", sans-serif !important;
+  overflow-x: hidden;
 }
 
 .container {
@@ -92,6 +93,11 @@ li a {
   background-color: white;
   padding: 0 5rem;
 }
+@media only screen and (max-width: 575.98px) {
+  .footer {
+    height: 40%;
+  }
+}
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -100,13 +106,37 @@ li a {
   width: 100%;
   gap: 1rem;
 }
+@media only screen and (max-width: 575.98px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 3rem;
+  }
+}
 .footer-content-left {
   flex: 1;
   height: 100%;
   padding: 3rem 0;
 }
+@media only screen and (max-width: 575.98px) {
+  .footer-content-left {
+    padding: 0rem;
+  }
+}
 .footer-content-left .branches {
   margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 575.98px) {
+  .footer-content-left .branches {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
 }
 .footer-content-left .branches span {
   background-color: #cbcbcb;
@@ -115,12 +145,22 @@ li a {
   margin-right: 1rem;
   color: rgb(95, 95, 95);
 }
+@media only screen and (max-width: 575.98px) {
+  .footer-content-left .branches span {
+    margin-right: 0;
+  }
+}
 .footer-content-right {
   flex: 1;
   height: 100%;
   padding: 3rem 0;
   display: flex;
   justify-content: flex-end;
+}
+@media only screen and (max-width: 575.98px) {
+  .footer-content-right {
+    padding-top: 1rem;
+  }
 }
 .footer-content-right-copyright {
   display: flex;
@@ -139,6 +179,12 @@ li a {
   background-position: center;
   background-repeat: no-repeat;
 }
+@media only screen and (max-width: 575.98px) {
+  .home {
+    height: 200vh;
+    background-size: cover;
+  }
+}
 .home-text {
   height: 35rem;
   width: 40rem;
@@ -151,17 +197,42 @@ li a {
   font-size: 6.5rem;
   color: #024060;
 }
+@media only screen and (max-width: 575.98px) {
+  .home-text {
+    height: 10rem;
+    width: 24rem;
+    font-size: 2.5rem;
+    padding-left: 8rem;
+    padding-top: 7.5rem;
+  }
+}
 .home-content {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
+@media only screen and (max-width: 575.98px) {
+  .home-content {
+    flex-direction: column;
+    height: auto;
+  }
+}
 .home-content-top {
   display: flex;
   flex: 2.5;
 }
+@media only screen and (max-width: 575.98px) {
+  .home-content-top {
+    flex-direction: column;
+  }
+}
 .home-content-top-left {
   flex: 1;
+}
+@media only screen and (max-width: 575.98px) {
+  .home-content-top-left {
+    flex: none;
+  }
 }
 .home-content-top-left img {
   height: 100%;
@@ -169,15 +240,36 @@ li a {
   height: 40rem;
   transform: translate(5rem, 5rem);
 }
+@media only screen and (max-width: 575.98px) {
+  .home-content-top-left img {
+    height: 22rem;
+    transform: translate(-2rem, 5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .home-content-top-right {
   flex: 1;
   display: flex;
   align-items: end;
   justify-content: start;
 }
+@media only screen and (max-width: 575.98px) {
+  .home-content-top-right {
+    align-items: center;
+    justify-content: center;
+  }
+}
 .home-content-bottom {
   display: flex;
   flex: 1;
+}
+@media only screen and (max-width: 575.98px) {
+  .home-content-bottom {
+    flex-direction: column;
+    padding-top: 10rem;
+  }
 }
 
 .counter {
@@ -222,6 +314,23 @@ li a {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media only screen and (max-width: 575.98px) {
+  .counter {
+    flex-direction: column;
+    width: 80%;
+    height: 90vh;
+    padding: 2rem 0;
+  }
+  .counter-1 {
+    margin-bottom: 1.5rem;
+  }
+  .counter-1 span {
+    font-size: 2.5rem;
+  }
+  .counter-1 div {
+    font-size: 1.2rem;
+  }
 }
 
 .about {
@@ -317,6 +426,12 @@ li a {
   background-position: right center;
   background-attachment: fixed;
 }
+@media only screen and (max-width: 575.98px) {
+  .research {
+    height: 400vh;
+    padding-top: 0rem;
+  }
+}
 .research-bttn {
   margin-top: 2rem;
 }
@@ -356,11 +471,26 @@ li a {
   color: #024060;
   text-align: center;
 }
+@media only screen and (max-width: 575.98px) {
+  .research-head {
+    font-size: 5rem;
+    font-weight: 600;
+    text-align: center;
+  }
+}
 .research-head-desc {
   font-size: 3rem;
   font-weight: 300;
   color: #000;
   text-align: center;
+}
+@media only screen and (max-width: 575.98px) {
+  .research-head-desc {
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 2rem;
+  }
 }
 .research-para {
   width: 40%;
@@ -369,6 +499,14 @@ li a {
   font-size: 1.5rem;
   font-weight: 300;
   padding-top: 1rem;
+}
+@media only screen and (max-width: 575.98px) {
+  .research-para {
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    width: 13rem;
+  }
 }
 .research-enrolled {
   background-color: #cbcbcb;
@@ -404,10 +542,20 @@ li a {
   height: 100vh;
   padding-top: 10rem;
 }
+@media only screen and (max-width: 575.98px) {
+  .testmonial {
+    padding-top: 4rem;
+  }
+}
 .testmonial-head {
   height: 10rem;
   width: 60%;
   margin: 0 auto;
+}
+@media only screen and (max-width: 575.98px) {
+  .testmonial-head {
+    width: 100%;
+  }
 }
 .testmonial-head h2 {
   font-size: 3rem;
@@ -416,6 +564,13 @@ li a {
   width: 50%;
   color: #024060;
   text-align: center;
+}
+@media only screen and (max-width: 575.98px) {
+  .testmonial-head h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    width: 70%;
+  }
 }
 .testmonial-body {
   width: 100%;
@@ -461,9 +616,19 @@ li a {
   justify-content: center;
   align-items: center;
 }
+@media only screen and (max-width: 575.98px) {
+  .main-swiper {
+    padding-top: 8rem;
+  }
+}
 .main-swiper .main-swiper-container {
   width: 80%;
   height: 70%;
+}
+@media only screen and (max-width: 575.98px) {
+  .main-swiper .main-swiper-container {
+    width: 100%;
+  }
 }
 .main-swiper .main-swiper-container .testmonial-body-item {
   width: 100%;
@@ -507,6 +672,11 @@ li a {
   line-height: 1;
   opacity: 0.5;
 }
+@media only screen and (max-width: 575.98px) {
+  .bottom-hello {
+    font-size: 10rem;
+  }
+}
 .bottom-content {
   font-size: 8rem;
   font-weight: 600;
@@ -522,6 +692,14 @@ li a {
   border: 1px solid gray;
   cursor: pointer;
 }
+@media only screen and (max-width: 575.98px) {
+  .bottom-content {
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    margin-top: 12rem;
+  }
+}
 
 .scroll-card-box {
   height: 100vh;
@@ -532,6 +710,11 @@ li a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (max-width: 575.98px) {
+  .scroll-card-box {
+    padding: 1px;
+  }
 }
 
 .scroll-card-box-container {
@@ -545,6 +728,17 @@ li a {
   justify-content: space-between;
   overflow: hidden;
 }
+@media only screen and (max-width: 575.98px) {
+  .scroll-card-box-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 1rem;
+  }
+}
 
 .scroll-card-box-left {
   height: 100%;
@@ -554,6 +748,12 @@ li a {
   justify-content: space-between;
   padding: 2rem;
 }
+@media only screen and (max-width: 575.98px) {
+  .scroll-card-box-left {
+    padding: 1rem;
+    width: 150%;
+  }
+}
 .scroll-card-box-left .step {
   display: flex;
   align-items: center;
@@ -561,6 +761,14 @@ li a {
   width: 10rem;
   gap: 1rem;
   font-size: 1.2rem;
+}
+@media only screen and (max-width: 575.98px) {
+  .scroll-card-box-left .step {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding-bottom: 1rem;
+  }
 }
 .scroll-card-box-left .step .num {
   background-color: black;
@@ -574,6 +782,13 @@ li a {
   align-items: center;
   justify-content: center;
 }
+@media only screen and (max-width: 575.98px) {
+  .scroll-card-box-left .step .num {
+    font-size: 15px;
+    height: 2rem;
+    width: 2rem;
+  }
+}
 .scroll-card-box-left .title {
   width: 70%;
 }
@@ -584,10 +799,23 @@ li a {
   margin-bottom: 2rem;
   margin-left: 2rem;
 }
+@media only screen and (max-width: 575.98px) {
+  .scroll-card-box-left .title div {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    width: 80%;
+  }
+}
 .scroll-card-box-left p {
   font-size: 1.2rem;
   font-weight: 300;
   margin-left: 2rem;
+}
+@media only screen and (max-width: 575.98px) {
+  .scroll-card-box-left p {
+    margin-left: 1rem;
+    font-size: 1rem;
+  }
 }
 
 .scroll-card-box-right {
@@ -599,4 +827,11 @@ li a {
   margin-bottom: 2rem;
   margin-right: 2rem;
   margin-left: 6rem;
+}
+
+.scroll-card-box-center {
+  height: 50rem;
+  width: 65%;
+  background-color: rgb(249, 249, 249);
+  border-radius: 1rem;
 }

@@ -11,6 +11,7 @@ export default function ScrollCardBox({ color = "green", type = "green" }) {
     textCol = "white";
   }
 
+  const isTab = window.innerWidth < 992;
   return (
     <div className="scroll-card-box">
       <div
@@ -27,6 +28,7 @@ export default function ScrollCardBox({ color = "green", type = "green" }) {
             </span>
             <span style={{ color: textCol }}>Step</span>
           </div>
+          {isTab && <div className="scroll-card-box-center">.</div>}
           <div className="title" style={{ color: titleCol }}>
             <div>Lorem ipsum dolor sit amet,</div>
             <p style={{ color: textCol }}>
@@ -35,7 +37,7 @@ export default function ScrollCardBox({ color = "green", type = "green" }) {
             </p>
           </div>
         </div>
-        <div className="scroll-card-box-right"></div>
+        {!isTab && <div className="scroll-card-box-right">y</div>}
       </div>
     </div>
   );

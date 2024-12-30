@@ -1,3 +1,4 @@
+@use "../base/responive" as responsive;
 .main-swiper {
   width: 100%;
   height: 100vh;
@@ -6,9 +7,17 @@
   justify-content: center;
   align-items: center;
 
+  @include responsive.respond(smallPhone) {
+    padding-top: 8rem;
+  }
+
   .main-swiper-container {
     width: 80%;
     height: 70%;
+
+    @include responsive.respond(smallPhone) {
+      width: 100%;
+    }
 
     & .testmonial-body-item {
       width: 100%;
