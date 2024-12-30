@@ -2,10 +2,12 @@ import React from "react";
 import BlackBtn from "../../Utils/BlackBtn";
 import SecBtn from "../../Utils/SecBtn";
 
-export default function AboutRIghtContent({ refs = null }) {
+export default function AboutRIghtContent({ refs = null, img = null }) {
   return (
     <article className="about-scroll-container-right-content">
-      <div className="img-container" ref={refs}></div>
+      <div className="img-container" ref={refs}>
+        <img src={img} alt="about" />
+      </div>
       <div className="buttons">
         <BlackBtn
           style={{

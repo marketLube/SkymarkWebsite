@@ -7,7 +7,7 @@
   align-items: center;
 
   .main-swiper-container {
-    width: 80%;
+    width: 100%;
     height: 70%;
 
     & .testmonial-body-item {
@@ -15,8 +15,8 @@
       height: 100%;
 
       & span {
-        height: 40rem;
-        border-radius: 3rem;
+        height: 42rem;
+        border-radius: 2rem;
       }
     }
   }

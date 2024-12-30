@@ -5,15 +5,15 @@ export default function MainSwiper() {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 8000,
-    slidesToShow: 3,
+    speed: 5000,
+    slidesToShow: 4,
     autoplay: true,
     autoplaySpeed: 0,
-    cssEase: "linear",
+    cssEase: "ease-in-out",
     centerMode: true,
     arrows: false,
     centerPadding: "20px",
-
+    pauseOnHover: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -26,28 +26,78 @@ export default function MainSwiper() {
     ],
   };
   return (
-    <seciton>
+    <section>
       <div className="main-swiper">
         <div className="main-swiper-container">
           <Slider {...settings}>
             <div className="testmonial-body-item">
-              <span>1</span>
+              <span>
+                <iframe
+                  src="https://www.youtube.com/embed/uBDbrr6cjPE"
+                  title="Frame 1"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  loading="lazy"
+                  allowFullScreen
+                />
+              </span>
             </div>
             <div className="testmonial-body-item">
-              <span>2</span>
+              <span>
+                <iframe
+                  src="https://www.youtube.com/embed/unR5vDRuLj4"
+                  title="Frame 2"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  loading="lazy"
+                  allowFullScreen
+                />
+              </span>
             </div>
             <div className="testmonial-body-item">
-              <span>3</span>
+              <span>
+                <iframe
+                  src="https://www.youtube.com/embed/xcGU-1FB_kA"
+                  title="Frame 3"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  loading="lazy"
+                  allowFullScreen
+                />
+              </span>
             </div>
             <div className="testmonial-body-item">
-              <span>4</span>
+              <span>
+                <iframe
+                  src="https://www.youtube.com/embed/dGU52bhgI7M"
+                  title="Frame 4"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  loading="lazy"
+                  allowFullScreen
+                />
+              </span>
             </div>
             <div className="testmonial-body-item">
-              <span>5</span>
+              <span>
+                <iframe
+                  src="https://www.youtube.com/embed/BOuXCyMuVCs"
+                  title="Frame 5"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  loading="lazy"
+                  allowFullScreen
+                />
+              </span>
             </div>
           </Slider>
         </div>
       </div>
-    </seciton>
+    </section>
   );
 }
