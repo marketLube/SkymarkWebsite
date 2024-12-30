@@ -1,8 +1,9 @@
 import Counter from "../Components/Counter";
+import globe from "../../src/assets/UpdatedUIsky-16.svg";
 
 export default function Home() {
   return (
-    <section className="home">
+    <section className="home" style={{ backgroundImage: `url(${globe})` }}>
       <div className="home-content">
         <div className="home-content-top">
           <div className="home-content-top-left">
