@@ -8,28 +8,6 @@ import img5 from "../assets/Flags/ireland.png";
 import img6 from "../assets/Flags/australia.png";
 import img7 from "../assets/Flags/newzeland.png";
 
-const textArray = [
-  "United Kingdom",
-  "Germany",
-  "USA",
-  "Canada",
-  "Ireland",
-  "Australia",
-  "New Zealand",
-];
-
-const paraArray = [
-  "High-quality education and diverse cultural experiences for students.",
-  "World-class education with low or no tuition fees for students.",
-  "World-class education with globally recognized degrees and diverse culture.",
-  "High-quality education and diverse culture for international students.",
-  "High-quality education and vibrant student life with work opportunities.",
-  "World-class education and vibrant multicultural environment for international students",
-  "World-class education with globally recognized qualifications.",
-];
-
-const flagArr = [img1, img2, img3, img4, img5, img6, img7];
-
 export default function StudyIn() {
   const [headingText, setHeadingText] = useState("Research");
   const [paraText, setParaText] = useState(
@@ -42,6 +20,28 @@ export default function StudyIn() {
   const containerRef = useRef(null);
   const lastScrollTime = useRef(0);
   const lastIndex = useRef(0);
+
+  const textArray = [
+    "United Kingdom",
+    "Germany",
+    "USA",
+    "Canada",
+    "Ireland",
+    "Australia",
+    "New Zealand",
+  ];
+
+  const paraArray = [
+    "High-quality education and diverse cultural experiences for students.",
+    "World-class education with low or no tuition fees for students.",
+    "World-class education with globally recognized degrees and diverse culture.",
+    "High-quality education and diverse culture for international students.",
+    "High-quality education and vibrant student life with work opportunities.",
+    "World-class education and vibrant multicultural environment for international students",
+    "World-class education with globally recognized qualifications.",
+  ];
+
+  const flagArr = [img1, img2, img3, img4, img5, img6, img7];
 
   useEffect(() => {
     const container = containerRef.current;

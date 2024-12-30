@@ -99,6 +99,21 @@ export default function MainSwiper() {
           </Slider>
         </div>
       </div>
+      <h1
+        className="main-text"
+        style={{
+          fontSize: "3rem",
+          fontWeight: "500",
+          color: "#024060",
+          textAlign: "center",
+          height: "8rem",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        Guiding Success Stories Worldwide.
+      </h1>
     </section>
   );
 }
