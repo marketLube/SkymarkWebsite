@@ -3,7 +3,7 @@
 
 .study {
   height: 100vh;
-  background-image: url("../../src/assets/UpdatedUIsky-17.svg");
+
   background-size: cover;
   background-position: center;
 }
@@ -11,17 +11,14 @@
 .research {
   height: 500vh;
   width: 100%;
-  background-image: url("../../src/assets/UpdatedUIsky-17.svg");
+  background-image: url("/UpdatedUIsky-17.svg");
   background-size: cover;
   background-position: right center;
   background-attachment: fixed;
-  
- 
 
   @include responsive.respond(smallPhone) {
     height: 400vh;
     padding-top: 0rem;
-   
   }
 
   &-bttn {
@@ -70,10 +67,9 @@
     text-align: center;
 
     @include responsive.respond(smallPhone) {
-    font-size: 5rem;
-    font-weight: 600;
-    text-align: center;
-   
+      font-size: 5rem;
+      font-weight: 600;
+      text-align: center;
     }
 
     &-desc {
@@ -84,9 +80,9 @@
 
       @include responsive.respond(smallPhone) {
         font-size: 2rem;
-      font-weight: 300;
-      text-align: center;
-      padding-top: 2rem;
+        font-weight: 300;
+        text-align: center;
+        padding-top: 2rem;
       }
     }
   }
@@ -98,15 +94,14 @@
     font-size: 1.5rem;
     font-weight: 300;
     padding-top: 1rem;
-   
 
     @include responsive.respond(smallPhone) {
       font-size: 1rem;
-    font-weight: 300;
-    text-align: center;
-    width: 13rem;
-  
+      font-weight: 300;
+      text-align: center;
+      width: 13rem;
     }
+    height: 5rem;
   }
 
   &-enrolled {

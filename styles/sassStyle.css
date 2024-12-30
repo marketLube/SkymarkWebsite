@@ -174,7 +174,7 @@ li a {
 
 .home {
   height: 100vh;
-  background-image: url("./../../src/assets/UpdatedUIsky-16.svg");
+  background-image: url("UpdatedUIsky-16.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -352,7 +352,7 @@ li a {
   position: sticky;
   top: 10rem;
   left: 0;
-  background-image: url("../../src/assets/UpdatedUIsky-17.svg");
+  background-image: url("/UpdatedUIsky-17.svg");
   background-position: bottom;
   background-repeat: no-repeat;
 }
@@ -373,6 +373,11 @@ li a {
   flex: 1;
   width: 100%;
   background-color: blue;
+}
+.about-scroll-container-right-content .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .about-scroll-container-right-content .buttons {
   display: flex;
@@ -413,7 +418,6 @@ li a {
 }
 .study {
   height: 100vh;
-  background-image: url("../../src/assets/UpdatedUIsky-17.svg");
   background-size: cover;
   background-position: center;
 }
@@ -421,7 +425,7 @@ li a {
 .research {
   height: 500vh;
   width: 100%;
-  background-image: url("../../src/assets/UpdatedUIsky-17.svg");
+  background-image: url("/UpdatedUIsky-17.svg");
   background-size: cover;
   background-position: right center;
   background-attachment: fixed;
@@ -499,6 +503,7 @@ li a {
   font-size: 1.5rem;
   font-weight: 300;
   padding-top: 1rem;
+  height: 5rem;
 }
 @media only screen and (max-width: 575.98px) {
   .research-para {
@@ -541,6 +546,7 @@ li a {
 .testmonial {
   height: 100vh;
   padding-top: 10rem;
+  padding-bottom: 5rem;
 }
 @media only screen and (max-width: 575.98px) {
   .testmonial {
@@ -578,21 +584,24 @@ li a {
   margin-bottom: 2rem;
 }
 .testmonial-body-item {
-  width: 10rem;
-  height: 18rem;
   border-radius: 1rem;
-  padding: 1rem;
 }
 .testmonial-body-item span {
   border: 1px solid #024060;
-  display: block;
-  width: 100%;
-  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
   border-radius: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: black;
+  overflow: hidden;
+}
+.testmonial-body-item span img {
+  width: 100%;
+  object-fit: contain;
 }
 
 .scroll-card {
@@ -622,7 +631,7 @@ li a {
   }
 }
 .main-swiper .main-swiper-container {
-  width: 80%;
+  width: 100%;
   height: 70%;
 }
 @media only screen and (max-width: 575.98px) {
@@ -635,8 +644,8 @@ li a {
   height: 100%;
 }
 .main-swiper .main-swiper-container .testmonial-body-item span {
-  height: 40rem;
-  border-radius: 3rem;
+  height: 42rem;
+  border-radius: 2rem;
 }
 
 .bottom {
@@ -662,7 +671,7 @@ li a {
   background-position: inherit;
   background-repeat: inherit;
   transform: scaleY(-1);
-  background-image: url("../../src/assets/UpdatedUIsky-16.svg");
+  background-image: url("/UpdatedUIsky-16.svg");
   z-index: -1;
 }
 .bottom-hello {
