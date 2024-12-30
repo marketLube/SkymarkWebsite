@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import AboutLeftContent from "./components/AboutLeftContent";
 import AboutRIghtContent from "./components/AboutRIghtContent";
 import { useInView } from "motion/react";
+import img1 from "../../src/assets/About/5000andcounting.jpeg";
+import img2 from "../../src/assets/About/expandhorizon.png";
 
 const contentOne = {
   title: "Powerful Compelling Experiences",
@@ -28,7 +30,7 @@ const contentTwo = {
 const contentThree = {
   title: "Counting Our Success",
   description:
-    "  We specialize in helping students achieve their dreams of studying " +
+    "We specialize in helping students achieve their dreams of studying " +
     "abroad through personalized guidance and support. With over a decade " +
     "of experience, our team of dedicated counselors works tirelessly to " +
     "match students with the perfect educational institutions worldwide. We " +
@@ -66,9 +68,9 @@ export default function About() {
           {isCounting && <AboutLeftContent content={content} />}
         </div>
         <div className="about-scroll-container-right">
-          <AboutRIghtContent refs={primeRef} />
-          <AboutRIghtContent refs={expandRef} />
-          <AboutRIghtContent refs={countingRef} />
+          <AboutRIghtContent refs={primeRef} img={""} />
+          <AboutRIghtContent refs={expandRef} img={img1} />
+          <AboutRIghtContent refs={countingRef} img={img2} />
         </div>
       </div>
     </section>
