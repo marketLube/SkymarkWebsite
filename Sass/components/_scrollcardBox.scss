@@ -1,0 +1,82 @@
+@use "../abstract/variables";
+
+.scroll-card-box {
+  height: 100vh;
+  width: 100%;
+  background-color: transparent;
+  position: sticky;
+  top: 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-card-box-container {
+  height: 80vh;
+  width: 100%;
+  background-color: variables.$color-green;
+  border-radius: 8rem;
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.scroll-card-box-left {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  & .step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    gap: 1rem;
+    font-size: 1.2rem;
+    & .num {
+      background-color: black;
+      border-radius: 50%;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 600;
+      height: 3rem;
+      width: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  & .title {
+    width: 70%;
+  }
+
+  & .title div {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+  }
+
+  & p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-left: 2rem;
+  }
+}
+
+.scroll-card-box-right {
+  height: 100%;
+  width: 50%;
+  background-color: rgb(249, 249, 249);
+  border-radius: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+  margin-left: 6rem;
+}

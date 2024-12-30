@@ -1,0 +1,52 @@
+@use "../abstract/variables";
+.bottom {
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    background-repeat: inherit;
+    transform: scaleY(-1);
+    background-image: url("../../src/assets/UpdatedUIsky-16.svg");
+    z-index: -1;
+  }
+
+  &-hello {
+    font-size: 40rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+    opacity: 0.5;
+  }
+
+  &-content {
+    font-size: 8rem;
+    font-weight: 600;
+    color: gray;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -30%);
+    z-index: 1000;
+    background-color: rgb(255, 255, 255);
+    padding: 2.2rem 9rem;
+    border-radius: 7rem;
+    border: 1px solid gray;
+    cursor: pointer;
+  }
+}

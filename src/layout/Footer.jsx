@@ -1,0 +1,34 @@
+import { useScroll, motion } from "motion/react";
+import React from "react";
+
+export default function Footer() {
+  const { scrollYProgress } = useScroll();
+
+  return (
+    <footer className="footer">
+      <div className="footer-content">
+        <div className="footer-content-left">
+          <div className="footer-content-left-logo">
+            <img
+              src="https://skymark.in/web/assets/images/svg/skymarkLogo.svg"
+              alt="logo"
+            />
+            <div className="branches">
+              <span>Trivandrum</span>
+              <span>Kochi</span>
+              <span>Mumbai</span>
+              <span>Delhi</span>
+            </div>
+          </div>
+        </div>
+        <div className="footer-content-right">
+          <div className="footer-content-right-copyright">
+            <span>Designed by</span>
+            <span className="market-lube">Market Lube</span>
+          </div>
+        </div>
+      </div>
+      <motion.div style={{ scaleX: scrollYProgress }} className="progress" />
+    </footer>
+  );
+}

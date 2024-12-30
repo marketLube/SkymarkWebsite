@@ -1,0 +1,111 @@
+@use "./../abstract/variables";
+
+.study {
+  height: 100vh;
+  background-image: url("../../src/assets/UpdatedUIsky-17.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.research {
+  height: 500vh;
+  width: 100%;
+  background-image: url("../../src/assets/UpdatedUIsky-17.svg");
+  background-size: cover;
+  background-position: right center;
+  background-attachment: fixed;
+
+  &-bttn {
+    margin-top: 2rem;
+  }
+
+  &-scrol {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  &-content {
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+
+    &.second {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, calc(-50% + 20px));
+    }
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+
+      &.second {
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &-head {
+    font-size: 10rem;
+    font-weight: 500;
+    color: variables.$color-blue;
+    text-align: center;
+
+    &-desc {
+      font-size: 3rem;
+      font-weight: 300;
+      color: variables.$color-black;
+      text-align: center;
+    }
+  }
+
+  &-para {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding-top: 1rem;
+  }
+
+  &-enrolled {
+    background-color: variables.$color-gray;
+    padding: 0.8rem 1.5rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: variables.$color-white;
+    border-radius: 5rem;
+    margin-top: 8rem;
+  }
+}
+@keyframes anim {
+  0% {
+    opacity: 0;
+    // transform: translateY(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+.research-head,
+.research-para {
+  opacity: 0;
+  //   transform: translateY(10rem);
+}
+
+.animate {
+  opacity: 1;
+  animation: anim 1s ease forwards;
+}

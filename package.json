@@ -1,0 +1,36 @@
+{
+  "name": "skymarkwebsite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"vite --host\" \"npm run sass\"",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "sass": "sass --watch --poll --no-source-map sass/main.scss:styles/sassStyle.css"
+  },
+  "dependencies": {
+    "locomotive-scroll": "^4.1.4",
+    "motion": "^11.15.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-locomotive-scroll": "^0.2.2",
+    "react-slick": "^0.30.3",
+    "sass": "^1.83.0",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^8.2.2",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "globals": "^15.14.0",
+    "vite": "^6.0.5"
+  }
+}
