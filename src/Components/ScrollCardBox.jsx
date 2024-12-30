@@ -1,14 +1,19 @@
 import React from "react";
 
-export default function ScrollCardBox({ color = "green", type = "green" }) {
+export default function ScrollCardBox({ data }) {
   let titleCol = "black";
   let stepCol = "white";
   let textCol = "black";
 
-  if (type === "blue") {
+  if (data.type === "blue") {
     titleCol = "white";
     stepCol = "black";
     textCol = "white";
+  }
+  if (data.type === "green") {
+    titleCol = "black";
+    stepCol = "white";
+    textCol = "black";
   }
 
   const isTab = window.innerWidth < 992;
@@ -16,7 +21,7 @@ export default function ScrollCardBox({ color = "green", type = "green" }) {
     <div className="scroll-card-box">
       <div
         className="scroll-card-box-container"
-        style={{ backgroundColor: color }}
+        style={{ backgroundColor: data.color }}
       >
         <div className="scroll-card-box-left">
           <div className="step">
@@ -24,20 +29,21 @@ export default function ScrollCardBox({ color = "green", type = "green" }) {
               className="num"
               style={{ backgroundColor: textCol, color: stepCol }}
             >
-              1
+              {data.span}
             </span>
             <span style={{ color: textCol }}>Step</span>
           </div>
           {isTab && <div className="scroll-card-box-center">.</div>}
           <div className="title" style={{ color: titleCol }}>
-            <div>Lorem ipsum dolor sit amet,</div>
-            <p style={{ color: textCol }}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-              quos.
-            </p>
+            <div>{data.title}</div>
+            <p style={{ color: textCol }}>{data.desc}</p>
           </div>
         </div>
-        {!isTab && <div className="scroll-card-box-right">y</div>}
+        {!isTab && (
+          <div className="scroll-card-box-right">
+            <img src={data.img} alt="" />
+          </div>
+        )}
       </div>
     </div>
   );
