@@ -55,6 +55,9 @@
           justify-content: center;
           gap: 1rem;
         }
+        @include responsive.respond(tablets) {
+          width: 150%;
+        }
       }
       & .branches span {
         background-color: variables.$color-gray;

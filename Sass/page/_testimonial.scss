@@ -8,7 +8,7 @@
 
   @include responsive.respond(smallPhone) {
     padding-top: 0rem;
-    margin-top: -8rem;
+    margin-top: -12rem;
     height: 75vh;
   }
   @include responsive.respond(tablets) {

@@ -32,6 +32,10 @@
     justify-content: center;
     overflow: hidden;
 
+    @include responsive.respond(smallPhone) {
+      height: 90vh;
+    }
+
     &-bg {
       position: absolute;
       top: 0rem;
