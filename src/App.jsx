@@ -16,7 +16,7 @@ function App() {
   const isMob = window.innerWidth <= 768;
   return (
     <div className="container">
-      {/* <Header /> */}
+      <Header />
       <div className="research-enrolled">1,11,11,131 Students Enrolled</div>
       <Main>
         <Home></Home>
