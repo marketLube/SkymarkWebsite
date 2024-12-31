@@ -79,6 +79,10 @@
       padding-bottom: 1rem;
     }
 
+    @include responsive.respond(tablets) {
+      padding-left: 3rem;
+    }
+
     & .num {
       background-color: black;
       border-radius: 50%;
@@ -171,6 +175,10 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+
+    @include responsive.respond(smallPhone) {
+      border-radius: 1rem;
+    }
 
     @include responsive.respond(tablets) {
       border-radius: 1rem;

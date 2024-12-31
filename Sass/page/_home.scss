@@ -34,6 +34,10 @@
       font-size: 2.5rem;
       padding-left: 8rem;
       padding-top: 7.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
     }
 
     @include responsive.respond(tablets) {
@@ -106,6 +110,51 @@
       @include responsive.respond(smallPhone) {
         flex-direction: column;
         padding-top: 10rem;
+      }
+    }
+  }
+}
+
+.mobile-only-arrow {
+  display: none;
+
+  @include responsive.respond(smallPhone) {
+    display: block;
+    font-size: 2rem;
+    margin-left: -7px;
+    align-self: flex-start;
+  }
+}
+
+.homeGlobeImage {
+  @include responsive.respond(tablets) {
+    height: 400px !important;
+    width: 400px !important;
+  }
+}
+
+.home-content-top {
+  @include responsive.respond(tablets) {
+    flex-direction: column;
+    align-items: center;
+
+    &-left {
+      img {
+        transform: translate(0, 2rem);
+        margin-top: 2rem;
+        margin-left: -20rem !important;
+      }
+    }
+
+    &-right {
+      align-items: center;
+      justify-content: center;
+
+      .home-text {
+        span {
+          margin-top: -5rem;
+          margin-left: 3rem;
+        }
       }
     }
   }

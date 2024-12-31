@@ -19,6 +19,9 @@
   @include responsive.respond(smallPhone) {
     height: 40%;
   }
+  @include responsive.respond(tablets) {
+    margin-bottom: 2rem;
+  }
 
   &-content {
     display: flex;
@@ -81,6 +84,7 @@
 
       @include responsive.respond(smallPhone) {
         padding-top: 1rem;
+        margin-bottom: 2rem;
       }
 
       &-copyright {
