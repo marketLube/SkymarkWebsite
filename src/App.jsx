@@ -20,7 +20,7 @@ function App() {
       <div className="research-enrolled">1,11,11,131 Students Enrolled</div>
       <Main>
         <Home></Home>
-        {/* {isMob ? <AboutMob /> : <About></About>} */}
+        {isMob ? <AboutMob /> : <About></About>}
         <StudyIn></StudyIn>
         <ScrollCard></ScrollCard>
         <Testimonial></Testimonial>

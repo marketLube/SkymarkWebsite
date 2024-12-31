@@ -794,9 +794,21 @@ li a {
   background-color: black;
   overflow: hidden;
 }
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .testmonial-body-item span {
+    background-color: white;
+    width: 75%;
+    height: 40%;
+  }
+}
 .testmonial-body-item span img {
   width: 100%;
   object-fit: contain;
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .testmonial-body-item span img {
+    width: 70%;
+  }
 }
 
 .title-animate {
@@ -847,7 +859,7 @@ li a {
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .main-swiper .main-swiper-container {
     height: 70vh;
-    margin-top: 18rem;
+    margin-top: -4rem;
   }
 }
 .main-swiper .main-swiper-container .testmonial-body-item {
@@ -858,6 +870,11 @@ li a {
   height: 40rem;
   width: 23rem;
   border-radius: 2rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .main-swiper .main-swiper-container .testmonial-body-item span {
+    width: 90%;
+  }
 }
 .main-swiper .main-text {
   font-size: 3rem;
@@ -893,6 +910,11 @@ li a {
     height: 100%;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .bottom {
+    height: 100%;
+  }
+}
 .bottom::before {
   content: "";
   position: absolute;
@@ -919,6 +941,11 @@ li a {
     font-size: 10rem;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .bottom-hello {
+    font-size: 20rem;
+  }
+}
 .bottom-content {
   font-size: 8rem;
   font-weight: 600;
@@ -942,6 +969,17 @@ li a {
     margin-top: 0rem;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .bottom-content {
+    font-size: 2rem;
+    font-weight: 500;
+    border-radius: 5rem;
+    padding: 1.5rem 4rem;
+    position: absolute;
+    left: 50%;
+    top: 52%;
+  }
+}
 
 .scroll-card-box {
   height: 100vh;
@@ -952,11 +990,6 @@ li a {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-@media only screen and (max-width: 575.98px) {
-  .scroll-card-box {
-    padding: 1px;
-  }
 }
 
 .scroll-card-box-container {
@@ -979,6 +1012,7 @@ li a {
     align-items: start;
     justify-content: start;
     padding: 1rem;
+    height: 40rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
@@ -1009,8 +1043,7 @@ li a {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .scroll-card-box-left {
-    padding: 1rem;
-    width: 100%;
+    width: 110%;
   }
 }
 .scroll-card-box-left .step {
@@ -1051,11 +1084,6 @@ li a {
 .scroll-card-box-left .title {
   width: 70%;
 }
-@media only screen and (min-width: 768px) and (max-width: 991.98px) {
-  .scroll-card-box-left .title {
-    width: 72%;
-  }
-}
 .scroll-card-box-left .title div {
   font-size: 3rem;
   font-weight: 500;
@@ -1070,6 +1098,11 @@ li a {
     width: 80%;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .scroll-card-box-left .title div {
+    padding-left: 2rem;
+  }
+}
 .scroll-card-box-left p {
   font-size: 1.2rem;
   font-weight: 300;
@@ -1079,6 +1112,11 @@ li a {
   .scroll-card-box-left p {
     margin-left: 0rem;
     font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .scroll-card-box-left p {
+    padding-left: 2rem;
   }
 }
 
@@ -1101,26 +1139,26 @@ li a {
   width: 100%;
   object-fit: cover;
 }
-@media only screen and (min-width: 768px) and (max-width: 991.98px) {
-  .scroll-card-box-right img {
-    width: 72%;
-  }
-}
 
 .scroll-card-box-center {
   height: 50rem;
   width: 65%;
+  background-color: rgb(249, 249, 249);
   border-radius: 1rem;
-}
-.scroll-card-box-center img {
-  height: 15rem;
-  width: 15rem;
-  object-fit: cover;
-  border-radius: 15px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .scroll-card-box-center {
-    width: 30rem;
-    height: 30rem;
+    margin-left: 4rem;
+    margin-top: 1rem;
+  }
+}
+.scroll-card-box-center img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .scroll-card-box-center img {
+    border-radius: 1rem;
   }
 }

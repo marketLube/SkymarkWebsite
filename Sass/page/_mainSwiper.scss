@@ -19,7 +19,7 @@
     }
     @include responsive.respond(tablets) {
       height: 70vh;
-      margin-top: 18rem;
+      margin-top: -4rem;
     }
 
     & .testmonial-body-item {
@@ -30,6 +30,10 @@
         height: 40rem;
         width: 23rem;
         border-radius: 2rem;
+
+        @include responsive.respond(tablets) {
+          width: 90%;
+        }
       }
     }
   }
