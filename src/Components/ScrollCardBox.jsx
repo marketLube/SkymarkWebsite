@@ -16,7 +16,7 @@ export default function ScrollCardBox({ data }) {
     textCol = "black";
   }
 
-  const isTab = window.innerWidth < 768;
+  const isTab = window.innerWidth < 998;
   return (
     <div className="scroll-card-box">
       <div

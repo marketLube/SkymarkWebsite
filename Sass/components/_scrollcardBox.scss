@@ -59,6 +59,10 @@
     padding: 1rem;
     width: 150%;
   }
+  @include responsive.respond(tablets) {
+    padding: 1rem;
+    width: 100%;
+  }
   & .step {
     display: flex;
     align-items: center;
@@ -96,6 +100,10 @@
 
   & .title {
     width: 70%;
+
+    @include responsive.respond(tablets) {
+      width: 72%;
+    }
   }
 
   & .title div {
@@ -109,10 +117,6 @@
       font-size: 1.5rem;
       margin-left: 0rem;
       width: 80%;
-    }
-
-    @include responsive.respond(tablet) {
-      font-size: 2rem;
     }
   }
 
@@ -146,17 +150,26 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+
+    @include responsive.respond(tablets) {
+      width: 72%;
+    }
   }
 }
 .scroll-card-box-center {
   height: 50rem;
   width: 65%;
-  background-color: rgb(249, 249, 249);
+
   border-radius: 1rem;
 
   & img {
-    height: 100%;
-    width: 100%;
+    height: 15rem;
+    width: 15rem;
     object-fit: cover;
+    border-radius: 15px;
+  }
+  @include responsive.respond(tablets) {
+    width: 30rem;
+    height: 30rem;
   }
 }
