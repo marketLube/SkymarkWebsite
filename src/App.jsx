@@ -10,15 +10,17 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import MainSwiper from "./page/MainSwiper";
 import Bottom from "./page/Bottom";
+import AboutMob from "./page/AboutMob";
 
 function App() {
+  const isMob = window.innerWidth <= 768;
   return (
     <div className="container">
-      <Header />
+      {/* <Header /> */}
       <div className="research-enrolled">1,11,11,131 Students Enrolled</div>
       <Main>
         <Home></Home>
-        {/* <About></About> */}
+        {isMob ? <AboutMob /> : <About></About>}
         <StudyIn></StudyIn>
         <ScrollCard></ScrollCard>
         <Testimonial></Testimonial>
