@@ -3,7 +3,7 @@ nav {
   display: flex;
   justify-content: transparent;
   align-items: center;
-  width: 40rem;
+  width: 60rem;
   background-color: white;
   border-radius: 3rem;
   padding: 0rem 2rem;
@@ -23,7 +23,8 @@ ul {
   align-items: center;
   list-style: none;
   height: 4.5rem;
-  width: 15rem;
+  width: auto;
+  min-width: 15rem;
   font-weight: 600;
 
   @include responsive.respond(smallPhone) {
@@ -49,4 +50,13 @@ li {
       font-size: 10px;
     }
   }
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-list li {
+  list-style: none;
 }

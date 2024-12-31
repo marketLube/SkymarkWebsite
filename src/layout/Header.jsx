@@ -1,4 +1,6 @@
-export const Header = () => {
+import React from "react";
+
+export const Header = ({ setIsFormOpen }) => {
   return (
     <header className="header">
       <nav>
@@ -8,7 +10,7 @@ export const Header = () => {
             alt="Logo of the website"
           />
         </div>
-        <ul>
+        <ul className="nav-list">
           <li>
             <a href="/">Process</a>
           </li>
@@ -17,6 +19,17 @@ export const Header = () => {
           </li>
           <li>
             <a href="/">Contact</a>
+          </li>
+          <li>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                setIsFormOpen(true);
+              }}
+            >
+              Enquiry
+            </a>
           </li>
         </ul>
       </nav>
