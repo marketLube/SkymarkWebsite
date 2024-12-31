@@ -1,4 +1,5 @@
 @use "../base/responive" as responsive;
+
 nav {
   display: flex;
   justify-content: transparent;
@@ -11,7 +12,7 @@ nav {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 
   @include responsive.respond(smallPhone) {
-    width: 22rem;
+    width: 30rem;
     height: 3rem;
     gap: 5rem;
   }
@@ -51,12 +52,67 @@ li {
     }
   }
 }
-
 .nav-list {
   display: flex;
-  gap: 2rem;
+  list-style: none;
+  gap: 1.5rem;
+  @include responsive.respond(smallPhone) {
+  }
+}
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+
+  @include responsive.respond(smallPhone) {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 45vh;
+    background-color: white;
+    flex-direction: column;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    &.active {
+      display: flex;
+    }
+  }
+}
+
+.nav-item {
+  @include responsive.respond(smallPhone) {
+    padding: 15px 20px;
+    width: 100%;
+    text-align: center;
+
+    a {
+      display: block;
+      width: 100%;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
 }
 
 .nav-list li {
   list-style: none;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  color: black;
+  z-index: 100;
+
+  @include responsive.respond(smallPhone) {
+    display: block;
+  }
+
+  .thin-icon {
+    stroke-width: 1;
+    color: #333;
+  }
 }

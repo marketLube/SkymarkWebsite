@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import { HiMenu, HiX } from "react-icons/hi";
 
 export const Header = ({ setIsFormOpen }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className="header">
       <nav>
@@ -10,17 +13,22 @@ export const Header = ({ setIsFormOpen }) => {
             alt="Logo of the website"
           />
         </div>
-        <ul className="nav-list">
-          <li>
+
+        <div className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          {isMenuOpen ? <HiX size={26} /> : <HiMenu size={26} />}
+        </div>
+
+        <ul className={`nav-list ${isMenuOpen ? "active" : ""}`}>
+          <li className="nav-item">
             <a href="/">Process</a>
           </li>
-          <li>
+          <li className="nav-item">
             <a href="/">Events</a>
           </li>
-          <li>
+          <li className="nav-item">
             <a href="/">Contact</a>
           </li>
-          <li>
+          <li className="nav-item">
             <a
               href="#"
               onClick={(e) => {
