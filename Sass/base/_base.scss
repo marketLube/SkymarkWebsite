@@ -1,3 +1,4 @@
+@use "../abstract/variables" as variables;
 * {
   padding: 0;
   margin: 0;
@@ -29,4 +30,23 @@ header {
 }
 section {
   margin-bottom: 15rem;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: variables.$color-blue;
+}
+
+::-webkit-scrollbar-thumb {
+  background: variables.$color-green;
+  background: white;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

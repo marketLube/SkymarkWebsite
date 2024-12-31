@@ -34,6 +34,25 @@ section {
   margin-bottom: 15rem;
 }
 
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #024060;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #65d175;
+  background: white;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .sec-btn,
 .black-btn {
   background-color: #000;
@@ -90,6 +109,7 @@ li a {
   height: 10px;
   background-color: #024060;
   transform-origin: left;
+  border-radius: 8rem;
 }
 
 .footer {

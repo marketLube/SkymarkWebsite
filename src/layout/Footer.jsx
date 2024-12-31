@@ -28,7 +28,16 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <motion.div style={{ scaleX: scrollYProgress }} className="progress" />
+      <motion.div
+        style={{ scaleX: scrollYProgress }}
+        className="progress"
+        transition={{
+          type: "spring",
+          stiffness: 100,
+          damping: 30,
+          ease: "easeInOut",
+        }}
+      />
     </footer>
   );
 }
