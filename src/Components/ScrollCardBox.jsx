@@ -33,7 +33,11 @@ export default function ScrollCardBox({ data }) {
             </span>
             <span style={{ color: textCol }}>Step</span>
           </div>
-          {isTab && <div className="scroll-card-box-center">.</div>}
+          {isTab && (
+            <div className="scroll-card-box-center">
+              <img src={data.img} alt="" />
+            </div>
+          )}
           <div className="title" style={{ color: titleCol }}>
             <div>{data.title}</div>
             <p style={{ color: textCol }}>{data.desc}</p>

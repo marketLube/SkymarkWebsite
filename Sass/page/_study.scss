@@ -21,6 +21,10 @@
 
     & img {
       height: 10rem;
+
+      @include responsive.respond(smallPhone) {
+        height: 7rem;
+      }
     }
   }
 
@@ -130,11 +134,12 @@
     left: 50%;
     z-index: 90000000000;
     transform: translateX(-50%);
-    // @include responsive.respond(smallPhone) {
-    //   font-size: 1rem;
-    // font-weight: 400;
-    // margin-top: 2rem;
-    // }
+    @include responsive.respond(smallPhone) {
+      font-size: 1rem;
+      font-weight: 400;
+      margin-top: 5rem;
+      width: 67%;
+    }
   }
 }
 @keyframes anim {

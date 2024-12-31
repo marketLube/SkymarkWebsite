@@ -81,6 +81,13 @@ nav {
   justify-content: space-between;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
+@media only screen and (max-width: 575.98px) {
+  nav {
+    width: 22rem;
+    height: 3rem;
+    gap: 5rem;
+  }
+}
 
 ul {
   display: flex;
@@ -91,14 +98,30 @@ ul {
   width: 15rem;
   font-weight: 600;
 }
+@media only screen and (max-width: 575.98px) {
+  ul {
+    font-weight: 400;
+    padding-bottom: 6px;
+  }
+}
 
 .logo img {
   height: 2rem;
+}
+@media only screen and (max-width: 575.98px) {
+  .logo img {
+    height: 1rem;
+  }
 }
 
 li a {
   text-decoration: none;
   color: black;
+}
+@media only screen and (max-width: 575.98px) {
+  li a {
+    font-size: 10px;
+  }
 }
 
 .progress {
@@ -205,7 +228,7 @@ li a {
 }
 @media only screen and (max-width: 575.98px) {
   .home {
-    height: 200vh;
+    height: 155vh;
     background-size: cover;
   }
 }
@@ -343,7 +366,7 @@ li a {
   .counter {
     flex-direction: column;
     width: 80%;
-    height: 90vh;
+    height: 80vh;
     padding: 2rem 0;
   }
   .counter-1 {
@@ -465,6 +488,11 @@ li a {
 .research-bttn img {
   height: 10rem;
 }
+@media only screen and (max-width: 575.98px) {
+  .research-bttn img {
+    height: 7rem;
+  }
+}
 .research-scrol {
   position: sticky;
   top: 0;
@@ -566,6 +594,14 @@ li a {
   z-index: 90000000000;
   transform: translateX(-50%);
 }
+@media only screen and (max-width: 575.98px) {
+  .research-enrolled {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 5rem;
+    width: 67%;
+  }
+}
 
 @keyframes anim {
   0% {
@@ -593,7 +629,9 @@ li a {
 }
 @media only screen and (max-width: 575.98px) {
   .testmonial {
-    padding-top: 4rem;
+    padding-top: 0rem;
+    margin-top: -8rem;
+    height: 75vh;
   }
 }
 .testmonial-head {
@@ -617,9 +655,10 @@ li a {
 }
 @media only screen and (max-width: 575.98px) {
   .testmonial-head h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    width: 70%;
+    width: 95%;
+    padding: 3px;
   }
 }
 .testmonial-body {
@@ -695,7 +734,7 @@ li a {
 }
 .main-swiper .main-swiper-container .testmonial-body-item {
   width: 100%;
-  height: 100%;
+  height: 80%;
 }
 .main-swiper .main-swiper-container .testmonial-body-item span {
   height: 40rem;
@@ -711,8 +750,11 @@ li a {
   display: none;
 }
 @media only screen and (max-width: 575.98px) {
-  .main-swiper {
-    padding-top: 8rem;
+  .main-swiper .main-text {
+    margin-top: 20rem;
+    display: block;
+    background-color: aquamarine;
+    height: 100vh;
   }
 }
 
@@ -727,6 +769,11 @@ li a {
   justify-content: center;
   align-items: flex-end;
   margin: 0;
+}
+@media only screen and (max-width: 575.98px) {
+  .bottom {
+    height: 100%;
+  }
 }
 .bottom::before {
   content: "";
@@ -775,7 +822,7 @@ li a {
     font-size: 1.5rem;
     padding: 1rem 3rem;
     border-radius: 2rem;
-    margin-top: 12rem;
+    margin-top: 0rem;
   }
 }
 
@@ -873,14 +920,14 @@ li a {
 .scroll-card-box-left .title div {
   font-size: 3rem;
   font-weight: 500;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   margin-left: 2rem;
 }
 @media only screen and (max-width: 575.98px) {
   .scroll-card-box-left .title div {
     font-size: 1.5rem;
-    margin-left: 1rem;
+    margin-left: 0rem;
     width: 80%;
   }
 }
@@ -891,7 +938,7 @@ li a {
 }
 @media only screen and (max-width: 575.98px) {
   .scroll-card-box-left p {
-    margin-left: 1rem;
+    margin-left: 0rem;
     font-size: 1rem;
   }
 }
@@ -921,4 +968,9 @@ li a {
   width: 65%;
   background-color: rgb(249, 249, 249);
   border-radius: 1rem;
+}
+.scroll-card-box-center img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
