@@ -34,6 +34,10 @@
       font-size: 2.5rem;
       padding-left: 8rem;
       padding-top: 7.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
     }
 
     @include responsive.respond(tablets) {
@@ -108,5 +112,16 @@
         padding-top: 10rem;
       }
     }
+  }
+}
+
+.mobile-only-arrow {
+  display: none;
+
+  @include responsive.respond(smallPhone) {
+    display: block;
+    font-size: 2rem;
+    margin-left: -7px;
+    align-self: flex-start;
   }
 }

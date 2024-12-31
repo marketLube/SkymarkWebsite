@@ -1,7 +1,7 @@
 import Counter from "../Components/Counter";
 import globe from "../../src/assets/UpdatedUIsky-16.svg";
 import globe2 from "../../src/assets/1.svg";
-
+import { GoArrowDownRight } from "react-icons/go";
 export default function Home() {
   return (
     <section className="home" style={{ backgroundImage: `url(${globe})` }}>
@@ -13,6 +13,9 @@ export default function Home() {
           <div className="home-content-top-right">
             <div className="home-text">
               <span>Your trusted study abroad partner</span>
+              <span className="mobile-only-arrow">
+                <GoArrowDownRight />
+              </span>
             </div>
           </div>
         </div>
