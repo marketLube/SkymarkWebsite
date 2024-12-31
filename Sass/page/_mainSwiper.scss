@@ -17,6 +17,10 @@
     @include responsive.respond(smallPhone) {
       width: 100%;
     }
+    @include responsive.respond(tablets) {
+      height: 70vh;
+      margin-top: 18rem;
+    }
 
     & .testmonial-body-item {
       width: 100%;

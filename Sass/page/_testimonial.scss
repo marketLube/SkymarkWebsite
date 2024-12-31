@@ -11,6 +11,10 @@
     margin-top: -8rem;
     height: 75vh;
   }
+  @include responsive.respond(tablets) {
+    padding-top: 0rem;
+    margin-top: -7rem;
+  }
 
   &-head {
     height: 10rem;
@@ -37,6 +41,10 @@
         width: 95%;
         padding: 3px;
       }
+      @include responsive.respond(tablets) {
+        width: 98%;
+        padding: 3rem;
+      }
     }
   }
 
@@ -44,6 +52,10 @@
     width: 100%;
     margin: 0 auto;
     margin-bottom: 2rem;
+
+    @include responsive.respond(tablets) {
+      margin-top: 5rem;
+    }
     &-item {
       border-radius: 1rem;
       & span {

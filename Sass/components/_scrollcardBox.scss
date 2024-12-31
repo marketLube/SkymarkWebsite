@@ -36,6 +36,15 @@
     justify-content: start;
     padding: 1rem;
   }
+  @include responsive.respond(tablets) {
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 1rem;
+  }
 }
 
 .scroll-card-box-left {

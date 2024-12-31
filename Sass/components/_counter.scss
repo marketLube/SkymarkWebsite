@@ -80,4 +80,7 @@ $border-width: 1px;
       font-size: 1.2rem;
     }
   }
+  @include responsive.respond(tablets) {
+    width: 70%;
+  }
 }

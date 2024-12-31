@@ -1,18 +1,11 @@
 @use "./../abstract/variables";
 @use "../base/responive" as responsive;
 
-.study {
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-}
-
 .research {
   height: 500vh;
   width: 100%;
 
   @include responsive.respond(smallPhone) {
-    height: 400vh;
     padding-top: 0rem;
   }
 
@@ -23,7 +16,7 @@
       height: 10rem;
 
       @include responsive.respond(smallPhone) {
-        height: 7rem;
+        height: 4rem;
       }
     }
   }

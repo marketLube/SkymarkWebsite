@@ -232,6 +232,11 @@ li a {
     background-size: cover;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .home {
+    height: 100vh;
+  }
+}
 .home-text {
   height: 35rem;
   width: 40rem;
@@ -251,6 +256,11 @@ li a {
     font-size: 2.5rem;
     padding-left: 8rem;
     padding-top: 7.5rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .home-text {
+    width: 40rem;
   }
 }
 .home-content {
@@ -294,6 +304,14 @@ li a {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .home-content-top-left img {
+    height: 100%;
+    width: 100%;
+    height: 40rem;
+    transform: translate(5rem, 5rem);
   }
 }
 .home-content-top-right {
@@ -377,6 +395,11 @@ li a {
   }
   .counter-1 div {
     font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .counter {
+    width: 70%;
   }
 }
 
@@ -466,19 +489,12 @@ li a {
     transform: translateY(0);
   }
 }
-.study {
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-}
-
 .research {
   height: 500vh;
   width: 100%;
 }
 @media only screen and (max-width: 575.98px) {
   .research {
-    height: 400vh;
     padding-top: 0rem;
   }
 }
@@ -490,7 +506,7 @@ li a {
 }
 @media only screen and (max-width: 575.98px) {
   .research-bttn img {
-    height: 7rem;
+    height: 4rem;
   }
 }
 .research-scrol {
@@ -634,6 +650,12 @@ li a {
     height: 75vh;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .testmonial {
+    padding-top: 0rem;
+    margin-top: -7rem;
+  }
+}
 .testmonial-head {
   height: 10rem;
   width: 100%;
@@ -661,10 +683,21 @@ li a {
     padding: 3px;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .testmonial-head h2 {
+    width: 98%;
+    padding: 3rem;
+  }
+}
 .testmonial-body {
   width: 100%;
   margin: 0 auto;
   margin-bottom: 2rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .testmonial-body {
+    margin-top: 5rem;
+  }
 }
 .testmonial-body-item {
   border-radius: 1rem;
@@ -732,6 +765,12 @@ li a {
     width: 100%;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .main-swiper .main-swiper-container {
+    height: 70vh;
+    margin-top: 18rem;
+  }
+}
 .main-swiper .main-swiper-container .testmonial-body-item {
   width: 100%;
   height: 80%;
@@ -791,7 +830,6 @@ li a {
   z-index: -1;
 }
 .bottom-hello {
-  font-size: 40rem;
   font-weight: 700;
   color: white;
   line-height: 1;
@@ -854,6 +892,17 @@ li a {
   overflow: hidden;
 }
 @media only screen and (max-width: 575.98px) {
+  .scroll-card-box-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 1rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .scroll-card-box-container {
     display: flex;
     flex-direction: column;
