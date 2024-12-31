@@ -1,13 +1,20 @@
+@use "../base/responive" as responsive;
 nav {
   display: flex;
   justify-content: transparent;
   align-items: center;
-  width: 50rem;
+  width: 40rem;
   background-color: white;
   border-radius: 3rem;
   padding: 0rem 2rem;
   justify-content: space-between;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+  @include responsive.respond(smallPhone) {
+    width: 22rem;
+    height: 3rem;
+    gap: 5rem;
+  }
 }
 
 ul {
@@ -15,18 +22,31 @@ ul {
   justify-content: space-between;
   align-items: center;
   list-style: none;
-  height: 4rem;
-  width: 28rem;
+  height: 4.5rem;
+  width: 15rem;
   font-weight: 600;
+
+  @include responsive.respond(smallPhone) {
+    font-weight: 400;
+    padding-bottom: 6px;
+  }
 }
 .logo {
   img {
     height: 2rem;
+
+    @include responsive.respond(smallPhone) {
+      height: 1rem;
+    }
   }
 }
 li {
   a {
     text-decoration: none;
     color: black;
+
+    @include responsive.respond(smallPhone) {
+      font-size: 10px;
+    }
   }
 }

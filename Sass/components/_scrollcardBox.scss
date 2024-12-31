@@ -36,6 +36,15 @@
     justify-content: start;
     padding: 1rem;
   }
+  @include responsive.respond(tablets) {
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 1rem;
+  }
 }
 
 .scroll-card-box-left {
@@ -92,13 +101,13 @@
   & .title div {
     font-size: 3rem;
     font-weight: 500;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     margin-left: 2rem;
 
     @include responsive.respond(smallPhone) {
       font-size: 1.5rem;
-      margin-left: 1rem;
+      margin-left: 0rem;
       width: 80%;
     }
 
@@ -113,7 +122,7 @@
     margin-left: 2rem;
 
     @include responsive.respond(smallPhone) {
-      margin-left: 1rem;
+      margin-left: 0rem;
       font-size: 1rem;
     }
   }
@@ -128,10 +137,26 @@
   margin-bottom: 2rem;
   margin-right: 2rem;
   margin-left: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  & img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 .scroll-card-box-center {
   height: 50rem;
   width: 65%;
   background-color: rgb(249, 249, 249);
   border-radius: 1rem;
+
+  & img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }

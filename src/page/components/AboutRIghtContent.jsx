@@ -4,11 +4,11 @@ import SecBtn from "../../Utils/SecBtn";
 
 export default function AboutRIghtContent({ refs = null, img = null }) {
   return (
-    <article className="about-scroll-container-right-content">
-      <div className="img-container" ref={refs}>
+    <article className="about-scroll-container-right-content" ref={refs}>
+      <div className="img-container">
         <img src={img} alt="about" />
       </div>
-      <div className="buttons">
+      {/* <div className="buttons">
         <BlackBtn
           style={{
             fontWeight: "500",
@@ -39,7 +39,7 @@ export default function AboutRIghtContent({ refs = null, img = null }) {
             Click me
           </SecBtn>
         </div>
-      </div>
+      </div> */}
     </article>
   );
 }
