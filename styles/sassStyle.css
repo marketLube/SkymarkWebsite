@@ -362,6 +362,8 @@ li a {
 }
 .about .home-text {
   height: 25rem;
+  overflow: hidden;
+  width: 80%;
 }
 .about-scroll-container {
   height: 100%;
@@ -391,7 +393,6 @@ li a {
   gap: 1rem;
   height: 30rem;
   width: 100%;
-  background-color: yellow;
   overflow: hidden;
 }
 .about-scroll-container-right-content .img-container {
@@ -443,6 +444,74 @@ li a {
     transform: translateY(0);
   }
 }
+.about-mob {
+  position: relative;
+}
+
+.about-scroll-mob {
+  background-color: white;
+}
+.about-scroll-mob-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.about-scroll-mob-container .home-text {
+  width: 100%;
+  height: fit-content;
+  padding: 0;
+  margin: 2rem 0;
+  z-index: -1;
+  background-color: white;
+}
+.about-scroll-mob-container-item {
+  position: sticky;
+  top: 2rem;
+  left: 0;
+  z-index: 1;
+  background-color: white;
+}
+.about-scroll-mob-right-content {
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: white;
+}
+.about-scroll-mob-right-content .img-container {
+  width: 100%;
+  height: 20rem;
+  padding: 0 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.about-scroll-mob-right-content .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.about-scroll-mob-container-left {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+}
+
+.about-scrolll-mob-left {
+  position: relative;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  height: fit-content;
+  z-index: 2;
+}
+
+.about-mob-para {
+  line-height: 1.5;
+  background-color: white;
+  height: fit-content;
+}
+
 .study {
   height: 100vh;
   background-size: cover;
