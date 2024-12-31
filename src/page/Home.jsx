@@ -8,7 +8,7 @@ export default function Home() {
       <div className="home-content">
         <div className="home-content-top">
           <div className="home-content-top-left">
-            <img src={globe2} alt="globe" />
+            <img src={globe2} alt="globe" className="homeGlobeImage" />
           </div>
           <div className="home-content-top-right">
             <div className="home-text">

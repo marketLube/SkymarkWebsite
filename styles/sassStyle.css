@@ -421,6 +421,33 @@ li a {
   }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .homeGlobeImage {
+    height: 400px !important;
+    width: 400px !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .home-content-top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .home-content-top-left img {
+    transform: translate(0, 2rem);
+    margin-top: 2rem;
+    margin-left: -20rem !important;
+  }
+  .home-content-top-right {
+    align-items: center;
+    justify-content: center;
+  }
+  .home-content-top-right .home-text span {
+    margin-top: -5rem;
+    margin-left: 3rem;
+  }
+}
+
 .counter {
   display: flex;
   align-items: center;

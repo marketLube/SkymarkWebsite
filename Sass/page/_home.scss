@@ -125,3 +125,37 @@
     align-self: flex-start;
   }
 }
+
+.homeGlobeImage {
+  @include responsive.respond(tablets) {
+    height: 400px !important;
+    width: 400px !important;
+  }
+}
+
+.home-content-top {
+  @include responsive.respond(tablets) {
+    flex-direction: column;
+    align-items: center;
+
+    &-left {
+      img {
+        transform: translate(0, 2rem);
+        margin-top: 2rem;
+        margin-left: -20rem !important;
+      }
+    }
+
+    &-right {
+      align-items: center;
+      justify-content: center;
+
+      .home-text {
+        span {
+          margin-top: -5rem;
+          margin-left: 3rem;
+        }
+      }
+    }
+  }
+}
