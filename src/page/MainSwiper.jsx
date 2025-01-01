@@ -18,7 +18,7 @@ export default function MainSwiper() {
     responsive: [
       {
         breakpoint: 1024,
-        settings: { slidesToShow: 3 },
+        settings: { slidesToShow: 1.2 },
       },
       {
         breakpoint: 768,

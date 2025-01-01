@@ -104,3 +104,9 @@
 .fade-out {
   opacity: 0;
 }
+
+@media (min-width: 800px) and (max-width: 900px) {
+  .testmonial-body {
+    width: 80rem;
+  }
+}

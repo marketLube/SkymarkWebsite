@@ -8,6 +8,9 @@
   @include responsive.respond(smallPhone) {
     padding-top: 0rem;
   }
+  @include responsive.respond(tablets) {
+    margin-top: -6rem;
+  }
 
   &-bttn {
     margin-top: 2rem;
@@ -162,4 +165,9 @@
 .animate {
   opacity: 1;
   animation: anim 1s ease forwards;
+}
+@media (min-width: 800px) and (max-width: 900px) {
+  .research-enrolled {
+    margin-top: 11rem;
+  }
 }

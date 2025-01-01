@@ -62,3 +62,8 @@
   //   padding-top: 0rem;
   // }
 }
+@media (min-width: 800px) and (max-width: 900px) {
+  .main-swiper {
+    margin-top: -14rem;
+  }
+}
