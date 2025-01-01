@@ -683,7 +683,7 @@ li a {
 }
 @media only screen and (max-width: 575.98px) {
   .about-mob-para {
-    font-size: 0.9rem;
+    font-size: 11px;
     line-height: 1.25;
     color: rgb(94, 94, 94);
   }
@@ -719,6 +719,11 @@ li a {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+@media only screen and (max-width: 575.98px) {
+  .research-scrol {
+    margin-top: 0rem;
+  }
 }
 .research-scrol-bg {
   position: absolute;

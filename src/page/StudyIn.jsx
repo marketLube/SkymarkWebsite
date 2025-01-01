@@ -9,13 +9,13 @@ import img6 from "../assets/Flags/australia.png";
 import img7 from "../assets/Flags/newzeland.png";
 
 export default function StudyIn() {
-  const [headingText, setHeadingText] = useState("Research");
+  const [headingText, setHeadingText] = useState("United Kingdom");
   const [paraText, setParaText] = useState(
-    "Look for grammar, spelling mistakes, and make sure you proper nouns. A paragraph three parts:"
+    "High-quality education and diverse cultural experiences for students."
   );
   const [flag, setFlag] = useState(img1);
 
-  const [animate, setAnimate] = useState(false); // State to trigger animation
+  const [animate, setAnimate] = useState(true);
 
   const containerRef = useRef(null);
   const lastScrollTime = useRef(0);
@@ -44,6 +44,8 @@ export default function StudyIn() {
   const flagArr = [img1, img2, img3, img4, img5, img6, img7];
 
   useEffect(() => {
+    setAnimate(true);
+
     const container = containerRef.current;
     if (!container) return;
 
@@ -93,14 +95,10 @@ export default function StudyIn() {
     <div className="research" ref={containerRef}>
       <div className="research-scrol">
         <span className="research-head-desc">Study In</span>
-        <div
-          className={`research-head ${animate ? "animate" : ""}`} // Apply animation class dynamically
-        >
+        <div className={`research-head ${animate ? "animate" : ""}`}>
           {headingText}
         </div>
-        <p
-          className={`research-para ${animate ? "animate" : ""}`} // Apply animation class dynamically
-        >
+        <p className={`research-para ${animate ? "animate" : ""}`}>
           {paraText}
         </p>
         <div className="research-bttn">

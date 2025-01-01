@@ -172,7 +172,7 @@
   background-color: white;
   height: fit-content;
   @include responsive.respond(smallPhone) {
-    font-size: 0.9rem;
+    font-size: 11px;
     line-height: 1.25;
     color: rgb(94, 94, 94);
   }

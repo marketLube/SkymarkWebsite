@@ -31,6 +31,9 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    @include responsive.respond(smallPhone) {
+      margin-top: 0rem;
+    }
 
     &-bg {
       position: absolute;
