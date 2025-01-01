@@ -36,7 +36,7 @@ export const Header = ({ setIsFormOpen }) => {
                 setIsFormOpen(true);
               }}
             >
-              Enquiry
+              Enquire
             </a>
           </li>
         </ul>

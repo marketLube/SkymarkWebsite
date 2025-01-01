@@ -9,7 +9,7 @@ import { createPortal } from "react-dom";
 
 function EnquiryForm({ setIsFormOpen }) {
   const values = {
-    Date: new Date().toISOString(),
+    Date: new Date().toISOString().split("T")[0],
     Name: "",
     Contact: "",
     Location: "",
