@@ -1154,6 +1154,7 @@ li a {
   z-index: -1;
 }
 .bottom-hello {
+  font-size: 40rem;
   font-weight: 700;
   color: white;
   line-height: 1;
