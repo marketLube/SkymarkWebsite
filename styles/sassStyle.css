@@ -1245,6 +1245,11 @@ li a {
   width: 100%;
   object-fit: cover;
 }
+@media only screen and (max-width: 575.98px) {
+  .scroll-card-box-center img {
+    border-radius: 12px;
+  }
+}
 
 .enquary {
   display: flex;
