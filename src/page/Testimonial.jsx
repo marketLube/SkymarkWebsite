@@ -71,7 +71,9 @@ export default function Testimonial() {
     centerMode: true,
     arrows: false,
     pauseOnHover: true,
-
+    draggable: true,
+    swipe: true,
+    touchThreshold: 1,
     responsive: [
       {
         breakpoint: 1024,
