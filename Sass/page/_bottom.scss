@@ -16,6 +16,10 @@
   @include responsive.respond(smallPhone) {
     height: 100%;
   }
+  @include responsive.respond(tablets) {
+    // height: 100%;
+    margin-top: -32rem;
+  }
 
   &::before {
     content: "";
@@ -34,7 +38,7 @@
   }
 
   &-hello {
-    // font-size: 40rem;
+    font-size: 40rem;
     font-weight: 700;
     color: white;
     line-height: 1;
@@ -42,6 +46,9 @@
 
     @include responsive.respond(smallPhone) {
       font-size: 10rem;
+    }
+    @include responsive.respond(tablets) {
+      font-size: 20rem;
     }
   }
 
@@ -66,5 +73,20 @@
       border-radius: 2rem;
       margin-top: 0rem;
     }
+
+    @include responsive.respond(tablets) {
+      font-size: 2rem;
+      font-weight: 500;
+      border-radius: 5rem;
+      padding: 1.5rem 4rem;
+      position: absolute;
+      left: 50%;
+      top: 83%;
+    }
+  }
+}
+@media (min-width: 800px) and (max-width: 900px) {
+  .bottom {
+    margin-top: -41rem;
   }
 }

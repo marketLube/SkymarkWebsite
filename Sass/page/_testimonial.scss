@@ -24,13 +24,15 @@
     @include responsive.respond(smallPhone) {
       width: 100%;
     }
+    @include responsive.respond(tablets) {
+      margin-top: -15rem;
+      height: 14rem;
+    }
 
     & h2 {
       font-size: 3rem;
       font-weight: 500;
-
       margin: 0 auto;
-
       width: 50%;
       color: variables.$color-blue;
       text-align: center;
@@ -58,6 +60,7 @@
     }
     &-item {
       border-radius: 1rem;
+
       & span {
         border: 1px solid variables.$color-blue;
         display: flex;
@@ -71,10 +74,19 @@
         background-color: black;
         overflow: hidden;
 
+        @include responsive.respond(tablets) {
+          background-color: white;
+          width: 75%;
+          height: 40%;
+        }
+
         img {
           width: 100%;
-
           object-fit: contain;
+
+          @include responsive.respond(tablets) {
+            width: 70%;
+          }
         }
       }
     }
@@ -91,4 +103,10 @@
 
 .fade-out {
   opacity: 0;
+}
+
+@media (min-width: 800px) and (max-width: 900px) {
+  .testmonial-body {
+    width: 80rem;
+  }
 }

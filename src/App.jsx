@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Home from "./page/Home";
 import Footer from "./layout/Footer";
 import { Header } from "./layout/Header";
@@ -11,24 +12,33 @@ import "slick-carousel/slick/slick-theme.css";
 import MainSwiper from "./page/MainSwiper";
 import Bottom from "./page/Bottom";
 import AboutMob from "./page/AboutMob";
+import EnquiryForm from "./Components/EnquiryForm";
 
 function App() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
   const isMob = window.innerWidth <= 768;
   return (
-    <div className="container">
-      <Header />
-      <div className="research-enrolled">1,11,11,131 Students Enrolled</div>
-      <Main>
-        <Home></Home>
-        {/* {isMob ? <AboutMob /> : <About></About>} */}
-        <StudyIn></StudyIn>
-        <ScrollCard></ScrollCard>
-        <Testimonial></Testimonial>
-        <MainSwiper />
-        <Bottom />
-      </Main>
-      <Footer />
-    </div>
+    <>
+      {isFormOpen ? (
+        <EnquiryForm setIsFormOpen={setIsFormOpen} />
+      ) : (
+        <div className="container">
+          <Header setIsFormOpen={setIsFormOpen} />
+          <div className="research-enrolled">1,11,11,131 Students Enrolled</div>
+          <Main>
+            <Home></Home>
+            {isMob ? <AboutMob /> : <About></About>}
+            <StudyIn></StudyIn>
+            <ScrollCard></ScrollCard>
+            <Testimonial></Testimonial>
+            <MainSwiper />
+            <Bottom />
+          </Main>
+          <Footer />
+        </div>
+      )}
+    </>
   );
 }
 

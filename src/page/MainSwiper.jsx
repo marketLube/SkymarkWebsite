@@ -18,7 +18,7 @@ export default function MainSwiper() {
     responsive: [
       {
         breakpoint: 1024,
-        settings: { slidesToShow: 3 },
+        settings: { slidesToShow: 1.2 },
       },
       {
         breakpoint: 768,
@@ -26,6 +26,8 @@ export default function MainSwiper() {
       },
     ],
   };
+
+  const isTab = window.innerWidth < 998;
   return (
     <section>
       <div className="main-swiper">
@@ -99,21 +101,23 @@ export default function MainSwiper() {
           </Slider>
         </div>
       </div>
-      <h1
-        className="main-text"
-        style={{
-          fontSize: "3rem",
-          fontWeight: "500",
-          color: "#024060",
-          textAlign: "center",
-          height: "8rem",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        Guiding Success Stories Worldwide.
-      </h1>
+      {!isTab && (
+        <h1
+          className="main-text"
+          style={{
+            fontSize: "3rem",
+            fontWeight: "500",
+            color: "#024060",
+            textAlign: "center",
+            height: "8rem",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          Guiding Success Stories Worldwide.
+        </h1>
+      )}
     </section>
   );
 }

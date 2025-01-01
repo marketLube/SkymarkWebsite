@@ -11,9 +11,10 @@
   justify-content: center;
   align-items: center;
 
-  @include responsive.respond(smallPhone) {
-    padding: 1px;
-  }
+  // @include responsive.respond(smallPhone) {
+  //   height: 20rem;
+  //   width: 0rem;
+  // }
 }
 
 .scroll-card-box-container {
@@ -35,6 +36,7 @@
     align-items: start;
     justify-content: start;
     padding: 1rem;
+    height: 40rem;
   }
   @include responsive.respond(tablets) {
     display: flex;
@@ -60,8 +62,8 @@
     width: 150%;
   }
   @include responsive.respond(tablets) {
-    padding: 1rem;
-    width: 100%;
+    width: 110%;
+    margin-left: -1rem;
   }
   & .step {
     display: flex;
@@ -76,6 +78,10 @@
       align-items: start;
       justify-content: start;
       padding-bottom: 1rem;
+    }
+
+    @include responsive.respond(tablets) {
+      padding-left: 3rem;
     }
 
     & .num {
@@ -102,7 +108,7 @@
     width: 70%;
 
     @include responsive.respond(tablets) {
-      width: 72%;
+      width: 86%;
     }
   }
 
@@ -118,6 +124,10 @@
       margin-left: 0rem;
       width: 80%;
     }
+
+    @include responsive.respond(tablets) {
+      padding-left: 2rem;
+    }
   }
 
   & p {
@@ -128,6 +138,9 @@
     @include responsive.respond(smallPhone) {
       margin-left: 0rem;
       font-size: 1rem;
+    }
+    @include responsive.respond(tablets) {
+      padding-left: 2rem;
     }
   }
 }
@@ -150,26 +163,41 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-
-    @include responsive.respond(tablets) {
-      width: 72%;
-    }
   }
 }
 .scroll-card-box-center {
   height: 50rem;
   width: 65%;
-
+  background-color: rgb(249, 249, 249);
   border-radius: 1rem;
 
-  & img {
-    height: 15rem;
-    width: 15rem;
-    object-fit: cover;
-    border-radius: 15px;
-  }
   @include responsive.respond(tablets) {
-    width: 30rem;
-    height: 30rem;
+    margin-left: 4rem;
+    margin-top: 1rem;
+    height: 27rem;
+  }
+
+  & img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    @include responsive.respond(smallPhone) {
+      border-radius: 1rem;
+    }
+
+    @include responsive.respond(tablets) {
+      border-radius: 1rem;
+      width: 29rem;
+      height: 27rem;
+    }
+  }
+}
+@media (min-width: 800px) and (max-width: 900px) {
+  .scroll-card-box-center {
+    margin-top: 1rem;
+  }
+  .title {
+    margin-bottom: 4rem;
   }
 }

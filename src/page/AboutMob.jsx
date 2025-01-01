@@ -35,15 +35,19 @@ export default function AboutMob() {
     <section className="about-mob">
       <div className="about-scroll-mob-container">
         <div className="about-scroll-mob-container-item">
-          <AboutMobLeftContent content={content} />
+          <AboutMobLeftContent content={contentOne} />
           <AboutMobRightContent refs={primeRef} img={img0} />
         </div>
         <div className="about-scroll-mob-container-item">
-          <AboutMobLeftContent content={content} />
-          <AboutMobRightContent refs={primeRef} img={img0} />
+          <AboutMobLeftContent content={contentTwo} />
+          <AboutMobRightContent refs={primeRef} img={img1} />
         </div>
         <div className="about-scroll-mob-container-item">
-          <AboutMobLeftContent content={content} />
+          <AboutMobLeftContent content={contentThree} />
+          <AboutMobRightContent refs={primeRef} img={img2} />
+        </div>
+        <div className="about-scroll-mob-container-item">
+          <AboutMobLeftContent content={contentFour} />
           <AboutMobRightContent refs={primeRef} img={img0} />
         </div>
       </div>
