@@ -9,6 +9,9 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  @include responsive.respond(smallPhone) {
+    margin-top: -9rem;
+  }
 
   @include responsive.respond(smallPhone) {
     margin-top: -5rem;
@@ -52,12 +55,12 @@
     }
   }
   .main-text {
-    font-size: 3rem;
-    font-weight: 500;
-    width: 50%;
-    color: variables.$color-blue;
-    text-align: center;
-    display: none;
+    font-size: 3rem !important;
+    font-weight: 500 !important;
+    width: 50% !important;
+    color: variables.$color-blue !important;
+    text-align: center !important;
+    display: none !important;
 
     @include responsive.respond(smallPhone) {
       margin-top: 20rem;

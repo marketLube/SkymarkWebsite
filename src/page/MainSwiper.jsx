@@ -17,7 +17,7 @@ export default function MainSwiper() {
     pauseOnHover: true,
     draggable: true,
     swipe: true,
-    touchThreshold: 1,
+
     responsive: [
       {
         breakpoint: 1024,
