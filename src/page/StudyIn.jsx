@@ -9,13 +9,13 @@ import img6 from "../assets/Flags/australia.png";
 import img7 from "../assets/Flags/newzeland.png";
 
 export default function StudyIn() {
-  const [headingText, setHeadingText] = useState("Research");
+  const [headingText, setHeadingText] = useState("United Kingdom");
   const [paraText, setParaText] = useState(
     "Look for grammar, spelling mistakes, and make sure you proper nouns. A paragraph three parts:"
   );
   const [flag, setFlag] = useState(img1);
 
-  const [animate, setAnimate] = useState(false); // State to trigger animation
+  const [animate, setAnimate] = useState(true); // State to trigger animation
 
   const containerRef = useRef(null);
   const lastScrollTime = useRef(0);
@@ -87,7 +87,7 @@ export default function StudyIn() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [flagArr]);
+  }, [flagArr, paraArray, textArray]);
 
   return (
     <div className="research" ref={containerRef}>
