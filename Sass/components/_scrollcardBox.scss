@@ -47,6 +47,9 @@
     justify-content: start;
     padding: 1rem;
   }
+  @include responsive.respond(bigTablets) {
+    border-radius: 4rem;
+  }
 }
 
 .scroll-card-box-left {
@@ -65,6 +68,7 @@
     width: 110%;
     margin-left: -1rem;
   }
+
   & .step {
     display: flex;
     align-items: center;
@@ -82,6 +86,9 @@
 
     @include responsive.respond(tablets) {
       padding-left: 3rem;
+    }
+    @include responsive.respond(bigTablets) {
+      font-size: 2rem;
     }
 
     & .num {
@@ -101,6 +108,11 @@
         height: 2rem;
         width: 2rem;
       }
+      @include responsive.respond(bigTablets) {
+        font-size: 20px;
+        height: 4rem;
+        width: 4rem;
+      }
     }
   }
 
@@ -109,6 +121,9 @@
 
     @include responsive.respond(tablets) {
       width: 86%;
+    }
+    @include responsive.respond(bigTablets) {
+      width: 107%;
     }
   }
 
@@ -128,6 +143,10 @@
     @include responsive.respond(tablets) {
       padding-left: 2rem;
     }
+    @include responsive.respond(bigTablets) {
+      margin-top: -1rem;
+      width: 149%;
+    }
   }
 
   & p {
@@ -141,6 +160,9 @@
     }
     @include responsive.respond(tablets) {
       padding-left: 2rem;
+    }
+    @include responsive.respond(bigTablets) {
+      width: 100%;
     }
   }
 }
@@ -176,6 +198,10 @@
     margin-top: 1rem;
     height: 27rem;
   }
+  @include responsive.respond(bigTablets) {
+    height: 35rem;
+    width: 215%;
+  }
 
   & img {
     height: 100%;
@@ -190,6 +216,9 @@
       border-radius: 1rem;
       width: 29rem;
       height: 27rem;
+    }
+    @include responsive.respond(bigTablets) {
+      border-radius: 1rem;
     }
   }
 }

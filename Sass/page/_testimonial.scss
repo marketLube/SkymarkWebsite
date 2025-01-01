@@ -28,6 +28,10 @@
       margin-top: -15rem;
       height: 14rem;
     }
+    @include responsive.respond(bigTablets) {
+      margin-top: -22rem;
+      height: 20rem;
+    }
 
     & h2 {
       font-size: 3rem;
@@ -57,6 +61,9 @@
 
     @include responsive.respond(tablets) {
       margin-top: 5rem;
+    }
+    @include responsive.respond(bigTablets) {
+      width: 150%;
     }
     &-item {
       border-radius: 1rem;

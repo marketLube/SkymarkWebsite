@@ -20,6 +20,9 @@
     // height: 100%;
     margin-top: -32rem;
   }
+  @include responsive.respond(bigTablets) {
+    margin-top: -40rem;
+  }
 
   &::before {
     content: "";
@@ -49,6 +52,9 @@
     }
     @include responsive.respond(tablets) {
       font-size: 20rem;
+    }
+    @include responsive.respond(bigTablets) {
+      font-size: 30rem;
     }
   }
 
@@ -82,6 +88,16 @@
       position: absolute;
       left: 50%;
       top: 83%;
+    }
+
+    @include responsive.respond(bigTablets) {
+      font-size: 5rem;
+      font-weight: 500;
+      border-radius: 5rem;
+      padding: 2rem 6rem;
+      position: absolute;
+      left: 50%;
+      top: 80%;
     }
   }
 }

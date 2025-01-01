@@ -8,6 +8,10 @@
     height: 25rem;
     overflow: hidden;
     width: 80%;
+
+    @include responsive.respond(bigTablets) {
+      font-size: 65px;
+    }
   }
   &-scroll-container {
     height: 100%;
@@ -126,6 +130,9 @@
       @include responsive.respond(smallPhone) {
         top: 2rem;
       }
+      @include responsive.respond(bigTablets) {
+        padding: 4px;
+      }
     }
   }
 
@@ -170,6 +177,9 @@
   height: fit-content;
   @include responsive.respond(smallPhone) {
     font-size: 10px;
+  }
+  @include responsive.respond(bigTablets) {
+    font-size: 2rem;
   }
 }
 @media (min-width: 800px) and (max-width: 900px) {

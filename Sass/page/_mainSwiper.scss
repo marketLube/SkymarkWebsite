@@ -13,6 +13,9 @@
   @include responsive.respond(smallPhone) {
     margin-top: -5rem;
   }
+  @include responsive.respond(bigTablets) {
+    margin-top: -50rem;
+  }
 
   .main-swiper-container {
     width: 100%;
@@ -25,6 +28,9 @@
     @include responsive.respond(tablets) {
       height: 70vh;
       margin-top: -7rem;
+    }
+    @include responsive.respond(bigTablets) {
+      width: 173%;
     }
 
     & .testmonial-body-item {
