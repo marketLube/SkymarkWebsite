@@ -155,6 +155,7 @@ li a {
   }
   .nav-list.active {
     display: flex;
+    margin-top: -4.5rem;
   }
 }
 
