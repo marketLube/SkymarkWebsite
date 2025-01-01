@@ -14,7 +14,8 @@
   margin: 0;
 
   @include responsive.respond(smallPhone) {
-    height: 100%;
+    height: 40vh;
+    margin-top: -10rem;
   }
 
   &::before {
@@ -66,5 +67,11 @@
       border-radius: 2rem;
       margin-top: 0rem;
     }
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 450px) {
+  .bottom {
+    margin-top: -20rem;
   }
 }

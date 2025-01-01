@@ -27,7 +27,7 @@ header {
 }
 @media only screen and (max-width: 575.98px) {
   header {
-    height: 4rem;
+    height: 4.8rem;
   }
 }
 
@@ -838,6 +838,11 @@ li a {
   animation: anim 1s ease forwards;
 }
 
+@media only screen and (min-width: 400px) and (max-width: 450px) {
+  .research-enrolled {
+    margin-top: 8.5rem;
+  }
+}
 .testmonial {
   height: 100vh;
   padding-top: 10rem;
@@ -957,6 +962,11 @@ li a {
   align-items: center;
   position: relative;
 }
+@media only screen and (max-width: 575.98px) {
+  .main-swiper {
+    margin-top: -9rem;
+  }
+}
 .main-swiper .main-swiper-container {
   width: 100%;
   height: 70%;
@@ -982,12 +992,12 @@ li a {
   border-radius: 2rem;
 }
 .main-swiper .main-text {
-  font-size: 3rem;
-  font-weight: 500;
-  width: 50%;
-  color: #024060;
-  text-align: center;
-  display: none;
+  font-size: 3rem !important;
+  font-weight: 500 !important;
+  width: 50% !important;
+  color: #024060 !important;
+  text-align: center !important;
+  display: none !important;
 }
 @media only screen and (max-width: 575.98px) {
   .main-swiper .main-text {
@@ -1012,7 +1022,8 @@ li a {
 }
 @media only screen and (max-width: 575.98px) {
   .bottom {
-    height: 100%;
+    height: 40vh;
+    margin-top: -10rem;
   }
 }
 .bottom::before {
@@ -1065,6 +1076,11 @@ li a {
   }
 }
 
+@media only screen and (min-width: 400px) and (max-width: 450px) {
+  .bottom {
+    margin-top: -20rem;
+  }
+}
 .scroll-card-box {
   height: 100vh;
   width: 100%;
