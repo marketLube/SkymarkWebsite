@@ -12,10 +12,17 @@
   justify-content: center;
   align-items: flex-end;
   margin: 0;
-
+  z-index: 90000000;
   @include responsive.respond(smallPhone) {
     // height: 0;
     margin-top: -25rem;
+  }
+  @include responsive.respond(tablets) {
+    // height: 100%;
+    margin-top: -32rem;
+  }
+  @include responsive.respond(bigTablets) {
+    margin-top: -51rem;
   }
 
   &::before {
@@ -35,7 +42,7 @@
   }
 
   &-hello {
-    // font-size: 40rem;
+    font-size: 40rem;
     font-weight: 700;
     color: white;
     line-height: 1;
@@ -43,6 +50,12 @@
 
     @include responsive.respond(smallPhone) {
       font-size: 10rem;
+    }
+    @include responsive.respond(tablets) {
+      font-size: 20rem;
+    }
+    @include responsive.respond(bigTablets) {
+      font-size: 30rem;
     }
   }
 
@@ -68,6 +81,31 @@
       margin-top: 0rem;
       top: 85%;
     }
+
+    @include responsive.respond(tablets) {
+      font-size: 2rem;
+      font-weight: 500;
+      border-radius: 5rem;
+      padding: 1.5rem 4rem;
+      position: absolute;
+      left: 50%;
+      top: 83%;
+    }
+
+    @include responsive.respond(bigTablets) {
+      font-size: 5rem;
+      font-weight: 500;
+      border-radius: 5rem;
+      padding: 2rem 6rem;
+      position: absolute;
+      left: 50%;
+      top: 80%;
+    }
+  }
+}
+@media (min-width: 800px) and (max-width: 900px) {
+  .bottom {
+    margin-top: -41rem;
   }
 }
 

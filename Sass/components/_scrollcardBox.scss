@@ -11,9 +11,10 @@
   justify-content: center;
   align-items: center;
 
-  @include responsive.respond(smallPhone) {
-    padding: 1px;
-  }
+  // @include responsive.respond(smallPhone) {
+  //   height: 20rem;
+  //   width: 0rem;
+  // }
 }
 
 .scroll-card-box-container {
@@ -35,6 +36,7 @@
     align-items: start;
     justify-content: start;
     padding: 1rem;
+    height: 40rem;
   }
   @include responsive.respond(tablets) {
     display: flex;
@@ -44,6 +46,9 @@
     align-items: start;
     justify-content: start;
     padding: 1rem;
+  }
+  @include responsive.respond(bigTablets) {
+    border-radius: 4rem;
   }
 }
 
@@ -59,6 +64,11 @@
     padding: 1rem;
     width: 150%;
   }
+  @include responsive.respond(tablets) {
+    width: 110%;
+    margin-left: -1rem;
+  }
+
   & .step {
     display: flex;
     align-items: center;
@@ -72,6 +82,13 @@
       align-items: start;
       justify-content: start;
       padding-bottom: 1rem;
+    }
+
+    @include responsive.respond(tablets) {
+      padding-left: 3rem;
+    }
+    @include responsive.respond(bigTablets) {
+      font-size: 2rem;
     }
 
     & .num {
@@ -91,11 +108,23 @@
         height: 2rem;
         width: 2rem;
       }
+      @include responsive.respond(bigTablets) {
+        font-size: 20px;
+        height: 4rem;
+        width: 4rem;
+      }
     }
   }
 
   & .title {
     width: 70%;
+
+    @include responsive.respond(tablets) {
+      width: 86%;
+    }
+    @include responsive.respond(bigTablets) {
+      width: 107%;
+    }
   }
 
   & .title div {
@@ -111,8 +140,12 @@
       width: 80%;
     }
 
-    @include responsive.respond(tablet) {
-      font-size: 2rem;
+    @include responsive.respond(tablets) {
+      padding-left: 2rem;
+    }
+    @include responsive.respond(bigTablets) {
+      margin-top: -1rem;
+      width: 149%;
     }
   }
 
@@ -124,6 +157,12 @@
     @include responsive.respond(smallPhone) {
       margin-left: 0rem;
       font-size: 1rem;
+    }
+    @include responsive.respond(tablets) {
+      padding-left: 2rem;
+    }
+    @include responsive.respond(bigTablets) {
+      width: 100%;
     }
   }
 }
@@ -154,13 +193,40 @@
   background-color: rgb(249, 249, 249);
   border-radius: 1rem;
 
+  @include responsive.respond(tablets) {
+    margin-left: 4rem;
+    margin-top: 1rem;
+    height: 27rem;
+  }
+  @include responsive.respond(bigTablets) {
+    height: 35rem;
+    width: 215%;
+  }
+
   & img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 
     @include responsive.respond(smallPhone) {
-      border-radius: 12px;
+      border-radius: 1rem;
     }
+
+    @include responsive.respond(tablets) {
+      border-radius: 1rem;
+      width: 29rem;
+      height: 27rem;
+    }
+    @include responsive.respond(bigTablets) {
+      border-radius: 1rem;
+    }
+  }
+}
+@media (min-width: 800px) and (max-width: 900px) {
+  .scroll-card-box-center {
+    margin-top: 1rem;
+  }
+  .title {
+    margin-bottom: 4rem;
   }
 }

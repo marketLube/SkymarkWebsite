@@ -10,22 +10,37 @@ export default function MainSwiper() {
     autoplay: true,
     autoplaySpeed: 0,
     swipeToSlide: true,
-    cssEase: "ease-in-out",
+    cssEase: "linear",
     centerMode: true,
     arrows: false,
     centerPadding: "20px",
     pauseOnHover: true,
+    draggable: true,
+    swipe: true,
+
     responsive: [
       {
         breakpoint: 1024,
-        settings: { slidesToShow: 3 },
+        settings: {
+          slidesToShow: 1.2,
+          centerMode: true,
+          speed: 500,
+          autoplay: false,
+        },
       },
       {
         breakpoint: 768,
-        settings: { slidesToShow: 1 },
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+          speed: 500,
+          autoplay: false,
+        },
       },
     ],
   };
+
+  const isTab = window.innerWidth < 998;
   return (
     <section>
       <div className="main-swiper">
@@ -99,21 +114,23 @@ export default function MainSwiper() {
           </Slider>
         </div>
       </div>
-      <h1
-        className="main-text"
-        style={{
-          fontSize: "3rem",
-          fontWeight: "500",
-          color: "#024060",
-          textAlign: "center",
-          height: "8rem",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        Guiding Success Stories Worldwide.
-      </h1>
+      {!isTab && (
+        <h1
+          className="main-text"
+          style={{
+            fontSize: "3rem",
+            fontWeight: "500",
+            color: "#024060",
+            textAlign: "center",
+            height: "8rem",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          Guiding Success Stories Worldwide.
+        </h1>
+      )}
     </section>
   );
 }

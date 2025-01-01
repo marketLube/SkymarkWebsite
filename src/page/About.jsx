@@ -8,7 +8,7 @@ import img1 from "../../src/assets/About/5000andcounting.jpeg";
 import img2 from "../../src/assets/About/expandhorizon.png";
 
 const contentOne = {
-  title: "The Powerful Team: All Skymark Team ",
+  title: "The Powerful Team",
   description:
     "Skymark Education’s remarkable success is deeply rooted in the teamwork, dedication, and passion of its members. Each individual contributes their unique expertise and energy, ensuring that students receive unparalleled guidance on their journey to study abroad. Our collective commitment to empowering students and helping them achieve their dreams fosters an environment of excellence. Together, we transform aspirations into achievements, driven by a shared vision of making global education accessible and impactful.",
 };
@@ -71,7 +71,7 @@ export default function About() {
   }, [isExpand, isCounting, isPrime, isVisionary, lastActive]);
 
   return (
-    <section className="about">
+    <section className="about" id="about">
       <div className="about-scroll-container">
         <div className="about-scroll-container-left">
           {isExpand && <AboutLeftContent content={content} />}

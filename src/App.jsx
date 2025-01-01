@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Home from "./page/Home";
 import Footer from "./layout/Footer";
 import { Header } from "./layout/Header";
@@ -17,7 +17,7 @@ import EnquiryForm from "./Components/EnquiryForm";
 function App() {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
-  const isMob = window.innerWidth <= 768;
+  const isMob = window.innerWidth <= 1250;
   return (
     <>
       {isFormOpen ? (

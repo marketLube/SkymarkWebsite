@@ -3,8 +3,8 @@ import step1 from "../../src/assets/Steps/Step 1.jpeg";
 import step2 from "../../src/assets/Steps/step2.jpeg";
 import step3 from "../../src/assets/Steps/step3.jpeg";
 import step4 from "../../src/assets/Steps/step 4.png";
-import step5 from "../../src/assets/Steps/Step 5.jpeg";
-import step6 from "../../src/assets/Steps/Step 6.jpeg";
+import step5 from "../../src/assets/Steps/step 5.jpeg";
+import step6 from "../../src/assets/Steps/step 6.jpeg";
 
 const obj = [
   {
@@ -59,7 +59,7 @@ const obj = [
 
 export default function ScrollCard() {
   return (
-    <section className="scroll-card">
+    <section className="scroll-card" id="process">
       <div className="scroll-card-scroll-container">
         {obj.map((item, index) => (
           <ScrollCardBox

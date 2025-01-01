@@ -8,6 +8,12 @@
   @include responsive.respond(smallPhone) {
     padding-top: 0rem;
   }
+  @include responsive.respond(tablets) {
+    margin-top: -6rem;
+  }
+  @include responsive.respond(bigTablets) {
+    margin-top: -10rem;
+  }
 
   &-bttn {
     margin-top: 2rem;
@@ -31,8 +37,9 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+
     @include responsive.respond(smallPhone) {
-      margin-top: 0rem;
+      height: 90vh;
     }
 
     &-bg {
@@ -107,6 +114,7 @@
     font-size: 1.5rem;
     font-weight: 300;
     padding-top: 1rem;
+    height: 5rem;
 
     @include responsive.respond(smallPhone) {
       font-size: 1rem;
@@ -117,7 +125,8 @@
   }
 
   &-enrolled {
-    background-color: variables.$color-gray;
+    background-color: rgba(variables.$color-black, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 0.8rem 1.5rem;
     border-radius: 1rem;
     font-size: 1.2rem;
@@ -128,13 +137,16 @@
     position: fixed;
     top: 78vh;
     left: 50%;
-    z-index: 90000000000;
+    z-index: 90000;
     transform: translateX(-50%);
     @include responsive.respond(smallPhone) {
       font-size: 1rem;
       font-weight: 400;
       margin-top: 5rem;
       width: 67%;
+    }
+    @include responsive.respond(tablets) {
+      margin-top: 9rem;
     }
   }
 }
@@ -159,9 +171,8 @@
   opacity: 1;
   animation: anim 1s ease forwards;
 }
-
-@media only screen and (min-width: 400px) and (max-width: 450px) {
+@media (min-width: 800px) and (max-width: 900px) {
   .research-enrolled {
-    margin-top: 8.5rem;
+    margin-top: 11rem;
   }
 }

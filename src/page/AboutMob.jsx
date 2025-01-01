@@ -32,7 +32,7 @@ export default function AboutMob() {
   const [content, setContent] = useState(contentOne);
 
   return (
-    <section className="about-mob">
+    <section className="about-mob" id="about">
       <div className="about-scroll-mob-container">
         <div className="about-scroll-mob-container-item">
           <AboutMobLeftContent content={contentOne} />

@@ -16,8 +16,10 @@ export default function Footer() {
             <div className="branches">
               <span>Trivandrum</span>
               <span>Kochi</span>
-              <span>Mumbai</span>
-              <span>Delhi</span>
+              <span>Kannur</span>
+              <span>Kozhikode</span>
+              <span>Manjeri</span>
+              <span>Kottayam</span>
             </div>
           </div>
         </div>

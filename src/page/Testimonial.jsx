@@ -71,15 +71,29 @@ export default function Testimonial() {
     centerMode: true,
     arrows: false,
     pauseOnHover: true,
+    draggable: true,
+    swipe: true,
 
     responsive: [
       {
         breakpoint: 1024,
-        settings: { slidesToShow: 3 },
+        settings: {
+          slidesToShow: 3,
+          autoplay: false,
+          cssEase: "linear",
+          centerMode: true,
+          speed: 100,
+        },
       },
       {
         breakpoint: 768,
-        settings: { slidesToShow: 1.2 },
+        settings: {
+          slidesToShow: 1.2,
+          autoplay: false,
+          cssEase: "linear",
+          centerMode: true,
+          speed: 100,
+        },
       },
     ],
   };
