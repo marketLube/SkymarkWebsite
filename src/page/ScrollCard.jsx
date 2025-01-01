@@ -59,7 +59,7 @@ const obj = [
 
 export default function ScrollCard() {
   return (
-    <section className="scroll-card">
+    <section className="scroll-card" id="process">
       <div className="scroll-card-scroll-container">
         {obj.map((item, index) => (
           <ScrollCardBox
