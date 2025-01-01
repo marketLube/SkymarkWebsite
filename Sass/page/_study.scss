@@ -137,6 +137,9 @@
       margin-top: 5rem;
       width: 67%;
     }
+    @include responsive.respond(tablets) {
+      margin-top: 9rem;
+    }
   }
 }
 @keyframes anim {

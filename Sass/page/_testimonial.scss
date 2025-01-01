@@ -24,6 +24,10 @@
     @include responsive.respond(smallPhone) {
       width: 100%;
     }
+    @include responsive.respond(tablets) {
+      margin-top: -15rem;
+      height: 14rem;
+    }
 
     & h2 {
       font-size: 3rem;

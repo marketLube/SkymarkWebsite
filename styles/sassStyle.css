@@ -623,6 +623,7 @@ li a {
   display: flex;
   flex-direction: column;
   position: relative;
+  padding: 6px;
 }
 .about-scroll-mob-container .home-text {
   width: 100%;
@@ -634,10 +635,15 @@ li a {
 }
 .about-scroll-mob-container-item {
   position: sticky;
-  top: 2rem;
+  top: 4rem;
   left: 0;
   z-index: 1;
   background-color: white;
+}
+@media only screen and (max-width: 575.98px) {
+  .about-scroll-mob-container-item {
+    top: 2rem;
+  }
 }
 .about-scroll-mob-right-content {
   z-index: 1;
@@ -678,6 +684,11 @@ li a {
   line-height: 1.5;
   background-color: white;
   height: fit-content;
+}
+@media only screen and (max-width: 575.98px) {
+  .about-mob-para {
+    font-size: 10px;
+  }
 }
 
 .research {
@@ -814,6 +825,11 @@ li a {
     width: 67%;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .research-enrolled {
+    margin-top: 9rem;
+  }
+}
 
 @keyframes anim {
   0% {
@@ -861,6 +877,12 @@ li a {
 @media only screen and (max-width: 575.98px) {
   .testmonial-head {
     width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .testmonial-head {
+    margin-top: -15rem;
+    height: 14rem;
   }
 }
 .testmonial-head h2 {
@@ -996,7 +1018,8 @@ li a {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .main-swiper .main-swiper-container .testmonial-body-item span {
-    width: 90%;
+    width: 80%;
+    height: 55rem;
   }
 }
 .main-swiper .main-text {
@@ -1035,7 +1058,7 @@ li a {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .bottom {
-    height: 100%;
+    margin-top: -32rem;
   }
 }
 .bottom::before {
@@ -1100,7 +1123,7 @@ li a {
     padding: 1.5rem 4rem;
     position: absolute;
     left: 50%;
-    top: 52%;
+    top: 83%;
   }
 }
 
@@ -1167,6 +1190,7 @@ li a {
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .scroll-card-box-left {
     width: 110%;
+    margin-left: -1rem;
   }
 }
 .scroll-card-box-left .step {
@@ -1211,6 +1235,11 @@ li a {
 }
 .scroll-card-box-left .title {
   width: 70%;
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .scroll-card-box-left .title {
+    width: 86%;
+  }
 }
 .scroll-card-box-left .title div {
   font-size: 3rem;
@@ -1278,6 +1307,7 @@ li a {
   .scroll-card-box-center {
     margin-left: 4rem;
     margin-top: 1rem;
+    height: 27rem;
   }
 }
 .scroll-card-box-center img {
@@ -1293,6 +1323,8 @@ li a {
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .scroll-card-box-center img {
     border-radius: 1rem;
+    width: 29rem;
+    height: 27rem;
   }
 }
 
