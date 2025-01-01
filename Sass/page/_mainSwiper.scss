@@ -27,7 +27,7 @@
     }
     @include responsive.respond(tablets) {
       height: 70vh;
-      margin-top: -7rem;
+      margin-top: -2rem;
     }
     @include responsive.respond(bigTablets) {
       width: 173%;
