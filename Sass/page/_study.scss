@@ -11,6 +11,9 @@
   @include responsive.respond(tablets) {
     margin-top: -6rem;
   }
+  @include responsive.respond(bigTablets) {
+    margin-top: -10rem;
+  }
 
   &-bttn {
     margin-top: 2rem;
