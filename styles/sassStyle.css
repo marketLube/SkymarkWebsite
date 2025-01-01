@@ -245,7 +245,7 @@ li a {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 5000;
+  z-index: 10000000000000000;
   height: 100vh;
   width: 0;
   opacity: 0;
@@ -1201,8 +1201,7 @@ li a {
 }
 @media only screen and (max-width: 575.98px) {
   .bottom {
-    height: 40vh;
-    margin-top: -10rem;
+    margin-top: -25rem;
   }
 }
 .bottom::before {
@@ -1252,12 +1251,13 @@ li a {
     padding: 1rem 3rem;
     border-radius: 2rem;
     margin-top: 0rem;
+    top: 85%;
   }
 }
 
 @media only screen and (min-width: 400px) and (max-width: 450px) {
   .bottom {
-    margin-top: -20rem;
+    margin-top: -45rem;
   }
 }
 .scroll-card-box {
