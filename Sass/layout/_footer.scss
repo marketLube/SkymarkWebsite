@@ -35,6 +35,7 @@
       justify-content: center;
       gap: 1rem;
       padding-top: 2rem;
+      margin-bottom: 1.5rem;
     }
 
     &-left {
@@ -78,7 +79,7 @@
       justify-content: flex-end;
 
       @include responsive.respond(smallPhone) {
-        padding-top: 1rem;
+        padding-top: 0rem;
       }
 
       &-copyright {
