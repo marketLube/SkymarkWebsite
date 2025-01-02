@@ -14,13 +14,39 @@ export function Header() {
 
   const isEnquiryPage = location.pathname === "/enquiry";
 
-  // Navigation items based on current page
   const navigationItems = isEnquiryPage ? (
-    <li className="navigation__item" onClick={() => setIsChecked(false)}>
-      <a href="/" className="navigation__link">
-        Register
-      </a>
-    </li>
+    <>
+      <li className="navigation__item" onClick={() => setIsChecked(false)}>
+        <a href="/" className="navigation__link">
+          Process
+        </a>
+      </li>
+      <li className="navigation__item" onClick={() => setIsChecked(false)}>
+        <a href="/" className="navigation__link">
+          Events
+        </a>
+      </li>
+      <li className="navigation__item" onClick={() => setIsChecked(false)}>
+        <a href="/" className="navigation__link">
+          Contact
+        </a>
+      </li>
+      <li className="nav-item">
+        <button
+          onClick={handleEnquiryClick}
+          style={{
+            background: "#244EA2",
+            color: "white",
+            border: "none",
+            padding: "8px 16px",
+            borderRadius: "18px",
+            cursor: "pointer",
+          }}
+        >
+          Register
+        </button>
+      </li>
+    </>
   ) : (
     <>
       <li className="navigation__item" onClick={() => setIsChecked(false)}>
@@ -39,17 +65,51 @@ export function Header() {
         </a>
       </li>
       <li className="navigation__item" onClick={() => setIsChecked(false)}>
-        <a href="#" className="navigation__link" onClick={handleEnquiryClick}>
-          Enquiry
-        </a>
+        <button
+          className="navigation__link btn-register"
+          onClick={handleEnquiryClick}
+          style={{
+            background: "#244EA2",
+            color: "white",
+            border: "none",
+            padding: "8px 16px",
+            borderRadius: "18px",
+            cursor: "pointer",
+          }}
+        >
+          Register
+        </button>
       </li>
     </>
   );
 
   const desktopNavItems = isEnquiryPage ? (
-    <li className="nav-item">
-      <a href="/">Register</a>
-    </li>
+    <>
+      <li className="nav-item">
+        <a href="/#process">Process</a>
+      </li>
+      <li className="nav-item">
+        <a href="/#about">Events</a>
+      </li>
+      <li className="nav-item">
+        <a href="/#contact">Contact</a>
+      </li>
+      <li className="nav-item">
+        <button
+          onClick={handleEnquiryClick}
+          style={{
+            background: "#244EA2",
+            color: "white",
+            border: "none",
+            padding: "8px 16px",
+            borderRadius: "18px",
+            cursor: "pointer",
+          }}
+        >
+          Register
+        </button>
+      </li>
+    </>
   ) : (
     <>
       <li className="nav-item">
@@ -62,9 +122,19 @@ export function Header() {
         <a href="/">Contact</a>
       </li>
       <li className="nav-item">
-        <a href="#" onClick={handleEnquiryClick}>
-          Enquire
-        </a>
+        <button
+          onClick={handleEnquiryClick}
+          style={{
+            background: "#244EA2",
+            color: "white",
+            border: "none",
+            padding: "8px 16px",
+            borderRadius: "18px",
+            cursor: "pointer",
+          }}
+        >
+          Register
+        </button>
       </li>
     </>
   );
@@ -75,7 +145,11 @@ export function Header() {
       style={isEnquiryPage ? { marginLeft: "-20px" } : undefined}
     >
       <nav>
-        <div className="logo" onClick={() => (window.location.href = "/")}>
+        <div
+          className="logo"
+          onClick={() => (window.location.href = "/")}
+          style={{ cursor: "pointer" }}
+        >
           <img
             src="https://skymark.in/web/assets/images/svg/skymarkLogo.svg"
             alt="Logo of the website"
