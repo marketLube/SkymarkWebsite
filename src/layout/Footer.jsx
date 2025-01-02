@@ -1,5 +1,4 @@
 import { useScroll, motion } from "motion/react";
-import React from "react";
 
 export default function Footer() {
   const { scrollYProgress } = useScroll();
