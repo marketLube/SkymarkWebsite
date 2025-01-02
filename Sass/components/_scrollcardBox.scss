@@ -11,10 +11,10 @@
   justify-content: center;
   align-items: center;
 
-  // @include responsive.respond(smallPhone) {
-  //   height: 20rem;
-  //   width: 0rem;
-  // }
+  @include responsive.respond(smallPhone) {
+    height: fit-content;
+    padding: 5rem 0;
+  }
 }
 
 .scroll-card-box-container {
@@ -36,16 +36,16 @@
     align-items: start;
     justify-content: start;
     padding: 1rem;
-    height: 71vh;
+    height: 32.5rem;
   }
   @include responsive.respond(tablets) {
     display: flex;
     flex-direction: column;
     border-radius: 2rem;
     display: flex;
-    align-items: start;
-    justify-content: start;
-    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
   }
   @include responsive.respond(bigTablets) {
     border-radius: 4rem;
@@ -62,11 +62,10 @@
 
   @include responsive.respond(smallPhone) {
     padding: 1rem;
-    width: 150%;
+    width: 100%;
   }
   @include responsive.respond(tablets) {
-    width: 110%;
-    margin-left: -1rem;
+    width: 100%;
   }
 
   & .step {
@@ -79,13 +78,14 @@
 
     @include responsive.respond(smallPhone) {
       display: flex;
-      align-items: start;
+      align-items: center;
       justify-content: start;
-      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      width: 100%;
     }
 
     @include responsive.respond(tablets) {
-      padding-left: 3rem;
+      justify-content: start;
     }
     @include responsive.respond(bigTablets) {
       font-size: 2rem;
@@ -119,8 +119,12 @@
   & .title {
     width: 70%;
 
+    @include responsive.respond(smallPhone) {
+      width: 100%;
+    }
+
     @include responsive.respond(tablets) {
-      width: 86%;
+      width: 75%;
     }
     @include responsive.respond(bigTablets) {
       width: 107%;
@@ -137,11 +141,11 @@
     @include responsive.respond(smallPhone) {
       font-size: 1.5rem;
       margin-left: 0rem;
-      width: 85%;
+      width: 100%;
     }
 
     @include responsive.respond(tablets) {
-      padding-left: 2rem;
+      margin-left: 0rem;
     }
     @include responsive.respond(bigTablets) {
       margin-top: -1rem;
@@ -159,7 +163,7 @@
       font-size: 0.8rem;
     }
     @include responsive.respond(tablets) {
-      padding-left: 2rem;
+      margin-left: 0rem;
     }
     @include responsive.respond(bigTablets) {
       width: 100%;
@@ -181,10 +185,17 @@
   justify-content: center;
   overflow: hidden;
 
+  @include responsive.respond(smallPhone) {
+    display: none;
+  }
+
   & img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    @include responsive.respond(smallPhone) {
+      display: none;
+    }
   }
 }
 .scroll-card-box-center {
@@ -194,17 +205,17 @@
   border-radius: 1rem;
 
   @include responsive.respond(smallPhone) {
-    height: 15rem;
-    width: 65%;
+    width: 100%;
     background-color: rgb(249, 249, 249);
     border-radius: 1rem;
-    margin-top: -1rem;
   }
 
   @include responsive.respond(tablets) {
-    margin-left: 4rem;
-    margin-top: 1rem;
-    height: 27rem;
+    // margin-left: 4rem;
+    // margin-top: 1rem;
+    // height: 27rem;
+    width: 100%;
+    height: 28rem;
   }
   @include responsive.respond(bigTablets) {
     height: 35rem;
@@ -222,8 +233,8 @@
 
     @include responsive.respond(tablets) {
       border-radius: 1rem;
-      width: 29rem;
-      height: 27rem;
+      width: 100%;
+      height: 100%;
     }
     @include responsive.respond(bigTablets) {
       border-radius: 1rem;
@@ -238,11 +249,11 @@
     margin-bottom: 4rem;
   }
 }
-@media only screen and (min-width: 400px) and (max-width: 450px) {
-  .scroll-card-box-container {
-    height: 59vh;
-  }
-  .scroll-card-box {
-    height: 50rem;
-  }
-}
+// @media only screen and (min-width: 400px) and (max-width: 450px) {
+//   .scroll-card-box-container {
+//     height: 59vh;
+//   }
+//   .scroll-card-box {
+//     height: 50rem;
+//   }
+// }

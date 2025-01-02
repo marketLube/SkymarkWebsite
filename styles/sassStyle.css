@@ -38,6 +38,16 @@ header {
 section {
   margin-bottom: 15rem;
 }
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  section {
+    margin-bottom: 0rem;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  section {
+    margin-bottom: 0rem;
+  }
+}
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
@@ -396,12 +406,15 @@ li a {
 }
 @media only screen and (max-width: 575.98px) {
   .footer {
-    height: 40%;
+    padding: 0rem 1rem;
+    text-align: center;
+    height: fit-content;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .footer {
     margin-bottom: 2rem;
+    padding: 0rem 3rem;
   }
 }
 .footer-content {
@@ -439,7 +452,7 @@ li a {
 }
 @media only screen and (max-width: 575.98px) {
   .footer-content-left .branches {
-    flex-direction: column;
+    font-size: 0.8rem;
     align-items: center;
     justify-content: center;
     gap: 1rem;
@@ -448,6 +461,9 @@ li a {
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .footer-content-left .branches {
     width: 150%;
+  }
+  .footer-content-left .branches span {
+    margin-top: 0.5rem;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
@@ -500,13 +516,13 @@ li a {
 }
 @media only screen and (max-width: 575.98px) {
   .home {
-    height: 155vh;
+    height: 90rem;
     background-size: cover;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .home {
-    height: 100vh;
+    height: 85rem;
   }
 }
 .home-text {
@@ -620,7 +636,6 @@ li a {
   .mobile-only-arrow {
     display: block;
     font-size: 2rem;
-    margin-left: -7px;
     align-self: flex-start;
   }
 }
@@ -828,11 +843,6 @@ li a {
   position: relative;
   padding: 6px;
 }
-@media only screen and (max-width: 575.98px) {
-  .about-scroll-mob-container {
-    margin-top: -4rem;
-  }
-}
 .about-scroll-mob-container .home-text {
   width: 100%;
   height: fit-content;
@@ -919,11 +929,6 @@ li a {
 @media (min-width: 800px) and (max-width: 900px) {
   .main-swiperabout-scroll-mob-container {
     padding: 15px;
-  }
-}
-@media only screen and (min-width: 400px) and (max-width: 450px) {
-  .about-scroll-mob-container {
-    margin-top: -10rem;
   }
 }
 .research {
@@ -1125,14 +1130,15 @@ li a {
 @media only screen and (max-width: 575.98px) {
   .testmonial {
     padding-top: 0rem;
-    margin-top: -12rem;
-    height: 75vh;
+    height: fit-content;
+    margin-bottom: 5rem;
+    padding: 0;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .testmonial {
-    padding-top: 0rem;
-    margin-top: -7rem;
+    padding: 0;
+    height: fit-content;
   }
 }
 .testmonial-head {
@@ -1144,17 +1150,16 @@ li a {
 @media only screen and (max-width: 575.98px) {
   .testmonial-head {
     width: 100%;
+    height: 8rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .testmonial-head {
-    margin-top: -15rem;
     height: 14rem;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .testmonial-head {
-    margin-top: -22rem;
     height: 20rem;
   }
 }
@@ -1190,15 +1195,15 @@ li a {
     margin-top: 5rem;
   }
 }
-@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
-  .testmonial-body {
-    width: 150%;
-  }
-}
-.testmonial-body-item {
+.testmonial-body-item-t {
   border-radius: 1rem;
 }
-.testmonial-body-item span {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .testmonial-body-item-t {
+    width: 20rem !important;
+  }
+}
+.testmonial-body-item-t span {
   border: 1px solid #024060;
   display: flex;
   align-items: center;
@@ -1212,18 +1217,17 @@ li a {
   overflow: hidden;
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
-  .testmonial-body-item span {
+  .testmonial-body-item-t span {
     background-color: white;
-    width: 75%;
-    height: 40%;
+    width: 100%;
   }
 }
-.testmonial-body-item span img {
+.testmonial-body-item-t span img {
   width: 100%;
   object-fit: contain;
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
-  .testmonial-body-item span img {
+  .testmonial-body-item-t span img {
     width: 70%;
   }
 }
@@ -1253,6 +1257,11 @@ li a {
   justify-content: center;
   align-items: center;
 }
+@media only screen and (max-width: 575.98px) {
+  .scroll-card {
+    height: 262.5rem;
+  }
+}
 .scroll-card-scroll-container {
   width: 85%;
   height: 100%;
@@ -1271,54 +1280,72 @@ li a {
 }
 @media only screen and (max-width: 575.98px) {
   .main-swiper {
-    margin-top: -9rem;
+    height: fit-content;
   }
 }
-@media only screen and (max-width: 575.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .main-swiper {
-    margin-top: -5rem;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
-  .main-swiper {
-    margin-top: -50rem;
+    height: 55rem;
+    padding: 0;
   }
 }
 .main-swiper .main-swiper-container {
   width: 100%;
-  height: 70%;
+  height: 100%;
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .main-swiper .main-swiper-container {
-    height: 70vh;
-    margin-top: -2rem;
+    height: fit-content;
   }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
-  .main-swiper .main-swiper-container {
-    width: 173%;
-  }
-}
-.main-swiper .main-swiper-container .testmonial-body-item {
-  width: 100%;
-  height: 80%;
-}
-.main-swiper .main-swiper-container .testmonial-body-item span {
-  height: 40rem;
-  width: 23rem;
-  border-radius: 2rem;
 }
 @media only screen and (max-width: 575.98px) {
-  .main-swiper .main-swiper-container .testmonial-body-item span {
-    width: 80%;
-    height: 30rem;
+  .main-swiper .main-swiper-container {
+    height: fit-content;
+  }
+}
+.main-swiper .main-swiper-container .swiper-body-item {
+  height: 47rem;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+@media only screen and (max-width: 575.98px) {
+  .main-swiper .main-swiper-container .swiper-body-item {
+    height: fit-content;
+  }
+}
+.main-swiper .main-swiper-container .swiper-body-item span {
+  border-radius: 2rem;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-swiper .main-swiper-container .swiper-body-item span iframe {
+  width: 80% !important;
+  height: 100%;
+  border-radius: 2rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .main-swiper .main-swiper-container .swiper-body-item span iframe {
+    width: 27rem !important;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .main-swiper .main-swiper-container .swiper-body-item span iframe {
+    width: 18rem !important;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .main-swiper .main-swiper-container .swiper-body-item span {
+    width: 100%;
+    height: 31rem;
     margin: 0 auto;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
-  .main-swiper .main-swiper-container .testmonial-body-item span {
-    width: 80%;
-    height: 55rem;
+  .main-swiper .main-swiper-container .swiper-body-item span {
+    width: 100%;
   }
 }
 .main-swiper .main-text {
@@ -1333,22 +1360,13 @@ li a {
   .main-swiper .main-text {
     margin-top: 20rem;
     display: block;
-    background-color: aquamarine;
     height: 100vh;
   }
 }
 
-@media (min-width: 800px) and (max-width: 900px) {
-  .main-swiper {
-    margin-top: -14rem;
-  }
-}
 .bottom {
   width: 100%;
   height: 80vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   position: relative;
   display: flex;
   justify-content: center;
@@ -1358,17 +1376,12 @@ li a {
 }
 @media only screen and (max-width: 575.98px) {
   .bottom {
-    margin-top: -25rem;
+    height: 15rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .bottom {
-    margin-top: -32rem;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
-  .bottom {
-    margin-top: -51rem;
+    height: 20rem;
   }
 }
 .bottom::before {
@@ -1378,10 +1391,9 @@ li a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: inherit;
-  background-size: inherit;
-  background-position: inherit;
-  background-repeat: inherit;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   transform: scaleY(-1);
   background-image: url("/UpdatedUIsky-16.svg");
   z-index: -1;
@@ -1389,16 +1401,23 @@ li a {
 @media only screen and (max-width: 575.98px) {
   .bottom::before {
     position: absolute;
-    top: 64px;
+    top: 0;
     left: 0;
-    width: 100%;
-    height: 63%;
-    background-size: inherit;
-    background-position: inherit;
-    background-repeat: inherit;
+    bottom: 0;
+    background-repeat: no-repeat;
     transform: scaleY(-1);
     z-index: -1;
-    margin-top: 8rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .bottom::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    transform: scaleY(-1);
+    z-index: -1;
   }
 }
 .bottom-hello {
@@ -1411,6 +1430,7 @@ li a {
 @media only screen and (max-width: 575.98px) {
   .bottom-hello {
     font-size: 10rem;
+    line-height: 1.2;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
@@ -1444,18 +1464,14 @@ li a {
     padding: 1rem 3rem;
     border-radius: 2rem;
     margin-top: 0rem;
-    top: 85%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .bottom-content {
-    font-size: 2rem;
-    font-weight: 500;
-    border-radius: 5rem;
-    padding: 1.5rem 4rem;
-    position: absolute;
-    left: 50%;
-    top: 83%;
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    margin-top: 0rem;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
@@ -1470,16 +1486,6 @@ li a {
   }
 }
 
-@media (min-width: 800px) and (max-width: 900px) {
-  .bottom {
-    margin-top: -41rem;
-  }
-}
-@media only screen and (min-width: 400px) and (max-width: 450px) {
-  .bottom {
-    margin-top: -45rem;
-  }
-}
 .scroll-card-box {
   height: 100vh;
   width: 100%;
@@ -1489,6 +1495,12 @@ li a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (max-width: 575.98px) {
+  .scroll-card-box {
+    height: fit-content;
+    padding: 5rem 0;
+  }
 }
 
 .scroll-card-box-container {
@@ -1511,7 +1523,7 @@ li a {
     align-items: start;
     justify-content: start;
     padding: 1rem;
-    height: 71vh;
+    height: 32.5rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
@@ -1520,9 +1532,9 @@ li a {
     flex-direction: column;
     border-radius: 2rem;
     display: flex;
-    align-items: start;
-    justify-content: start;
-    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
@@ -1542,13 +1554,12 @@ li a {
 @media only screen and (max-width: 575.98px) {
   .scroll-card-box-left {
     padding: 1rem;
-    width: 150%;
+    width: 100%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .scroll-card-box-left {
-    width: 110%;
-    margin-left: -1rem;
+    width: 100%;
   }
 }
 .scroll-card-box-left .step {
@@ -1562,14 +1573,15 @@ li a {
 @media only screen and (max-width: 575.98px) {
   .scroll-card-box-left .step {
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: start;
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .scroll-card-box-left .step {
-    padding-left: 3rem;
+    justify-content: start;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
@@ -1606,9 +1618,14 @@ li a {
 .scroll-card-box-left .title {
   width: 70%;
 }
+@media only screen and (max-width: 575.98px) {
+  .scroll-card-box-left .title {
+    width: 100%;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .scroll-card-box-left .title {
-    width: 86%;
+    width: 75%;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
@@ -1627,12 +1644,12 @@ li a {
   .scroll-card-box-left .title div {
     font-size: 1.5rem;
     margin-left: 0rem;
-    width: 85%;
+    width: 100%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .scroll-card-box-left .title div {
-    padding-left: 2rem;
+    margin-left: 0rem;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
@@ -1654,7 +1671,7 @@ li a {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .scroll-card-box-left p {
-    padding-left: 2rem;
+    margin-left: 0rem;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
@@ -1677,10 +1694,20 @@ li a {
   justify-content: center;
   overflow: hidden;
 }
+@media only screen and (max-width: 575.98px) {
+  .scroll-card-box-right {
+    display: none;
+  }
+}
 .scroll-card-box-right img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+@media only screen and (max-width: 575.98px) {
+  .scroll-card-box-right img {
+    display: none;
+  }
 }
 
 .scroll-card-box-center {
@@ -1691,18 +1718,15 @@ li a {
 }
 @media only screen and (max-width: 575.98px) {
   .scroll-card-box-center {
-    height: 15rem;
-    width: 65%;
+    width: 100%;
     background-color: rgb(249, 249, 249);
     border-radius: 1rem;
-    margin-top: -1rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .scroll-card-box-center {
-    margin-left: 4rem;
-    margin-top: 1rem;
-    height: 27rem;
+    width: 100%;
+    height: 28rem;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
@@ -1724,8 +1748,8 @@ li a {
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .scroll-card-box-center img {
     border-radius: 1rem;
-    width: 29rem;
-    height: 27rem;
+    width: 100%;
+    height: 100%;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
@@ -1740,14 +1764,6 @@ li a {
   }
   .title {
     margin-bottom: 4rem;
-  }
-}
-@media only screen and (min-width: 400px) and (max-width: 450px) {
-  .scroll-card-box-container {
-    height: 59vh;
-  }
-  .scroll-card-box {
-    height: 50rem;
   }
 }
 .enquary {

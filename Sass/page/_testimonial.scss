@@ -8,12 +8,13 @@
 
   @include responsive.respond(smallPhone) {
     padding-top: 0rem;
-    margin-top: -12rem;
-    height: 75vh;
+    height: fit-content;
+    margin-bottom: 5rem;
+    padding: 0;
   }
   @include responsive.respond(tablets) {
-    padding-top: 0rem;
-    margin-top: -7rem;
+    padding: 0;
+    height: fit-content;
   }
 
   &-head {
@@ -23,13 +24,12 @@
     cursor: pointer;
     @include responsive.respond(smallPhone) {
       width: 100%;
+      height: 8rem;
     }
     @include responsive.respond(tablets) {
-      margin-top: -15rem;
       height: 14rem;
     }
     @include responsive.respond(bigTablets) {
-      margin-top: -22rem;
       height: 20rem;
     }
 
@@ -63,10 +63,13 @@
       margin-top: 5rem;
     }
     @include responsive.respond(bigTablets) {
-      width: 150%;
     }
-    &-item {
+    &-item-t {
       border-radius: 1rem;
+
+      @include responsive.respond(tablets) {
+        width: 20rem !important;
+      }
 
       & span {
         border: 1px solid variables.$color-blue;
@@ -83,8 +86,7 @@
 
         @include responsive.respond(tablets) {
           background-color: white;
-          width: 75%;
-          height: 40%;
+          width: 100%;
         }
 
         img {

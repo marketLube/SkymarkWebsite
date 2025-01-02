@@ -7,7 +7,7 @@ import AboutMobLeftContent from "./components/AboutMobLeftContent";
 import AboutMobRightContent from "./components/AboutMobRightContent";
 
 const contentOne = {
-  title: "The Powerful Team: All Skymark Team ",
+  title: "The Powerful Team",
   description:
     "Skymark Education’s remarkable success is deeply rooted in the teamwork, dedication, and passion of its members. Each individual contributes their unique expertise and energy, ensuring that students receive unparalleled guidance on their journey to study abroad. Our collective commitment to empowering students and helping them achieve their dreams fosters an environment of excellence. Together, we transform aspirations into achievements, driven by a shared vision of making global education accessible and impactful.",
 };

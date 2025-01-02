@@ -115,7 +115,6 @@
     position: relative;
     padding: 6px;
     @include responsive.respond(smallPhone) {
-      margin-top: -4rem;
     }
 
     & .home-text {
@@ -201,6 +200,5 @@
 }
 @media only screen and (min-width: 400px) and (max-width: 450px) {
   .about-scroll-mob-container {
-    margin-top: -10rem;
   }
 }

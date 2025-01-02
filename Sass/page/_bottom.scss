@@ -4,25 +4,21 @@
 .bottom {
   width: 100%;
   height: 80vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   margin: 0;
   z-index: 90000000;
+
   @include responsive.respond(smallPhone) {
-    // height: 0;
-    margin-top: -25rem;
+    height: 15rem;
   }
   @include responsive.respond(tablets) {
     // height: 100%;
-    margin-top: -32rem;
+    height: 20rem;
   }
   @include responsive.respond(bigTablets) {
-    margin-top: -51rem;
   }
 
   &::before {
@@ -32,26 +28,30 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: inherit;
-    background-size: inherit;
-    background-position: inherit;
-    background-repeat: inherit;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     transform: scaleY(-1);
     background-image: url("/UpdatedUIsky-16.svg");
     z-index: -1;
 
     @include responsive.respond(smallPhone) {
       position: absolute;
-      top: 64px;
+      top: 0;
       left: 0;
-      width: 100%;
-      height: 63%;
-      background-size: inherit;
-      background-position: inherit;
-      background-repeat: inherit;
+      bottom: 0;
+      background-repeat: no-repeat;
       transform: scaleY(-1);
       z-index: -1;
-      margin-top: 8rem;
+    }
+    @include responsive.respond(tablets) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background-repeat: no-repeat;
+      transform: scaleY(-1);
+      z-index: -1;
     }
   }
 
@@ -64,6 +64,7 @@
 
     @include responsive.respond(smallPhone) {
       font-size: 10rem;
+      line-height: 1.2;
     }
     @include responsive.respond(tablets) {
       font-size: 20rem;
@@ -93,17 +94,14 @@
       padding: 1rem 3rem;
       border-radius: 2rem;
       margin-top: 0rem;
-      top: 85%;
+      // top: 85%;
     }
 
     @include responsive.respond(tablets) {
-      font-size: 2rem;
-      font-weight: 500;
-      border-radius: 5rem;
-      padding: 1.5rem 4rem;
-      position: absolute;
-      left: 50%;
-      top: 83%;
+      font-size: 1.5rem;
+      padding: 1rem 3rem;
+      border-radius: 2rem;
+      margin-top: 0rem;
     }
 
     @include responsive.respond(bigTablets) {
@@ -119,12 +117,10 @@
 }
 @media (min-width: 800px) and (max-width: 900px) {
   .bottom {
-    margin-top: -41rem;
   }
 }
 
 @media only screen and (min-width: 400px) and (max-width: 450px) {
   .bottom {
-    margin-top: -45rem;
   }
 }

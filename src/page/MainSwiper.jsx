@@ -6,7 +6,7 @@ export default function MainSwiper() {
     dots: false,
     infinite: true,
     speed: 5000,
-    slidesToShow: 4,
+    slidesToShow: 3,
     autoplay: true,
     autoplaySpeed: 0,
     swipeToSlide: true,
@@ -46,7 +46,7 @@ export default function MainSwiper() {
       <div className="main-swiper">
         <div className="main-swiper-container">
           <Slider {...settings}>
-            <div className="testmonial-body-item">
+            <div className="swiper-body-item">
               <span>
                 <iframe
                   src="https://www.youtube.com/embed/uBDbrr6cjPE"
@@ -59,7 +59,7 @@ export default function MainSwiper() {
                 />
               </span>
             </div>
-            <div className="testmonial-body-item">
+            <div className="swiper-body-item">
               <span>
                 <iframe
                   src="https://www.youtube.com/embed/unR5vDRuLj4"
@@ -72,7 +72,7 @@ export default function MainSwiper() {
                 />
               </span>
             </div>
-            <div className="testmonial-body-item">
+            <div className="swiper-body-item">
               <span>
                 <iframe
                   src="https://www.youtube.com/embed/xcGU-1FB_kA"
@@ -85,7 +85,7 @@ export default function MainSwiper() {
                 />
               </span>
             </div>
-            <div className="testmonial-body-item">
+            <div className="swiper-body-item">
               <span>
                 <iframe
                   src="https://www.youtube.com/embed/dGU52bhgI7M"
@@ -98,7 +98,7 @@ export default function MainSwiper() {
                 />
               </span>
             </div>
-            <div className="testmonial-body-item">
+            <div className="swiper-body-item">
               <span>
                 <iframe
                   src="https://www.youtube.com/embed/BOuXCyMuVCs"
@@ -122,6 +122,7 @@ export default function MainSwiper() {
             fontWeight: "500",
             color: "#024060",
             textAlign: "center",
+
             height: "8rem",
             display: "flex",
             justifyContent: "center",

@@ -24,7 +24,7 @@ export default function AboutMobLeftContent({ content }) {
       <div className="home-text">
         <span>{content.title}</span>
       </div>
-      <BlackBtn>Click me</BlackBtn>
+      <BlackBtn style={{ marginBottom: "1rem" }}>Click me</BlackBtn>
       <div className="about-mob-para-container">
         <p className="about-mob-para">{content.description}</p>
       </div>

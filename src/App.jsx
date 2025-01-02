@@ -25,7 +25,7 @@ function App() {
       ) : (
         <div className="container">
           <Header setIsFormOpen={setIsFormOpen} />
-          <div className="research-enrolled">1,11,11,131 Students Enrolled</div>
+          {/* <div className="research-enrolled">1,11,11,131 Students Enrolled</div> */}
           <Main>
             <Home></Home>
             {isMob ? <AboutMob /> : <About></About>}

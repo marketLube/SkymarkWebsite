@@ -35,6 +35,13 @@ header {
 }
 section {
   margin-bottom: 15rem;
+
+  @include responsive.respond(tablets) {
+    margin-bottom: 0rem;
+  }
+  @include responsive.respond(smallPhone) {
+    margin-bottom: 0rem;
+  }
 }
 
 /* Scrollbar styling */

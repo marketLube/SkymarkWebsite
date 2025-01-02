@@ -88,7 +88,7 @@ export default function Testimonial() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1.2,
+          slidesToShow: 2,
           autoplay: false,
           cssEase: "linear",
           centerMode: true,
@@ -142,7 +142,7 @@ export default function Testimonial() {
       <div className="testmonial-body">
         <Slider {...settings}>
           {imgArray.slice(0, 10).map((item, index) => (
-            <div className="testmonial-body-item" key={index}>
+            <div className="testmonial-body-item-t" key={index}>
               <span>
                 <img src={item} alt="testimonial" />
               </span>
@@ -153,7 +153,7 @@ export default function Testimonial() {
       <div className="testmonial-body">
         <Slider {...settings} rtl={true}>
           {imgArray.slice(10, 21).map((item, index) => (
-            <div className="testmonial-body-item" key={index}>
+            <div className="testmonial-body-item-t" key={index}>
               <span>
                 <img src={item} alt="testimonial" />
               </span>
