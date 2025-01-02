@@ -1,15 +1,73 @@
 import React, { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export function Header() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [checked, setIsChecked] = useState(false);
 
   const handleEnquiryClick = (e) => {
     e.preventDefault();
     navigate("/enquiry");
   };
+
+  const isEnquiryPage = location.pathname === "/enquiry";
+
+  // Navigation items based on current page
+  const navigationItems = isEnquiryPage ? (
+    <li className="navigation__item" onClick={() => setIsChecked(false)}>
+      <a href="/" className="navigation__link">
+        Register
+      </a>
+    </li>
+  ) : (
+    <>
+      <li className="navigation__item" onClick={() => setIsChecked(false)}>
+        <a href="/" className="navigation__link">
+          Process
+        </a>
+      </li>
+      <li className="navigation__item" onClick={() => setIsChecked(false)}>
+        <a href="/" className="navigation__link">
+          Events
+        </a>
+      </li>
+      <li className="navigation__item" onClick={() => setIsChecked(false)}>
+        <a href="/" className="navigation__link">
+          Contact
+        </a>
+      </li>
+      <li className="navigation__item" onClick={() => setIsChecked(false)}>
+        <a href="#" className="navigation__link" onClick={handleEnquiryClick}>
+          Enquiry
+        </a>
+      </li>
+    </>
+  );
+
+  const desktopNavItems = isEnquiryPage ? (
+    <li className="nav-item">
+      <a href="/">Register</a>
+    </li>
+  ) : (
+    <>
+      <li className="nav-item">
+        <a href="#process">Process</a>
+      </li>
+      <li className="nav-item">
+        <a href="#about">Events</a>
+      </li>
+      <li className="nav-item">
+        <a href="/">Contact</a>
+      </li>
+      <li className="nav-item">
+        <a href="#" onClick={handleEnquiryClick}>
+          Enquire
+        </a>
+      </li>
+    </>
+  );
 
   return (
     <header className="header">
@@ -43,63 +101,11 @@ export function Header() {
             id="navigationMenu"
             aria-label="Main navigation"
           >
-            <ul className="navigation__list">
-              <li
-                className="navigation__item"
-                onClick={() => setIsChecked(false)}
-              >
-                <a href="/" className="navigation__link">
-                  Process
-                </a>
-              </li>
-              <li
-                className="navigation__item"
-                onClick={() => setIsChecked(false)}
-              >
-                <a href="/" className="navigation__link">
-                  Events
-                </a>
-              </li>
-              <li
-                className="navigation__item"
-                onClick={() => setIsChecked(false)}
-              >
-                <a href="/" className="navigation__link">
-                  Contact
-                </a>
-              </li>
-              <li
-                className="navigation__item"
-                onClick={() => setIsChecked(false)}
-              >
-                <a
-                  href="#"
-                  className="navigation__link"
-                  onClick={handleEnquiryClick}
-                >
-                  Enquiry
-                </a>
-              </li>
-            </ul>
+            <ul className="navigation__list">{navigationItems}</ul>
           </nav>
         </div>
 
-        <ul className="nav-list">
-          <li className="nav-item">
-            <a href="#process">Process</a>
-          </li>
-          <li className="nav-item">
-            <a href="#about">Events</a>
-          </li>
-          <li className="nav-item">
-            <a href="/">Contact</a>
-          </li>
-          <li className="nav-item">
-            <a href="#" onClick={handleEnquiryClick}>
-              Enquire
-            </a>
-          </li>
-        </ul>
+        <ul className="nav-list">{desktopNavItems}</ul>
       </nav>
     </header>
   );
