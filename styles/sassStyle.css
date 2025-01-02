@@ -1737,12 +1737,12 @@ li a {
 }
 
 .enquary-globimg {
-  max-width: 640px;
-  max-height: 640px;
+  max-width: 639px;
+  max-height: 639px;
   object-fit: cover;
   position: absolute;
-  bottom: 231px;
-  left: 235px;
+  bottom: 234px;
+  left: 237px;
 }
 
 .enquary-image-text {
@@ -2018,7 +2018,7 @@ li a {
     width: 130px;
   }
   .enquary-mobile-text {
-    bottom: -20px;
+    bottom: 90px;
     font-size: 1.9rem;
     left: 150px;
   }
@@ -2041,11 +2041,12 @@ li a {
     padding-right: 15px;
   }
   .enquary-respoImg {
+    max-width: 250px;
+    max-height: 250px;
     left: 0px;
-    top: 0rem;
   }
   .enquary-mobile-text {
-    bottom: -30px;
+    bottom: -50px;
     font-size: 1.9rem;
     left: 150px;
   }
