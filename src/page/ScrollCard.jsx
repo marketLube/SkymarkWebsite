@@ -4,7 +4,7 @@ import step2 from "../../src/assets/Steps/step2.jpeg";
 import step3 from "../../src/assets/Steps/step3.jpeg";
 import step4 from "../../src/assets/Steps/step 4.png";
 import step5 from "../../src/assets/Steps/step 5.jpeg";
-import step6 from "../../src/assets/Steps/Step 6.jpeg";
+import step6 from "../../src/assets/Steps/step 6.jpeg";
 
 const obj = [
   {
