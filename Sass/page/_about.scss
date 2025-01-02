@@ -199,3 +199,8 @@
     padding: 15px;
   }
 }
+@media only screen and (min-width: 400px) and (max-width: 450px) {
+  .about-scroll-mob-container {
+    margin-top: -10rem;
+  }
+}

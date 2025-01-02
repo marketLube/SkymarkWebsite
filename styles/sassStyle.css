@@ -921,6 +921,11 @@ li a {
     padding: 15px;
   }
 }
+@media only screen and (min-width: 400px) and (max-width: 450px) {
+  .about-scroll-mob-container {
+    margin-top: -10rem;
+  }
+}
 .research {
   height: 500vh;
   width: 100%;
@@ -1735,6 +1740,14 @@ li a {
   }
   .title {
     margin-bottom: 4rem;
+  }
+}
+@media only screen and (min-width: 400px) and (max-width: 450px) {
+  .scroll-card-box-container {
+    height: 59vh;
+  }
+  .scroll-card-box {
+    height: 50rem;
   }
 }
 .enquary {
