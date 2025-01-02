@@ -70,7 +70,10 @@ export function Header() {
   );
 
   return (
-    <header className="header">
+    <header
+      className="header"
+      style={isEnquiryPage ? { marginLeft: "-20px" } : undefined}
+    >
       <nav>
         <div className="logo" onClick={() => (window.location.href = "/")}>
           <img
