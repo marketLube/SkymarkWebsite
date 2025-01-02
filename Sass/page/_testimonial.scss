@@ -16,6 +16,10 @@
     padding: 0;
     height: fit-content;
   }
+  @include responsive.respond(bigTablets) {
+    height: fit-content;
+    padding: 0;
+  }
 
   &-head {
     height: 10rem;

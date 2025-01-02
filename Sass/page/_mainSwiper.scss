@@ -19,6 +19,8 @@
   }
 
   @include responsive.respond(bigTablets) {
+    // height: 55rem;
+    height: fit-content;
   }
 
   .main-swiper-container {
@@ -42,6 +44,10 @@
         height: fit-content;
       }
 
+      @include responsive.respond(bigTablets) {
+        height: 70rem;
+      }
+
       & span {
         border-radius: 2rem;
         height: 100%;
@@ -59,6 +65,9 @@
           }
           @include responsive.respond(smallPhone) {
             width: 18rem !important;
+          }
+          @include responsive.respond(bigTablets) {
+            width: 38rem !important;
           }
         }
 

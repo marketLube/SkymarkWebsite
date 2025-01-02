@@ -103,6 +103,9 @@
 }
 .about-mob {
   position: relative;
+  @include responsive.respond(bigTablets) {
+    text-align: left;
+  }
   @include responsive.respond(smallPhone) {
     margin-bottom: 0;
   }

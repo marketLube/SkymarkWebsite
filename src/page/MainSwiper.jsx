@@ -37,6 +37,15 @@ export default function MainSwiper() {
           autoplay: false,
         },
       },
+      {
+        breakpoint: 834,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+          speed: 500,
+          autoplay: false,
+        },
+      },
     ],
   };
 
