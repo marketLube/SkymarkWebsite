@@ -299,8 +299,7 @@ li a {
 }
 .navigation__link {
   display: inline-block;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   letter-spacing: 2px;
   font-size: 1.2rem;
   font-weight: 700;
@@ -694,8 +693,7 @@ li a {
   border-radius: 3rem;
   position: relative;
   color: black;
-  background: linear-gradient(to right, #65d175, #024060) padding-box,
-    linear-gradient(to right, #65d175, #024060) border-box;
+  background: linear-gradient(to right, #65d175, #024060) padding-box, linear-gradient(to right, #65d175, #024060) border-box;
   border: 1px solid transparent;
   overflow: hidden;
 }
@@ -753,6 +751,7 @@ li a {
 
 .about {
   height: fit-content;
+  padding: 0 5rem;
 }
 .about .home-text {
   height: 25rem;
@@ -785,6 +784,7 @@ li a {
   display: flex;
   flex-direction: column;
   gap: 5rem;
+  padding: 13rem 0;
 }
 .about-scroll-container-right-content {
   display: flex;
@@ -1910,6 +1910,10 @@ li a {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.enquary-form-row:has(input[name=country], input[name=education]) input {
+  width: 50%;
+  flex: 1 1 0;
 }
 
 .enquary-form-row input,
