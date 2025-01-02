@@ -103,6 +103,9 @@
 }
 .about-mob {
   position: relative;
+  @include responsive.respond(smallPhone) {
+    margin-bottom: 0;
+  }
 }
 .about-scroll-mob {
   background-color: white;
@@ -125,6 +128,8 @@
       @include responsive.respond(smallPhone) {
         font-size: 2rem;
         width: 70%;
+        // margin-top: 3.3rem;
+        font-weight: 400;
       }
     }
     &-item {

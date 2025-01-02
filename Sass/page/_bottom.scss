@@ -14,7 +14,8 @@
   margin: 0;
   z-index: 90000000;
   @include responsive.respond(smallPhone) {
-    height: 100%;
+    // height: 0;
+    margin-top: -25rem;
   }
   @include responsive.respond(tablets) {
     // height: 100%;
@@ -38,6 +39,20 @@
     transform: scaleY(-1);
     background-image: url("/UpdatedUIsky-16.svg");
     z-index: -1;
+
+    @include responsive.respond(smallPhone) {
+      position: absolute;
+      top: 64px;
+      left: 0;
+      width: 100%;
+      height: 63%;
+      background-size: inherit;
+      background-position: inherit;
+      background-repeat: inherit;
+      transform: scaleY(-1);
+      z-index: -1;
+      margin-top: 8rem;
+    }
   }
 
   &-hello {
@@ -78,6 +93,7 @@
       padding: 1rem 3rem;
       border-radius: 2rem;
       margin-top: 0rem;
+      top: 85%;
     }
 
     @include responsive.respond(tablets) {
@@ -104,5 +120,11 @@
 @media (min-width: 800px) and (max-width: 900px) {
   .bottom {
     margin-top: -41rem;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 450px) {
+  .bottom {
+    margin-top: -45rem;
   }
 }

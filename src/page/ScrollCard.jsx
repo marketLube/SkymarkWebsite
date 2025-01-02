@@ -3,14 +3,14 @@ import step1 from "../../src/assets/Steps/Step 1.jpeg";
 import step2 from "../../src/assets/Steps/step2.jpeg";
 import step3 from "../../src/assets/Steps/step3.jpeg";
 import step4 from "../../src/assets/Steps/step 4.png";
-import step5 from "../../src/assets/Steps/step 5.jpeg";
-import step6 from "../../src/assets/Steps/step 6.jpeg";
+import step5 from "../../src/assets/Steps/Step 5.jpeg";
+import step6 from "../../src/assets/Steps/Step 6.jpeg";
 
 const obj = [
   {
     img: step1,
     color: "#09bc54",
-    desc: "Receive personalized guidance to explore courses, universities, and destinations that match your goals.",
+    desc: "Receive personalized guidance to explore course that match your goals.",
     title: "Expert Counselling Session",
     span: "1",
     type: "green",
@@ -18,7 +18,7 @@ const obj = [
   {
     img: step2,
     color: " #024060",
-    desc: "Research and select institutions based on academics, budget, and future career prospects.",
+    desc: "Research and select institutions based on academics and future career prospects.",
     title: "Shortlist Universities & Programs",
     span: "2",
     type: "blue",
@@ -59,7 +59,7 @@ const obj = [
 
 export default function ScrollCard() {
   return (
-    <section className="scroll-card" id="process">
+    <section className="scroll-card">
       <div className="scroll-card-scroll-container">
         {obj.map((item, index) => (
           <ScrollCardBox

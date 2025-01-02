@@ -36,7 +36,7 @@
     align-items: start;
     justify-content: start;
     padding: 1rem;
-    height: 40rem;
+    height: 71vh;
   }
   @include responsive.respond(tablets) {
     display: flex;
@@ -137,7 +137,7 @@
     @include responsive.respond(smallPhone) {
       font-size: 1.5rem;
       margin-left: 0rem;
-      width: 80%;
+      width: 85%;
     }
 
     @include responsive.respond(tablets) {
@@ -156,7 +156,7 @@
 
     @include responsive.respond(smallPhone) {
       margin-left: 0rem;
-      font-size: 1rem;
+      font-size: 0.8rem;
     }
     @include responsive.respond(tablets) {
       padding-left: 2rem;
@@ -192,6 +192,14 @@
   width: 65%;
   background-color: rgb(249, 249, 249);
   border-radius: 1rem;
+
+  @include responsive.respond(smallPhone) {
+    height: 15rem;
+    width: 65%;
+    background-color: rgb(249, 249, 249);
+    border-radius: 1rem;
+    margin-top: -1rem;
+  }
 
   @include responsive.respond(tablets) {
     margin-left: 4rem;

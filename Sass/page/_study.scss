@@ -49,9 +49,20 @@
       width: 50rem;
       height: 50rem;
       z-index: -1;
+      @include responsive.respond(smallPhone) {
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        width: 100%;
+        height: 50%;
+      }
       & img {
         width: 100%;
         height: 100%;
+        @include responsive.respond(smallPhone) {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }
