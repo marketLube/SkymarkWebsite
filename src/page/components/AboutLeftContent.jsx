@@ -1,9 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import BlackBtn from "../../Utils/BlackBtn";
+import { useNavigate } from "react-router-dom";
 
 export default function AboutLeftContent({ content }) {
   const prevContentRef = useRef(content);
   const [shouldAnimate, setShouldAnimate] = useState(false);
+  const navigate = useNavigate();
+
+  const handleRegisterNow = () => {
+    navigate("/enquiry");
+  };
 
   useEffect(() => {
     if (
@@ -25,7 +31,7 @@ export default function AboutLeftContent({ content }) {
         <span>{content.title}</span>
       </div>
       <div className="about-para-container">
-        <BlackBtn>Click me</BlackBtn>
+        <BlackBtn onClick={handleRegisterNow}>Register Now</BlackBtn>
         <p className="about-para-container-right">{content.description}</p>
       </div>
     </div>
