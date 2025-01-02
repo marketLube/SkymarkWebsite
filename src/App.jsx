@@ -13,32 +13,39 @@ import MainSwiper from "./page/MainSwiper";
 import Bottom from "./page/Bottom";
 import AboutMob from "./page/AboutMob";
 import EnquiryForm from "./Components/EnquiryForm";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  const [isFormOpen, setIsFormOpen] = useState(false);
-
+  // const [isFormOpen, setIsFormOpen] = useState(false);
   const isMob = window.innerWidth <= 1250;
+
   return (
-    <>
-      {isFormOpen ? (
-        <EnquiryForm setIsFormOpen={setIsFormOpen} />
-      ) : (
-        <div className="container">
-          <Header setIsFormOpen={setIsFormOpen} />
-          <div className="research-enrolled">1,11,11,131 Students Enrolled</div>
-          <Main>
-            <Home></Home>
-            {isMob ? <AboutMob /> : <About></About>}
-            <StudyIn></StudyIn>
-            <ScrollCard></ScrollCard>
-            <Testimonial></Testimonial>
-            <MainSwiper />
-            <Bottom />
-          </Main>
-          <Footer />
-        </div>
-      )}
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/enquiry" element={<EnquiryForm />} />
+        <Route
+          path="/"
+          element={
+            <div className="container">
+              <Header />
+              <div className="research-enrolled">
+                1,11,11,131 Students Enrolled
+              </div>
+              <Main>
+                <Home />
+                {isMob ? <AboutMob /> : <About />}
+                <StudyIn />
+                <ScrollCard />
+                <Testimonial />
+                <MainSwiper />
+                <Bottom />
+              </Main>
+              <Footer />
+            </div>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

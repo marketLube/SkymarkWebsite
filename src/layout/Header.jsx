@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
+import { useNavigate } from "react-router-dom";
 
-export const Header = ({ setIsFormOpen }) => {
+export function Header() {
+  const navigate = useNavigate();
   const [checked, setIsChecked] = useState(false);
+
+  const handleEnquiryClick = (e) => {
+    e.preventDefault();
+    navigate("/enquiry");
+  };
 
   return (
     <header className="header">
@@ -68,10 +75,7 @@ export const Header = ({ setIsFormOpen }) => {
                 <a
                   href="#"
                   className="navigation__link"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsFormOpen(true);
-                  }}
+                  onClick={handleEnquiryClick}
                 >
                   Enquiry
                 </a>
@@ -91,13 +95,7 @@ export const Header = ({ setIsFormOpen }) => {
             <a href="/">Contact</a>
           </li>
           <li className="nav-item">
-            <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                setIsFormOpen(true);
-              }}
-            >
+            <a href="#" onClick={handleEnquiryClick}>
               Enquire
             </a>
           </li>
@@ -105,4 +103,4 @@ export const Header = ({ setIsFormOpen }) => {
       </nav>
     </header>
   );
-};
+}

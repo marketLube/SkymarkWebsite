@@ -6,8 +6,11 @@ import { useState } from "react";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { createPortal } from "react-dom";
+import { useNavigate } from "react-router-dom";
 
-function EnquiryForm({ setIsFormOpen }) {
+function EnquiryForm() {
+  const navigate = useNavigate();
+
   const values = {
     Date: new Date().toISOString().split("T")[0],
     Name: "",
@@ -18,6 +21,10 @@ function EnquiryForm({ setIsFormOpen }) {
     Education: "",
   };
   const [data, setData] = useState(values);
+
+  const handleClose = () => {
+    navigate("/");
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -69,7 +76,7 @@ function EnquiryForm({ setIsFormOpen }) {
           <img
             src={Logo}
             alt="logo"
-            onClick={() => setIsFormOpen(false)}
+            onClick={handleClose}
             style={{ cursor: "pointer" }}
           />
         </div>
