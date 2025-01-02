@@ -7,7 +7,7 @@ export const Header = ({ setIsFormOpen }) => {
   return (
     <header className="header">
       <nav>
-        <div className="logo">
+        <div className="logo" onClick={() => (window.location.href = "/")}>
           <img
             src="https://skymark.in/web/assets/images/svg/skymarkLogo.svg"
             alt="Logo of the website"
@@ -20,10 +20,10 @@ export const Header = ({ setIsFormOpen }) => {
 
         <ul className={`nav-list ${isMenuOpen ? "active" : ""}`}>
           <li className="nav-item">
-            <a href="/">Process</a>
+            <a href="#process">Process</a>
           </li>
           <li className="nav-item">
-            <a href="/">Events</a>
+            <a href="#about">Events</a>
           </li>
           <li className="nav-item">
             <a href="/">Contact</a>
@@ -36,7 +36,7 @@ export const Header = ({ setIsFormOpen }) => {
                 setIsFormOpen(true);
               }}
             >
-              Enquiry
+              Enquire
             </a>
           </li>
         </ul>

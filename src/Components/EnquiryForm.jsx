@@ -4,10 +4,12 @@ import GlobeSec from "../assets/LP-04.svg";
 import Flags from "../assets/Flags.svg";
 import { useState } from "react";
 import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
+import { createPortal } from "react-dom";
 
 function EnquiryForm({ setIsFormOpen }) {
   const values = {
-    Date: new Date().toISOString(),
+    Date: new Date().toISOString().split("T")[0],
     Name: "",
     Contact: "",
     Location: "",
@@ -19,7 +21,18 @@ function EnquiryForm({ setIsFormOpen }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Check for empty fields
+    const emptyFields = Object.entries(data).filter(
+      ([key, value]) => key !== "Date" && !value.trim()
+    );
+    if (emptyFields.length > 0) {
+      toast.error(`Please fill in all fields`);
+      return;
+    }
+
     try {
+      const loadingToast = toast.loading("Submitting...");
       const res = await axios.post(
         "https://sheet.best/api/sheets/73642f1b-8b20-4bb1-8dc6-360fd76d1f91",
         data,
@@ -30,14 +43,27 @@ function EnquiryForm({ setIsFormOpen }) {
           },
         }
       );
-      console.log(res);
+      toast.dismiss(loadingToast);
+      toast.success("Thank you!");
       setData(values);
     } catch (error) {
+      toast.error("Error submitting form. Please try again.");
       console.error("Error submitting form:", error);
     }
   };
   return (
     <div className="enquary">
+      {createPortal(
+        <Toaster
+          position="bottom-center"
+          toastOptions={{
+            style: {
+              zIndex: 2147483647,
+            },
+          }}
+        />,
+        document.body
+      )}
       <header className="enquary-header">
         <div className="enquary-logo">
           <img
@@ -95,19 +121,13 @@ function EnquiryForm({ setIsFormOpen }) {
               />
             </div>
             <div className="enquary-form-row">
-              <select
-                name="Country"
-                defaultValue=""
+              <input
+                type="text"
+                name="country"
                 placeholder="Country"
                 value={data.Country}
                 onChange={(e) => setData({ ...data, Country: e.target.value })}
-              >
-                <option value="" disabled>
-                  Country
-                </option>
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-              </select>
+              />
               <input
                 type="text"
                 name="education"

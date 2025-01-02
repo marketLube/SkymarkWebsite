@@ -114,6 +114,7 @@
     font-size: 1.5rem;
     font-weight: 300;
     padding-top: 1rem;
+    height: 5rem;
 
     @include responsive.respond(smallPhone) {
       font-size: 1rem;
@@ -124,7 +125,8 @@
   }
 
   &-enrolled {
-    background-color: variables.$color-gray;
+    background-color: rgba(variables.$color-black, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 0.8rem 1.5rem;
     border-radius: 1rem;
     font-size: 1.2rem;
@@ -135,7 +137,7 @@
     position: fixed;
     top: 78vh;
     left: 50%;
-    z-index: 90000000000;
+    z-index: 90000;
     transform: translateX(-50%);
     @include responsive.respond(smallPhone) {
       font-size: 1rem;

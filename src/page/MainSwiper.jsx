@@ -10,19 +10,32 @@ export default function MainSwiper() {
     autoplay: true,
     autoplaySpeed: 0,
     swipeToSlide: true,
-    cssEase: "ease-in-out",
+    cssEase: "linear",
     centerMode: true,
     arrows: false,
     centerPadding: "20px",
     pauseOnHover: true,
+    draggable: true,
+    swipe: true,
+    touchThreshold: 1,
     responsive: [
       {
         breakpoint: 1024,
-        settings: { slidesToShow: 1.2 },
+        settings: {
+          slidesToShow: 1.2,
+          centerMode: true,
+          speed: 500,
+          autoplay: false,
+        },
       },
       {
         breakpoint: 768,
-        settings: { slidesToShow: 1 },
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+          speed: 500,
+          autoplay: false,
+        },
       },
     ],
   };

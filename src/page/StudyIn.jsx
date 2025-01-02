@@ -1,21 +1,40 @@
 import React, { useEffect, useState, useRef } from "react";
 import BlackBtn from "../Utils/BlackBtn";
-import img1 from "../assets/Flags/uk.png";
-import img2 from "../assets/Flags/germany.png";
-import img3 from "../assets/Flags/us.png";
-import img4 from "../assets/Flags/canada.png";
-import img5 from "../assets/Flags/ireland.png";
-import img6 from "../assets/Flags/australia.png";
-import img7 from "../assets/Flags/newzeland.png";
+// import img1 from "../assets/Flags/uk.png";
+// import img2 from "../assets/Flags/germany.png";
+// import img3 from "../assets/Flags/us.png";
+// import img4 from "../assets/Flags/canada.png";
+// import img5 from "../assets/Flags/ireland.png";
+// import img6 from "../assets/Flags/australia.png";
+// import img7 from "../assets/Flags/newzeland.png";
+
+const img1 =
+  "https://cdn.pixabay.com/photo/2015/11/06/13/29/union-jack-1027898_1280.jpg";
+const img2 =
+  "https://cdn.pixabay.com/photo/2016/10/30/17/39/germany-flag-1783774_1280.png";
+
+const img3 =
+  "https://cdn.pixabay.com/photo/2012/04/12/23/52/usa-31021_1280.png";
+
+const img4 =
+  "https://cdn.pixabay.com/photo/2012/04/10/23/27/canada-27003_1280.png";
+
+const img5 =
+  "https://cdn.pixabay.com/photo/2012/04/10/23/11/ireland-26887_1280.png";
+
+const img6 =
+  "https://cdn.pixabay.com/photo/2012/04/11/15/43/australia-28586_1280.png";
+const img7 =
+  "https://img.freepik.com/free-vector/illustration-new-zealand-flag_53876-27119.jpg?t=st=1735732573~exp=1735736173~hmac=f21070393e8c99d91b1b5d5c9d5081176879438426d78a59f8ab63a78956eb70&w=2000";
 
 export default function StudyIn() {
-  const [headingText, setHeadingText] = useState("Research");
+  const [headingText, setHeadingText] = useState("United Kingdom");
   const [paraText, setParaText] = useState(
     "Look for grammar, spelling mistakes, and make sure you proper nouns. A paragraph three parts:"
   );
   const [flag, setFlag] = useState(img1);
 
-  const [animate, setAnimate] = useState(false); // State to trigger animation
+  const [animate, setAnimate] = useState(true); // State to trigger animation
 
   const containerRef = useRef(null);
   const lastScrollTime = useRef(0);
@@ -87,7 +106,7 @@ export default function StudyIn() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [flagArr]);
+  }, [flagArr, paraArray, textArray]);
 
   return (
     <div className="research" ref={containerRef}>

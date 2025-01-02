@@ -4,7 +4,11 @@ import globe2 from "../../src/assets/1.svg";
 import { GoArrowDownRight } from "react-icons/go";
 export default function Home() {
   return (
-    <section className="home" style={{ backgroundImage: `url(${globe})` }}>
+    <section
+      className="home"
+      id="home"
+      style={{ backgroundImage: `url(${globe})` }}
+    >
       <div className="home-content">
         <div className="home-content-top">
           <div className="home-content-top-left">
