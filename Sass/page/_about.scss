@@ -111,6 +111,9 @@
     flex-direction: column;
     position: relative;
     padding: 6px;
+    @include responsive.respond(smallPhone) {
+      margin-top: -4rem;
+    }
 
     & .home-text {
       width: 100%;
@@ -119,6 +122,10 @@
       margin: 2rem 0;
       z-index: -1;
       background-color: white;
+      @include responsive.respond(smallPhone) {
+        font-size: 2rem;
+        width: 70%;
+      }
     }
     &-item {
       position: sticky;
