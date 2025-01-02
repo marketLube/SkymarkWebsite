@@ -6,8 +6,13 @@ import { useState } from "react";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { createPortal } from "react-dom";
+import { useNavigate } from "react-router-dom";
+import { Header } from "../layout/Header";
+import globe2 from "../../src/assets/1.svg";
 
-function EnquiryForm({ setIsFormOpen }) {
+function EnquiryForm() {
+  const navigate = useNavigate();
+
   const values = {
     Date: new Date().toISOString().split("T")[0],
     Name: "",
@@ -64,19 +69,12 @@ function EnquiryForm({ setIsFormOpen }) {
         />,
         document.body
       )}
-      <header className="enquary-header">
-        <div className="enquary-logo">
-          <img
-            src={Logo}
-            alt="logo"
-            onClick={() => setIsFormOpen(false)}
-            style={{ cursor: "pointer" }}
-          />
-        </div>
-      </header>
+
+      <Header />
+
       <main className="enquary-content">
         <div className="enquary-form-container">
-          <img src={Globe} alt="logo" className="enquary-globimg" />
+          <img src={globe2} alt="logo" className="enquary-globimg" />
           <div className="enquary-image-text">
             <div>Start your</div>
             <div>global career</div>

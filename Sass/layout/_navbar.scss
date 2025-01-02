@@ -56,13 +56,8 @@ li {
   display: flex;
   list-style: none;
   gap: 1.5rem;
-  @include responsive.respond(smallPhone) {
-  }
-}
-.nav-list {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
+  align-items: center;
+  justify-content: flex-end;
 
   @include responsive.respond(smallPhone) {
     display: none;
@@ -281,4 +276,8 @@ li {
 }
 .navigation__btn:hover .navigation__icon::before {
   transform: translateY(-0.1rem);
+}
+
+.nav-item:last-child {
+  margin-left: auto;
 }

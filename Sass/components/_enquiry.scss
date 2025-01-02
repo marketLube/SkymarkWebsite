@@ -5,6 +5,9 @@
   justify-content: start;
   height: 100vh;
 }
+.header-left {
+  margin-left: 100px;
+}
 
 .enquary-header {
   display: flex;
@@ -40,15 +43,17 @@
 .enquary-form-container {
   display: flex;
   align-items: center;
+  margin-bottom: 100px;
   /* gap: 20px; */
 }
 
 .enquary-globimg {
-  max-width: 560px;
-  max-height: 560px;
+  max-width: 639px;
+  max-height: 639px;
   object-fit: cover;
   position: absolute;
-  bottom: 210px;
+  bottom: 234px;
+  left: 237px;
 }
 
 .enquary-image-text {
@@ -78,6 +83,13 @@
   display: flex;
   align-items: center;
   gap: 10px;
+
+  &:has(input[name="country"], input[name="education"]) {
+    input {
+      width: 50%;
+      flex: 1 1 0;
+    }
+  }
 }
 
 .enquary-form-row input,
@@ -133,6 +145,22 @@
   position: absolute;
   bottom: 130px;
 }
+// @media (min-width: 1600px) {
+//   .enquary-globimg {
+//     left: 150px;
+//     bottom: 160px;
+//   }
+//   .enquary-image-text {
+//     left: 500px;
+//   }
+//   // .enquary-flagRow {
+//   //   height: auto;
+//   //   width: 750px;
+//   //   position: absolute;
+//   //   bottom: 130px;
+//   //   left: 0;
+//   // }
+// }
 
 @media (min-width: 1500px) {
   .enquary-form-row input,
@@ -213,6 +241,7 @@
   }
   .enquary-form {
     margin-left: 0rem;
+    margin-top: 110px;
   }
 
   .enquary-logo {
@@ -326,13 +355,16 @@
   }
 
   .enquary-mobile-text {
-    bottom: -20px;
+    bottom: 90px;
     font-size: 1.9rem;
     left: 150px;
   }
 }
 
 @media (max-width: 380px) {
+  .enquary-form {
+    margin-top: 65px;
+  }
   .enquary-form-row input {
     width: 100px;
     font-size: 11px;
@@ -347,12 +379,13 @@
     padding-right: 15px;
   }
   .enquary-respoImg {
+    max-width: 250px;
+    max-height: 250px;
     left: 0px;
-    top: 0rem;
   }
 
   .enquary-mobile-text {
-    bottom: -30px;
+    bottom: -50px;
     font-size: 1.9rem;
     left: 150px;
   }
