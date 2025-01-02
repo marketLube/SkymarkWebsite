@@ -7,6 +7,8 @@ import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { createPortal } from "react-dom";
 import { useNavigate } from "react-router-dom";
+import { Header } from "../layout/Header";
+import globe2 from "../../src/assets/1.svg";
 
 function EnquiryForm() {
   const navigate = useNavigate();
@@ -21,10 +23,6 @@ function EnquiryForm() {
     Education: "",
   };
   const [data, setData] = useState(values);
-
-  const handleClose = () => {
-    navigate("/");
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -71,19 +69,12 @@ function EnquiryForm() {
         />,
         document.body
       )}
-      <header className="enquary-header">
-        <div className="enquary-logo">
-          <img
-            src={Logo}
-            alt="logo"
-            onClick={handleClose}
-            style={{ cursor: "pointer" }}
-          />
-        </div>
-      </header>
+
+      <Header />
+
       <main className="enquary-content">
         <div className="enquary-form-container">
-          <img src={Globe} alt="logo" className="enquary-globimg" />
+          <img src={globe2} alt="logo" className="enquary-globimg" />
           <div className="enquary-image-text">
             <div>Start your</div>
             <div>global career</div>

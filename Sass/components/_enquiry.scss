@@ -5,6 +5,9 @@
   justify-content: start;
   height: 100vh;
 }
+.header-left {
+  margin-left: 100px;
+}
 
 .enquary-header {
   display: flex;
@@ -40,15 +43,17 @@
 .enquary-form-container {
   display: flex;
   align-items: center;
+  margin-bottom: 100px;
   /* gap: 20px; */
 }
 
 .enquary-globimg {
-  max-width: 560px;
-  max-height: 560px;
+  max-width: 640px;
+  max-height: 640px;
   object-fit: cover;
   position: absolute;
-  bottom: 210px;
+  bottom: 231px;
+  left: 235px;
 }
 
 .enquary-image-text {
@@ -78,6 +83,13 @@
   display: flex;
   align-items: center;
   gap: 10px;
+
+  &:has(input[name="country"], input[name="education"]) {
+    input {
+      width: 50%;
+      flex: 1 1 0;
+    }
+  }
 }
 
 .enquary-form-row input,

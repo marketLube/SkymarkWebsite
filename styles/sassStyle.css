@@ -24,6 +24,7 @@ header {
   align-items: center;
   padding: 0 2rem;
   color: white;
+  margin-right: -10px;
 }
 @media only screen and (max-width: 575.98px) {
   header {
@@ -282,8 +283,7 @@ li a {
 }
 .navigation__link {
   display: inline-block;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   letter-spacing: 2px;
   font-size: 1.2rem;
   font-weight: 700;
@@ -654,8 +654,7 @@ li a {
   border-radius: 3rem;
   position: relative;
   color: black;
-  background: linear-gradient(to right, #65d175, #024060) padding-box,
-    linear-gradient(to right, #65d175, #024060) border-box;
+  background: linear-gradient(to right, #65d175, #024060) padding-box, linear-gradient(to right, #65d175, #024060) border-box;
   border: 1px solid transparent;
   overflow: hidden;
 }
@@ -1238,6 +1237,11 @@ li a {
 }
 @media only screen and (max-width: 575.98px) {
   .main-swiper {
+    margin-top: -9rem;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .main-swiper {
     margin-top: -5rem;
   }
 }
@@ -1321,6 +1325,16 @@ li a {
 @media only screen and (max-width: 575.98px) {
   .bottom {
     margin-top: -25rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .bottom {
+    margin-top: -32rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .bottom {
+    margin-top: -51rem;
   }
 }
 .bottom::before {
@@ -1678,6 +1692,10 @@ li a {
   height: 100vh;
 }
 
+.header-left {
+  margin-left: 100px;
+}
+
 .enquary-header {
   display: flex;
   justify-content: center;
@@ -1713,15 +1731,17 @@ li a {
 .enquary-form-container {
   display: flex;
   align-items: center;
+  margin-bottom: 100px;
   /* gap: 20px; */
 }
 
 .enquary-globimg {
-  max-width: 560px;
-  max-height: 560px;
+  max-width: 640px;
+  max-height: 640px;
   object-fit: cover;
   position: absolute;
-  bottom: 210px;
+  bottom: 231px;
+  left: 235px;
 }
 
 .enquary-image-text {
@@ -1751,6 +1771,10 @@ li a {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.enquary-form-row:has(input[name=country], input[name=education]) input {
+  width: 50%;
+  flex: 1 1 0;
 }
 
 .enquary-form-row input,
