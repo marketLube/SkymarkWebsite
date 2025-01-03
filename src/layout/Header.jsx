@@ -1,3 +1,4 @@
+import { transform } from "motion";
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -139,6 +140,9 @@ export function Header() {
             padding: "8px 16px",
             borderRadius: "18px",
             cursor: "pointer",
+            fontSize: "1.1rem",
+            fontWeight: "500",
+            letterSpacing: "2px",
           }}
         >
           Register
