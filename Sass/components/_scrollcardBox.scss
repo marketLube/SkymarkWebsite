@@ -203,7 +203,7 @@
   width: 65%;
   background-color: rgb(249, 249, 249);
   border-radius: 1rem;
-
+  overflow: hidden;
   @include responsive.respond(smallPhone) {
     width: 100%;
     background-color: rgb(249, 249, 249);
@@ -229,6 +229,9 @@
 
     @include responsive.respond(smallPhone) {
       border-radius: 1rem;
+      width: 100%;
+
+      object-fit: cover;
     }
 
     @include responsive.respond(tablets) {
@@ -249,11 +252,3 @@
     margin-bottom: 4rem;
   }
 }
-// @media only screen and (min-width: 400px) and (max-width: 450px) {
-//   .scroll-card-box-container {
-//     height: 59vh;
-//   }
-//   .scroll-card-box {
-//     height: 50rem;
-//   }
-// }

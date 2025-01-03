@@ -122,7 +122,7 @@ export default function StudyIn() {
           {paraText}
         </p>
         <div className="research-bttn">
-          <img src={flag} alt="flag" />
+          <img src={flag} alt="flag" style={{ borderRadius: "0.5rem" }} />
         </div>
         <div className="research-scrol-bg">
           <img src="/UpdatedUIsky-17.svg" alt="bg" />

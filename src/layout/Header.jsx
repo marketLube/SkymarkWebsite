@@ -11,22 +11,67 @@ export function Header() {
     navigate("/enquiry");
   };
 
+  const handleScrollToSection = (sectionId) => {
+    // Remove the '#' if it's included in the sectionId
+    const targetId = sectionId.startsWith("#")
+      ? sectionId.substring(1)
+      : sectionId;
+    const section = document.getElementById(targetId);
+
+    if (section) {
+      // Close mobile menu if open
+      setIsChecked(false);
+
+      // If we're not on the home page, navigate home first
+      if (location.pathname !== "/") {
+        navigate("/", { state: { scrollTo: targetId } });
+        return;
+      }
+
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   const isEnquiryPage = location.pathname === "/enquiry";
 
   const navigationItems = isEnquiryPage ? (
     <>
-      <li className="navigation__item" onClick={() => setIsChecked(false)}>
-        <a href="/" className="navigation__link">
+      <li className="navigation__item">
+        <a
+          href="/"
+          className="navigation__link"
+          onClick={(e) => {
+            e.preventDefault();
+            handleScrollToSection("process");
+          }}
+        >
           Process
         </a>
       </li>
-      <li className="navigation__item" onClick={() => setIsChecked(false)}>
-        <a href="/" className="navigation__link">
+      <li className="navigation__item">
+        <a
+          href="/"
+          className="navigation__link"
+          onClick={(e) => {
+            e.preventDefault();
+            handleScrollToSection("about");
+          }}
+        >
           Events
         </a>
       </li>
-      <li className="navigation__item" onClick={() => setIsChecked(false)}>
-        <a href="/" className="navigation__link">
+      <li className="navigation__item">
+        <a
+          href="/"
+          className="navigation__link"
+          onClick={(e) => {
+            e.preventDefault();
+            handleScrollToSection("contact");
+          }}
+        >
           Contact
         </a>
       </li>
@@ -48,24 +93,44 @@ export function Header() {
     </>
   ) : (
     <>
-      <li className="navigation__item" onClick={() => setIsChecked(false)}>
-        <a href="/" className="navigation__link">
+      <li className="navigation__item">
+        <a
+          href="#process"
+          className="navigation__link"
+          onClick={(e) => {
+            e.preventDefault();
+            handleScrollToSection("process");
+          }}
+        >
           Process
         </a>
       </li>
-      <li className="navigation__item" onClick={() => setIsChecked(false)}>
-        <a href="/" className="navigation__link">
+      <li className="navigation__item">
+        <a
+          href="#about"
+          className="navigation__link"
+          onClick={(e) => {
+            e.preventDefault();
+            handleScrollToSection("about");
+          }}
+        >
           Events
         </a>
       </li>
-      <li className="navigation__item" onClick={() => setIsChecked(false)}>
-        <a href="/" className="navigation__link">
+      <li className="navigation__item">
+        <a
+          href="#contact"
+          className="navigation__link"
+          onClick={(e) => {
+            e.preventDefault();
+            handleScrollToSection("contact");
+          }}
+        >
           Contact
         </a>
       </li>
-      <li className="navigation__item" onClick={() => setIsChecked(false)}>
+      <li className="navigation__item">
         <button
-          className="navigation__link btn-register"
           onClick={handleEnquiryClick}
           style={{
             background: "#244EA2",
@@ -85,13 +150,37 @@ export function Header() {
   const desktopNavItems = isEnquiryPage ? (
     <>
       <li className="nav-item">
-        <a href="/#process">Process</a>
+        <a
+          href="#process"
+          onClick={(e) => {
+            e.preventDefault();
+            handleScrollToSection("process");
+          }}
+        >
+          Process
+        </a>
       </li>
       <li className="nav-item">
-        <a href="/#about">Events</a>
+        <a
+          href="#about"
+          onClick={(e) => {
+            e.preventDefault();
+            handleScrollToSection("about");
+          }}
+        >
+          Events
+        </a>
       </li>
       <li className="nav-item">
-        <a href="/#contact">Contact</a>
+        <a
+          href="#contact"
+          onClick={(e) => {
+            e.preventDefault();
+            handleScrollToSection("contact");
+          }}
+        >
+          Contact
+        </a>
       </li>
       <li className="nav-item">
         <button
@@ -112,13 +201,37 @@ export function Header() {
   ) : (
     <>
       <li className="nav-item">
-        <a href="#process">Process</a>
+        <a
+          href="#process"
+          onClick={(e) => {
+            e.preventDefault();
+            handleScrollToSection("process");
+          }}
+        >
+          Process
+        </a>
       </li>
       <li className="nav-item">
-        <a href="#about">Events</a>
+        <a
+          href="#about"
+          onClick={(e) => {
+            e.preventDefault();
+            handleScrollToSection("about");
+          }}
+        >
+          Events
+        </a>
       </li>
       <li className="nav-item">
-        <a href="/">Contact</a>
+        <a
+          href="#contact"
+          onClick={(e) => {
+            e.preventDefault();
+            handleScrollToSection("contact");
+          }}
+        >
+          Contact
+        </a>
       </li>
       <li className="nav-item">
         <button
@@ -158,7 +271,7 @@ export function Header() {
         <div className="navigation">
           <input
             checked={checked}
-            onClick={() => setIsChecked((checked) => !checked)}
+            onChange={() => setIsChecked((prev) => !prev)}
             type="checkbox"
             className="navigation__checkbox"
             id="navi__toggle"
@@ -186,3 +299,5 @@ export function Header() {
     </header>
   );
 }
+
+export default Header;
