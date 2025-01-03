@@ -1,11 +1,29 @@
 import { transform } from "motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 export function Header() {
   const navigate = useNavigate();
   const location = useLocation();
   const [checked, setIsChecked] = useState(false);
+
+  // Handle scrolling after navigation to home page
+  useEffect(() => {
+    if (location.pathname === "/" && location.state?.scrollTo) {
+      const section = document.getElementById(location.state.scrollTo);
+      if (section) {
+        // Add a small delay to ensure the DOM is ready
+        setTimeout(() => {
+          section.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }, 100);
+      }
+      // Clear the state after scrolling
+      window.history.replaceState({}, document.title);
+    }
+  }, [location]);
 
   const handleEnquiryClick = (e) => {
     e.preventDefault();
@@ -17,18 +35,20 @@ export function Header() {
     const targetId = sectionId.startsWith("#")
       ? sectionId.substring(1)
       : sectionId;
+
+    // If we're not on the home page, navigate home first with the section in state
+    if (location.pathname !== "/") {
+      navigate("/", {
+        state: { scrollTo: targetId },
+        replace: true, // Use replace to avoid adding to history stack
+      });
+      return;
+    }
+
+    // If we're already on home page, just scroll
     const section = document.getElementById(targetId);
-
     if (section) {
-      // Close mobile menu if open
-      setIsChecked(false);
-
-      // If we're not on the home page, navigate home first
-      if (location.pathname !== "/") {
-        navigate("/", { state: { scrollTo: targetId } });
-        return;
-      }
-
+      setIsChecked(false); // Close mobile menu if open
       section.scrollIntoView({
         behavior: "smooth",
         block: "start",
@@ -42,7 +62,7 @@ export function Header() {
     <>
       <li className="navigation__item">
         <a
-          href="/"
+          href="#about"
           className="navigation__link"
           onClick={(e) => {
             e.preventDefault();
@@ -308,3 +328,23 @@ export function Header() {
 }
 
 export default Header;
+{
+  /* <li className="navigation__item">
+  <button
+    onClick={handleEnquiryClick}
+    style={{
+      background: "#244EA2",
+      color: "white",
+      border: "none",
+      padding: "8px 16px",
+      borderRadius: "18px",
+      cursor: "pointer",
+      fontSize: "1.1rem",
+      fontWeight: "500",
+      letterSpacing: "2px",
+    }}
+  >
+    Register
+  </button>
+</li>; */
+}
