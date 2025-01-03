@@ -136,6 +136,11 @@
         // margin-top: 3.3rem;
         font-weight: 400;
       }
+      @include responsive.respond(bigTablets) {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+      }
     }
     &-item {
       position: sticky;
