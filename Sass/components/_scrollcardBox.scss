@@ -245,7 +245,7 @@
   width: 65%;
   background-color: rgb(249, 249, 249);
   border-radius: 1rem;
-
+  overflow: hidden;
   @include responsive.respond(smallPhone) {
     width: 100%;
     background-color: rgb(249, 249, 249);
@@ -276,6 +276,9 @@
 
     @include responsive.respond(smallPhone) {
       border-radius: 1rem;
+      width: 100%;
+
+      object-fit: cover;
     }
     @include responsive.respond(phone) {
       border-radius: 1rem;

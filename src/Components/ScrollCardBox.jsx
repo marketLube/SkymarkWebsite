@@ -18,7 +18,7 @@ export default function ScrollCardBox({ data }) {
 
   const isTab = window.innerWidth < 1250;
   return (
-    <div className="scroll-card-box">
+    <div className="scroll-card-box" id="process">
       <div
         className="scroll-card-box-container"
         style={{ backgroundColor: data.color }}

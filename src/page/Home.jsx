@@ -2,7 +2,9 @@ import Counter from "../Components/Counter";
 import globe from "../../src/assets/UpdatedUIsky-16.svg";
 import globe2 from "../../src/assets/1.svg";
 import { GoArrowDownRight } from "react-icons/go";
+import BlackBtn from "../Utils/BlackBtn";
 export default function Home() {
+  const isTab = window.innerWidth < 1250;
   return (
     <section
       className="home"
@@ -23,6 +25,13 @@ export default function Home() {
             </div>
           </div>
         </div>
+        {isTab && (
+          <div className="home-contact">
+            <BlackBtn style={{ backgroundColor: "#024060" }}>
+              Contact Us
+            </BlackBtn>
+          </div>
+        )}
         <div className="home-content-bottom">
           <Counter />
         </div>
