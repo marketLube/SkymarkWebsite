@@ -136,6 +136,9 @@
       text-align: center;
       width: 16rem;
     }
+    @include responsive.respond(tablets) {
+      width: 32rem;
+    }
   }
 
   &-enrolled {

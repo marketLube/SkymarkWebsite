@@ -25,7 +25,6 @@
   }
 
   @include responsive.respond(tablets) {
-    margin-bottom: 2rem;
     padding: 0rem 3rem;
   }
   @include responsive.respond(bigTablets) {

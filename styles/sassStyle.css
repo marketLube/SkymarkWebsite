@@ -413,7 +413,6 @@ li a {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .footer {
-    margin-bottom: 2rem;
     padding: 0rem 3rem;
   }
 }
@@ -1121,6 +1120,11 @@ li a {
     font-weight: 300;
     text-align: center;
     width: 16rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .research-para {
+    width: 32rem;
   }
 }
 .research-enrolled {
