@@ -1583,6 +1583,18 @@ li a {
     height: 32.5rem;
   }
 }
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .scroll-card-box-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 1rem;
+    height: 32.5rem;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .scroll-card-box-container {
     display: flex;
@@ -1614,6 +1626,12 @@ li a {
     width: 100%;
   }
 }
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .scroll-card-box-left {
+    padding: 1rem;
+    width: 100%;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .scroll-card-box-left {
     width: 100%;
@@ -1628,6 +1646,15 @@ li a {
   font-size: 1.2rem;
 }
 @media only screen and (max-width: 575.98px) {
+  .scroll-card-box-left .step {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .scroll-card-box-left .step {
     display: flex;
     align-items: center;
@@ -1665,6 +1692,13 @@ li a {
     width: 2rem;
   }
 }
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .scroll-card-box-left .step .num {
+    font-size: 15px;
+    height: 2rem;
+    width: 2rem;
+  }
+}
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .scroll-card-box-left .step .num {
     font-size: 20px;
@@ -1676,6 +1710,11 @@ li a {
   width: 70%;
 }
 @media only screen and (max-width: 575.98px) {
+  .scroll-card-box-left .title {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .scroll-card-box-left .title {
     width: 100%;
   }
@@ -1704,6 +1743,13 @@ li a {
     width: 100%;
   }
 }
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .scroll-card-box-left .title div {
+    font-size: 1.5rem;
+    margin-left: 0rem;
+    width: 100%;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .scroll-card-box-left .title div {
     margin-left: 0rem;
@@ -1721,6 +1767,12 @@ li a {
   margin-left: 2rem;
 }
 @media only screen and (max-width: 575.98px) {
+  .scroll-card-box-left p {
+    margin-left: 0rem;
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .scroll-card-box-left p {
     margin-left: 0rem;
     font-size: 0.8rem;
@@ -1756,6 +1808,11 @@ li a {
     display: none;
   }
 }
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .scroll-card-box-right {
+    display: none;
+  }
+}
 .scroll-card-box-right img {
   height: 100%;
   width: 100%;
@@ -1780,6 +1837,13 @@ li a {
     border-radius: 1rem;
   }
 }
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .scroll-card-box-center {
+    width: 100%;
+    background-color: rgb(249, 249, 249);
+    border-radius: 1rem;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .scroll-card-box-center {
     width: 100%;
@@ -1798,6 +1862,11 @@ li a {
   object-fit: cover;
 }
 @media only screen and (max-width: 575.98px) {
+  .scroll-card-box-center img {
+    border-radius: 1rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .scroll-card-box-center img {
     border-radius: 1rem;
   }
