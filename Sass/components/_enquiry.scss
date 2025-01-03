@@ -390,3 +390,20 @@
     left: 150px;
   }
 }
+
+@media (max-width: 430px) {
+  .enquary-form-row input {
+    width: 130px;
+    font-size: 11px;
+  }
+  .enquary-form-row select {
+    font-size: 11px;
+    width: 130px;
+  }
+
+  .enquary-mobile-text {
+    bottom: -5px;
+    font-size: 1.9rem;
+    left: 150px;
+  }
+}
