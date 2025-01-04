@@ -25,7 +25,7 @@ const img5 =
 const img6 =
   "https://cdn.pixabay.com/photo/2012/04/11/15/43/australia-28586_1280.png";
 const img7 =
-  "https://img.freepik.com/free-vector/illustration-new-zealand-flag_53876-27119.jpg?t=st=1735732573~exp=1735736173~hmac=f21070393e8c99d91b1b5d5c9d5081176879438426d78a59f8ab63a78956eb70&w=2000";
+  "https://img.freepik.com/free-vector/illustration-new-zealand-flag_53876-27119.jpg?t=st=1735969506~exp=1735973106~hmac=4581cf9e22e19da04a13fbc38af0227d349449589f60ac17a86ce637890335c5&w=1480";
 
 export default function StudyIn() {
   const [headingText, setHeadingText] = useState("United Kingdom");
