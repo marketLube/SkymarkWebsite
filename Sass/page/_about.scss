@@ -8,7 +8,7 @@
   & .home-text {
     height: 25rem;
     overflow: hidden;
-    width: 80%;
+    width: 100%;
 
     @include responsive.respond(bigTablets) {
       font-size: 65px;

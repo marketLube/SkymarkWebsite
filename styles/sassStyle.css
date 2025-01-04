@@ -776,7 +776,7 @@ li a {
 .about .home-text {
   height: 25rem;
   overflow: hidden;
-  width: 80%;
+  width: 100%;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .about .home-text {
