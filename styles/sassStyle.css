@@ -934,10 +934,13 @@ li a {
 }
 .about-scroll-mob-right-content .img-container {
   width: 100%;
-  height: 20rem;
+  height: 35rem;
   padding: 0 1rem;
   border-radius: 1rem;
   overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 .about-scroll-mob-right-content .img-container img {
   width: 100%;
