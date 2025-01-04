@@ -67,32 +67,31 @@ export default function Testimonial() {
     slidesToShow: 5,
     autoplay: true,
     autoplaySpeed: 0,
-    cssEase: "ease-in-out",
+    cssEase: "linear",
     centerMode: true,
     arrows: false,
     pauseOnHover: true,
     draggable: true,
     swipe: true,
+    swipeToSlide: true,
 
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          autoplay: false,
           cssEase: "linear",
           centerMode: true,
-          speed: 100,
+          speed: 5000,
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
-          autoplay: false,
           cssEase: "linear",
           centerMode: true,
-          speed: 100,
+          speed: 5000,
         },
       },
     ],

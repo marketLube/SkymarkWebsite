@@ -16,7 +16,6 @@ export default function MainSwiper() {
     centerPadding: "20px",
     pauseOnHover: true,
     draggable: true,
-
     swipe: true,
 
     responsive: [
@@ -25,7 +24,7 @@ export default function MainSwiper() {
         settings: {
           slidesToShow: 1.2,
           centerMode: true,
-          speed: 500,
+          speed: 5000,
           autoplay: false,
         },
       },
@@ -34,7 +33,7 @@ export default function MainSwiper() {
         settings: {
           slidesToShow: 1,
           centerMode: true,
-          speed: 500,
+          speed: 5000,
           autoplay: false,
         },
       },
@@ -43,7 +42,7 @@ export default function MainSwiper() {
         settings: {
           slidesToShow: 1,
           centerMode: true,
-          speed: 500,
+          speed: 5000,
           autoplay: false,
         },
       },
