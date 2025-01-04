@@ -1343,7 +1343,7 @@ li a {
 
 .main-swiper {
   width: 100%;
-  height: 80vh;
+  height: fit-content;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -1381,7 +1381,7 @@ li a {
   }
 }
 .main-swiper .main-swiper-container .swiper-body-item {
-  height: 47rem;
+  height: 35rem;
   border-radius: 2rem;
   overflow: hidden;
 }
