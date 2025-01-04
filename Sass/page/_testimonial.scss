@@ -123,3 +123,20 @@
     width: 80rem;
   }
 }
+
+.testimonial-slider {
+  margin-bottom: 3rem;
+}
+
+// .testimonial-slider:active {
+//   cursor: grabbing;
+// }
+
+// /* Prevent image dragging while swiping */
+.slide-item img {
+  // user-select: none;
+  // -webkit-user-drag: none;
+
+  border: 1px solid variables.$color-blue;
+  border-radius: 1rem;
+}

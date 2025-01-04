@@ -1322,6 +1322,15 @@ li a {
     width: 80rem;
   }
 }
+.testimonial-slider {
+  margin-bottom: 3rem;
+}
+
+.slide-item img {
+  border: 1px solid #024060;
+  border-radius: 1rem;
+}
+
 .scroll-card {
   width: 100%;
   height: 600vh;

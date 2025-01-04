@@ -24,7 +24,7 @@ export default function MainSwiper() {
         settings: {
           slidesToShow: 1.2,
           centerMode: true,
-          speed: 5000,
+          speed: 500,
           autoplay: false,
         },
       },
@@ -33,7 +33,7 @@ export default function MainSwiper() {
         settings: {
           slidesToShow: 1,
           centerMode: true,
-          speed: 5000,
+          speed: 500,
           autoplay: false,
         },
       },
@@ -42,7 +42,7 @@ export default function MainSwiper() {
         settings: {
           slidesToShow: 1,
           centerMode: true,
-          speed: 5000,
+          speed: 500,
           autoplay: false,
         },
       },

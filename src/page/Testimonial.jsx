@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Slider from "react-slick/lib/slider";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 import img1 from "../../src/assets/Testimonials/one.jpeg";
 import img2 from "../../src/assets/Testimonials/two.jpeg";
@@ -60,41 +62,59 @@ const titleArray = [
 ];
 
 export default function Testimonial() {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 3000,
-    slidesToShow: 5,
-    autoplay: true,
-    autoplaySpeed: 0,
-    cssEase: "linear",
-    centerMode: true,
-    arrows: false,
-    pauseOnHover: true,
-    draggable: true,
-    swipe: true,
-    swipeToSlide: true,
+  const [isPaused, setIsPaused] = useState(false);
 
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          cssEase: "linear",
-          centerMode: true,
-          speed: 5000,
-        },
+  const swiperSettingsRightToLeft = {
+    modules: [Autoplay],
+    slidesPerView: 1.3,
+    breakpoints: {
+      380: {
+        slidesPerView: 1.4,
+        spaceBetween: 10,
       },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          cssEase: "linear",
-          centerMode: true,
-          speed: 5000,
-        },
+      480: {
+        slidesPerView: 1.5,
+        spaceBetween: 10,
       },
-    ],
+      640: {
+        slidesPerView: 1.5,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 2.5,
+        spaceBetween: 10,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+      1280: {
+        slidesPerView: 5,
+      },
+
+      1580: {
+        slidesPerView: 7,
+      },
+      1800: {
+        slidesPerView: 7,
+      },
+    },
+    loop: true,
+    speed: 3000,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+      reverseDirection: false,
+    },
+    grabCursor: true,
+    centeredSlides: true,
+  };
+
+  const swiperSettingsLeftToRight = {
+    ...swiperSettingsRightToLeft,
+    autoplay: {
+      ...swiperSettingsRightToLeft.autoplay,
+      reverseDirection: true,
+    },
   };
 
   const [title, setTitle] = useState(titleArray[0]);
@@ -127,38 +147,65 @@ export default function Testimonial() {
     setIsMouseEnter(false);
   };
 
+  const handleSliderHover = (swiper, isHovered) => {
+    if (isHovered) {
+      swiper.autoplay.stop();
+    } else {
+      swiper.autoplay.start();
+    }
+    setIsPaused(isHovered);
+  };
+
   return (
     <section className="testmonial">
-      <div
-        className="testmonial-head"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
+      <div className="testmonial-head">
         <h2 className={`title-animate ${fadeIn ? "fade-in" : "fade-out"}`}>
           {`"${title}"`}
         </h2>
       </div>
-      <div className="testmonial-body">
-        <Slider {...settings}>
-          {imgArray.slice(0, 10).map((item, index) => (
-            <div className="testmonial-body-item-t" key={index}>
-              <span>
-                <img src={item} alt="testimonial" />
-              </span>
-            </div>
+
+      <div className="testimonial-slider">
+        <Swiper
+          {...swiperSettingsRightToLeft}
+          onMouseEnter={(swiper) => handleSliderHover(swiper, true)}
+          onMouseLeave={(swiper) => handleSliderHover(swiper, false)}
+          onTouchStart={(swiper) => handleSliderHover(swiper, true)}
+          onTouchEnd={(swiper) => handleSliderHover(swiper, false)}
+        >
+          {imgArray.map((image, index) => (
+            <SwiperSlide key={index}>
+              <div className="slide-item">
+                <img
+                  src={image}
+                  alt={`Testimonial ${index + 1}`}
+                  style={{ height: "300px", objectFit: "cover" }}
+                />
+              </div>
+            </SwiperSlide>
           ))}
-        </Slider>
+        </Swiper>
       </div>
-      <div className="testmonial-body">
-        <Slider {...settings} rtl={true}>
-          {imgArray.slice(10, 21).map((item, index) => (
-            <div className="testmonial-body-item-t" key={index}>
-              <span>
-                <img src={item} alt="testimonial" />
-              </span>
-            </div>
+
+      <div className="testimonial-slider">
+        <Swiper
+          {...swiperSettingsLeftToRight}
+          onMouseEnter={(swiper) => handleSliderHover(swiper, true)}
+          onMouseLeave={(swiper) => handleSliderHover(swiper, false)}
+          onTouchStart={(swiper) => handleSliderHover(swiper, true)}
+          onTouchEnd={(swiper) => handleSliderHover(swiper, false)}
+        >
+          {imgArray.map((image, index) => (
+            <SwiperSlide key={index}>
+              <div className="slide-item">
+                <img
+                  src={image}
+                  alt={`Testimonial ${index + 1}`}
+                  style={{ height: "300px", objectFit: "cover" }}
+                />
+              </div>
+            </SwiperSlide>
           ))}
-        </Slider>
+        </Swiper>
       </div>
     </section>
   );
