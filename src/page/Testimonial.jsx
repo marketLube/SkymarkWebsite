@@ -66,7 +66,7 @@ export default function Testimonial() {
 
   const swiperSettingsRightToLeft = {
     modules: [Autoplay],
-    slidesPerView: 1.3,
+    slidesPerView: 6,
     breakpoints: {
       380: {
         slidesPerView: 1.4,
@@ -92,7 +92,7 @@ export default function Testimonial() {
       },
 
       1580: {
-        slidesPerView: 7,
+        // slidesPerView: 6,
       },
       1800: {
         slidesPerView: 7,
