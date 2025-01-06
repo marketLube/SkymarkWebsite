@@ -92,8 +92,8 @@ export default function Testimonial() {
         spaceBetween: 30,
       },
 
-      1024: {
-        slidesPerView: 4,
+      1025: {
+        slidesPerView: 3.6,
         spaceBetween: 30,
       },
 
@@ -183,7 +183,8 @@ export default function Testimonial() {
                   src={image}
                   alt={`Testimonial ${index + 1}`}
                   style={{
-                    height: window.innerWidth <= 768 ? "200px" : "280px",
+                    height: window.innerWidth <= 768 ? "200px" : "300px",
+                    // width: "100%",
                     objectFit: "cover",
                   }}
                 />
@@ -209,6 +210,7 @@ export default function Testimonial() {
                   alt={`Testimonial ${index + 1}`}
                   style={{
                     height: window.innerWidth <= 768 ? "200px" : "300px",
+                    // width: "100%",
                     objectFit: "cover",
                   }}
                 />

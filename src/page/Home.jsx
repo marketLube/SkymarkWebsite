@@ -4,7 +4,7 @@ import globe2 from "../../src/assets/1.svg";
 import { GoArrowDownRight } from "react-icons/go";
 import BlackBtn from "../Utils/BlackBtn";
 export default function Home() {
-  const isTab = window.innerWidth < 1250;
+  const isTab = window.innerWidth < 950;
   return (
     <section
       className="home"

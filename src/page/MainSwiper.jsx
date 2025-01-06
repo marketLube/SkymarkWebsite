@@ -20,9 +20,9 @@ export default function MainSwiper() {
 
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1025,
         settings: {
-          slidesToShow: 1.2,
+          slidesToShow: 1,
           centerMode: true,
           speed: 500,
           autoplay: false,

@@ -98,6 +98,7 @@
     border-radius: 7rem;
     border: 1px solid gray;
     cursor: pointer;
+    white-space: nowrap;
 
     @include responsive.respond(smallPhone) {
       font-size: 1.5rem;

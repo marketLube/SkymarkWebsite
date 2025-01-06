@@ -43,6 +43,15 @@
     @include responsive.respond(tablets) {
       width: 40rem;
     }
+    @media screen and (min-width: 1150px) and (max-width: 1400px) {
+      margin-left: 2.5rem;
+      font-size: 5.5rem;
+    }
+    @media screen and (min-width: 992px) and (max-width: 1149px) {
+      margin-left: 2rem;
+      font-size: 5.2rem;
+      width: 30rem;
+    }
   }
 
   &-content {
@@ -112,6 +121,10 @@
         padding-top: 10rem;
       }
     }
+
+    &-bottom {
+      // margin-top: 1rem;
+    }
   }
   &-contact {
     display: flex;
@@ -146,8 +159,8 @@
 
 .homeGlobeImage {
   @include responsive.respond(tablets) {
-    height: 400px !important;
-    width: 400px !important;
+    height: 450px !important;
+    width: 450px !important;
   }
 }
 

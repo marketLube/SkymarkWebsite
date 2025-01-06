@@ -568,6 +568,19 @@ li a {
     width: 40rem;
   }
 }
+@media screen and (min-width: 1150px) and (max-width: 1400px) {
+  .home-text {
+    margin-left: 2.5rem;
+    font-size: 5.5rem;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1149px) {
+  .home-text {
+    margin-left: 2rem;
+    font-size: 5.2rem;
+    width: 30rem;
+  }
+}
 .home-content {
   display: flex;
   flex-direction: column;
@@ -678,8 +691,8 @@ li a {
 
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .homeGlobeImage {
-    height: 400px !important;
-    width: 400px !important;
+    height: 450px !important;
+    width: 450px !important;
   }
 }
 
@@ -1569,6 +1582,7 @@ li a {
   border-radius: 7rem;
   border: 1px solid gray;
   cursor: pointer;
+  white-space: nowrap;
 }
 @media only screen and (max-width: 575.98px) {
   .bottom-content {
