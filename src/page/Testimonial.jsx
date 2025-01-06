@@ -66,38 +66,7 @@ export default function Testimonial() {
 
   const swiperSettingsRightToLeft = {
     modules: [Autoplay],
-    slidesPerView: 6,
-    breakpoints: {
-      380: {
-        slidesPerView: 1.4,
-        spaceBetween: 10,
-      },
-      480: {
-        slidesPerView: 1.5,
-        spaceBetween: 10,
-      },
-      640: {
-        slidesPerView: 1.5,
-        spaceBetween: 10,
-      },
-      768: {
-        slidesPerView: 2.5,
-        spaceBetween: 10,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-      1280: {
-        slidesPerView: 5,
-      },
-
-      1580: {
-        // slidesPerView: 6,
-      },
-      1800: {
-        slidesPerView: 7,
-      },
-    },
+    slidesPerView: 3,
     loop: true,
     speed: 3000,
     autoplay: {
@@ -107,8 +76,43 @@ export default function Testimonial() {
     },
     grabCursor: true,
     centeredSlides: true,
-  };
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
 
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+
+      1200: {
+        slidesPerView: 4.5,
+        spaceBetween: 30,
+      },
+
+      1350: {
+        slidesPerView: 5,
+        spaceBetween: 30,
+      },
+
+      1560: {
+        slidesPerView: 6,
+        spaceBetween: 30,
+      },
+    },
+  };
   const swiperSettingsLeftToRight = {
     ...swiperSettingsRightToLeft,
     autoplay: {
@@ -178,7 +182,10 @@ export default function Testimonial() {
                 <img
                   src={image}
                   alt={`Testimonial ${index + 1}`}
-                  style={{ height: "300px", objectFit: "cover" }}
+                  style={{
+                    height: window.innerWidth <= 768 ? "200px" : "280px",
+                    objectFit: "cover",
+                  }}
                 />
               </div>
             </SwiperSlide>
@@ -200,7 +207,10 @@ export default function Testimonial() {
                 <img
                   src={image}
                   alt={`Testimonial ${index + 1}`}
-                  style={{ height: "300px", objectFit: "cover" }}
+                  style={{
+                    height: window.innerWidth <= 768 ? "200px" : "300px",
+                    objectFit: "cover",
+                  }}
                 />
               </div>
             </SwiperSlide>
