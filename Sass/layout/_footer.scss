@@ -86,6 +86,7 @@
         border-radius: 2rem;
         margin-right: 1rem;
         color: rgb(95, 95, 95);
+        margin-top: 1rem;
 
         @include responsive.respond(bigTablets) {
           padding: 0.3rem 1.2rem;

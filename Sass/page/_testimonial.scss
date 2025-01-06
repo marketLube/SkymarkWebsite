@@ -30,11 +30,15 @@
       width: 100%;
       height: 8rem;
     }
+
     @include responsive.respond(tablets) {
-      height: 14rem;
+      height: 11rem;
     }
     @include responsive.respond(bigTablets) {
-      height: 20rem;
+      height: 13rem;
+    }
+    @include responsive.respond(desktop) {
+      margin-bottom: 2rem;
     }
 
     & h2 {
@@ -54,6 +58,7 @@
       @include responsive.respond(tablets) {
         width: 98%;
         padding: 3rem;
+        font-size: 2.5rem;
       }
     }
   }
@@ -125,7 +130,7 @@
 }
 
 .testimonial-slider {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 // .testimonial-slider:active {

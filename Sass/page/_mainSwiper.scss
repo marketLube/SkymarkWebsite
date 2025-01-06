@@ -40,13 +40,18 @@
       height: 35rem;
       border-radius: 2rem;
       overflow: hidden;
+      padding: 0 10px;
+
+      @media (max-width: 1199px) {
+        padding: 0 20px;
+      }
 
       @include responsive.respond(smallPhone) {
         height: fit-content;
       }
 
       @include responsive.respond(bigTablets) {
-        height: 70rem;
+        // height: 70rem;
       }
 
       & span {

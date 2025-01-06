@@ -20,9 +20,27 @@ export default function MainSwiper() {
 
     responsive: [
       {
-        breakpoint: 1025,
+        breakpoint: 1400,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
+          centerMode: true,
+          speed: 500,
+          autoplay: false,
+        },
+      },
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 2.5,
+          centerMode: true,
+          speed: 500,
+          autoplay: false,
+        },
+      },
+      {
+        breakpoint: 821,
+        settings: {
+          slidesToShow: 2,
           centerMode: true,
           speed: 500,
           autoplay: false,
@@ -31,14 +49,23 @@ export default function MainSwiper() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           centerMode: true,
           speed: 500,
           autoplay: false,
         },
       },
       {
-        breakpoint: 834,
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1.7,
+          centerMode: true,
+          speed: 500,
+          autoplay: false,
+        },
+      },
+      {
+        breakpoint: 500,
         settings: {
           slidesToShow: 1,
           centerMode: true,

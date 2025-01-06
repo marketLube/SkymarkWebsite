@@ -16,6 +16,9 @@ nav {
     height: 3rem;
     gap: 5rem;
   }
+  @include responsive.respond(phone) {
+    width: 40rem;
+  }
 }
 
 ul {

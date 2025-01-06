@@ -77,23 +77,27 @@ export default function Testimonial() {
     grabCursor: true,
     centeredSlides: true,
     breakpoints: {
-      320: {
-        slidesPerView: 2,
+      300: {
+        slidesPerView: 2.3,
+        spaceBetween: 10,
+      },
+      380: {
+        slidesPerView: 2.5,
         spaceBetween: 10,
       },
 
       480: {
-        slidesPerView: 2,
+        slidesPerView: 3,
         spaceBetween: 20,
       },
 
       768: {
-        slidesPerView: 3,
+        slidesPerView: 4, // Increased for tablet size (768px-991.98px)
         spaceBetween: 30,
       },
 
       1025: {
-        slidesPerView: 3.6,
+        slidesPerView: 3.9,
         spaceBetween: 30,
       },
 
@@ -183,8 +187,12 @@ export default function Testimonial() {
                   src={image}
                   alt={`Testimonial ${index + 1}`}
                   style={{
-                    height: window.innerWidth <= 768 ? "200px" : "300px",
-                    // width: "100%",
+                    height:
+                      window.innerWidth <= 450
+                        ? "170px"
+                        : window.innerWidth <= 868
+                        ? "200px"
+                        : "270px",
                     objectFit: "cover",
                   }}
                 />
@@ -209,8 +217,12 @@ export default function Testimonial() {
                   src={image}
                   alt={`Testimonial ${index + 1}`}
                   style={{
-                    height: window.innerWidth <= 768 ? "200px" : "300px",
-                    // width: "100%",
+                    height:
+                      window.innerWidth <= 450
+                        ? "170px"
+                        : window.innerWidth <= 868
+                        ? "200px"
+                        : "270px",
                     objectFit: "cover",
                   }}
                 />

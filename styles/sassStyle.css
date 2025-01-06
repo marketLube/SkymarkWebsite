@@ -113,6 +113,11 @@ nav {
     gap: 5rem;
   }
 }
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  nav {
+    width: 40rem;
+  }
+}
 
 ul {
   display: flex;
@@ -481,6 +486,7 @@ li a {
   border-radius: 2rem;
   margin-right: 1rem;
   color: rgb(95, 95, 95);
+  margin-top: 1rem;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .footer-content-left .branches span {
@@ -1267,12 +1273,17 @@ li a {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .testmonial-head {
-    height: 14rem;
+    height: 11rem;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .testmonial-head {
-    height: 20rem;
+    height: 13rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .testmonial-head {
+    margin-bottom: 2rem;
   }
 }
 .testmonial-head h2 {
@@ -1295,6 +1306,7 @@ li a {
   .testmonial-head h2 {
     width: 98%;
     padding: 3rem;
+    font-size: 2.5rem;
   }
 }
 .testmonial-body {
@@ -1363,7 +1375,7 @@ li a {
   }
 }
 .testimonial-slider {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .slide-item img {
@@ -1433,15 +1445,16 @@ li a {
   height: 35rem;
   border-radius: 2rem;
   overflow: hidden;
+  padding: 0 10px;
+}
+@media (max-width: 1199px) {
+  .main-swiper .main-swiper-container .swiper-body-item {
+    padding: 0 20px;
+  }
 }
 @media only screen and (max-width: 575.98px) {
   .main-swiper .main-swiper-container .swiper-body-item {
     height: fit-content;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
-  .main-swiper .main-swiper-container .swiper-body-item {
-    height: 70rem;
   }
 }
 .main-swiper .main-swiper-container .swiper-body-item span {
