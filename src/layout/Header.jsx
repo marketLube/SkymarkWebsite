@@ -56,6 +56,11 @@ export function Header() {
     }
   };
 
+  const handleWhatsAppRedirect = (e) => {
+    e.preventDefault();
+    window.open("https://wa.me/+919876543210", "_blank"); // Replace with your WhatsApp number
+  };
+
   const isEnquiryPage = location.pathname === "/enquiry";
 
   const navigationItems = isEnquiryPage ? (
@@ -86,12 +91,9 @@ export function Header() {
       </li>
       <li className="navigation__item">
         <a
-          href="/"
+          href="#contact"
           className="navigation__link"
-          onClick={(e) => {
-            e.preventDefault();
-            handleScrollToSection("contact");
-          }}
+          onClick={handleWhatsAppRedirect}
         >
           Contact
         </a>
@@ -142,10 +144,7 @@ export function Header() {
         <a
           href="#contact"
           className="navigation__link"
-          onClick={(e) => {
-            e.preventDefault();
-            handleScrollToSection("contact");
-          }}
+          onClick={handleWhatsAppRedirect}
         >
           Contact
         </a>
@@ -196,13 +195,7 @@ export function Header() {
         </a>
       </li>
       <li className="nav-item">
-        <a
-          href="#contact"
-          onClick={(e) => {
-            e.preventDefault();
-            handleScrollToSection("contact");
-          }}
-        >
+        <a href="#contact" onClick={handleWhatsAppRedirect}>
           Contact
         </a>
       </li>
@@ -216,9 +209,6 @@ export function Header() {
             padding: "8px 16px",
             borderRadius: "18px",
             cursor: "pointer",
-            fontSize: "1.1rem",
-            fontWeight: "500",
-            letterSpacing: "2px",
           }}
         >
           Register
@@ -250,13 +240,7 @@ export function Header() {
         </a>
       </li>
       <li className="nav-item">
-        <a
-          href="#contact"
-          onClick={(e) => {
-            e.preventDefault();
-            handleScrollToSection("contact");
-          }}
-        >
+        <a href="#contact" onClick={handleWhatsAppRedirect}>
           Contact
         </a>
       </li>
