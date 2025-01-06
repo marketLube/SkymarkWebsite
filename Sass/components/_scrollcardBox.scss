@@ -183,8 +183,8 @@
       margin-left: 0rem;
     }
     @include responsive.respond(bigTablets) {
-      margin-top: -1rem;
-      width: 149%;
+      margin-top: 1rem;
+      width: 100%;
     }
   }
 
@@ -246,6 +246,7 @@
   background-color: rgb(249, 249, 249);
   border-radius: 1rem;
   overflow: hidden;
+  margin-top: 1rem;
   @include responsive.respond(smallPhone) {
     width: 100%;
     background-color: rgb(249, 249, 249);
@@ -273,6 +274,7 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+    object-position: cover;
 
     @include responsive.respond(smallPhone) {
       border-radius: 1rem;
@@ -286,8 +288,8 @@
 
     @include responsive.respond(tablets) {
       border-radius: 1rem;
-      width: 100%;
-      height: 100%;
+      // width: 100%;
+      // height: 100%;
     }
     @include responsive.respond(bigTablets) {
       border-radius: 1rem;

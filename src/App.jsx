@@ -17,7 +17,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   // const [isFormOpen, setIsFormOpen] = useState(false);
-  const isMob = window.innerWidth <= 1250;
+  const isMob = window.innerWidth <= 1150;
 
   return (
     <BrowserRouter>
