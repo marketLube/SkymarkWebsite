@@ -49,7 +49,7 @@ export default function MainSwiper() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1.6,
           centerMode: true,
           speed: 500,
           autoplay: false,
@@ -58,7 +58,7 @@ export default function MainSwiper() {
       {
         breakpoint: 575,
         settings: {
-          slidesToShow: 1.7,
+          slidesToShow: 1.6,
           centerMode: true,
           speed: 500,
           autoplay: false,

@@ -17,6 +17,11 @@ nav {
     gap: 5rem;
   }
   @include responsive.respond(phone) {
+    // width: 25rem;
+    height: 3rem;
+    gap: 5rem;
+  }
+  @include responsive.respond(phone) {
     width: 40rem;
   }
 }
@@ -42,6 +47,9 @@ ul {
 
     @include responsive.respond(smallPhone) {
       height: 1rem;
+    }
+    @include responsive.respond(phone) {
+      height: 2rem;
     }
   }
 }
@@ -79,10 +87,40 @@ li {
       margin-top: -4.5rem;
     }
   }
+  @include responsive.respond(phone) {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 45vh;
+    background-color: white;
+    flex-direction: column;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    &.active {
+      display: flex;
+      margin-top: -4.5rem;
+    }
+  }
 }
 
 .nav-item {
   @include responsive.respond(smallPhone) {
+    padding: 15px 20px;
+    width: 100%;
+    text-align: center;
+
+    a {
+      display: block;
+      width: 100%;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+
+  @include responsive.respond(phone) {
     padding: 15px 20px;
     width: 100%;
     text-align: center;
@@ -117,8 +155,11 @@ li {
 }
 .navigation {
   display: none;
-  z-index: 100000;
+  z-index: 10000000000000;
 
+  @include responsive.respond(phone) {
+    display: block;
+  }
   @include responsive.respond(smallPhone) {
     display: block;
   }
@@ -282,5 +323,8 @@ li {
 }
 
 .nav-item:last-child {
+  @include responsive.respond(phone) {
+    margin-left: 0;
+  }
   margin-left: auto;
 }

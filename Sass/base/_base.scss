@@ -43,6 +43,9 @@ section {
   @include responsive.respond(smallPhone) {
     margin-bottom: 0rem;
   }
+  @include responsive.respond(phone) {
+    margin-bottom: 0rem;
+  }
 }
 
 /* Scrollbar styling */

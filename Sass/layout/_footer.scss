@@ -17,8 +17,13 @@
   background-color: white;
   padding: 0 5rem;
   position: relative;
-  z-index: 90000000000;
+  z-index: 90000;
   @include responsive.respond(smallPhone) {
+    padding: 0rem 1rem;
+    text-align: center;
+    height: fit-content;
+  }
+  @include responsive.respond(phone) {
     padding: 0rem 1rem;
     text-align: center;
     height: fit-content;

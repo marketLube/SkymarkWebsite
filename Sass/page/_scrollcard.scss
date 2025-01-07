@@ -12,6 +12,10 @@
     height: calc(37.5rem * 7);
   }
 
+  // @include responsive.respond(phone) {
+  //   height: calc(37.5rem * 7);
+  // }
+
   &-scroll-container {
     width: 85%;
     height: 100%;

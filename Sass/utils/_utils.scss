@@ -18,6 +18,17 @@
     font-size: 0.8rem;
     margin-bottom: 1rem;
   }
+
+  @include responsive.respond(phone) {
+    padding: 0.6rem 1.5rem;
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    padding: 0.8rem 1.8rem;
+    font-size: 0.9rem;
+  }
 }
 
 .sec-btn {

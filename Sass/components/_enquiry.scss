@@ -118,49 +118,39 @@
   background-color: #0056b3;
 }
 
+//mobo
+
 .enquary-bottomDiv {
   width: 350px;
+  position: relative;
+  // top: -10px;
 }
 
 .enquary-respoImg {
-  max-width: 210px;
-  max-height: 210px;
+  max-width: 350px;
+  max-height: 350px;
   object-fit: cover;
   position: relative;
-  left: 20px;
+  left: -20px;
 }
 
 .enquary-mobile-text {
-  font-size: 2rem;
-  position: absolute;
+  font-size: 3rem;
+  position: relative;
   font-weight: 700;
   color: #244ea0;
   font-family: "Times New Roman", Times, serif;
-  bottom: 100px;
-  left: 500px;
+  bottom: 250px;
+  left: 100px;
+  width: fit-content;
 }
+
 .enquary-flagRow {
   height: auto;
   width: 750px;
   position: absolute;
   bottom: 130px;
 }
-// @media (min-width: 1600px) {
-//   .enquary-globimg {
-//     left: 150px;
-//     bottom: 160px;
-//   }
-//   .enquary-image-text {
-//     left: 500px;
-//   }
-//   // .enquary-flagRow {
-//   //   height: auto;
-//   //   width: 750px;
-//   //   position: absolute;
-//   //   bottom: 130px;
-//   //   left: 0;
-//   // }
-// }
 
 @media (min-width: 1500px) {
   .enquary-form-row input,
@@ -259,53 +249,7 @@
     display: none;
   }
 }
-
-@media (max-width: 1000px) {
-  .enquary-respoImg {
-    left: 0px;
-    top: -3rem;
-  }
-
-  .enquary-mobile-text {
-    position: absolute;
-    left: 450px;
-    padding-bottom: 40px;
-  }
-}
-@media (max-width: 920px) {
-  .enquary-mobile-text {
-    position: absolute;
-    left: 400px;
-    padding-bottom: 40px;
-  }
-}
-@media (max-width: 820px) {
-  .enquary-mobile-text {
-    position: absolute;
-    left: 350px;
-    padding-bottom: 40px;
-  }
-}
-@media (max-width: 720px) {
-  .enquary-mobile-text {
-    position: absolute;
-    left: 300px;
-    padding-bottom: 40px;
-  }
-}
-@media (max-width: 620px) {
-  .enquary-mobile-text {
-    position: absolute;
-    left: 250px;
-    padding-bottom: 40px;
-  }
-}
 @media (max-width: 520px) {
-  .enquary-mobile-text {
-    position: absolute;
-    left: 200px;
-    padding-bottom: 40px;
-  }
   .enquary-form-row input {
     width: 150px;
     font-size: 11px;
@@ -326,11 +270,6 @@
     gap: 15px;
   }
 
-  .enquary-mobile-text {
-    bottom: 100px;
-    font-size: 1.9rem;
-    left: 190px;
-  }
   .enquary-form-container {
     padding-top: 15px;
     padding-left: 15px;
@@ -343,7 +282,6 @@
     object-fit: cover;
   }
 }
-
 @media (max-width: 450px) {
   .enquary-form-row input {
     width: 130px;
@@ -353,14 +291,7 @@
     font-size: 11px;
     width: 130px;
   }
-
-  .enquary-mobile-text {
-    bottom: 90px;
-    font-size: 1.9rem;
-    left: 150px;
-  }
 }
-
 @media (max-width: 380px) {
   .enquary-form {
     margin-top: 65px;
@@ -378,19 +309,7 @@
     padding-left: 15px;
     padding-right: 15px;
   }
-  .enquary-respoImg {
-    max-width: 250px;
-    max-height: 250px;
-    left: 0px;
-  }
-
-  .enquary-mobile-text {
-    bottom: -50px;
-    font-size: 1.9rem;
-    left: 150px;
-  }
 }
-
 @media (max-width: 430px) {
   .enquary-form-row input {
     width: 130px;
@@ -400,10 +319,18 @@
     font-size: 11px;
     width: 130px;
   }
+}
 
+@media (max-width: 550px) {
   .enquary-mobile-text {
-    bottom: -5px;
-    font-size: 1.9rem;
-    left: 150px;
+    font-size: 2.3rem;
+    left: 120px;
+    bottom: 220px;
+  }
+
+  .enquary-respoImg {
+    max-width: 280px;
+    max-height: 280px;
+    left: 20px;
   }
 }

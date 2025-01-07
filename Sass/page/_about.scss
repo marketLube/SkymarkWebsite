@@ -71,6 +71,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: 50% 0%;
           }
         }
 
@@ -143,13 +144,21 @@
       margin: 2rem 0;
       z-index: -1;
       background-color: white;
+      @media screen and (min-width: 992px) and (max-width: 1199px) {
+        font-size: 4rem !important;
+      }
       @media screen and (min-width: 1251px) and (max-width: 1400px) {
         font-size: 5rem !important;
       }
       @include responsive.respond(smallPhone) {
-        font-size: 2.8rem;
+        font-size: 2.7rem;
         width: 75%;
         // margin-top: 3.3rem;
+        font-weight: 400;
+      }
+      @include responsive.respond(phone) {
+        font-size: 4.5rem;
+        width: 75%;
         font-weight: 400;
       }
       @include responsive.respond(bigTablets) {
@@ -189,13 +198,35 @@
       display: flex;
       align-items: flex-start;
       justify-content: center;
+      // @include responsive.respond(phone) {
+      //   height: fit-content;
+      // }
+      // @include responsive.respond(smallPhone) {
+      //   height: fit-content;
+      // }
+      // @include responsive.respond(tablets) {
+      //   height: fit-content;
+      // }
 
       & img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
-        object-position: top;
+        object-fit: cover;
+        object-position: 50% 20%;
         border-radius: 1rem;
+        @include responsive.respond(smallPhone) {
+          object-fit: contain;
+          border-radius: 16px;
+          // height: fit-content;
+        }
+        @include responsive.respond(phone) {
+          object-fit: contain;
+          // height: fit-content;
+        }
+        @include responsive.respond(tablets) {
+          object-fit: cover;
+          // height: fit-content;
+        }
       }
     }
   }
@@ -222,8 +253,16 @@
   @include responsive.respond(smallPhone) {
     font-size: 13px;
   }
+
+  @include responsive.respond(phone) {
+    font-size: 15px;
+  }
   @include responsive.respond(bigTablets) {
     font-size: 2rem;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    font-size: 1.1rem;
   }
 }
 @media (min-width: 800px) and (max-width: 900px) {
