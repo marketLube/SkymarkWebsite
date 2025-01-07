@@ -731,6 +731,12 @@ li a {
   align-items: end;
   justify-content: start;
 }
+@media screen and (min-width: 1022px) and (max-width: 1025px) {
+  .home-content-top-right {
+    align-items: center;
+    justify-content: center;
+  }
+}
 @media only screen and (max-width: 575.98px) {
   .home-content-top-right {
     align-items: center;
@@ -800,6 +806,18 @@ li a {
   }
 }
 
+@media screen and (min-width: 1022px) and (max-width: 1025px) {
+  .home-content-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+  }
+  .home-content-top-right .home-text span {
+    font-size: 4.5rem;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .home-content-top {
     flex-direction: column;
