@@ -87,13 +87,23 @@ export default function Testimonial() {
       },
 
       480: {
-        slidesPerView: 3,
+        slidesPerView: 2.8,
         spaceBetween: 20,
       },
 
       768: {
-        slidesPerView: 4, // Increased for tablet size (768px-991.98px)
+        slidesPerView: 4,
         spaceBetween: 30,
+      },
+
+      870: {
+        slidesPerView: 3.5,
+        spaceBetween: 25,
+      },
+
+      944: {
+        slidesPerView: 3.5,
+        spaceBetween: 28,
       },
 
       1025: {

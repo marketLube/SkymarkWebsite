@@ -14,10 +14,14 @@
     overflow: hidden;
     width: 100%;
 
+    // @include responsive.respond(tablets) {
+    //   font-size: 4rem;
+    // }
     @include responsive.respond(bigTablets) {
       font-size: 65px;
     }
   }
+
   &-scroll-container {
     height: 100%;
     width: 100%;
@@ -151,13 +155,13 @@
         font-size: 5rem !important;
       }
       @include responsive.respond(smallPhone) {
-        font-size: 2.7rem;
+        font-size: 2.4rem;
         width: 75%;
         // margin-top: 3.3rem;
         font-weight: 400;
       }
       @include responsive.respond(phone) {
-        font-size: 4.5rem;
+        font-size: 3rem;
         width: 75%;
         font-weight: 400;
       }
@@ -198,15 +202,12 @@
       display: flex;
       align-items: flex-start;
       justify-content: center;
-      // @include responsive.respond(phone) {
-      //   height: fit-content;
-      // }
-      // @include responsive.respond(smallPhone) {
-      //   height: fit-content;
-      // }
-      // @include responsive.respond(tablets) {
-      //   height: fit-content;
-      // }
+      @include responsive.respond(smallPhone) {
+        height: 14rem;
+      }
+      @include responsive.respond(phone) {
+        height: 18rem;
+      }
 
       & img {
         width: 100%;
@@ -215,12 +216,12 @@
         object-position: 50% 20%;
         border-radius: 1rem;
         @include responsive.respond(smallPhone) {
-          object-fit: contain;
+          object-fit: cover;
           border-radius: 16px;
           // height: fit-content;
         }
         @include responsive.respond(phone) {
-          object-fit: contain;
+          object-fit: cover;
           // height: fit-content;
         }
         @include responsive.respond(tablets) {
