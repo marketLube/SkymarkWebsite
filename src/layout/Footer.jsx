@@ -25,7 +25,14 @@ export default function Footer() {
         <div className="footer-content-right">
           <div className="footer-content-right-copyright">
             <span>Designed by</span>
-            <span className="market-lube">Market Lube</span>
+            <a
+              href="https://www.instagram.com/marketlube/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="market-lube"
+            >
+              Market Lube
+            </a>
           </div>
         </div>
       </div>

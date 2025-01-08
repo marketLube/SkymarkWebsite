@@ -129,4 +129,9 @@
 .market-lube {
   font-weight: 600;
   text-decoration: underline;
+  color: variables.$color-black;
+
+  &:hover {
+    color: blue;
+  }
 }

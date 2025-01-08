@@ -603,6 +603,10 @@ li a {
 .market-lube {
   font-weight: 600;
   text-decoration: underline;
+  color: #000;
+}
+.market-lube:hover {
+  color: blue;
 }
 
 .home {
