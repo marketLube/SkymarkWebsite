@@ -61,9 +61,11 @@
   position: absolute;
   left: 550px;
   bottom: 390px;
-  font-weight: 900;
-  color: #244ea0;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Inter", serif;
+  font-weight: 300;
+  line-height: 1;
+  font-size: 6.5rem;
+  color: #024060;
 }
 
 .enquary-form {
@@ -137,9 +139,9 @@
 .enquary-mobile-text {
   font-size: 3rem;
   position: relative;
-  font-weight: 700;
-  color: #244ea0;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Inter", serif;
+  font-weight: 400;
+  color: #024060;
   bottom: 250px;
   left: 100px;
   width: fit-content;
