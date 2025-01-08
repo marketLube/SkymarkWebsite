@@ -179,7 +179,7 @@
     position: fixed;
     top: 78vh;
     left: 50%;
-    z-index: 90000;
+    z-index: 900;
     transform: translateX(-50%);
     @include responsive.respond(smallPhone) {
       font-size: 1rem;
