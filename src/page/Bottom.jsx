@@ -4,13 +4,15 @@ export default function Bottom() {
   };
 
   return (
-    <section
-      className="bottom"
-      onClick={handleWhatsAppClick}
-      style={{ cursor: "pointer" }}
-    >
+    <section className="bottom">
       <div className="bottom-hello">hello</div>
-      <div className="bottom-content">Say Hi</div>
+      <div
+        className="bottom-content"
+        onClick={handleWhatsAppClick}
+        style={{ cursor: "pointer" }}
+      >
+        Say Hi
+      </div>
     </section>
   );
 }
