@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Home from "./page/Home";
 import Footer from "./layout/Footer";
 import { Header } from "./layout/Header";
@@ -16,8 +16,26 @@ import EnquiryForm from "./Components/EnquiryForm";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  // const [isFormOpen, setIsFormOpen] = useState(false);
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [showEnrolled, setShowEnrolled] = useState(true);
   const isMob = window.innerWidth <= 1150;
+  console.log(showEnrolled, "ajfshgsjvssfsksk");
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const threshold = documentHeight - window.innerHeight * 0.4;
+
+      if (scrollPosition >= threshold) {
+        setShowEnrolled(false);
+      } else {
+        setShowEnrolled(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <BrowserRouter>
@@ -28,9 +46,11 @@ function App() {
           element={
             <div className="container">
               <Header />
-              <div className="research-enrolled">
-                1,11,11,131 Students Enrolled
-              </div>
+              {showEnrolled && (
+                <div className="research-enrolled">
+                  1,11,11,131 Students Enrolled
+                </div>
+              )}
               <Main>
                 <Home />
                 {isMob ? <AboutMob /> : <About />}
