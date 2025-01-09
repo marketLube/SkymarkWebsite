@@ -24,7 +24,7 @@ function App() {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
-      const threshold = documentHeight - window.innerHeight * 0.4;
+      const threshold = documentHeight - window.innerHeight * 0.45;
 
       if (scrollPosition >= threshold) {
         setShowEnrolled(false);
