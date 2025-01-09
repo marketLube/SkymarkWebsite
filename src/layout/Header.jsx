@@ -108,6 +108,7 @@ export function Header() {
             padding: "8px 16px",
             borderRadius: "18px",
             cursor: "pointer",
+            fontSize: ".9rem",
           }}
         >
           Register
@@ -159,7 +160,7 @@ export function Header() {
             padding: "8px 16px",
             borderRadius: "18px",
             cursor: "pointer",
-            fontSize: "1.1rem",
+            fontSize: ".9rem",
             fontWeight: "500",
             letterSpacing: "2px",
           }}
@@ -209,6 +210,7 @@ export function Header() {
             padding: "8px 16px",
             borderRadius: "18px",
             cursor: "pointer",
+            fontSize: "1rem",
           }}
         >
           Register
@@ -254,6 +256,7 @@ export function Header() {
             padding: "8px 16px",
             borderRadius: "18px",
             cursor: "pointer",
+            fontSize: "1rem",
           }}
         >
           Register
