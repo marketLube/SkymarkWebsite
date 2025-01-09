@@ -19,7 +19,7 @@ function App() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [showEnrolled, setShowEnrolled] = useState(true);
   const isMob = window.innerWidth <= 1150;
-  console.log(showEnrolled, "ajfshgsjvssfsksk");
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight;

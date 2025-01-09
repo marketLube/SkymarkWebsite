@@ -7,12 +7,10 @@ export function Header() {
   const location = useLocation();
   const [checked, setIsChecked] = useState(false);
 
-  // Handle scrolling after navigation to home page
   useEffect(() => {
     if (location.pathname === "/" && location.state?.scrollTo) {
       const section = document.getElementById(location.state.scrollTo);
       if (section) {
-        // Add a small delay to ensure the DOM is ready
         setTimeout(() => {
           section.scrollIntoView({
             behavior: "smooth",
@@ -20,10 +18,36 @@ export function Header() {
           });
         }, 100);
       }
-      // Clear the state after scrolling
+
       window.history.replaceState({}, document.title);
     }
   }, [location]);
+
+  useEffect(() => {
+    const preventScroll = (e) => {
+      if (checked) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+    };
+
+    if (checked) {
+      document.body.style.overflow = "hidden";
+      // Add wheel and touchmove event listeners
+      document.addEventListener("wheel", preventScroll, { passive: false });
+      document.addEventListener("touchmove", preventScroll, { passive: false });
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    // Cleanup function
+    return () => {
+      document.body.style.overflow = "unset";
+      document.removeEventListener("wheel", preventScroll);
+      document.removeEventListener("touchmove", preventScroll);
+    };
+  }, [checked]);
 
   const handleEnquiryClick = (e) => {
     e.preventDefault();
@@ -31,24 +55,21 @@ export function Header() {
   };
 
   const handleScrollToSection = (sectionId) => {
-    // Remove the '#' if it's included in the sectionId
     const targetId = sectionId.startsWith("#")
       ? sectionId.substring(1)
       : sectionId;
 
-    // If we're not on the home page, navigate home first with the section in state
     if (location.pathname !== "/") {
       navigate("/", {
         state: { scrollTo: targetId },
-        replace: true, // Use replace to avoid adding to history stack
+        replace: true,
       });
       return;
     }
 
-    // If we're already on home page, just scroll
     const section = document.getElementById(targetId);
     if (section) {
-      setIsChecked(false); // Close mobile menu if open
+      setIsChecked(false);
       section.scrollIntoView({
         behavior: "smooth",
         block: "start",
@@ -58,7 +79,7 @@ export function Header() {
 
   const handleWhatsAppRedirect = (e) => {
     e.preventDefault();
-    window.open("https://wa.me/+919876543210", "_blank"); // Replace with your WhatsApp number
+    window.open("https://wa.me/+919876543210", "_blank");
   };
 
   const isEnquiryPage = location.pathname === "/enquiry";
@@ -315,23 +336,3 @@ export function Header() {
 }
 
 export default Header;
-{
-  /* <li className="navigation__item">
-  <button
-    onClick={handleEnquiryClick}
-    style={{
-      background: "#244EA2",
-      color: "white",
-      border: "none",
-      padding: "8px 16px",
-      borderRadius: "18px",
-      cursor: "pointer",
-      fontSize: "1.1rem",
-      fontWeight: "500",
-      letterSpacing: "2px",
-    }}
-  >
-    Register
-  </button>
-</li>; */
-}
