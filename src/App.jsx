@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Home from "./page/Home";
-import Footer from "./layout/Footer";
+import Footer from "./Components/Footer";
 import { Header } from "./layout/Header";
 import { Main } from "./layout/Main";
 import About from "./page/About";
@@ -39,6 +39,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route path="/enquiry" element={<EnquiryForm />} />
         <Route

@@ -132,7 +132,7 @@ export function Header() {
             fontSize: ".9rem",
           }}
         >
-          Register
+          Login
         </button>
       </li>
     </>
@@ -287,10 +287,7 @@ export function Header() {
   );
 
   return (
-    <header
-      className="header"
-      style={isEnquiryPage ? { marginLeft: "-20px" } : undefined}
-    >
+    <header className="header">
       <nav>
         <div
           className="logo"

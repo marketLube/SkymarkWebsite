@@ -1,0 +1,19 @@
+@use "../base/responive" as mix;
+
+.enquire-section-two {
+  height: 100vh;
+
+  @include mix.respond(smallPhone) {
+    height: fit-content;
+  }
+
+  &-container {
+    margin: 0 auto;
+
+    & h2 {
+      font-size: 3rem;
+      margin-left: 5rem;
+      margin-bottom: 5rem;
+    }
+  }
+}

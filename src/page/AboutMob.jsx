@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 import img0 from "../../src/assets/About/DSC00692.jpg";
 import img1 from "../../src/assets/About/5000andcounting.jpeg";
@@ -29,7 +29,6 @@ const contentFour = {
 
 export default function AboutMob() {
   const primeRef = useRef(null);
-  const [content, setContent] = useState(contentOne);
 
   return (
     <section className="about-mob" id="about">

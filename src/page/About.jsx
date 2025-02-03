@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import AboutLeftContent from "./components/AboutLeftContent";
 import AboutRIghtContent from "./components/AboutRIghtContent";
 import { useInView } from "motion/react";
