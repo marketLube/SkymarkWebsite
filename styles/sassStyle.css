@@ -2309,6 +2309,10 @@ li a {
   align-items: center;
   justify-content: start;
   height: 100vh;
+  background-image: url("/src/assets/UpdatedUIsky-16.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .header-left {
@@ -2333,18 +2337,6 @@ li a {
   width: 100%;
   height: 100px;
   object-fit: cover;
-}
-
-.enquary-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  background-image: url("/src/assets/UpdatedUIsky-16.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .enquary-form-container {
@@ -2451,11 +2443,6 @@ li a {
 
 .enquire-section-two {
   height: 100vh;
-}
-@media only screen and (max-width: 575.98px) {
-  .enquire-section-two {
-    height: fit-content;
-  }
 }
 .enquire-section-two-container {
   margin: 0 auto;

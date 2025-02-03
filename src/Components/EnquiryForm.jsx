@@ -12,7 +12,7 @@ function EnquiryForm() {
       <Header />
       <main className="enquary-content">
         <EnquireSectionOne />
-        {/* <EnquirySectionTwo /> */}
+        <EnquirySectionTwo />
       </main>
       <Footer />
     </>

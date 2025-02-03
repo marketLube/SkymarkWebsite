@@ -2,9 +2,6 @@
 
 .enquire-section-two {
   height: 100vh;
-  @include mix.respond(smallPhone) {
-    height: fit-content;
-  }
 
   &-container {
     margin: 0 auto;
