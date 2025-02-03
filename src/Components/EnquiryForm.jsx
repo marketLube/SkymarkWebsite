@@ -8,14 +8,12 @@ import EnQueryMob from "./EnQueryMob";
 function EnquiryForm() {
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
-  console.log(isMobile, "isMobile");
-
   return (
     <>
       <Header />
       <main className="enquary-content">
-        <EnquireSectionOne />
-        {isMobile ? <EnQueryMob /> : <EnquirySectionTwo />}
+        {isMobile ? <EnQueryMob /> : <EnquireSectionOne />}
+        <EnquirySectionTwo />
       </main>
       <Footer />
     </>
