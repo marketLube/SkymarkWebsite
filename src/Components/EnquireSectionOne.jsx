@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { GoArrowDownRight } from "react-icons/go";
-import EnuiryIconBox from "./EnuiryIconBox";
-import { FaHatCowboy } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
 
 import { createPortal } from "react-dom";
+import EnuiryIconBox from "./EnuiryIconBox";
+import { FaHatCowboy } from "react-icons/fa";
 
 export default function EnquireSectionOne() {
   const values = {
@@ -73,6 +73,7 @@ export default function EnquireSectionOne() {
       );
     }
   };
+
   return (
     <div className="enquary">
       {createPortal(
@@ -96,23 +97,23 @@ export default function EnquireSectionOne() {
               <GoArrowDownRight fontWeight={500} />
             </article>
 
-            {/* <div className="enquirey-icons">
+            <div className="enquirey-icons">
               <EnuiryIconBox
                 p="Fees Starting From"
                 h2="8 Lakhs *"
                 Icon={FaHatCowboy}
               />
               <EnuiryIconBox
-                p="Scholarship"
-                h2="10 Lakhs *"
+                p="Fees Starting From"
+                h2="8 Lakhs *"
                 Icon={FaHatCowboy}
               />
               <EnuiryIconBox
-                p="Offer Letter in"
-                h2="48 Hours *"
+                p="Fees Starting From"
+                h2="8 Lakhs *"
                 Icon={FaHatCowboy}
               />
-            </div> */}
+            </div>
           </div>
 
           <form className="enquary-form" onSubmit={handleSubmit}>

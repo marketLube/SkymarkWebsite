@@ -10,7 +10,6 @@
 .header-left {
   margin-left: 100px;
 }
-
 .enquary-header {
   display: flex;
   justify-content: center;
@@ -61,14 +60,16 @@
 }
 .enquary-image-text {
   font-size: 5rem;
-  // position: absolute;
-  // left: 550px;
-  // bottom: 390px;
   font-family: "Inter", serif;
   font-weight: 300;
   line-height: 1;
   font-size: 6.5rem;
   color: #024060;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  gap: 1rem;
 }
 
 .enquary-form {
@@ -121,12 +122,9 @@
   background-color: #0056b3;
 }
 
-//mobo
-
 .enquary-bottomDiv {
   width: 350px;
   position: relative;
-  // top: -10px;
 }
 
 .enquary-respoImg {
@@ -146,11 +144,4 @@
   bottom: 250px;
   left: 100px;
   width: fit-content;
-}
-
-.enquary-flagRow {
-  height: auto;
-  width: 750px;
-  position: absolute;
-  bottom: 130px;
 }

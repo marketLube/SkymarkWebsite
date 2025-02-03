@@ -1,0 +1,34 @@
+.enquirey-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.enquirey-icons-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  &-icon {
+    background-color: rgb(40, 148, 0);
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-p {
+    font-size: 1.2rem;
+  }
+
+  &-h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+}
