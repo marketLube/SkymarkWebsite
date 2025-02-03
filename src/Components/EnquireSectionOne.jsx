@@ -96,7 +96,7 @@ export default function EnquireSectionOne() {
               <GoArrowDownRight fontWeight={500} />
             </article>
 
-            <div className="enquirey-icons">
+            {/* <div className="enquirey-icons">
               <EnuiryIconBox
                 p="Fees Starting From"
                 h2="8 Lakhs *"
@@ -112,7 +112,7 @@ export default function EnquireSectionOne() {
                 h2="48 Hours *"
                 Icon={FaHatCowboy}
               />
-            </div>
+            </div> */}
           </div>
 
           <form className="enquary-form" onSubmit={handleSubmit}>
