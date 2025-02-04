@@ -1,7 +1,15 @@
 @use "../base/responive" as mix;
+@use "./../base/responive" as responsive;
 
 .enquire-section-two {
   height: 100vh;
+
+  @include responsive.respond(tablets) {
+    height: 85vh;
+  }
+  @include responsive.respond(bigTablets) {
+    height: 80vh;
+  }
 
   &-container {
     margin: 0 auto;
@@ -10,6 +18,17 @@
       font-size: 3rem;
       margin-left: 5rem;
       margin-bottom: 5rem;
+
+      @include responsive.respond(tablets) {
+        padding: 3rem;
+        margin-left: 0rem;
+        margin-bottom: 0rem;
+      }
+      @include responsive.respond(bigTablets) {
+        padding: 5rem;
+        margin-left: 0rem;
+        margin-bottom: 0rem;
+      }
     }
   }
 }

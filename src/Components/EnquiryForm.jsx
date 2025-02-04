@@ -6,7 +6,7 @@ import Header from "../layout/Header";
 import EnQueryMob from "./EnQueryMob";
 
 function EnquiryForm() {
-  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const isMobile = useMediaQuery({ maxWidth: 1199 });
 
   return (
     <>

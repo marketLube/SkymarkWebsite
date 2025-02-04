@@ -10,7 +10,7 @@ export default function EnQueryMob() {
 
       <div className="enquary-mob-image-text">
         <article>
-          <h2>1000+ students</h2>
+          <h2>1000+ Students</h2>
           <h2>Already Applied </h2>
           <GoArrowDownRight fontWeight={500} fontSize={40} color="#244ea0" />
         </article>
