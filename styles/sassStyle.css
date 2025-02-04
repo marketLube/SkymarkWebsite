@@ -2468,6 +2468,16 @@ li a {
   margin-left: 5rem;
   margin-bottom: 5rem;
 }
+@media only screen and (max-width: 575.98px) {
+  .enquire-section-two-container h2 {
+    padding: 2rem;
+    margin-left: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .enquire-section-two-container h2 {
     padding: 3rem;
@@ -2493,12 +2503,17 @@ li a {
   padding: 7rem 0;
 }
 .enquary-mob-form {
-  width: 80vw;
+  width: 92vw;
   margin: 0 auto;
   height: fit-content;
   background-color: white;
   padding: 2rem;
   border-radius: 1rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .enquary-mob-form {
+    width: 80vw;
+  }
 }
 .enquary-mob-form .enquary-form-row {
   margin-bottom: 1rem;
@@ -2522,7 +2537,7 @@ li a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 18rem;
   padding: 2rem;
 }
 @media only screen and (max-width: 575.98px) {
