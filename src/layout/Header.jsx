@@ -54,11 +54,6 @@ export function Header() {
     navigate("/enquiry");
   };
 
-  const handleBackClick = (e) => {
-    e.preventDefault();
-    navigate("/");
-  };
-
   const handleScrollToSection = (sectionId) => {
     const targetId = sectionId.startsWith("#")
       ? sectionId.substring(1)
@@ -75,10 +70,13 @@ export function Header() {
     const section = document.getElementById(targetId);
     if (section) {
       setIsChecked(false);
-      section.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      // Use a timeout to allow for smoother transition
+      setTimeout(() => {
+        section.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 50); // Reduced delay for quicker switch
     }
   };
 
@@ -120,7 +118,10 @@ export function Header() {
       </li>
       <li className="navigation__item">
         <a
-          onClick={handleBackClick}
+          onClick={(e) => {
+            e.preventDefault();
+            handleScrollToSection("home");
+          }}
           style={{
             background: "#244EA2",
             display: "inline-block",
