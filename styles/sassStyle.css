@@ -322,18 +322,6 @@ li a {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
-.navigation__background {
-  background-image: radial-gradient(#322486, #030637, black);
-  height: 6rem;
-  width: 6rem;
-  border-radius: 0;
-  position: fixed;
-  top: 6.5rem;
-  left: 6.5rem;
-  z-index: 5000;
-  transition: transform 0.5s;
-}
-
 .navigation__nav {
   position: fixed;
   top: 0;
@@ -358,7 +346,7 @@ li a {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .navigation__item {
@@ -377,23 +365,11 @@ li a {
   letter-spacing: 2px;
   font-size: 1.2rem;
   font-weight: 700;
-  text-decoration: none;
   color: rgb(0, 0, 0);
-  padding: 1rem;
+  background-color: white;
+  padding: 0;
 }
 
-@media (max-width: 900px) {
-  .navigation__link {
-    font-size: 1.2rem;
-    font-weight: 700;
-  }
-}
-@media (max-width: 900px) {
-  .navigation__link {
-    font-size: 1rem;
-    font-weight: 500;
-  }
-}
 .navigation__checkbox:checked ~ .navigation__nav {
   visibility: visible;
   width: 100%;
@@ -427,7 +403,7 @@ li a {
 .navigation__icon::after,
 .navigation__icon::before {
   display: inline-block;
-  background-color: rgb(59, 59, 59);
+  background-color: #3b3b3b;
   width: 1.5rem;
   height: 2px;
   transition: all 0.3s;

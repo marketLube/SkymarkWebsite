@@ -1,7 +1,6 @@
 import { transform } from "motion";
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { IoMdArrowBack } from "react-icons/io";
 
 export function Header() {
   const navigate = useNavigate();
@@ -94,7 +93,6 @@ export function Header() {
     <>
       <li className="navigation__item">
         <a
-          href="#about"
           className="navigation__link"
           onClick={(e) => {
             e.preventDefault();
@@ -106,7 +104,6 @@ export function Header() {
       </li>
       <li className="navigation__item">
         <a
-          href="/"
           className="navigation__link"
           onClick={(e) => {
             e.preventDefault();
@@ -117,38 +114,32 @@ export function Header() {
         </a>
       </li>
       <li className="navigation__item">
-        <a
-          href="#contact"
-          className="navigation__link"
-          onClick={handleWhatsAppRedirect}
-        >
+        <a className="navigation__link" onClick={handleWhatsAppRedirect}>
           Contact
         </a>
       </li>
-      <li className="nav-item">
-        <button
+      <li className="navigation__item">
+        <a
           onClick={handleBackClick}
           style={{
-            background: "#ffffff",
-            border: "1px solid black",
-            color: "black",
-            textAlign: "center",
-            padding: "8px 16px",
-            borderRadius: "18px",
-            fontSize: ".9rem",
-            fontWeight: "500",
+            background: "#244EA2",
+            display: "inline-block",
             letterSpacing: "2px",
+            fontSize: "1.2rem",
+            fontWeight: 700,
+            color: "white",
+            borderRadius: "18px",
+            padding: "3px 16px",
           }}
         >
-          <IoMdArrowBack style={{ marginBottom: "-3px" }} /> Back
-        </button>
+          Home
+        </a>
       </li>
     </>
   ) : (
     <>
       <li className="navigation__item">
         <a
-          href="#process"
           className="navigation__link"
           onClick={(e) => {
             e.preventDefault();
@@ -160,7 +151,6 @@ export function Header() {
       </li>
       <li className="navigation__item">
         <a
-          href="#about"
           className="navigation__link"
           onClick={(e) => {
             e.preventDefault();
@@ -171,31 +161,26 @@ export function Header() {
         </a>
       </li>
       <li className="navigation__item">
-        <a
-          href="#contact"
-          className="navigation__link"
-          onClick={handleWhatsAppRedirect}
-        >
+        <a className="navigation__link" onClick={handleWhatsAppRedirect}>
           Contact
         </a>
       </li>
       <li className="navigation__item">
-        <button
+        <a
           onClick={handleEnquiryClick}
           style={{
             background: "#244EA2",
-            color: "white",
-            border: "none",
-            padding: "8px 16px",
-            borderRadius: "18px",
-            cursor: "pointer",
-            fontSize: ".9rem",
-            fontWeight: "500",
+            display: "inline-block",
             letterSpacing: "2px",
+            fontSize: "1.2rem",
+            fontWeight: 700,
+            color: "white",
+            borderRadius: "18px",
+            padding: "3px 16px",
           }}
         >
           Register
-        </button>
+        </a>
       </li>
     </>
   );
@@ -323,7 +308,7 @@ export function Header() {
             className="navigation__btn"
             aria-controls="navigationMenu"
           >
-            <span className="navigation__icon">&nbsp;</span>
+            <span className="navigation__icon"></span>
           </label>
 
           <nav

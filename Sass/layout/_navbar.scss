@@ -186,19 +186,18 @@ li {
   align-items: center;
   justify-content: center;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  // cursor: pointer;
 }
-.navigation__background {
-  background-image: radial-gradient(#322486, #030637, black);
-  height: 6rem;
-  width: 6rem;
-  border-radius: 0;
-  position: fixed;
-  top: 6.5rem;
-  left: 6.5rem;
-  z-index: 5000;
-  transition: transform 0.5s;
-}
+// .navigation__background {
+// background-image: radial-gradient(#322486, #030637, black);
+// height: 6rem;
+// width: 6rem;
+// border-radius: 0;
+// position: fixed;
+// top: 6.5rem;
+// left: 6.5rem;
+// z-index: 5000;
+// transition: transform 0.5s;
+// }
 .navigation__nav {
   position: fixed;
   top: 0;
@@ -212,19 +211,18 @@ li {
   border-radius: 0;
 }
 .navigation__list {
-  // cursor: pointer;
   position: absolute;
   top: 10%;
   left: 0;
   width: 100%;
   padding: 2rem;
-
   font-weight: 900;
   text-align: center;
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
+  // height: fit-content;
 }
 .navigation__item {
   margin: 0.5rem;
@@ -234,43 +232,19 @@ li {
 @media (max-width: 900px) {
   .navigation__item {
     margin: 0;
-    // margin-bottom: 1.5rem;
   }
 }
 .navigation__link {
   display: inline-block;
-  // font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-  //   "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   letter-spacing: 2px;
   font-size: 1.2rem;
   font-weight: 700;
-  text-decoration: none;
-
   color: rgb(0, 0, 0);
-  padding: 1rem;
+  background-color: white;
+  padding: 0;
+  // padding: "8px 16px";
 }
-@media (max-width: 900px) {
-  .navigation__link {
-    font-size: 1.2rem;
-    font-weight: 700;
-  }
-}
-@media (max-width: 900px) {
-  .navigation__link {
-    font-size: 1rem;
-    font-weight: 500;
-  }
-}
-.navigation__link:hover,
-.navigation__link:active {
-  // color: #470034;
-}
-@media (max-width: 900px) {
-  .navigation__link:hover,
-  .navigation__link:active {
-    // Removed transform
-  }
-}
+
 .navigation__checkbox:checked ~ .navigation__nav {
   visibility: visible;
   width: 100%;
@@ -298,7 +272,7 @@ li {
 .navigation__icon::after,
 .navigation__icon::before {
   display: inline-block;
-  background-color: rgb(59, 59, 59);
+  background-color: #3b3b3b;
   width: 1.5rem;
   height: 2px;
   transition: all 0.3s;
