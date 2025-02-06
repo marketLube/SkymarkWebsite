@@ -1,6 +1,7 @@
 import { transform } from "motion";
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { IoMdArrowBack } from "react-icons/io";
 
 export function Header() {
   const navigate = useNavigate();
@@ -52,6 +53,11 @@ export function Header() {
   const handleEnquiryClick = (e) => {
     e.preventDefault();
     navigate("/enquiry");
+  };
+
+  const handleBackClick = (e) => {
+    e.preventDefault();
+    navigate("/");
   };
 
   const handleScrollToSection = (sectionId) => {
@@ -121,18 +127,20 @@ export function Header() {
       </li>
       <li className="nav-item">
         <button
-          onClick={handleEnquiryClick}
+          onClick={handleBackClick}
           style={{
-            background: "#244EA2",
-            color: "white",
-            border: "none",
+            background: "#ffffff",
+            border: "1px solid black",
+            color: "black",
+            textAlign: "center",
             padding: "8px 16px",
             borderRadius: "18px",
-            cursor: "pointer",
             fontSize: ".9rem",
+            fontWeight: "500",
+            letterSpacing: "2px",
           }}
         >
-          Login
+          <IoMdArrowBack style={{ marginBottom: "-3px" }} /> Back
         </button>
       </li>
     </>
