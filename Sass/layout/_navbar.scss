@@ -167,12 +167,11 @@ li {
 }
 .navigation__checkbox {
   position: absolute;
-  top: 1.5rem;
+  top: 1.8rem;
   right: 3.8rem;
-  height: 2rem;
+  height: 1.21rem;
   width: 2rem;
   opacity: 0;
-  cursor: pointer;
   z-index: 30000;
 }
 .navigation__btn {
@@ -182,12 +181,12 @@ li {
   background-color: #f7f7f7;
   border-radius: 50%;
   text-align: center;
-  z-index: 1000000000000000000000000000000000000;
+  z-index: 999999999;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  cursor: pointer;
+  // cursor: pointer;
 }
 .navigation__background {
   background-image: radial-gradient(#322486, #030637, black);
@@ -213,7 +212,7 @@ li {
   border-radius: 0;
 }
 .navigation__list {
-  cursor: pointer;
+  // cursor: pointer;
   position: absolute;
   top: 10%;
   left: 0;

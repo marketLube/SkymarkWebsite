@@ -303,13 +303,14 @@ export function Header() {
         <div className="navigation">
           <input
             checked={checked}
-            onChange={() => setIsChecked((prev) => !prev)}
+            // onClick={() => setIsChecked((prev) => !prev)}
             type="checkbox"
             className="navigation__checkbox"
             id="navi__toggle"
             aria-label="Toggle navigation"
           />
           <label
+            onClick={() => setIsChecked((prev) => !prev)}
             htmlFor="navi__toggle"
             className="navigation__btn"
             aria-controls="navigationMenu"
