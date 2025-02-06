@@ -35,19 +35,39 @@ export default function AboutMob() {
       <div className="about-scroll-mob-container">
         <div className="about-scroll-mob-container-item">
           <AboutMobLeftContent content={contentOne} />
-          <AboutMobRightContent refs={primeRef} img={img0} />
+          <AboutMobRightContent
+            refs={primeRef}
+            img={
+              "https://res.cloudinary.com/ds07e7rod/image/upload/v1738834197/DSC00692_2_y6a1ku.jpg"
+            }
+          />
         </div>
         <div className="about-scroll-mob-container-item">
           <AboutMobLeftContent content={contentTwo} />
-          <AboutMobRightContent refs={primeRef} img={img1} />
+          <AboutMobRightContent
+            refs={primeRef}
+            img={
+              "https://res.cloudinary.com/ds07e7rod/image/upload/v1738834197/5000andcounting_zkcqpr.jpg"
+            }
+          />
         </div>
         <div className="about-scroll-mob-container-item">
           <AboutMobLeftContent content={contentThree} />
-          <AboutMobRightContent refs={primeRef} img={img2} />
+          <AboutMobRightContent
+            refs={primeRef}
+            img={
+              "https://res.cloudinary.com/ds07e7rod/image/upload/v1738834197/expandhorizon_wrtksz.png"
+            }
+          />
         </div>
         <div className="about-scroll-mob-container-item">
           <AboutMobLeftContent content={contentFour} />
-          <AboutMobRightContent refs={primeRef} img={img0} />
+          <AboutMobRightContent
+            refs={primeRef}
+            img={
+              "https://res.cloudinary.com/ds07e7rod/image/upload/v1738834197/DSC00692_2_y6a1ku.jpg"
+            }
+          />
         </div>
       </div>
     </section>

@@ -1,14 +1,8 @@
 import ScrollCardBox from "../Components/ScrollCardBox";
-import step1 from "../../src/assets/Steps/Step 1.jpeg";
-import step2 from "../../src/assets/Steps/step2.jpeg";
-import step3 from "../../src/assets/Steps/step3.jpeg";
-import step4 from "../../src/assets/Steps/step 4.png";
-import step5 from "../../src/assets/Steps/step 5.jpeg";
-import step6 from "../../src/assets/Steps/step 6.jpeg";
 
 const obj = [
   {
-    img: step1,
+    img: "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833259/Step1_iemsbg.jpg",
     color: "#09bc54",
     desc: "Receive personalized guidance to explore course that match your goals.",
     title: "Expert Counselling Session",
@@ -16,7 +10,7 @@ const obj = [
     type: "green",
   },
   {
-    img: step2,
+    img: "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833259/step2_oi7frh.jpg",
     color: " #024060",
     desc: "Research and select institutions based on academics and future career prospects.",
     title: "Shortlist Universities & Programs",
@@ -24,7 +18,7 @@ const obj = [
     type: "blue",
   },
   {
-    img: step3,
+    img: "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833261/step3_ccrt6x.jpg",
     color: "#09bc54",
     desc: "Take required exams like IELTS, TOEFL, GRE, or GMAT with thorough preparation.",
     title: "Prepare for Entrance Tests",
@@ -32,7 +26,7 @@ const obj = [
     type: "gray",
   },
   {
-    img: step4,
+    img: "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833259/step4_cediub.png",
     color: " #024060",
     desc: "Complete applications with necessary documents like SOPs, LORs, and transcripts.",
     title: "Submit Applications Early",
@@ -40,7 +34,7 @@ const obj = [
     type: "blue",
   },
   {
-    img: step5,
+    img: "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833259/step5_z6lo3s.jpg",
     color: "#09bc54",
     desc: "Review acceptance letters, finalize your choice, and pay the enrollment deposit.",
     title: "Secure Admission Offer",
@@ -48,7 +42,7 @@ const obj = [
     type: "green",
   },
   {
-    img: step6,
+    img: "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833259/step6_ukgedw.jpg",
     color: " #024060",
     desc: "Submit visa applications with required documents and attend interviews if necessary",
     title: "Get Visa, Fly Abroad.",

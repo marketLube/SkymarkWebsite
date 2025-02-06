@@ -3,9 +3,9 @@ import AboutLeftContent from "./components/AboutLeftContent";
 import AboutRIghtContent from "./components/AboutRIghtContent";
 import { useInView } from "motion/react";
 
-import img0 from "../../src/assets/About/DSC00692.jpg";
-import img1 from "../../src/assets/About/5000andcounting.jpeg";
-import img2 from "../../src/assets/About/expandhorizon.png";
+// import img0 from "../../src/assets/About/DSC00692.jpg";
+// import img1 from "../../src/assets/About/5000andcounting.jpeg";
+// import img2 from "../../src/assets/About/expandhorizon.png";
 
 const contentOne = {
   title: "The Powerful Team",
@@ -82,10 +82,30 @@ export default function About() {
           )}
         </div>
         <div className="about-scroll-container-right">
-          <AboutRIghtContent refs={primeRef} img={img0} />
-          <AboutRIghtContent refs={expandRef} img={img1} />
-          <AboutRIghtContent refs={countingRef} img={img2} />
-          <AboutRIghtContent refs={visionaryRef} img={img0} />
+          <AboutRIghtContent
+            refs={primeRef}
+            img={
+              "https://res.cloudinary.com/ds07e7rod/image/upload/v1738834197/DSC00692_2_y6a1ku.jpg"
+            }
+          />
+          <AboutRIghtContent
+            refs={expandRef}
+            img={
+              "https://res.cloudinary.com/ds07e7rod/image/upload/v1738834197/5000andcounting_zkcqpr.jpg"
+            }
+          />
+          <AboutRIghtContent
+            refs={countingRef}
+            img={
+              "https://res.cloudinary.com/ds07e7rod/image/upload/v1738834197/expandhorizon_wrtksz.png"
+            }
+          />
+          <AboutRIghtContent
+            refs={visionaryRef}
+            img={
+              "https://res.cloudinary.com/ds07e7rod/image/upload/v1738834197/DSC00692_2_y6a1ku.jpg"
+            }
+          />
         </div>
       </div>
     </section>

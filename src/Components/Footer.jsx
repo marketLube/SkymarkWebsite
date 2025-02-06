@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="footer-content-left">
           <div className="footer-content-left-logo">
             <img
-              src="https://skymark.in/web/assets/images/svg/skymarkLogo.svg"
+              src="https://res.cloudinary.com/ds07e7rod/image/upload/v1738836367/skymarkLogo_drgzcw.svg"
               alt="logo"
             />
             <div className="branches">

@@ -1,6 +1,6 @@
 import Counter from "../Components/Counter";
-import globe from "../../src/assets/UpdatedUIsky-16.svg";
-import globe2 from "../../src/assets/1.svg";
+// import globe from "../../src/assets/UpdatedUIsky-16.svg";
+// import globe2 from "../../src/assets/1.svg";
 import { GoArrowDownRight } from "react-icons/go";
 import BlackBtn from "../Utils/BlackBtn";
 export default function Home() {
@@ -9,12 +9,20 @@ export default function Home() {
     <section
       className="home"
       id="home"
-      style={{ backgroundImage: `url(${globe})` }}
+      style={{
+        backgroundImage: `url("https://res.cloudinary.com/ds07e7rod/image/upload/v1738835352/UpdatedUIsky-16_yjszlk.svg")`,
+      }}
     >
       <div className="home-content">
         <div className="home-content-top">
           <div className="home-content-top-left">
-            <img src={globe2} alt="globe" className="homeGlobeImage" />
+            <img
+              src={
+                "https://res.cloudinary.com/ds07e7rod/image/upload/v1738835639/1_dram9q.svg"
+              }
+              alt="globe"
+              className="homeGlobeImage"
+            />
           </div>
           <div className="home-content-top-right">
             <div className="home-text">

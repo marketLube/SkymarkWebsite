@@ -3,50 +3,46 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
-import img1 from "../../src/assets/Testimonials/one.jpeg";
-import img2 from "../../src/assets/Testimonials/two.jpeg";
-import img3 from "../../src/assets/Testimonials/three.jpeg";
-import img4 from "../../src/assets/Testimonials/four.jpeg";
-import img5 from "../../src/assets/Testimonials/five.jpeg";
-// import img6 from "../../src/assets/Testimonials/six.jpeg";
-import img7 from "../../src/assets/Testimonials/seven.jpeg";
-import img8 from "../../src/assets/Testimonials/eight.jpeg";
-import img9 from "../../src/assets/Testimonials/nine.jpeg";
-import img10 from "../../src/assets/Testimonials/ten.jpeg";
-import img11 from "../../src/assets/Testimonials/eleven.jpeg";
-import img12 from "../../src/assets/Testimonials/twelve.jpeg";
-import img13 from "../../src/assets/Testimonials/13.jpeg";
-import img14 from "../../src/assets/Testimonials/14.jpeg";
-import img15 from "../../src/assets/Testimonials/15.jpeg";
-import img16 from "../../src/assets/Testimonials/16.jpeg";
-import img17 from "../../src/assets/Testimonials/17.jpeg";
-// import img18 from "../../src/assets/Testimonials/18.jpeg";
-import img19 from "../../src/assets/Testimonials/19.jpeg";
-import img20 from "../../src/assets/Testimonials/20.jpeg";
-import img21 from "../../src/assets/Testimonials/21.jpeg";
+// import img1 from "../../src/assets/Testimonials/one.jpeg";
+// import img2 from "../../src/assets/Testimonials/two.jpeg";
+// import img3 from "../../src/assets/Testimonials/three.jpeg";
+// import img4 from "../../src/assets/Testimonials/four.jpeg";
+// import img5 from "../../src/assets/Testimonials/five.jpeg";
+// import img7 from "../../src/assets/Testimonials/seven.jpeg";
+// import img8 from "../../src/assets/Testimonials/eight.jpeg";
+// import img9 from "../../src/assets/Testimonials/nine.jpeg";
+// import img10 from "../../src/assets/Testimonials/ten.jpeg";
+// import img11 from "../../src/assets/Testimonials/eleven.jpeg";
+// import img12 from "../../src/assets/Testimonials/twelve.jpeg";
+// import img13 from "../../src/assets/Testimonials/13.jpeg";
+// import img14 from "../../src/assets/Testimonials/14.jpeg";
+// import img15 from "../../src/assets/Testimonials/15.jpeg";
+// import img16 from "../../src/assets/Testimonials/16.jpeg";
+// import img17 from "../../src/assets/Testimonials/17.jpeg";
+// import img19 from "../../src/assets/Testimonials/19.jpeg";
+// import img20 from "../../src/assets/Testimonials/20.jpeg";
+// import img21 from "../../src/assets/Testimonials/21.jpeg";
 
 const imgArray = [
-  img1,
-  img2,
-  img3,
-  img4,
-  img5,
-  // img6,
-  img7,
-  img8,
-  img9,
-  img10,
-  img11,
-  img12,
-  img13,
-  img14,
-  img15,
-  img16,
-  img17,
-  // img18,
-  img19,
-  img20,
-  img21,
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833488/one_npdqdu.jpg",
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833554/two_rtipd4.jpg",
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833531/three_sgzttu.jpg",
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833488/four_xjgjc2.jpg",
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833488/five_emzxnx.jpg",
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833489/seven_fz7zdk.jpg",
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833488/eight_v49rdv.jpg",
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833488/nine_ke1ayg.jpg",
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833489/ten_ycalyf.jpg",
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833488/eleven_hi4xku.jpg",
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833553/twelve_bb9vnv.jpg",
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833556/13_knvjaw.jpg",
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833556/14_j8a94n.jpg",
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833487/15_bermzu.jpg",
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833486/16_bldx9b.jpg",
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833487/17_zonapn.jpg",
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833487/19_lw6jtf.jpg",
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833487/20_he09ih.jpg",
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833492/21_xtrmmp.jpg",
 ];
 
 const titleArray = [

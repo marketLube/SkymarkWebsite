@@ -9,23 +9,23 @@ import BlackBtn from "../Utils/BlackBtn";
 // import img7 from "../assets/Flags/newzeland.png";
 
 const img1 =
-  "https://cdn.pixabay.com/photo/2015/11/06/13/29/union-jack-1027898_1280.jpg";
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738835138/union-jack_avutfg.webp";
 const img2 =
-  "https://cdn.pixabay.com/photo/2016/10/30/17/39/germany-flag-1783774_1280.png";
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738835139/germany_ces0vq.webp";
 
 const img3 =
-  "https://cdn.pixabay.com/photo/2012/04/12/23/52/usa-31021_1280.png";
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738835142/usa_lhn5ty.webp";
 
 const img4 =
-  "https://cdn.pixabay.com/photo/2012/04/10/23/27/canada-27003_1280.png";
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738835144/canada_aacwta.webp";
 
 const img5 =
-  "https://cdn.pixabay.com/photo/2012/04/10/23/11/ireland-26887_1280.png";
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738835137/ireland_ur0eeq.webp";
 
 const img6 =
-  "https://cdn.pixabay.com/photo/2012/04/11/15/43/australia-28586_1280.png";
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738835138/australia_b0oz6o.webp";
 const img7 =
-  "https://media.istockphoto.com/id/951984490/vector/new-zealand-flag.jpg?s=612x612&w=0&k=20&c=KddU0iFFtGJo2WycII8daFYTC7juZEeUaxGS6TRUjSs=";
+  "https://res.cloudinary.com/ds07e7rod/image/upload/v1738835138/newZealand_dkqrdo.jpg";
 
 export default function StudyIn() {
   const [headingText, setHeadingText] = useState("United Kingdom");
@@ -125,7 +125,10 @@ export default function StudyIn() {
           <img src={flag} alt="flag" style={{ borderRadius: "0.5rem" }} />
         </div>
         <div className="research-scrol-bg">
-          <img src="/UpdatedUIsky-17.svg" alt="bg" />
+          <img
+            src="https://res.cloudinary.com/ds07e7rod/image/upload/v1738836028/UpdatedUIsky-17_yq8hmj.svg"
+            alt="bg"
+          />
         </div>
       </div>
     </div>
