@@ -126,11 +126,12 @@ export function Header() {
             background: "#244EA2",
             display: "inline-block",
             letterSpacing: "2px",
-            fontSize: "1.2rem",
-            fontWeight: 700,
+            fontSize: "1rem",
+            fontWeight: 600,
             color: "white",
             borderRadius: "18px",
             padding: "3px 16px",
+            border: "none",
           }}
         >
           Home
@@ -173,11 +174,12 @@ export function Header() {
             background: "#244EA2",
             display: "inline-block",
             letterSpacing: "2px",
-            fontSize: "1.2rem",
-            fontWeight: 700,
+            fontSize: "1rem",
+            fontWeight: 600,
             color: "white",
             borderRadius: "18px",
             padding: "3px 16px",
+            border: "none",
           }}
         >
           Register
@@ -217,7 +219,10 @@ export function Header() {
       </li>
       <li className="nav-item">
         <button
-          onClick={handleEnquiryClick}
+          onClick={(e) => {
+            e.preventDefault();
+            handleScrollToSection("home");
+          }}
           style={{
             background: "#244EA2",
             color: "white",
@@ -228,7 +233,7 @@ export function Header() {
             fontSize: "1rem",
           }}
         >
-          Register
+          Home
         </button>
       </li>
     </>
