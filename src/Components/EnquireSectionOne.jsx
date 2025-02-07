@@ -5,7 +5,7 @@ import axios from "axios";
 
 import { createPortal } from "react-dom";
 import EnuiryIconBox from "./EnuiryIconBox";
-import { LiaDollarSignSolid } from "react-icons/lia";
+import { LiaDollarSignSolid, LiaRupeeSignSolid } from "react-icons/lia";
 import { RiGraduationCapLine } from "react-icons/ri";
 import { PiTimer } from "react-icons/pi";
 
@@ -102,17 +102,18 @@ export default function EnquireSectionOne() {
             <div className="enquirey-icons">
               <EnuiryIconBox
                 p="Fees Starting From"
-                h2="8 Lakhs *"
+                h2=" ₹8 Lakhs *"
                 Icon={LiaDollarSignSolid}
               />
               <EnuiryIconBox
-                p="Fees Starting From"
-                h2="8 Lakhs *"
+                p="Scholarship worth"
+                h2={"₹10 Lakhs*"}
                 Icon={RiGraduationCapLine}
               />
+
               <EnuiryIconBox
-                p="Fees Starting From"
-                h2="8 Lakhs *"
+                p="Offer Letter in"
+                h2="48 Hours*"
                 Icon={PiTimer}
               />
             </div>

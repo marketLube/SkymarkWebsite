@@ -2420,6 +2420,36 @@ li a {
   width: fit-content;
 }
 
+.floating-button-container {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  display: flex;
+  gap: 10px;
+  z-index: 100000000;
+}
+
+.whatsapp-button,
+.call-button {
+  background: green;
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+
+/* Specific styles for Call Button */
+.call-button {
+  background: blue;
+}
+
 .enquire-section-two {
   height: 100vh;
 }

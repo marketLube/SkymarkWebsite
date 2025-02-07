@@ -21,12 +21,12 @@ export default function EnQueryMob() {
         <div className="enquary-mob-icons">
           <EnuiryIconBox
             p="Fees Starting From"
-            h2="8 Lakhs *"
+            h2="₹8 Lakhs *"
             Icon={LiaDollarSignSolid}
           />
           <EnuiryIconBox
             p="Scholarship"
-            h2="10 Lakhs *"
+            h2="₹10 Lakhs *"
             Icon={RiGraduationCapLine}
           />
         </div>
