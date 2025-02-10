@@ -19,6 +19,7 @@
       width: 80vw;
     }
     border-radius: 1rem;
+
     & .enquary-form-row {
       margin-bottom: 1rem;
     }
@@ -37,11 +38,6 @@
       color: #244ea0;
       margin-top: 3rem;
       margin: 0;
-
-      // @include responsive.respond(smallPhone) {
-      //   font-size: 1rem;
-      //   width: 5rem;
-      // }
     }
   }
 

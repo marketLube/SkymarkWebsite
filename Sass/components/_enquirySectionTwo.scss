@@ -10,6 +10,12 @@
   @include responsive.respond(bigTablets) {
     height: 80vh;
   }
+  @include responsive.respond(smallPhone) {
+    height: fit-content;
+  }
+
+  & .main-swiper {
+  }
 
   &-container {
     margin: 0 auto;

@@ -5,7 +5,7 @@ import axios from "axios";
 
 import { createPortal } from "react-dom";
 import EnuiryIconBox from "./EnuiryIconBox";
-import { LiaDollarSignSolid, LiaRupeeSignSolid } from "react-icons/lia";
+import { LiaDollarSignSolid } from "react-icons/lia";
 import { RiGraduationCapLine } from "react-icons/ri";
 import { PiTimer } from "react-icons/pi";
 
@@ -50,7 +50,7 @@ export default function EnquireSectionOne() {
       // Log the request details for debugging
       console.log("Sending data:", formattedData);
 
-      const res = await axios.post(
+      await axios.post(
         "https://api.sheetbest.com/sheets/05540cc0-c017-4369-b67c-8864cbde3440",
         formattedData,
         {
@@ -64,6 +64,7 @@ export default function EnquireSectionOne() {
 
       toast.dismiss(loadingToast);
       toast.success("Thank you!");
+
       setData(values);
     } catch (error) {
       console.error("Full error:", error);
@@ -102,7 +103,7 @@ export default function EnquireSectionOne() {
             <div className="enquirey-icons">
               <EnuiryIconBox
                 p="Fees Starting From"
-                h2=" ₹8 Lakhs *"
+                h2=" ₹8 Lakhs*"
                 Icon={LiaDollarSignSolid}
               />
               <EnuiryIconBox

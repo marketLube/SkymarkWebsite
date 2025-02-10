@@ -2,7 +2,6 @@ import { useMediaQuery } from "react-responsive";
 import EnquireSectionOne from "./EnquireSectionOne";
 import EnquirySectionTwo from "./EnquireSectionTwo";
 import Footer from "./Footer";
-import Header from "../layout/Header";
 import EnQueryMob from "./EnQueryMob";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlinePhone } from "react-icons/md";
@@ -21,11 +20,11 @@ function EnquiryForm() {
   return (
     <>
       {/* <Header /> */}
-      <main className="enquary-content">
+      <main className="enquary-content" style={{ overflowX: "hidden" }}>
         {isMobile ? <EnQueryMob /> : <EnquireSectionOne />}
         <EnquirySectionTwo />
+        <Footer />
       </main>
-      <Footer />
 
       <div className="floating-button-container">
         <button className="whatsapp-button" onClick={handleWhatsAppClick}>

@@ -1,4 +1,3 @@
-import { FaHatCowboy } from "react-icons/fa";
 import { GoArrowDownRight } from "react-icons/go";
 import EnquireyFormCom from "./EnquireyFormCom";
 import EnuiryIconBox from "./EnuiryIconBox";

@@ -1514,7 +1514,7 @@ li a {
     margin-bottom: 2rm;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) and (max-width: 1500px) {
   .testmonial-head {
     margin-bottom: 2rem;
   }
@@ -2318,6 +2318,10 @@ li a {
   object-fit: cover;
 }
 
+.enquary-content .footer {
+  margin-top: 10rem;
+}
+
 .enquary-form-container {
   display: flex;
   align-items: center;
@@ -2341,12 +2345,17 @@ li a {
   font-family: "Inter", serif;
   font-weight: 300;
   line-height: 1;
-  font-size: 6.5rem;
+  font-size: 600%;
   color: #024060;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 1rem;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+  .enquary-image-text {
+    font-size: 4rem;
+  }
 }
 
 .enquary-form {
@@ -2357,6 +2366,7 @@ li a {
   border-radius: 8px;
   display: flex;
   height: 100%;
+  min-height: 28rem;
   flex-direction: column;
   gap: 15px;
 }
@@ -2463,6 +2473,11 @@ li a {
     height: 80vh;
   }
 }
+@media only screen and (max-width: 575.98px) {
+  .enquire-section-two {
+    height: fit-content;
+  }
+}
 .enquire-section-two-container {
   margin: 0 auto;
 }
@@ -2564,8 +2579,8 @@ li a {
 }
 .enquirey-icons-box-icon {
   background-color: rgb(40, 148, 0);
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   padding: 1rem;
   border-radius: 50%;
   display: flex;
@@ -2588,13 +2603,13 @@ li a {
   }
 }
 .enquirey-icons-box-h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-top: 1rem;
 }
 @media only screen and (max-width: 575.98px) {
   .enquirey-icons-box-h2 {
-    font-size: 1rem;
+    font-size: 1.5rem !important;
   }
 }
 .enquirey-icons-box .enquireytexts {

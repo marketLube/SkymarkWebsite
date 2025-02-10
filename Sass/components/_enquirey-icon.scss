@@ -14,8 +14,8 @@
 
   &-icon {
     background-color: rgb(40, 148, 0);
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
     padding: 1rem;
     border-radius: 50%;
     display: flex;
@@ -38,12 +38,12 @@
   }
 
   &-h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     margin-top: 1rem;
 
     @include responsive.respond(smallPhone) {
-      font-size: 1rem;
+      font-size: 1.5rem !important;
     }
   }
 
