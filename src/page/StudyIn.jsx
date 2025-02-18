@@ -49,20 +49,46 @@ export default function StudyIn() {
 
   const containerRef = useRef(null);
   const [activeIndex, setActiveIndex] = React.useState(0);
+  const [screenWidth, setScreenWidth] = React.useState(window.innerWidth);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"],
   });
 
-  const flagsX = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [
-      `calc(50% - ${100 / 3}vw)`,
-      `calc(50% - ${(countries.length - 1.5) * (100 / 3)}vw)`,
-    ]
-  );
+  React.useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const getFlagsTransform = () => {
+    if (screenWidth < 768) {
+      return [
+        `calc(50vw - ${100 / 1.5 / 2}vw)`,
+        `calc(-${(countries.length - 3) * (100 / 1.5)}vw)`,
+      ];
+    } else if (screenWidth < 1024) {
+      return [
+        `calc(50vw - ${100 / 2.5 / 2}vw)`,
+        `calc(-${(countries.length - 1) * (100 / 2.5)}vw)`,
+      ];
+    } else if (screenWidth < 1200) {
+      return [
+        `calc(50vw - ${100 / 3 / 2}vw)`,
+        `calc(-${(countries.length - 1) * (100 / 3)}vw)`,
+      ];
+    }
+    return [
+      `calc(50vw - ${100 / 4 / 2}vw)`,
+      `calc(-${(countries.length - 1.2) * (100 / 4)}vw)`,
+    ];
+  };
+
+  const flagsX = useTransform(scrollYProgress, [0, 1], getFlagsTransform());
 
   React.useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (latest) => {
