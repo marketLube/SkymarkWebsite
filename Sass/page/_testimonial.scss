@@ -3,7 +3,7 @@
 
 .testmonial {
   height: 100vh;
-  padding-top: 10rem;
+  padding-top: 5rem;
   padding-bottom: 5rem;
 
   @include responsive.respond(smallPhone) {

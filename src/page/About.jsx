@@ -71,7 +71,7 @@ export default function About() {
   }, [isExpand, isCounting, isPrime, isVisionary, lastActive]);
 
   return (
-    <section className="about" id="about">
+    <div className="about" id="about">
       <div className="about-scroll-container">
         <div className="about-scroll-container-left">
           {isExpand && <AboutLeftContent content={content} />}
@@ -108,6 +108,6 @@ export default function About() {
           />
         </div>
       </div>
-    </section>
+    </div>
   );
 }

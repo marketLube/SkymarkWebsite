@@ -53,7 +53,7 @@ const obj = [
 
 export default function ScrollCard() {
   return (
-    <section className="scroll-card">
+    <div className="scroll-card">
       <div className="scroll-card-scroll-container">
         {obj.map((item, index) => (
           <ScrollCardBox
@@ -63,6 +63,6 @@ export default function ScrollCard() {
           ></ScrollCardBox>
         ))}
       </div>
-    </section>
+    </div>
   );
 }

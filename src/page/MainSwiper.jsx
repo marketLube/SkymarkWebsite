@@ -78,7 +78,7 @@ export default function MainSwiper() {
 
   const isTab = window.innerWidth < 998;
   return (
-    <section>
+    <div>
       <div className="main-swiper">
         <div className="main-swiper-container">
           <Slider {...settings}>
@@ -168,6 +168,6 @@ export default function MainSwiper() {
           Guiding Success Stories Worldwide.
         </h1>
       )}
-    </section>
+    </div>
   );
 }
