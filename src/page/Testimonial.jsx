@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -46,19 +46,21 @@ const imgArray = [
 ];
 
 const titleArray = [
-  "They truly care about their students’ success.",
-  "I’m now pursuing my master’s abroad, all thanks to Skymark",
-  "Skymark’s professionalism and dedication were outstanding.",
-  "Skymark’s counselors were always available to answer my questions",
+  "They truly care about their students' success.",
+  "I'm now pursuing my master's abroad, all thanks to Skymark",
+  "Skymark's professionalism and dedication were outstanding.",
+  "Skymark's counselors were always available to answer my questions",
   "Skymark changed my life truly.",
   "Thanks to their help, I got my admission and visa without any hassle.",
-  "I’m now studying abroad at my dream university.",
+  "I'm now studying abroad at my dream university.",
 
-  "I’m now studying in UK, Thank you Skymark.",
+  "I'm now studying in UK, Thank you Skymark.",
 ];
 
 export default function Testimonial() {
   const [isPaused, setIsPaused] = useState(false);
+  const [swiper1, setSwiper1] = useState(null);
+  const [swiper2, setSwiper2] = useState(null);
 
   const swiperSettingsRightToLeft = {
     modules: [Autoplay],
@@ -66,10 +68,12 @@ export default function Testimonial() {
     loop: true,
     speed: 3000,
     autoplay: {
-      delay: 0,
+      delay: 1,
       disableOnInteraction: false,
+      pauseOnMouseEnter: false,
       reverseDirection: false,
     },
+    onSwiper: setSwiper1,
     grabCursor: true,
     centeredSlides: true,
     breakpoints: {
@@ -123,22 +127,22 @@ export default function Testimonial() {
       },
     },
   };
+
   const swiperSettingsLeftToRight = {
     ...swiperSettingsRightToLeft,
     autoplay: {
       ...swiperSettingsRightToLeft.autoplay,
       reverseDirection: true,
     },
+    onSwiper: setSwiper2,
   };
 
   const [title, setTitle] = useState(titleArray[0]);
-  const [isMouseEnter, setIsMouseEnter] = useState(false);
   const [fadeIn, setFadeIn] = useState(true);
-
   let i = 1;
 
   useEffect(() => {
-    if (isMouseEnter) return;
+    if (isPaused) return;
     const interval = setInterval(() => {
       setFadeIn(false);
       setTimeout(() => {
@@ -151,23 +155,17 @@ export default function Testimonial() {
       }, 300);
     }, 5000);
     return () => clearInterval(interval);
-  }, [isMouseEnter]);
+  }, [isPaused]);
 
-  const handleMouseEnter = () => {
-    setIsMouseEnter(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsMouseEnter(false);
-  };
-
-  const handleSliderHover = (swiper, isHovered) => {
-    if (isHovered) {
-      swiper.autoplay.stop();
-    } else {
-      swiper.autoplay.start();
-    }
+  const handleSliderHover = (isHovered) => {
     setIsPaused(isHovered);
+    if (isHovered) {
+      swiper1?.autoplay?.stop();
+      swiper2?.autoplay?.stop();
+    } else {
+      swiper1?.autoplay?.start();
+      swiper2?.autoplay?.start();
+    }
   };
 
   return (
@@ -181,10 +179,10 @@ export default function Testimonial() {
       <div className="testimonial-slider">
         <Swiper
           {...swiperSettingsRightToLeft}
-          onMouseEnter={(swiper) => handleSliderHover(swiper, true)}
-          onMouseLeave={(swiper) => handleSliderHover(swiper, false)}
-          onTouchStart={(swiper) => handleSliderHover(swiper, true)}
-          onTouchEnd={(swiper) => handleSliderHover(swiper, false)}
+          onMouseEnter={() => handleSliderHover(true)}
+          onMouseLeave={() => handleSliderHover(false)}
+          onTouchStart={() => handleSliderHover(true)}
+          onTouchEnd={() => handleSliderHover(false)}
         >
           {imgArray.map((image, index) => (
             <SwiperSlide key={index}>
@@ -211,10 +209,10 @@ export default function Testimonial() {
       <div className="testimonial-slider">
         <Swiper
           {...swiperSettingsLeftToRight}
-          onMouseEnter={(swiper) => handleSliderHover(swiper, true)}
-          onMouseLeave={(swiper) => handleSliderHover(swiper, false)}
-          onTouchStart={(swiper) => handleSliderHover(swiper, true)}
-          onTouchEnd={(swiper) => handleSliderHover(swiper, false)}
+          onMouseEnter={() => handleSliderHover(true)}
+          onMouseLeave={() => handleSliderHover(false)}
+          onTouchStart={() => handleSliderHover(true)}
+          onTouchEnd={() => handleSliderHover(false)}
         >
           {imgArray.map((image, index) => (
             <SwiperSlide key={index}>
