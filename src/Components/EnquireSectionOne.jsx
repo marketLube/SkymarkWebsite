@@ -11,15 +11,14 @@ import { PiTimer } from "react-icons/pi";
 
 export default function EnquireSectionOne() {
   const values = {
-    Date: new Date().toISOString().split("T")[0],
+    Date: new Date().toLocaleDateString("en-GB"),
     Name: "",
     Contact: "",
     Location: "",
-    Mail: "",
     Country: "",
-    Education: "",
   };
   const [data, setData] = useState(values);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -32,23 +31,24 @@ export default function EnquireSectionOne() {
       toast.error(`Please fill in all fields`);
       return;
     }
+    setIsSubmitting(true);
+
+    const loadingToast = toast.loading("Submitting...");
 
     try {
-      const loadingToast = toast.loading("Submitting...");
-
       // Format the data to match sheet columns exactly
       const formattedData = {
-        date: data.Date,
+        date: new Date().toLocaleDateString("en-GB", {
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+        }),
         name: data.Name,
         contact: data.Contact,
         location: data.Location,
-        mail: data.Mail,
-        country: data.Country,
-        education: data.Education,
-      };
 
-      // Log the request details for debugging
-      console.log("Sending data:", formattedData);
+        country: data.Country,
+      };
 
       await axios.post(
         "https://api.sheetbest.com/sheets/05540cc0-c017-4369-b67c-8864cbde3440",
@@ -74,6 +74,9 @@ export default function EnquireSectionOne() {
         error.response?.data?.detail ||
           "Error submitting form. Please check the sheet configuration."
       );
+    } finally {
+      toast.dismiss(loadingToast);
+      setIsSubmitting(false);
     }
   };
 
@@ -150,34 +153,20 @@ export default function EnquireSectionOne() {
             </div>
             <div className="enquary-form-row">
               <input
-                type="email"
-                name="mailid"
-                placeholder="Mail Id"
-                value={data.Mail}
-                onChange={(e) => setData({ ...data, Mail: e.target.value })}
-              />
-            </div>
-            <div className="enquary-form-row">
-              <input
                 type="text"
                 name="country"
-                placeholder="Country"
+                placeholder="Preferred Country"
                 value={data.Country}
                 onChange={(e) => setData({ ...data, Country: e.target.value })}
               />
-              <input
-                type="text"
-                name="education"
-                placeholder="Education"
-                value={data.Education}
-                onChange={(e) =>
-                  setData({ ...data, Education: e.target.value })
-                }
-              />
             </div>
             <div className="enquary-form-row">
-              <button type="submit" className="enquary-submit-btn">
-                Submit
+              <button
+                type="submit"
+                className="enquary-submit-btn"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Submitting..." : "Submit"}
               </button>
             </div>
           </form>

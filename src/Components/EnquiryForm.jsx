@@ -10,11 +10,11 @@ function EnquiryForm() {
   const isMobile = useMediaQuery({ maxWidth: 1199 });
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/1234567890");
+    window.open("https://wa.me/8138929049");
   };
 
   const handleCallClick = () => {
-    window.location.href = "tel:+1234567890";
+    window.location.href = "tel:+919605771771";
   };
 
   return (
