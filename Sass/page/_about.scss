@@ -26,8 +26,8 @@
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 0.6fr;
-    gap: 2rem;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 5rem;
     position: relative;
     padding: 0 variables.$margin;
 
@@ -39,7 +39,7 @@
     &-left {
       &-content {
         position: sticky;
-        top: 10rem;
+        top: 5rem;
         left: 0;
         background-image: url("/UpdatedUIsky-17.svg");
         background-position: bottom;

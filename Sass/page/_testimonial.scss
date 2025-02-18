@@ -11,17 +11,21 @@
     height: fit-content;
     margin-bottom: 5rem;
     padding: 0;
+    display: none;
   }
+
   @include responsive.respond(phone) {
     padding-top: 0rem !important;
     height: fit-content;
     margin-bottom: 5rem;
     padding: 0;
   }
+
   @include responsive.respond(tablets) {
     padding: 0;
     height: fit-content;
   }
+
   @include responsive.respond(bigTablets) {
     height: fit-content;
     padding: 0;
@@ -48,7 +52,7 @@
 
     @include responsive.respond(bigTablets) {
       height: 13rem;
-      margin-bottom: 2rm;
+      margin-bottom: 2rem;
     }
 
     @include responsive.respond(desktop) {
@@ -153,15 +157,8 @@
   margin-bottom: 2rem;
 }
 
-// .testimonial-slider:active {
-//   cursor: grabbing;
-// }
-
 // /* Prevent image dragging while swiping */
 .slide-item img {
-  // user-select: none;
-  // -webkit-user-drag: none;
-
   border: 1px solid variables.$color-blue;
   border-radius: 1rem;
 }
