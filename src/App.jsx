@@ -46,7 +46,6 @@ function App() {
           path="/"
           element={
             <div className="container">
-              <Header />
               {showEnrolled && (
                 <div className="research-enrolled">
                   1,11,11,131 Students Enrolled

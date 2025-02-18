@@ -1,7 +1,7 @@
 import Counter from "../Components/Counter";
 // import globe from "../../src/assets/UpdatedUIsky-16.svg";
 // import globe2 from "../../src/assets/1.svg";
-import { GoArrowDownRight } from "react-icons/go";
+
 import BlackBtn from "../Utils/BlackBtn";
 // Import Swiper components and styles
 import { Swiper, SwiperSlide } from "swiper/react";

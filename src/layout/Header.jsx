@@ -1,4 +1,3 @@
-import { transform } from "motion";
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -6,6 +5,8 @@ export function Header() {
   const navigate = useNavigate();
   const location = useLocation();
   const [checked, setIsChecked] = useState(false);
+
+  console.log(checked, "checked");
 
   useEffect(() => {
     if (location.pathname === "/" && location.state?.scrollTo) {
@@ -51,8 +52,18 @@ export function Header() {
 
   const handleEnquiryClick = (e) => {
     e.preventDefault();
+    setIsChecked(false);
     navigate("/enquiry");
   };
+
+  useEffect(() => {
+    if (location.pathname === "/enquiry") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  }, [location.pathname]);
 
   const handleScrollToSection = (sectionId) => {
     const targetId = sectionId.startsWith("#")
@@ -76,7 +87,7 @@ export function Header() {
           behavior: "smooth",
           block: "start",
         });
-      }, 50); // Reduced delay for quicker switch
+      }, 0); // Reduced delay for quicker switch
     }
   };
 
@@ -95,6 +106,7 @@ export function Header() {
           onClick={(e) => {
             e.preventDefault();
             handleScrollToSection("process");
+            setIsChecked(false);
           }}
         >
           Process
@@ -106,6 +118,7 @@ export function Header() {
           onClick={(e) => {
             e.preventDefault();
             handleScrollToSection("about");
+            setIsChecked(false);
           }}
         >
           Events
@@ -121,6 +134,7 @@ export function Header() {
           onClick={(e) => {
             e.preventDefault();
             handleScrollToSection("home");
+            setIsChecked(false);
           }}
           style={{
             background: "#244EA2",
@@ -273,8 +287,8 @@ export function Header() {
             background: "#244EA2",
             color: "white",
             border: "none",
-            padding: "8px 16px",
-            borderRadius: "18px",
+            padding: "10px 20px",
+            borderRadius: "25px",
             cursor: "pointer",
             fontSize: "1rem",
           }}
@@ -290,7 +304,10 @@ export function Header() {
       <nav>
         <div
           className="logo"
-          onClick={() => (window.location.href = "/")}
+          onClick={() => {
+            window.location.href = "/";
+            setIsChecked(false);
+          }}
           style={{ cursor: "pointer" }}
         >
           <img
@@ -306,10 +323,10 @@ export function Header() {
             className="navigation__checkbox"
             id="navi__toggle"
             aria-label="Toggle navigation"
+            onChange={() => setIsChecked((prev) => !prev)}
           />
           <label
-            onTouchEnd={() => setIsChecked((prev) => !prev)} // Increased touch responsiveness
-            // onClick={() => setIsChecked((prev) => !prev)}
+            // onTouchEnd={() => setIsChecked((prev) => !prev)}
             htmlFor="navi__toggle"
             className="navigation__btn"
             aria-controls="navigationMenu"
