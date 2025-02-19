@@ -34,6 +34,9 @@ const imgArray = [
   "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833488/nine_ke1ayg.jpg",
   "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833489/ten_ycalyf.jpg",
   "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833488/eleven_hi4xku.jpg",
+];
+
+const imgArray2 = [
   "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833553/twelve_bb9vnv.jpg",
   "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833556/13_knvjaw.jpg",
   "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833556/14_j8a94n.jpg",
@@ -53,14 +56,29 @@ const titleArray = [
   "Skymark changed my life truly.",
   "Thanks to their help, I got my admission and visa without any hassle.",
   "I'm now studying abroad at my dream university.",
-
   "I'm now studying in UK, Thank you Skymark.",
 ];
 
 export default function Testimonial() {
-  const [isPaused, setIsPaused] = useState(false);
   const [swiper1, setSwiper1] = useState(null);
   const [swiper2, setSwiper2] = useState(null);
+
+  // Separate handlers for each swiper
+  const handleMouseEnterFirst = () => {
+    if (swiper1) swiper1.autoplay.stop();
+  };
+
+  const handleMouseLeaveFirst = () => {
+    if (swiper1) swiper1.autoplay.start();
+  };
+
+  const handleMouseEnterSecond = () => {
+    if (swiper2) swiper2.autoplay.stop();
+  };
+
+  const handleMouseLeaveSecond = () => {
+    if (swiper2) swiper2.autoplay.start();
+  };
 
   const swiperSettingsRightToLeft = {
     modules: [Autoplay],
@@ -69,9 +87,6 @@ export default function Testimonial() {
     speed: 3000,
     autoplay: {
       delay: 1,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: false,
-      reverseDirection: false,
     },
     onSwiper: setSwiper1,
     grabCursor: true,
@@ -141,33 +156,6 @@ export default function Testimonial() {
   const [fadeIn, setFadeIn] = useState(true);
   let i = 1;
 
-  useEffect(() => {
-    if (isPaused) return;
-    const interval = setInterval(() => {
-      setFadeIn(false);
-      setTimeout(() => {
-        setTitle(titleArray[i]);
-        setFadeIn(true);
-        i++;
-        if (i === titleArray.length) {
-          i = 0;
-        }
-      }, 300);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [isPaused]);
-
-  const handleSliderHover = (isHovered) => {
-    setIsPaused(isHovered);
-    if (isHovered) {
-      swiper1?.autoplay?.stop();
-      swiper2?.autoplay?.stop();
-    } else {
-      swiper1?.autoplay?.start();
-      swiper2?.autoplay?.start();
-    }
-  };
-
   return (
     <section className="testmonial">
       <div className="testmonial-head">
@@ -176,14 +164,12 @@ export default function Testimonial() {
         </h2>
       </div>
 
-      <div className="testimonial-slider">
-        <Swiper
-          {...swiperSettingsRightToLeft}
-          onMouseEnter={() => handleSliderHover(true)}
-          onMouseLeave={() => handleSliderHover(false)}
-          onTouchStart={() => handleSliderHover(true)}
-          onTouchEnd={() => handleSliderHover(false)}
-        >
+      <div
+        className="testimonial-slider"
+        onMouseEnter={handleMouseEnterFirst}
+        onMouseLeave={handleMouseLeaveFirst}
+      >
+        <Swiper style={{ cursor: "pointer" }} {...swiperSettingsRightToLeft}>
           {imgArray.map((image, index) => (
             <SwiperSlide key={index}>
               <div className="slide-item">
@@ -198,6 +184,8 @@ export default function Testimonial() {
                         ? "200px"
                         : "270px",
                     objectFit: "cover",
+                    transition: "transform 0.3s ease",
+                    cursor: "pointer",
                   }}
                 />
               </div>
@@ -206,15 +194,13 @@ export default function Testimonial() {
         </Swiper>
       </div>
 
-      <div className="testimonial-slider">
-        <Swiper
-          {...swiperSettingsLeftToRight}
-          onMouseEnter={() => handleSliderHover(true)}
-          onMouseLeave={() => handleSliderHover(false)}
-          onTouchStart={() => handleSliderHover(true)}
-          onTouchEnd={() => handleSliderHover(false)}
-        >
-          {imgArray.map((image, index) => (
+      <div
+        className="testimonial-slider"
+        onMouseEnter={handleMouseEnterSecond}
+        onMouseLeave={handleMouseLeaveSecond}
+      >
+        <Swiper {...swiperSettingsLeftToRight}>
+          {imgArray2.map((image, index) => (
             <SwiperSlide key={index}>
               <div className="slide-item">
                 <img
@@ -228,6 +214,8 @@ export default function Testimonial() {
                         ? "200px"
                         : "270px",
                     objectFit: "cover",
+                    transition: "transform 0.3s ease",
+                    cursor: "pointer",
                   }}
                 />
               </div>

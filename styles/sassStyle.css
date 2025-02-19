@@ -503,7 +503,7 @@ li a {
   }
 }
 .footer-content-left {
-  flex: 1;
+  flex: 1.5;
   height: 100%;
   padding: 3rem 0;
 }
@@ -562,7 +562,7 @@ li a {
   }
 }
 .footer-content-right {
-  flex: 1;
+  flex: 0.5;
   height: 100%;
   padding: 3rem 0;
   display: flex;
