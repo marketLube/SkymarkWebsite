@@ -1177,6 +1177,7 @@ li a {
   flex: 1.2;
   text-align: left;
   font-size: 1.2rem;
+  line-height: 1.8;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .about-para-container-right {
