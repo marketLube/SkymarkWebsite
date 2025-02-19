@@ -15,7 +15,7 @@
 .footer {
   height: 15rem;
   background-color: white;
-  padding: 0 5rem;
+  padding: 0 8.7rem;
   position: relative;
   z-index: 90000;
   @include responsive.respond(smallPhone) {
@@ -24,7 +24,7 @@
     height: fit-content;
   }
   @include responsive.respond(phone) {
-    padding: 0rem 1rem;
+    padding: 0rem 2rem;
     text-align: center;
     height: fit-content;
   }
@@ -56,11 +56,20 @@
     }
 
     &-left {
-      flex: 1.5;
+      flex: 1.55;
       height: 100%;
       padding: 3rem 0;
       @include responsive.respond(smallPhone) {
         padding: 0rem;
+      }
+      @include responsive.respond(phone) {
+        flex: 1;
+      }
+      @include responsive.respond(tablets) {
+        flex: 1;
+      }
+      @include responsive.respond(bigTablets) {
+        flex: 1;
       }
 
       & .branches {
@@ -109,11 +118,21 @@
     }
 
     &-right {
-      flex: 0.5;
+      flex: 0.45;
       height: 100%;
       padding: 3rem 0;
       display: flex;
       justify-content: flex-end;
+      @include responsive.respond(phone) {
+        flex: 1;
+      }
+      @include responsive.respond(tablets) {
+        flex: 1;
+        align-items: center;
+      }
+      @include responsive.respond(bigTablets) {
+        flex: 1;
+      }
 
       @include responsive.respond(smallPhone) {
         padding-top: 1rem;

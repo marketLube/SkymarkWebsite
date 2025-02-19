@@ -35,14 +35,13 @@ export function Header() {
 
     if (checked) {
       document.body.style.overflow = "hidden";
-      // Add wheel and touchmove event listeners
+
       document.addEventListener("wheel", preventScroll, { passive: false });
       document.addEventListener("touchmove", preventScroll, { passive: false });
     } else {
       document.body.style.overflow = "unset";
     }
 
-    // Cleanup function
     return () => {
       document.body.style.overflow = "unset";
       document.removeEventListener("wheel", preventScroll);
@@ -81,13 +80,13 @@ export function Header() {
     const section = document.getElementById(targetId);
     if (section) {
       setIsChecked(false);
-      // Use a timeout to allow for smoother transition
+
       setTimeout(() => {
         section.scrollIntoView({
           behavior: "smooth",
           block: "start",
         });
-      }, 0); // Reduced delay for quicker switch
+      }, 0);
     }
   };
 
