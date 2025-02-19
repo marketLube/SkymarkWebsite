@@ -16,14 +16,14 @@
     grid-template-columns: 1fr 0.8fr;
     gap: 5rem;
     position: relative;
-    padding: 0 variables.$margin;
+    padding: 0 variables.$margin 5rem variables.$margin;
 
     @include responsive.respond(bigDesktop) {
       gap: 2rem;
-      padding: 0;
+      padding: 0 0 5rem 0;
     }
     @media screen and (min-width: 1151px) and (max-width: 1400px) {
-      padding: 0;
+      padding: 0 0 5rem 0;
       gap: 1.5rem;
     }
 
@@ -82,7 +82,7 @@
       flex-direction: column;
       gap: 5rem;
 
-      padding: 13rem 0;
+      padding: 8rem 0 0rem 0;
       &-content {
         display: flex;
         flex-direction: column;
