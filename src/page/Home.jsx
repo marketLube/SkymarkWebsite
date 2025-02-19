@@ -61,14 +61,6 @@ export default function Home() {
               className="homeGlobeImage"
             />
           </div>
-          {/* <div className="home-content-top-right">
-            <div className="home-text">
-              <span>Your trusted study abroad partner</span>
-              <span className="mobile-only-arrow">
-                <GoArrowDownRight />
-              </span>
-            </div>
-          </div> */}
           <div className="home-content-top-right">
             <div className="home-rightText">
               <span>Your trusted</span>
@@ -88,21 +80,15 @@ export default function Home() {
                   fontWeight: "500",
                   width: isTab ? "100px" : "auto",
                 }}
-                onClick={() => window.open('https://wa.me/8138929049', '_blank')}
+                onClick={() =>
+                  window.open("https://wa.me/8138929049", "_blank")
+                }
               >
                 Contact
               </BlackBtn>
             </div>
           </div>
         </div>
-        {/* {isTab && (
-          <div className="home-contact">
-            <BlackBtn style={{ backgroundColor: "#024060" }}>
-              Contact Us
-            </BlackBtn>
-          </div>
-        )} */}
-
         <div className="flags-swiper-container">
           <Swiper
             modules={[Autoplay]}

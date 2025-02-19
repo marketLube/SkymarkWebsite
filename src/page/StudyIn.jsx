@@ -66,7 +66,12 @@ export default function StudyIn() {
   }, []);
 
   const getFlagsTransform = () => {
-    if (screenWidth < 768) {
+    if (screenWidth < 575) {
+      return [
+        `calc(50vw - ${100 / 2.5}vw)`,
+        `calc(-${(countries.length - 1.3) * (100 / 2.1)}vw)`,
+      ];
+    } else if (screenWidth < 768) {
       return [
         `calc(50vw - ${100 / 1.5 / 2}vw)`,
         `calc(-${(countries.length - 3) * (100 / 1.5)}vw)`,
