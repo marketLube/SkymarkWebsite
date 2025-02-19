@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Slider from "react-slick/lib/slider";
 
 export default function MainSwiper() {
@@ -76,6 +76,40 @@ export default function MainSwiper() {
     ],
   };
 
+  useEffect(() => {
+    let players = [];
+    if (typeof window !== "undefined") {
+      const tag = document.createElement("script");
+      tag.src = "https://www.youtube.com/iframe_api";
+      const firstScriptTag = document.getElementsByTagName("script")[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      window.onYouTubeIframeAPIReady = () => {
+        document
+          .querySelectorAll(".youtube-player")
+          .forEach((iframe, index) => {
+            players[index] = new YT.Player(iframe, {
+              events: {
+                onStateChange: (event) => {
+                  if (event.data === YT.PlayerState.PLAYING) {
+                    players.forEach((player, idx) => {
+                      if (idx !== index && player.pauseVideo) {
+                        player.pauseVideo();
+                      }
+                    });
+                  }
+                },
+              },
+            });
+          });
+      };
+    }
+
+    return () => {
+      players = [];
+    };
+  }, []);
+
   const isTab = window.innerWidth < 998;
   return (
     <div>
@@ -85,7 +119,8 @@ export default function MainSwiper() {
             <div className="swiper-body-item">
               <span>
                 <iframe
-                  src="https://www.youtube.com/embed/uBDbrr6cjPE"
+                  className="youtube-player"
+                  src="https://www.youtube.com/embed/uBDbrr6cjPE?enablejsapi=1"
                   title="Frame 1"
                   width="100%"
                   height="100%"
@@ -98,7 +133,8 @@ export default function MainSwiper() {
             <div className="swiper-body-item">
               <span>
                 <iframe
-                  src="https://www.youtube.com/embed/unR5vDRuLj4"
+                  className="youtube-player"
+                  src="https://www.youtube.com/embed/unR5vDRuLj4?enablejsapi=1"
                   title="Frame 2"
                   width="100%"
                   height="100%"
@@ -111,7 +147,8 @@ export default function MainSwiper() {
             <div className="swiper-body-item">
               <span>
                 <iframe
-                  src="https://www.youtube.com/embed/xcGU-1FB_kA"
+                  className="youtube-player"
+                  src="https://www.youtube.com/embed/xcGU-1FB_kA?enablejsapi=1"
                   title="Frame 3"
                   width="100%"
                   height="100%"
@@ -124,7 +161,8 @@ export default function MainSwiper() {
             <div className="swiper-body-item">
               <span>
                 <iframe
-                  src="https://www.youtube.com/embed/dGU52bhgI7M"
+                  className="youtube-player"
+                  src="https://www.youtube.com/embed/dGU52bhgI7M?enablejsapi=1"
                   title="Frame 4"
                   width="100%"
                   height="100%"
@@ -137,7 +175,8 @@ export default function MainSwiper() {
             <div className="swiper-body-item">
               <span>
                 <iframe
-                  src="https://www.youtube.com/embed/BOuXCyMuVCs"
+                  className="youtube-player"
+                  src="https://www.youtube.com/embed/BOuXCyMuVCs?enablejsapi=1"
                   title="Frame 5"
                   width="100%"
                   height="100%"
@@ -158,11 +197,12 @@ export default function MainSwiper() {
             fontWeight: "500",
             color: "#024060",
             textAlign: "center",
-
             height: "8rem",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            marginTop: "3rem",
+            paddingTop: "0rem",
           }}
         >
           Guiding Success Stories Worldwide.
