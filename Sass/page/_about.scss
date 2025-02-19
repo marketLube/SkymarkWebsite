@@ -9,19 +9,6 @@
     padding: 0 1rem;
   }
 
-  & .home-text {
-    height: 25rem;
-    overflow: hidden;
-    width: 100%;
-
-    // @include responsive.respond(tablets) {
-    //   font-size: 4rem;
-    // }
-    @include responsive.respond(bigTablets) {
-      font-size: 65px;
-    }
-  }
-
   &-scroll-container {
     height: 100%;
     width: 100%;
@@ -31,6 +18,10 @@
     position: relative;
     padding: 0 variables.$margin;
 
+    @include responsive.respond(bigDesktop) {
+      gap: 2rem;
+      padding: 0;
+    }
     @media screen and (min-width: 1151px) and (max-width: 1400px) {
       padding: 0;
       gap: 1.5rem;
@@ -47,6 +38,41 @@
 
         @media screen and (min-width: 1151px) and (max-width: 1400px) {
           top: 5rem;
+        }
+
+        &-title {
+          height: fit-content;
+          padding: 10% 0;
+          width: fit-content;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: Inter, serif;
+          font-weight: 300;
+          line-height: 1;
+          font-size: 6.5rem;
+          color: rgb(2, 64, 96);
+
+          @include responsive.respond(bigDesktop) {
+            font-size: 5rem;
+          }
+          @include responsive.respond(desktop) {
+            font-size: 5rem;
+            padding: 8% 0;
+          }
+
+          @include responsive.respond(bigTablets) {
+            font-size: 5rem;
+          }
+
+          @include responsive.respond(tablets) {
+            font-size: 4rem;
+          }
+
+          // @include responsive.respond(smallPhone) {
+          //   font-size: 3rem;
+          //   padding: 5% 0;
+          // }
         }
       }
     }
@@ -92,17 +118,35 @@
   }
 
   &-para-container {
-    height: 20rem;
+    height: fit-content;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: start;
     gap: 3rem;
+
+    @include responsive.respond(bigTablets) {
+      font-size: 1.3rem;
+    }
+    @include responsive.respond(desktop) {
+      gap: 1.5rem;
+    }
+    @include responsive.respond(bigDesktop) {
+      font-size: 1.5rem;
+      gap: 1.5rem;
+    }
     &-right {
-      flex: 1;
+      flex: 1.2;
       text-align: left;
       font-size: 1.2rem;
-      line-height: 1.5;
+
+      @include responsive.respond(bigTablets) {
+        font-size: 1.1rem;
+        flex: 1;
+      }
+      @include responsive.respond(desktop) {
+        font-size: 1.1rem;
+      }
     }
   }
 }

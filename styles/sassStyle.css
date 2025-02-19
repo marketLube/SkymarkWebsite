@@ -108,6 +108,24 @@ section {
     margin-bottom: 1rem;
   }
 }
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .sec-btn,
+  .black-btn {
+    padding: 0.6rem 1rem;
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .sec-btn,
+  .black-btn {
+    padding: 0.6rem 1.2rem;
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+}
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .sec-btn,
   .black-btn {
@@ -1016,16 +1034,6 @@ li a {
     padding: 0 1rem;
   }
 }
-.about .home-text {
-  height: 25rem;
-  overflow: hidden;
-  width: 100%;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
-  .about .home-text {
-    font-size: 65px;
-  }
-}
 .about-scroll-container {
   height: 100%;
   width: 100%;
@@ -1034,6 +1042,12 @@ li a {
   gap: 5rem;
   position: relative;
   padding: 0 5rem;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .about-scroll-container {
+    gap: 2rem;
+    padding: 0;
+  }
 }
 @media screen and (min-width: 1151px) and (max-width: 1400px) {
   .about-scroll-container {
@@ -1052,6 +1066,40 @@ li a {
 @media screen and (min-width: 1151px) and (max-width: 1400px) {
   .about-scroll-container-left-content {
     top: 5rem;
+  }
+}
+.about-scroll-container-left-content-title {
+  height: fit-content;
+  padding: 10% 0;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter, serif;
+  font-weight: 300;
+  line-height: 1;
+  font-size: 6.5rem;
+  color: rgb(2, 64, 96);
+}
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .about-scroll-container-left-content-title {
+    font-size: 5rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .about-scroll-container-left-content-title {
+    font-size: 5rem;
+    padding: 8% 0;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .about-scroll-container-left-content-title {
+    font-size: 5rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .about-scroll-container-left-content-title {
+    font-size: 4rem;
   }
 }
 .about-scroll-container-right {
@@ -1089,18 +1137,44 @@ li a {
   gap: 2rem;
 }
 .about-para-container {
-  height: 20rem;
+  height: fit-content;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: start;
   gap: 3rem;
 }
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .about-para-container {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .about-para-container {
+    gap: 1.5rem;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .about-para-container {
+    font-size: 1.5rem;
+    gap: 1.5rem;
+  }
+}
 .about-para-container-right {
-  flex: 1;
+  flex: 1.2;
   text-align: left;
   font-size: 1.2rem;
-  line-height: 1.5;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .about-para-container-right {
+    font-size: 1.1rem;
+    flex: 1;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .about-para-container-right {
+    font-size: 1.1rem;
+  }
 }
 
 .animate-mount {

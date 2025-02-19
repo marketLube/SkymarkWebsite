@@ -27,7 +27,7 @@ export default function AboutLeftContent({ content }) {
         shouldAnimate ? "animate-mount" : ""
       }`}
     >
-      <div className="home-text">
+      <div className="about-scroll-container-left-content-title">
         <span>{content.title}</span>
       </div>
       <div className="about-para-container">
