@@ -168,6 +168,7 @@
 }
 .about-mob {
   position: relative;
+  padding: 0 2rem;
   @include responsive.respond(bigTablets) {
     text-align: left;
   }
@@ -181,7 +182,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    padding: 6px;
+    // padding: 6px;
     @include responsive.respond(smallPhone) {
     }
 
@@ -262,15 +263,12 @@
         @include responsive.respond(smallPhone) {
           object-fit: cover;
           border-radius: 16px;
-          // height: fit-content;
         }
         @include responsive.respond(phone) {
           object-fit: cover;
-          // height: fit-content;
         }
         @include responsive.respond(tablets) {
           object-fit: cover;
-          // height: fit-content;
         }
       }
     }
@@ -279,7 +277,6 @@
 .about-scroll-mob-container-left {
   position: relative;
   z-index: 2;
-
   background-color: white;
 }
 .about-scrolll-mob-left {
@@ -289,6 +286,33 @@
   height: fit-content;
   z-index: 2;
   padding-top: 1rem;
+
+  &-title {
+    height: fit-content;
+    padding: 2rem 0;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter, serif;
+    font-weight: 300;
+    line-height: 1;
+    font-size: 4.3rem;
+    color: rgb(2, 64, 96);
+
+    @include responsive.respond(bigTablets) {
+      font-size: 3.5rem;
+    }
+    @include responsive.respond(tablets) {
+      font-size: 3.5rem;
+    }
+    @include responsive.respond(phone) {
+      font-size: 3.5rem;
+    }
+    @include responsive.respond(smallPhone) {
+      font-size: 2.5rem;
+    }
+  }
 }
 .about-mob-para {
   line-height: 1.5;
@@ -298,14 +322,12 @@
   @include responsive.respond(smallPhone) {
     font-size: 13px;
   }
-
   @include responsive.respond(phone) {
     font-size: 15px;
   }
   @include responsive.respond(bigTablets) {
     font-size: 2rem;
   }
-
   @media screen and (min-width: 992px) and (max-width: 1199px) {
     font-size: 1.1rem;
   }

@@ -13,9 +13,9 @@
   border: none;
 
   @include responsive.respond(smallPhone) {
-    padding: 0.4rem 1rem;
+    padding: 0.4rem 0.8rem;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.7rem;
     margin-bottom: 1rem;
   }
 
@@ -23,6 +23,18 @@
     padding: 0.6rem 1.5rem;
     font-weight: 400;
     font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  @include responsive.respond(bigTablets) {
+    padding: 0.6rem 1rem;
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  @include responsive.respond(tablets) {
+    padding: 0.6rem 1rem;
+    font-weight: 400;
+    font-size: 0.8rem;
     margin-bottom: 1rem;
   }
   @include responsive.respond(desktop) {
