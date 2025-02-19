@@ -3,26 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
-// import img1 from "../../src/assets/Testimonials/one.jpeg";
-// import img2 from "../../src/assets/Testimonials/two.jpeg";
-// import img3 from "../../src/assets/Testimonials/three.jpeg";
-// import img4 from "../../src/assets/Testimonials/four.jpeg";
-// import img5 from "../../src/assets/Testimonials/five.jpeg";
-// import img7 from "../../src/assets/Testimonials/seven.jpeg";
-// import img8 from "../../src/assets/Testimonials/eight.jpeg";
-// import img9 from "../../src/assets/Testimonials/nine.jpeg";
-// import img10 from "../../src/assets/Testimonials/ten.jpeg";
-// import img11 from "../../src/assets/Testimonials/eleven.jpeg";
-// import img12 from "../../src/assets/Testimonials/twelve.jpeg";
-// import img13 from "../../src/assets/Testimonials/13.jpeg";
-// import img14 from "../../src/assets/Testimonials/14.jpeg";
-// import img15 from "../../src/assets/Testimonials/15.jpeg";
-// import img16 from "../../src/assets/Testimonials/16.jpeg";
-// import img17 from "../../src/assets/Testimonials/17.jpeg";
-// import img19 from "../../src/assets/Testimonials/19.jpeg";
-// import img20 from "../../src/assets/Testimonials/20.jpeg";
-// import img21 from "../../src/assets/Testimonials/21.jpeg";
-
 const imgArray = [
   "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833488/one_npdqdu.jpg",
   "https://res.cloudinary.com/ds07e7rod/image/upload/v1738833554/two_rtipd4.jpg",
@@ -85,9 +65,12 @@ export default function Testimonial() {
     slidesPerView: 3,
     loop: true,
     speed: 3000,
-    autoplay: {
-      delay: 1,
-    },
+    autoplay:
+      window.innerWidth > 768
+        ? {
+            delay: 1,
+          }
+        : false,
     onSwiper: setSwiper1,
     grabCursor: true,
     centeredSlides: true,
@@ -145,10 +128,13 @@ export default function Testimonial() {
 
   const swiperSettingsLeftToRight = {
     ...swiperSettingsRightToLeft,
-    autoplay: {
-      ...swiperSettingsRightToLeft.autoplay,
-      reverseDirection: true,
-    },
+    autoplay:
+      window.innerWidth > 768
+        ? {
+            delay: 1,
+            reverseDirection: true,
+          }
+        : false,
     onSwiper: setSwiper2,
   };
 

@@ -61,6 +61,7 @@ export default function MainSwiper() {
   }, []);
 
   const isTab = window.innerWidth < 998;
+  const isMobile = window.innerWidth < 768;
 
   return (
     <div>
@@ -75,12 +76,17 @@ export default function MainSwiper() {
             slidesPerView={1}
             loop={true}
             speed={1000}
-            autoplay={{
-              delay: 1500,
-              disableOnInteraction: true,
-              pauseOnMouseEnter: true,
-              stopOnLastSlide: false,
-            }}
+            touchRatio={1.5}
+            touchAngle={45}
+            grabCursor={true}
+            autoplay={
+              !isMobile && {
+                delay: 1500,
+                disableOnInteraction: true,
+                pauseOnMouseEnter: true,
+                stopOnLastSlide: false,
+              }
+            }
             breakpoints={{
               500: {
                 slidesPerView: 1.6,
