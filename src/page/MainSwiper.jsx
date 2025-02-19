@@ -72,9 +72,9 @@ export default function MainSwiper() {
             }}
             modules={[Autoplay]}
             spaceBetween={20}
-            slidesPerView={4}
+            slidesPerView={1}
             loop={true}
-            speed={5000}
+            speed={1000}
             autoplay={{
               delay: 1500,
               disableOnInteraction: true,
@@ -82,29 +82,20 @@ export default function MainSwiper() {
               stopOnLastSlide: false,
             }}
             breakpoints={{
-              1400: {
-                slidesPerView: 4,
-                speed: 1000,
-              },
-              960: {
-                slidesPerView: 2.5,
-                speed: 1000,
-              },
-              821: {
-                slidesPerView: 2,
-                speed: 1000,
-              },
-              768: {
+              500: {
                 slidesPerView: 1.6,
-                speed: 1000,
               },
               575: {
                 slidesPerView: 1.6,
-                speed: 1000,
               },
-              500: {
-                slidesPerView: 1,
-                speed: 1000,
+              768: {
+                slidesPerView: 2,
+              },
+              960: {
+                slidesPerView: 2.5,
+              },
+              1400: {
+                slidesPerView: 3.5,
               },
             }}
           >
