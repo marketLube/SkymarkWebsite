@@ -31,6 +31,7 @@
 
   &-p {
     font-size: 1.2rem;
+    color: #024060;
 
     @include responsive.respond(smallPhone) {
       width: 11rem;

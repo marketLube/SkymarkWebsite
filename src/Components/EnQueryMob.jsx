@@ -14,7 +14,7 @@ export default function EnQueryMob() {
         <article>
           <h2>1000+ Students</h2>
           <h2>Already Applied </h2>
-          <GoArrowDownRight fontWeight={500} fontSize={40} color="#244ea0" />
+          <GoArrowDownRight fontWeight={500} fontSize={40} color="#024060" />
         </article>
 
         <div className="enquary-mob-icons">
