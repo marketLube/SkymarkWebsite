@@ -23,10 +23,32 @@ export default function EnquireSectionOne() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Check for empty fields
+    if (data.Name.length < 2 || data.Name.length > 50) {
+      toast.error("Name should be 2-50 characters");
+      return;
+    }
+    const phoneRegex = /^\+?[1-9]\d{9,14}$/;
+    if (!phoneRegex.test(data.Contact)) {
+      toast.error("Please enter a valid phone number");
+      return;
+    }
+
+    const locationRegex = /^[A-Za-z\s]{2,100}$/;
+    if (!locationRegex.test(data.Location.trim())) {
+      toast.error("Please enter a valid location");
+      return;
+    }
+
+    const countryRegex = /^[A-Za-z\s]{2,56}$/;
+    if (!countryRegex.test(data.Country.trim())) {
+      toast.error("Please enter a valid country name");
+      return;
+    }
+
     const emptyFields = Object.entries(data).filter(
       ([key, value]) => key !== "Date" && !value.trim()
     );
+
     if (emptyFields.length > 0) {
       toast.error(`Please fill in all fields`);
       return;
@@ -36,7 +58,6 @@ export default function EnquireSectionOne() {
     const loadingToast = toast.loading("Submitting...");
 
     try {
-      // Format the data to match sheet columns exactly
       const formattedData = {
         date: new Date().toLocaleDateString("en-GB", {
           year: "numeric",
@@ -130,16 +151,34 @@ export default function EnquireSectionOne() {
                 name="name"
                 placeholder="Name"
                 value={data.Name}
-                onChange={(e) => setData({ ...data, Name: e.target.value })}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  if (/^[A-Za-z\s]*$/.test(value)) {
+                    setData({ ...data, Name: value });
+                  }
+                }}
+                minLength={2}
+                maxLength={50}
               />
             </div>
             <div className="enquary-form-row">
               <input
-                type="number"
+                type="text"
                 name="number"
                 placeholder="Contact Number"
-                value={data.Contact}
-                onChange={(e) => setData({ ...data, Contact: e.target.value })}
+                value={data.Contact ? `+91 ${data.Contact}` : ""}
+                onFocus={() => {
+                  if (!data.Contact) {
+                    setData({ ...data, Contact: "" });
+                  }
+                }}
+                onChange={(e) => {
+                  const value = e.target.value.replace("+91 ", "");
+                  if (/^\d*$/.test(value) && value.length <= 10) {
+                    setData({ ...data, Contact: value });
+                  }
+                }}
+                maxLength={14}
               />
             </div>
             <div className="enquary-form-row">
@@ -148,7 +187,15 @@ export default function EnquireSectionOne() {
                 name="location"
                 placeholder="Location"
                 value={data.Location}
-                onChange={(e) => setData({ ...data, Location: e.target.value })}
+                onChange={(e) => {
+                  const value = e.target.value;
+
+                  if (/^[A-Za-z\s]*$/.test(value)) {
+                    setData({ ...data, Location: value });
+                  }
+                }}
+                minLength={2}
+                maxLength={100}
               />
             </div>
             <div className="enquary-form-row">
@@ -157,7 +204,14 @@ export default function EnquireSectionOne() {
                 name="country"
                 placeholder="Preferred Country"
                 value={data.Country}
-                onChange={(e) => setData({ ...data, Country: e.target.value })}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  if (/^[A-Za-z\s]*$/.test(value)) {
+                    setData({ ...data, Country: value });
+                  }
+                }}
+                minLength={2}
+                maxLength={56}
               />
             </div>
             <div className="enquary-form-row">
