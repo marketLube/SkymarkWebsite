@@ -88,6 +88,7 @@ export default function Home() {
                   fontWeight: "500",
                   width: isTab ? "100px" : "auto",
                 }}
+                onClick={() => window.open('https://wa.me/8138929049', '_blank')}
               >
                 Contact
               </BlackBtn>
