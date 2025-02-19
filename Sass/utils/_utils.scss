@@ -16,42 +16,38 @@
     padding: 0.4rem 0.8rem;
     font-weight: 400;
     font-size: 0.7rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   @include responsive.respond(phone) {
-    padding: 0.6rem 1.5rem;
-    font-weight: 400;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-  @include responsive.respond(bigTablets) {
-    padding: 0.6rem 1rem;
+    padding: 0.6rem 0.8rem;
     font-weight: 400;
     font-size: 0.8rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+  }
+  @include responsive.respond(bigTablets) {
+    padding: 0.6rem 0.8rem;
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
   }
   @include responsive.respond(tablets) {
     padding: 0.6rem 1rem;
     font-weight: 400;
     font-size: 0.8rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
   @include responsive.respond(desktop) {
     padding: 0.6rem 1rem;
     font-weight: 400;
     font-size: 0.8rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
   @include responsive.respond(bigDesktop) {
     padding: 0.6rem 1.2rem;
     font-weight: 400;
     font-size: 0.9rem;
-    margin-bottom: 1rem;
-  }
-  @media screen and (min-width: 992px) and (max-width: 1199px) {
-    padding: 0.8rem 1.8rem;
-    font-size: 1rem;
+    margin-bottom: 2rem;
   }
 }
 

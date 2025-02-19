@@ -91,25 +91,25 @@ section {
     padding: 0.4rem 0.8rem;
     font-weight: 400;
     font-size: 0.7rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .sec-btn,
   .black-btn {
-    padding: 0.6rem 1.5rem;
+    padding: 0.6rem 0.8rem;
     font-weight: 400;
-    font-size: 1rem;
-    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .sec-btn,
   .black-btn {
-    padding: 0.6rem 1rem;
+    padding: 0.6rem 0.8rem;
     font-weight: 400;
     font-size: 0.8rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
@@ -118,7 +118,7 @@ section {
     padding: 0.6rem 1rem;
     font-weight: 400;
     font-size: 0.8rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
@@ -127,7 +127,7 @@ section {
     padding: 0.6rem 1rem;
     font-weight: 400;
     font-size: 0.8rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
@@ -136,14 +136,7 @@ section {
     padding: 0.6rem 1.2rem;
     font-weight: 400;
     font-size: 0.9rem;
-    margin-bottom: 1rem;
-  }
-}
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-  .sec-btn,
-  .black-btn {
-    padding: 0.8rem 1.8rem;
-    font-size: 1rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -1352,7 +1345,7 @@ li a {
 }
 .about-scrolll-mob-left-title {
   height: fit-content;
-  padding: 2rem 0;
+  padding: 1rem 0;
   width: fit-content;
   display: flex;
   align-items: center;
@@ -1365,22 +1358,22 @@ li a {
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .about-scrolll-mob-left-title {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .about-scrolll-mob-left-title {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .about-scrolll-mob-left-title {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
   }
 }
 @media only screen and (max-width: 575.98px) {
   .about-scrolll-mob-left-title {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 }
 

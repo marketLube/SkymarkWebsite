@@ -290,7 +290,7 @@
 
   &-title {
     height: fit-content;
-    padding: 2rem 0;
+    padding: 1rem 0;
     width: fit-content;
     display: flex;
     align-items: center;
@@ -302,16 +302,16 @@
     color: rgb(2, 64, 96);
 
     @include responsive.respond(bigTablets) {
-      font-size: 3.5rem;
+      font-size: 4rem;
     }
     @include responsive.respond(tablets) {
-      font-size: 3.5rem;
+      font-size: 3.8rem;
     }
     @include responsive.respond(phone) {
-      font-size: 3.5rem;
+      font-size: 3.8rem;
     }
     @include responsive.respond(smallPhone) {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
     }
   }
 }

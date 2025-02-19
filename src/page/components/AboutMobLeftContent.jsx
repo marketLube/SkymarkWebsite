@@ -28,7 +28,7 @@ export default function AboutMobLeftContent({ content }) {
         shouldAnimate ? "animate-mount" : ""
       }`}
     >
-      <div className="home-text">
+      <div className="about-scrolll-mob-left-title">
         <span>{content.title}</span>
       </div>
       <BlackBtn style={{ marginBottom: "1rem" }} onClick={handleRegisterNow}>
