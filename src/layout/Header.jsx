@@ -304,8 +304,21 @@ export function Header() {
         <div
           className="logo"
           onClick={() => {
-            window.location.href = "/";
-            setIsChecked(false);
+            if (location.pathname === "/") {
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            } else {
+              navigate("/");
+              setIsChecked(false);
+              setTimeout(() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }, 300);
+            }
           }}
           style={{ cursor: "pointer" }}
         >
