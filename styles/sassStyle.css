@@ -655,7 +655,7 @@ li a {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  margin-bottom: 5rem;
+  margin-bottom: 0rem;
 }
 @media only screen and (max-width: 575.98px) {
   .home {
@@ -765,6 +765,7 @@ li a {
   display: flex;
   flex: 3;
   justify-content: center;
+  height: fit-content;
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .home-content-top {
@@ -891,7 +892,7 @@ li a {
 
 .flags-swiper-container {
   padding: 20px 0;
-  margin: 20px 35%;
+  margin: -135px 35% 20px 35%;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .flags-swiper-container {

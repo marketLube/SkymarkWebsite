@@ -8,7 +8,7 @@
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  margin-bottom: 5rem;
+  margin-bottom: 0rem;
 
   @include responsive.respond(smallPhone) {
     height: fit-content;
@@ -103,6 +103,7 @@
       display: flex;
       flex: 3;
       justify-content: center;
+      height: fit-content;
 
       @include responsive.respond(smallPhone) {
       }
@@ -296,7 +297,7 @@
 
 .flags-swiper-container {
   padding: 20px 0;
-  margin: 20px 35%;
+  margin: -135px 35% 20px 35%;
 
   @include responsive.respond(bigDesktop) {
     margin: 20px 25%;
