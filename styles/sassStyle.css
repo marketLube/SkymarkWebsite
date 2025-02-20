@@ -39,6 +39,11 @@ header {
 section {
   margin-bottom: 15rem;
 }
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  section {
+    margin-top: 0rem;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   section {
     margin-bottom: 0rem;
@@ -1930,8 +1935,8 @@ li a {
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .testmonial-head {
-    height: 13rem;
-    margin-bottom: 2rem;
+    height: 10rem;
+    margin-bottom: 0rem;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
@@ -1964,6 +1969,13 @@ li a {
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .testmonial-head h2 {
+    width: 98%;
+    padding: 3rem;
+    font-size: 2.3rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .testmonial-head h2 {
     width: 98%;
     padding: 3rem;
@@ -2171,6 +2183,42 @@ li a {
     margin-top: 20rem;
     display: block;
     height: 100vh;
+  }
+}
+
+.main-swiper-h2 {
+  font-size: 3rem;
+  margin-left: 5rem;
+  margin-bottom: 5rem;
+}
+@media only screen and (max-width: 575.98px) {
+  .main-swiper-h2 {
+    font-size: 1.7rem;
+    padding: 0rem;
+    margin-left: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .main-swiper-h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 3rem 0 3rem;
+    margin-left: 0rem;
+    margin-bottom: -2rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .main-swiper-h2 {
+    padding: 5rem;
+    margin-left: 0rem;
+    margin-bottom: 0rem;
   }
 }
 
@@ -3077,6 +3125,7 @@ li a {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 0.8rem;
 }
 @media only screen and (max-width: 575.98px) {
   .enquirey-icons-box-icon {
@@ -3086,8 +3135,9 @@ li a {
   }
 }
 .enquirey-icons-box-p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #024060;
+  padding-bottom: 0.7rem;
 }
 @media only screen and (max-width: 575.98px) {
   .enquirey-icons-box-p {
@@ -3095,9 +3145,8 @@ li a {
   }
 }
 .enquirey-icons-box-h2 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 600;
-  margin-top: 1rem;
 }
 @media only screen and (max-width: 575.98px) {
   .enquirey-icons-box-h2 {

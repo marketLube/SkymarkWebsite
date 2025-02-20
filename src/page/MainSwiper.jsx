@@ -65,6 +65,7 @@ export default function MainSwiper() {
 
   return (
     <div>
+      <h2 className="main-swiper-h2">Why Choose Skymark ?</h2>
       <div
         className="main-swiper"
         //  id="gallery"

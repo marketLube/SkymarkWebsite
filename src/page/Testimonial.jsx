@@ -158,7 +158,7 @@ export default function Testimonial() {
   };
 
   return (
-    <section
+    <div
       className="testmonial"
       // id="testimonials"
     >
@@ -227,6 +227,6 @@ export default function Testimonial() {
           ))}
         </Swiper>
       </div>
-    </section>
+    </div>
   );
 }

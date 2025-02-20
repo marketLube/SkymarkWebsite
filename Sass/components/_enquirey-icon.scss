@@ -21,6 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 0.8rem;
 
     @include responsive.respond(smallPhone) {
       width: 3rem;
@@ -30,18 +31,17 @@
   }
 
   &-p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #024060;
-
+    padding-bottom: 0.7rem;
     @include responsive.respond(smallPhone) {
       width: 11rem;
     }
   }
 
   &-h2 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 600;
-    margin-top: 1rem;
 
     @include responsive.respond(smallPhone) {
       font-size: 1.5rem !important;

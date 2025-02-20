@@ -38,7 +38,7 @@ section {
   margin-bottom: 15rem;
 
   @include responsive.respond(bigTablets) {
-    // margin-top: 5rem;
+    margin-top: 0rem;
   }
 
   @include responsive.respond(tablets) {

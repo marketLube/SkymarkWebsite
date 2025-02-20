@@ -11,9 +11,7 @@ export default function EnuiryIconBox({
         <Icon color="white" width={20} height={20} />
       </div>
       <div style={{ textAlign: "center" }} className="enquireytexts">
-        <p style={{ marginBottom: ".4rem" }} className="enquirey-icons-box-p">
-          {p}
-        </p>
+        <p className="enquirey-icons-box-p">{p}</p>
         <h2 className="enquirey-icons-box-h2">{h2}</h2>
       </div>
     </div>
