@@ -97,14 +97,23 @@
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-pack: distribute;
-    justify-content: space-around;
+    justify-content: center;
     padding: 2rem;
 
     @include responsive.respond(smallPhone) {
       gap: 0rem;
     }
-
+    @include responsive.respond(phone) {
+      justify-content: space-around;
+      gap: 0rem;
+    }
+    @include responsive.respond(tablets) {
+      justify-content: space-around;
+      padding: 0;
+    }
+  
     @include responsive.respond(bigTablets) {
+      justify-content: space-around;
       padding: 0;
     }
   }

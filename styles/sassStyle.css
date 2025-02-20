@@ -3857,7 +3857,7 @@ li a {
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+  justify-content: center;
   padding: 2rem;
 }
 @media only screen and (max-width: 575.98px) {
@@ -3865,8 +3865,21 @@ li a {
     gap: 0rem;
   }
 }
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .enquary-mob-icons {
+    justify-content: space-around;
+    gap: 0rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .enquary-mob-icons {
+    justify-content: space-around;
+    padding: 0;
+  }
+}
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .enquary-mob-icons {
+    justify-content: space-around;
     padding: 0;
   }
 }
