@@ -28,6 +28,10 @@
       height: 3rem;
       border-radius: 50%;
     }
+    @include responsive.respond(desktop) {
+      width: 3rem;
+      height: 3rem;
+    }
   }
 
   &-p {
@@ -37,6 +41,9 @@
     @include responsive.respond(smallPhone) {
       width: 11rem;
     }
+    @include responsive.respond(desktop) {
+      font-size: 0.9rem;
+    }
   }
 
   &-h2 {
@@ -45,6 +52,9 @@
 
     @include responsive.respond(smallPhone) {
       font-size: 1.5rem !important;
+    }
+    @include responsive.respond(desktop) {
+      font-size: 1.2rem;
     }
   }
 

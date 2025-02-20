@@ -2843,13 +2843,22 @@ li a {
   align-items: center;
   margin-left: auto;
 }
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .enquiry-container-box {
+    gap: 11rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .enquiry-container-box {
+    gap: 3rem;
+  }
+}
 
 .enquary-image-text {
   font-size: 5rem;
   font-family: "Inter", serif;
   font-weight: 500;
   line-height: 1;
-  font-size: 600%;
   color: #024060;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2863,9 +2872,27 @@ li a {
   justify-content: space-between;
   gap: 3rem;
 }
+.enquary-image-text article {
+  width: 100%;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .enquary-image-text article div {
+    width: 140%;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .enquary-image-text article div {
+    width: 140%;
+  }
+}
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
   .enquary-image-text {
-    font-size: 4rem;
+    font-size: 3.8rem;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .enquary-image-text {
+    font-size: 4.5rem;
   }
 }
 
@@ -2895,12 +2922,6 @@ li a {
   -ms-flex-align: center;
   align-items: center;
   gap: 10px;
-}
-.enquary-form-row:has(input[name=country], input[name=education]) input {
-  width: 50%;
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 0px;
-  flex: 1 1 0;
 }
 
 .enquary-form-row input,
@@ -3134,6 +3155,12 @@ li a {
     border-radius: 50%;
   }
 }
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .enquirey-icons-box-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+}
 .enquirey-icons-box-p {
   font-size: 1rem;
   color: #024060;
@@ -3144,6 +3171,11 @@ li a {
     width: 11rem;
   }
 }
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .enquirey-icons-box-p {
+    font-size: 0.9rem;
+  }
+}
 .enquirey-icons-box-h2 {
   font-size: 1.7rem;
   font-weight: 600;
@@ -3151,6 +3183,11 @@ li a {
 @media only screen and (max-width: 575.98px) {
   .enquirey-icons-box-h2 {
     font-size: 1.5rem !important;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .enquirey-icons-box-h2 {
+    font-size: 1.2rem;
   }
 }
 .enquirey-icons-box .enquireytexts {
