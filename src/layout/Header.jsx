@@ -5,8 +5,9 @@ export function Header() {
   const navigate = useNavigate();
   const location = useLocation();
   const [checked, setIsChecked] = useState(false);
+  const [currentHash, setCurrentHash] = useState(window.location.hash);
 
-  console.log(checked, "checked");
+  console.log(currentHash, "checkedHash");
 
   useEffect(() => {
     if (location.pathname === "/" && location.state?.scrollTo) {
@@ -109,6 +110,11 @@ export function Header() {
             handleScrollToSection("process");
             setIsChecked(false);
           }}
+          style={
+            currentHash === "#process"
+              ? { fontWeight: "800", color: "#244ea2" }
+              : {}
+          }
         >
           Process
         </a>
@@ -121,12 +127,25 @@ export function Header() {
             handleScrollToSection("about");
             setIsChecked(false);
           }}
+          style={
+            currentHash === "#about"
+              ? { fontWeight: "800", color: "#244ea2" }
+              : {}
+          }
         >
           Events
         </a>
       </li>
       <li className="navigation__item">
-        <a className="navigation__link" onClick={handleWhatsAppRedirect}>
+        <a
+          className="navigation__link"
+          onClick={handleWhatsAppRedirect}
+          style={
+            currentHash === "#contact"
+              ? { fontWeight: "800", color: "#244ea2" }
+              : {}
+          }
+        >
           Contact
         </a>
       </li>
@@ -162,6 +181,11 @@ export function Header() {
             e.preventDefault();
             handleScrollToSection("process");
           }}
+          style={
+            currentHash === "#process"
+              ? { fontWeight: "800", color: "#244ea2" }
+              : {}
+          }
         >
           Process
         </a>
@@ -173,12 +197,25 @@ export function Header() {
             e.preventDefault();
             handleScrollToSection("about");
           }}
+          style={
+            currentHash === "#about"
+              ? { fontWeight: "800", color: "#244ea2" }
+              : {}
+          }
         >
           Events
         </a>
       </li>
       <li className="navigation__item">
-        <a className="navigation__link" onClick={handleWhatsAppRedirect}>
+        <a
+          className="navigation__link"
+          onClick={handleWhatsAppRedirect}
+          style={
+            currentHash === "#contact"
+              ? { fontWeight: "800", color: "#244ea2" }
+              : {}
+          }
+        >
           Contact
         </a>
       </li>
@@ -212,6 +249,11 @@ export function Header() {
             e.preventDefault();
             handleScrollToSection("process");
           }}
+          style={
+            currentHash === "#process"
+              ? { fontWeight: "800", color: "#244ea2" }
+              : {}
+          }
         >
           Process
         </a>
@@ -223,12 +265,25 @@ export function Header() {
             e.preventDefault();
             handleScrollToSection("about");
           }}
+          style={
+            currentHash === "#about"
+              ? { fontWeight: "800", color: "#244ea2" }
+              : {}
+          }
         >
           Events
         </a>
       </li>
       <li className="nav-item">
-        <a href="#contact" onClick={handleWhatsAppRedirect}>
+        <a
+          href="#contact"
+          onClick={handleWhatsAppRedirect}
+          style={
+            currentHash === "#contact"
+              ? { fontWeight: "800", color: "#244ea2" }
+              : {}
+          }
+        >
           Contact
         </a>
       </li>
@@ -261,6 +316,11 @@ export function Header() {
             e.preventDefault();
             handleScrollToSection("process");
           }}
+          style={
+            currentHash === "#process"
+              ? { fontWeight: "800", color: "#244ea2" }
+              : {}
+          }
         >
           Process
         </a>
@@ -272,12 +332,25 @@ export function Header() {
             e.preventDefault();
             handleScrollToSection("about");
           }}
+          style={
+            currentHash === "#about"
+              ? { fontWeight: "800", color: "#244ea2" }
+              : {}
+          }
         >
           Events
         </a>
       </li>
       <li className="nav-item">
-        <a href="#contact" onClick={handleWhatsAppRedirect}>
+        <a
+          href="#contact"
+          onClick={handleWhatsAppRedirect}
+          style={
+            currentHash === "#contact"
+              ? { fontWeight: "800", color: "#244ea2" }
+              : {}
+          }
+        >
           Contact
         </a>
       </li>
@@ -299,6 +372,23 @@ export function Header() {
       </li>
     </>
   );
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setCurrentHash(window.location.hash);
+      console.log("Current hash:", window.location.hash);
+    };
+
+    // Listen for both regular hash changes and our custom event
+    window.addEventListener("hashchange", handleHashChange);
+
+    // Initial console log
+    console.log("Initial hash:", window.location.hash);
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
 
   return (
     <header className="header">

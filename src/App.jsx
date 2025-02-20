@@ -25,7 +25,6 @@ function App() {
       const documentHeight = document.documentElement.scrollHeight;
       const threshold = documentHeight - window.innerHeight * 0.45;
 
-      // Update hash based on visible sections
       const sections = [
         "home",
         "about",
@@ -41,7 +40,8 @@ function App() {
         if (element) {
           const rect = element.getBoundingClientRect();
           if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
-            window.history.replaceState(null, null, `#${section}`);
+            window.history.pushState(null, null, `#${section}`);
+            window.dispatchEvent(new Event("hashchange"));
           }
         }
       });
