@@ -4,17 +4,19 @@
 .scroll-card {
   width: 100%;
   height: 600vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 
   @include responsive.respond(smallPhone) {
     height: calc(37.5rem * 7);
   }
-
-  // @include responsive.respond(phone) {
-  //   height: calc(37.5rem * 7);
-  // }
 
   &-scroll-container {
     width: 85%;

@@ -1,5 +1,7 @@
 @use "./../base/responive" as responsive;
 .enquary-mob {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   width: 100%;
   background-image: url("https://res.cloudinary.com/ds07e7rod/image/upload/v1738835352/UpdatedUIsky-16_yjszlk.svg");
@@ -21,8 +23,9 @@
   }
 
   &-form {
-    // width: 92vw;
     margin: 0 auto;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     background-color: white;
     padding: 2rem;
@@ -51,9 +54,18 @@
     }
   }
   &-image-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     gap: 1rem;
     margin-top: 3rem;
@@ -79,8 +91,13 @@
 
   &-icons {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     padding: 2rem;
 

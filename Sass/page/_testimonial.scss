@@ -8,6 +8,8 @@
 
   @include responsive.respond(smallPhone) {
     padding-top: 0rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     margin-bottom: 5rem;
     padding: 0;
@@ -15,6 +17,8 @@
 
   @include responsive.respond(phone) {
     padding-top: 0rem !important;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     margin-bottom: 5rem;
     padding: 0;
@@ -22,10 +26,14 @@
 
   @include responsive.respond(tablets) {
     padding: 0;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
   }
 
   @include responsive.respond(bigTablets) {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     padding: 0;
   }
@@ -110,8 +118,14 @@
 
       & span {
         border: 1px solid variables.$color-blue;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         width: 85%;
         border-radius: 1rem;
@@ -128,6 +142,7 @@
 
         img {
           width: 100%;
+          -o-object-fit: contain;
           object-fit: contain;
 
           @include responsive.respond(tablets) {
@@ -139,11 +154,19 @@
   }
 }
 .title-animate {
+  -webkit-transition: opacity 0.3s ease-in-out,
+    -webkit-transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out,
+    -webkit-transform 0.3s ease-in-out;
 }
 
 .fade-in {
   opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
   transform: translateY(0);
 }
 
@@ -161,17 +184,24 @@
   margin-bottom: 2rem;
 }
 
-// /* Prevent image dragging while swiping */
 .slide-item img {
   border: 1px solid variables.$color-blue;
   border-radius: 1rem;
 }
 .slide-item img {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
   transform: scale(1);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .slide-item img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1.1);
   z-index: 10000000;
 }

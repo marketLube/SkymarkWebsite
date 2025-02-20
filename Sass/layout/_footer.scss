@@ -8,7 +8,9 @@
   width: 100%;
   height: 10px;
   background-color: variables.$color-blue;
-  transform-origin: left;
+  -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+          transform-origin: left;
   border-radius: 8rem;
   z-index: 99999;
 }
@@ -21,11 +23,15 @@
   @include responsive.respond(smallPhone) {
     padding: 0rem 1rem;
     text-align: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
   }
   @include responsive.respond(phone) {
     padding: 0rem 2rem;
     text-align: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
   }
 
@@ -39,17 +45,30 @@
   }
 
   &-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 100%;
     width: 100%;
     gap: 1rem;
 
     @include responsive.respond(smallPhone) {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       gap: 1rem;
       padding-top: 2rem;
     }
@@ -57,31 +76,46 @@
     }
 
     &-left {
-      flex: 1.55;
+      -webkit-box-flex: 1.55;
+          -ms-flex: 1.55;
+              flex: 1.55;
       height: 100%;
       padding: 3rem 0;
       @include responsive.respond(smallPhone) {
         padding: 0rem;
       }
       @include responsive.respond(phone) {
-        flex: 1;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
       }
       @include responsive.respond(tablets) {
-        flex: 1;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
       }
       @include responsive.respond(bigTablets) {
-        flex: 1;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
       }
 
       & .branches {
         margin-top: 2rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap; // Default behavior
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
 
         @include responsive.respond(smallPhone) {
           font-size: 0.8rem;
-          align-items: center;
-          justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
           gap: 1rem;
         }
         @include responsive.respond(tablets) {
@@ -94,7 +128,7 @@
         @include responsive.respond(bigTablets) {
           margin-top: 2rem;
           width: 170%;
-          // height: fit-content;
+
         }
       }
       & .branches span {
@@ -111,31 +145,43 @@
           margin-right: 1rem;
           color: rgb(95, 95, 95);
           margin-top: 1rem;
-          // text-wrap: nowrap;
+
         }
 
         @include responsive.respond(smallPhone) {
-          margin-right: 0; // Remove margin for column layout
+          margin-right: 0;
           margin-top: 0rem;
         }
       }
     }
 
     &-right {
-      flex: 0.45;
+      -webkit-box-flex: 0.45;
+          -ms-flex: 0.45;
+              flex: 0.45;
       height: 100%;
       padding: 3rem 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: flex-end;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
       @include responsive.respond(phone) {
-        flex: 1;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
       }
       @include responsive.respond(tablets) {
-        flex: 1;
-        // align-items: center;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+
       }
       @include responsive.respond(bigTablets) {
-        flex: 1;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
       }
 
       @include responsive.respond(smallPhone) {
@@ -144,6 +190,8 @@
       }
 
       &-copyright {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         gap: 0.5rem;
       }

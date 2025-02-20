@@ -4,9 +4,16 @@
 $border-width: 1px;
 
 .counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 
+  -webkit-box-align: center;
+
+  -ms-flex-align: center;
+
   align-items: center;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   width: 50%;
   height: 10rem;
@@ -14,6 +21,28 @@ $border-width: 1px;
   border-radius: 3rem;
   position: relative;
   color: black;
+  background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(variables.$color-green),
+        to(variables.$color-blue)
+      )
+      padding-box,
+    -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(variables.$color-green),
+        to(variables.$color-blue)
+      ) border-box;
+  background: -o-linear-gradient(
+        left,
+        variables.$color-green,
+        variables.$color-blue
+      )
+      padding-box,
+    -o-linear-gradient(left, variables.$color-green, variables.$color-blue) border-box;
   background: linear-gradient(
         to right,
         variables.$color-green,
@@ -43,15 +72,36 @@ $border-width: 1px;
   }
 
   &-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 
   &-1 span {
     font-size: 3rem;
     font-weight: 600;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(variables.$color-blue),
+      to(variables.$color-green)
+    );
+    background-image: -o-linear-gradient(
+      left,
+      variables.$color-blue,
+      variables.$color-green
+    );
     background-image: linear-gradient(
       to right,
       variables.$color-blue,
@@ -63,6 +113,9 @@ $border-width: 1px;
   }
 
   @include responsive.respond(smallPhone) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     width: 80%;
     height: 80vh;
@@ -81,9 +134,12 @@ $border-width: 1px;
     }
   }
   @include responsive.respond(phone) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     width: 80%;
-    // height: 40vh;
+
     padding: 2rem 0;
 
     &-1 {

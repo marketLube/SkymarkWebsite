@@ -3,13 +3,23 @@
 
 .main-swiper {
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   position: relative;
   @include responsive.respond(smallPhone) {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
   }
 
@@ -19,7 +29,8 @@
   }
 
   @include responsive.respond(bigTablets) {
-    // height: 55rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
   }
 
@@ -27,11 +38,15 @@
     width: 100%;
     height: 100%;
     @include responsive.respond(tablets) {
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
       height: fit-content;
     }
     @include responsive.respond(bigTablets) {
     }
     @include responsive.respond(smallPhone) {
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
       height: fit-content;
     }
 
@@ -46,19 +61,26 @@
       }
 
       @include responsive.respond(smallPhone) {
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
       }
 
       @include responsive.respond(bigTablets) {
-        // height: 70rem;
       }
 
       & span {
         border-radius: 2rem;
         height: 100%;
         overflow: hidden;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         & iframe {
           width: 80% !important;
@@ -101,16 +123,7 @@
       height: 100vh;
     }
   }
-  // @include responsive.respond(smallPhone) {
-  //   padding-top: 0rem;
-  // }
 }
-
-// @media only screen and (min-width: 400px) and (max-width: 450px) {
-//   .about-scroll-mob-container {
-//     margin-top: -10rem;
-//   }
-// }
 
 .main-swiper-h2 {
   font-size: 3rem;
@@ -120,16 +133,28 @@
     font-size: 1.7rem;
     padding: 0rem;
     margin-left: 0rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     text-align: center;
     margin-bottom: 2rem;
   }
 
   @include responsive.respond(tablets) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     text-align: center;
     padding: 3rem 3rem 0 3rem;

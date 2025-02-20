@@ -5,8 +5,14 @@
   width: 100%;
   height: 80vh;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
   align-items: flex-end;
   margin: 0;
   z-index: 999;
@@ -17,7 +23,6 @@
     height: 15rem;
   }
   @include responsive.respond(tablets) {
-    // height: 100%;
     height: 20rem;
   }
   @include responsive.respond(bigTablets) {
@@ -37,6 +42,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    -webkit-transform: scaleY(-1);
+    -ms-transform: scaleY(-1);
     transform: scaleY(-1);
     background-image: url("https://res.cloudinary.com/ds07e7rod/image/upload/v1738835352/UpdatedUIsky-16_yjszlk.svg");
     z-index: -1;
@@ -47,6 +54,8 @@
       left: 0;
       bottom: 0;
       background-repeat: no-repeat;
+      -webkit-transform: scaleY(-1);
+      -ms-transform: scaleY(-1);
       transform: scaleY(-1);
       z-index: -1;
     }
@@ -56,6 +65,8 @@
       left: 0;
       bottom: 0;
       background-repeat: no-repeat;
+      -webkit-transform: scaleY(-1);
+      -ms-transform: scaleY(-1);
       transform: scaleY(-1);
       z-index: -1;
     }
@@ -65,6 +76,8 @@
       left: 0;
       bottom: 0;
       background-repeat: no-repeat;
+      -webkit-transform: scaleY(-1);
+      -ms-transform: scaleY(-1);
       transform: scaleY(-1);
       z-index: -1;
     }
@@ -74,6 +87,8 @@
       left: 0;
       bottom: 0;
       background-repeat: no-repeat;
+      -webkit-transform: scaleY(-1);
+      -ms-transform: scaleY(-1);
       transform: scaleY(-1);
       z-index: -1;
     }
@@ -112,6 +127,8 @@
     position: absolute;
     left: 50%;
     top: 50%;
+    -webkit-transform: translate(-50%, -30%);
+    -ms-transform: translate(-50%, -30%);
     transform: translate(-50%, -30%);
     z-index: 1000;
     background-color: rgb(255, 255, 255);
@@ -126,14 +143,12 @@
       padding: 1rem 3rem;
       border-radius: 2rem;
       margin-top: 0rem;
-      // top: 85%;
     }
     @include responsive.respond(phone) {
       font-size: 1.5rem;
       padding: 1rem 3rem;
       border-radius: 2rem;
       margin-top: 0rem;
-      // top: 85%;
     }
 
     @include responsive.respond(tablets) {
@@ -149,14 +164,5 @@
       border-radius: 5rem;
       margin-top: 0rem;
     }
-  }
-}
-@media (min-width: 800px) and (max-width: 900px) {
-  .bottom {
-  }
-}
-
-@media only screen and (min-width: 400px) and (max-width: 450px) {
-  .bottom {
   }
 }
