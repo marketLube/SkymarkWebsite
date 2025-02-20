@@ -5,20 +5,20 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: transparent;
-      -ms-flex-pack: transparent;
-          justify-content: transparent;
+  -ms-flex-pack: transparent;
+  justify-content: transparent;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 40rem;
   background-color: white;
   border-radius: 3rem;
   padding: 0rem 2rem;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 
   @include responsive.respond(smallPhone) {
     width: 30rem;
@@ -26,7 +26,6 @@ nav {
     gap: 5rem;
   }
   @include responsive.respond(phone) {
-
     height: 3rem;
     gap: 5rem;
   }
@@ -40,11 +39,11 @@ ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   list-style: none;
   height: 4.5rem;
   width: auto;
@@ -86,11 +85,11 @@ li {
   list-style: none;
   gap: 1.5rem;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 
   @include responsive.respond(smallPhone) {
     display: none;
@@ -102,11 +101,11 @@ li {
     background-color: white;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     padding: 20px 0;
     -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
     &.active {
       display: -webkit-box;
@@ -125,11 +124,11 @@ li {
     background-color: white;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     padding: 20px 0;
     -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
     &.active {
       display: -webkit-box;
@@ -219,13 +218,13 @@ li {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .navigation__nav {
@@ -256,8 +255,8 @@ li {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 2rem;
 }
 .navigation__item {
@@ -278,7 +277,6 @@ li {
   color: rgb(0, 0, 0);
   background-color: white;
   padding: 0;
-
 }
 
 .navigation__checkbox:checked ~ .navigation__nav {
@@ -288,20 +286,20 @@ li {
 }
 .navigation__checkbox:checked ~ .navigation__background {
   -webkit-transform: scale(60);
-      -ms-transform: scale(60);
-          transform: scale(60);
+  -ms-transform: scale(60);
+  transform: scale(60);
   border-radius: 0;
 }
 .navigation__checkbox:checked ~ .navigation__btn .navigation__icon::after {
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
   top: 0rem;
 }
 .navigation__checkbox:checked ~ .navigation__btn .navigation__icon::before {
   -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
   top: 0rem;
 }
 .navigation__checkbox:checked ~ .navigation__btn .navigation__icon {
@@ -335,18 +333,18 @@ li {
 }
 .navigation__btn:hover .navigation__icon::after {
   -webkit-transform: translateY(0.1rem);
-      -ms-transform: translateY(0.1rem);
-          transform: translateY(0.1rem);
+  -ms-transform: translateY(0.1rem);
+  transform: translateY(0.1rem);
 }
 .navigation__btn:hover .navigation__icon::before {
   -webkit-transform: translateY(-0.1rem);
-      -ms-transform: translateY(-0.1rem);
-          transform: translateY(-0.1rem);
+  -ms-transform: translateY(-0.1rem);
+  transform: translateY(-0.1rem);
 }
 
 .nav-item:last-child {
+  margin-left: auto;
   @include responsive.respond(phone) {
     margin-left: 0;
   }
-  margin-left: auto;
 }
