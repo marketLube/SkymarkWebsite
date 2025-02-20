@@ -1751,7 +1751,7 @@ li a {
 }
 @media only screen and (max-width: 575.98px) {
   .researchNew-header h2 {
-    font-size: 1rem;
+    font-size: 1.5rem;
     max-width: 100%;
     padding: 1rem;
   }
