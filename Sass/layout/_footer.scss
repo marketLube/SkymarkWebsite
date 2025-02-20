@@ -84,7 +84,7 @@
           gap: 1rem;
         }
         @include responsive.respond(tablets) {
-          width: 150%;
+          width: 205%;
 
           & span {
             margin-top: 0.5rem;
@@ -109,6 +109,7 @@
           margin-right: 1rem;
           color: rgb(95, 95, 95);
           margin-top: 1rem;
+          // text-wrap: nowrap;
         }
 
         @include responsive.respond(smallPhone) {
@@ -129,7 +130,7 @@
       }
       @include responsive.respond(tablets) {
         flex: 1;
-        align-items: center;
+        // align-items: center;
       }
       @include responsive.respond(bigTablets) {
         flex: 1;

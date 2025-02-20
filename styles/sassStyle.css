@@ -571,7 +571,7 @@ li a {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .footer-content-left .branches {
-    width: 150%;
+    width: 205%;
   }
   .footer-content-left .branches span {
     margin-top: 0.5rem;
@@ -621,7 +621,6 @@ li a {
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .footer-content-right {
     flex: 1;
-    align-items: center;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {

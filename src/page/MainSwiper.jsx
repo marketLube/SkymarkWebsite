@@ -6,6 +6,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 export default function MainSwiper() {
+  console.log(window.location.pathname, "sdghjhdjdskjgdkjg");
   const swiperRef = React.useRef(null);
 
   useEffect(() => {
@@ -65,7 +66,9 @@ export default function MainSwiper() {
 
   return (
     <div>
-      <h2 className="main-swiper-h2">Why Choose Skymark ?</h2>
+      {window.location.pathname !== "/enquiry" && (
+        <h2 className="main-swiper-h2">Why Choose Skymark ?</h2>
+      )}
       <div
         className="main-swiper"
         //  id="gallery"
