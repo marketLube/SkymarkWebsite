@@ -7,6 +7,15 @@ import "swiper/css";
 
 export default function MainSwiper() {
   const swiperRef = React.useRef(null);
+  const [visibleSlides, setVisibleSlides] = React.useState([0]);
+
+  const videos = [
+    { id: "uBDbrr6cjPE", title: "Frame 1" },
+    { id: "unR5vDRuLj4", title: "Frame 2" },
+    { id: "xcGU-1FB_kA", title: "Frame 3" },
+    { id: "dGU52bhgI7M", title: "Frame 4" },
+    { id: "BOuXCyMuVCs", title: "Frame 5" },
+  ];
 
   useEffect(() => {
     let players = [];
@@ -63,6 +72,19 @@ export default function MainSwiper() {
   const isTab = window.innerWidth < 998;
   const isMobile = window.innerWidth < 768;
 
+  const updateVisibleSlides = (swiper) => {
+    const slidesPerView = swiper.params.slidesPerView;
+    const currentIndex = swiper.realIndex;
+    const visibleIndexes = [];
+
+    // Calculate visible slide indexes based on slidesPerView
+    for (let i = 0; i < Math.ceil(slidesPerView); i++) {
+      const index = (currentIndex + i) % videos.length;
+      visibleIndexes.push(index);
+    }
+    setVisibleSlides(visibleIndexes);
+  };
+
   return (
     <div>
       {window.location.pathname !== "/enquiry" && (
@@ -76,6 +98,10 @@ export default function MainSwiper() {
           <Swiper
             onSwiper={(swiper) => {
               swiperRef.current = swiper;
+              updateVisibleSlides(swiper);
+            }}
+            onSlideChange={(swiper) => {
+              updateVisibleSlides(swiper);
             }}
             modules={[Autoplay]}
             spaceBetween={20}
@@ -107,90 +133,42 @@ export default function MainSwiper() {
                 slidesPerView: 2.5,
               },
               1400: {
-                slidesPerView: 3.5,
+                slidesPerView: 4,
               },
             }}
           >
-            <SwiperSlide>
-              <div className="swiper-body-item">
-                <span>
-                  <iframe
-                    className="youtube-player"
-                    src="https://www.youtube.com/embed/uBDbrr6cjPE?enablejsapi=1"
-                    title="Frame 1"
-                    width="100%"
-                    height="100%"
-                    frameBorder="0"
-                    loading="lazy"
-                    allowFullScreen
-                  />
-                </span>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="swiper-body-item">
-                <span>
-                  <iframe
-                    className="youtube-player"
-                    src="https://www.youtube.com/embed/unR5vDRuLj4?enablejsapi=1"
-                    title="Frame 2"
-                    width="100%"
-                    height="100%"
-                    frameBorder="0"
-                    loading="lazy"
-                    allowFullScreen
-                  />
-                </span>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="swiper-body-item">
-                <span>
-                  <iframe
-                    className="youtube-player"
-                    src="https://www.youtube.com/embed/xcGU-1FB_kA?enablejsapi=1"
-                    title="Frame 3"
-                    width="100%"
-                    height="100%"
-                    frameBorder="0"
-                    loading="lazy"
-                    allowFullScreen
-                  />
-                </span>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="swiper-body-item">
-                <span>
-                  <iframe
-                    className="youtube-player"
-                    src="https://www.youtube.com/embed/dGU52bhgI7M?enablejsapi=1"
-                    title="Frame 4"
-                    width="100%"
-                    height="100%"
-                    frameBorder="0"
-                    loading="lazy"
-                    allowFullScreen
-                  />
-                </span>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="swiper-body-item">
-                <span>
-                  <iframe
-                    className="youtube-player"
-                    src="https://www.youtube.com/embed/BOuXCyMuVCs?enablejsapi=1"
-                    title="Frame 5"
-                    width="100%"
-                    height="100%"
-                    frameBorder="0"
-                    loading="lazy"
-                    allowFullScreen
-                  />
-                </span>
-              </div>
-            </SwiperSlide>
+            {videos.map((video, index) => (
+              <SwiperSlide key={video.id}>
+                <div className="swiper-body-item">
+                  <span>
+                    {visibleSlides.includes(index) ? (
+                      <iframe
+                        className="youtube-player"
+                        src={`https://www.youtube.com/embed/${video.id}?enablejsapi=1`}
+                        title={video.title}
+                        width="100%"
+                        height="100%"
+                        frameBorder="0"
+                        loading="lazy"
+                        allowFullScreen
+                      />
+                    ) : (
+                      <div
+                        className="youtube-thumbnail"
+                        style={{
+                          backgroundImage: `url(https://img.youtube.com/vi/${video.id}/maxresdefault.jpg)`,
+                          backgroundSize: "cover",
+                          backgroundPosition: "center",
+                          width: "100%",
+                          height: "100%",
+                          cursor: "pointer",
+                        }}
+                      />
+                    )}
+                  </span>
+                </div>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>
