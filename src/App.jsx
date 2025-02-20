@@ -16,7 +16,6 @@ import EnquiryForm from "./Components/EnquiryForm";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  const [isFormOpen, setIsFormOpen] = useState(false);
   const [showEnrolled, setShowEnrolled] = useState(true);
   const isMob = window.innerWidth <= 1150;
 
@@ -26,37 +25,32 @@ function App() {
       const documentHeight = document.documentElement.scrollHeight;
       const threshold = documentHeight - window.innerHeight * 0.45;
 
+      // Update hash based on visible sections
+      const sections = [
+        "home",
+        "about",
+        "country",
+        "process",
+        "testimonials",
+        "gallery",
+        "contact",
+        "footer",
+      ];
+      sections.forEach((section) => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
+            window.history.replaceState(null, null, `#${section}`);
+          }
+        }
+      });
+
       if (scrollPosition >= threshold) {
         setShowEnrolled(false);
       } else {
         setShowEnrolled(true);
       }
-
-      // const sections = [
-      //   "home",
-      //   "about",
-      //   "process",
-      //   "testimonials",
-      //   "gallery",
-      //   "contact",
-      // ];
-      // const currentPosition = window.scrollY + window.innerHeight / 2;
-
-      // for (const section of sections) {
-      //   const element = document.getElementById(section);
-      //   if (element) {
-      //     const { top, bottom } = element.getBoundingClientRect();
-      //     const elementPosition = window.scrollY + top;
-
-      //     if (
-      //       currentPosition >= elementPosition &&
-      //       currentPosition <= window.scrollY + bottom
-      //     ) {
-      //       window.location.hash = section;
-      //       break;
-      //     }
-      //   }
-      // }
     };
 
     window.addEventListener("scroll", handleScroll);

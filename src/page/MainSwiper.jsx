@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
@@ -17,58 +17,6 @@ export default function MainSwiper() {
     { id: "BOuXCyMuVCs", title: "Frame 5" },
   ];
 
-  useEffect(() => {
-    let players = [];
-    if (typeof window !== "undefined") {
-      const tag = document.createElement("script");
-      tag.src = "https://www.youtube.com/iframe_api";
-      const firstScriptTag = document.getElementsByTagName("script")[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-      window.onYouTubeIframeAPIReady = () => {
-        document
-          .querySelectorAll(".youtube-player")
-          .forEach((iframe, index) => {
-            players[index] = new YT.Player(iframe, {
-              playerVars: {
-                autoplay: 0,
-                controls: 1,
-                rel: 0,
-                modestbranding: 1,
-              },
-              events: {
-                onReady: (event) => {
-                  event.target.pauseVideo();
-                },
-                onStateChange: (event) => {
-                  if (event.data === YT.PlayerState.PLAYING) {
-                    // Pause other videos
-                    players.forEach((player, idx) => {
-                      if (idx !== index && player.pauseVideo) {
-                        player.pauseVideo();
-                      }
-                    });
-                    // Stop swiper autoplay
-                    swiperRef.current?.autoplay?.stop();
-                  } else if (
-                    event.data === YT.PlayerState.PAUSED ||
-                    event.data === YT.PlayerState.ENDED
-                  ) {
-                    // Resume swiper autoplay
-                    swiperRef.current?.autoplay?.start();
-                  }
-                },
-              },
-            });
-          });
-      };
-    }
-
-    return () => {
-      players = [];
-    };
-  }, []);
-
   const isTab = window.innerWidth < 998;
   const isMobile = window.innerWidth < 768;
 
@@ -77,7 +25,6 @@ export default function MainSwiper() {
     const currentIndex = swiper.realIndex;
     const visibleIndexes = [];
 
-    // Calculate visible slide indexes based on slidesPerView
     for (let i = 0; i < Math.ceil(slidesPerView); i++) {
       const index = (currentIndex + i) % videos.length;
       visibleIndexes.push(index);
@@ -86,14 +33,11 @@ export default function MainSwiper() {
   };
 
   return (
-    <div>
+    <div id="gallery">
       {window.location.pathname !== "/enquiry" && (
         <h2 className="main-swiper-h2">Why Choose Skymark ?</h2>
       )}
-      <div
-        className="main-swiper"
-        //  id="gallery"
-      >
+      <div className="main-swiper">
         <div className="main-swiper-container">
           <Swiper
             onSwiper={(swiper) => {
@@ -110,7 +54,6 @@ export default function MainSwiper() {
             speed={1000}
             touchRatio={1.5}
             touchAngle={45}
-            // grabCursor={true}
             autoplay={
               !isMobile && {
                 delay: 1500,
