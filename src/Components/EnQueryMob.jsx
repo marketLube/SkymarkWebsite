@@ -4,17 +4,26 @@ import EnuiryIconBox from "./EnuiryIconBox";
 import { LiaDollarSignSolid } from "react-icons/lia";
 import { RiGraduationCapLine } from "react-icons/ri";
 import { PiTimer } from "react-icons/pi";
+import { useMediaQuery } from "react-responsive";
 
 export default function EnQueryMob() {
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1199 });
+
   return (
     <div className="enquary-mob">
       <EnquireyFormCom />
 
       <div className="enquary-mob-image-text">
         <article>
-          <h2>1000+ Students</h2>
-          <h2>Already Applied </h2>
-          <GoArrowDownRight fontWeight={500} fontSize={40} color="#024060" />
+          <h3>1000+ Students</h3>
+          <h3>Already Applied </h3>
+          <GoArrowDownRight
+            fontWeight={500}
+            fontSize={40}
+            color="#024060"
+            className="enquary-mob-arrow"
+          />
         </article>
 
         <div className="enquary-mob-icons">
@@ -28,8 +37,13 @@ export default function EnQueryMob() {
             h2="₹10 Lakhs *"
             Icon={RiGraduationCapLine}
           />
+          {isTablet && (
+            <EnuiryIconBox p="Offer Letter in" h2="48 Hours *" Icon={PiTimer} />
+          )}
         </div>
-        <EnuiryIconBox p="Offer Letter in" h2="48 Hours *" Icon={PiTimer} />
+        {isMobile && (
+          <EnuiryIconBox p="Offer Letter in" h2="48 Hours *" Icon={PiTimer} />
+        )}
       </div>
     </div>
   );

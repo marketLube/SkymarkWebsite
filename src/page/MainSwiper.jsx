@@ -6,7 +6,6 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 export default function MainSwiper() {
-  console.log(window.location.pathname, "sdghjhdjdskjgdkjg");
   const swiperRef = React.useRef(null);
 
   useEffect(() => {
@@ -85,7 +84,7 @@ export default function MainSwiper() {
             speed={1000}
             touchRatio={1.5}
             touchAngle={45}
-            grabCursor={true}
+            // grabCursor={true}
             autoplay={
               !isMobile && {
                 delay: 1500,

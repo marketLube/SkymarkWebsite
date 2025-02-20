@@ -3048,19 +3048,37 @@ li a {
 }
 @media only screen and (max-width: 575.98px) {
   .enquire-section-two-container h2 {
-    padding: 2rem;
+    font-size: 1.7rem;
+    padding: 0rem;
     margin-left: 0rem;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .enquire-section-two-container h2 {
+    font-size: 2.5rem;
+    padding: 0rem;
+    margin-left: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 3rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .enquire-section-two-container h2 {
-    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 3rem 0 3rem;
     margin-left: 0rem;
-    margin-bottom: 0rem;
+    margin-bottom: -2rem;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
@@ -3075,13 +3093,32 @@ li a {
   height: fit-content;
   width: 100%;
   background-image: url("https://res.cloudinary.com/ds07e7rod/image/upload/v1738835352/UpdatedUIsky-16_yjszlk.svg");
-  background-size: 500% auto;
-  background-position: top center;
+  background-size: contain;
   background-repeat: no-repeat;
-  padding: 7rem 0;
+  background-position: center -1%;
+  padding: 6rem 0;
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .enquary-mob {
+    padding: 6rem 0 5rem 0;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .enquary-mob {
+    padding: 5rem 0 5rem 0;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .enquary-mob {
+    padding: 7rem 0 5rem 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .enquary-mob {
+    padding: 8rem 0 5rem 0;
+  }
 }
 .enquary-mob-form {
-  width: 92vw;
   margin: 0 auto;
   height: fit-content;
   background-color: white;
@@ -3090,11 +3127,31 @@ li a {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .enquary-mob-form {
-    width: 80vw;
+    margin: 0 5rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .enquary-mob-form {
+    margin: 0 12rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .enquary-mob-form {
+    margin: 0 1rem;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .enquary-mob-form {
+    margin: 0 0.5rem;
   }
 }
 .enquary-mob-form .enquary-form-row {
   margin-bottom: 1rem;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .enquary-mob-arrow {
+    font-size: 3.5rem;
+  }
 }
 .enquary-mob-image-text {
   display: flex;
@@ -3111,16 +3168,33 @@ li a {
   margin: 0;
   color: #024060;
 }
+.enquary-mob-image-text h3 {
+  font-weight: 500;
+  font-size: 4.5rem;
+  margin-top: 3rem;
+  margin: 0;
+  color: #024060;
+}
+@media only screen and (max-width: 575.98px) {
+  .enquary-mob-image-text h3 {
+    font-size: 2.7rem;
+  }
+}
 .enquary-mob-icons {
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 18rem;
+  justify-content: space-around;
   padding: 2rem;
 }
 @media only screen and (max-width: 575.98px) {
   .enquary-mob-icons {
     gap: 0rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .enquary-mob-icons {
+    padding: 0;
   }
 }
 

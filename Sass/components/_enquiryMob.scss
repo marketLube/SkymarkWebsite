@@ -3,25 +3,51 @@
   height: fit-content;
   width: 100%;
   background-image: url("https://res.cloudinary.com/ds07e7rod/image/upload/v1738835352/UpdatedUIsky-16_yjszlk.svg");
-  background-size: 500% auto;
-  background-position: top center;
+  background-size: contain;
   background-repeat: no-repeat;
-  padding: 7rem 0;
+  background-position: center -1%;
+  padding: 6rem 0;
+  @include responsive.respond(phone) {
+    padding: 6rem 0 5rem 0;
+  }
+  @include responsive.respond(smallPhone) {
+    padding: 5rem 0 5rem 0;
+  }
+  @include responsive.respond(bigTablets) {
+    padding: 7rem 0 5rem 0;
+  }
+  @include responsive.respond(tablets) {
+    padding: 8rem 0 5rem 0;
+  }
 
   &-form {
-    width: 92vw;
+    // width: 92vw;
     margin: 0 auto;
     height: fit-content;
     background-color: white;
     padding: 2rem;
 
     @include responsive.respond(tablets) {
-      width: 80vw;
+      margin: 0 5rem;
+    }
+    @include responsive.respond(bigTablets) {
+      margin: 0 12rem;
+    }
+    @include responsive.respond(phone) {
+      margin: 0 1rem;
+    }
+    @include responsive.respond(smallPhone) {
+      margin: 0 0.5rem;
     }
     border-radius: 1rem;
 
     & .enquary-form-row {
       margin-bottom: 1rem;
+    }
+  }
+  &-arrow {
+    @include responsive.respond(bigTablets) {
+      font-size: 3.5rem;
     }
   }
   &-image-text {
@@ -35,24 +61,35 @@
     & h2 {
       font-weight: 500;
       font-size: 2rem;
-
       margin-top: 3rem;
       margin: 0;
-
       color: #024060;
+    }
+    & h3 {
+      font-weight: 500;
+      font-size: 4.5rem;
+      margin-top: 3rem;
+      margin: 0;
+      color: #024060;
+      @include responsive.respond(smallPhone) {
+        font-size: 2.7rem;
+      }
     }
   }
 
   &-icons {
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    // color: #024060;
-    gap: 18rem;
+    justify-content: space-around;
     padding: 2rem;
 
     @include responsive.respond(smallPhone) {
       gap: 0rem;
+    }
+
+    @include responsive.respond(bigTablets) {
+      padding: 0;
     }
   }
 }
