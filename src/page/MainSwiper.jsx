@@ -206,7 +206,7 @@ export default function MainSwiper() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginTop: "3rem",
+            // marginTop: "3rem",
             paddingTop: "0rem",
           }}
         >

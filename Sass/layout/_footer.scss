@@ -31,10 +31,11 @@
 
   @include responsive.respond(tablets) {
     padding: 0rem 3rem;
-    height: 18rem;
+    height: 16rem;
   }
   @include responsive.respond(bigTablets) {
-    height: 20rem;
+    height: 15rem;
+    padding: 0 5rem;
   }
 
   &-content {
@@ -92,7 +93,8 @@
         }
         @include responsive.respond(bigTablets) {
           margin-top: 2rem;
-          width: 100%;
+          width: 170%;
+          // height: fit-content;
         }
       }
       & .branches span {
