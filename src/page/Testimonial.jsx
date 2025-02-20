@@ -158,7 +158,10 @@ export default function Testimonial() {
   };
 
   return (
-    <section className="testmonial" id="testimonials">
+    <section
+      className="testmonial"
+      // id="testimonials"
+    >
       <div className="testmonial-head">
         <h2 className={`title-animate ${fadeIn ? "fade-in" : "fade-out"}`}>
           {`"${title}"`}

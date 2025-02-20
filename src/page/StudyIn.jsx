@@ -113,7 +113,7 @@ export default function StudyIn() {
       ref={containerRef}
       className="researchNew"
       style={{ height: `${countries.length * 50}vh` }}
-      id="country"
+      // id="country"
     >
       <motion.div
         style={{

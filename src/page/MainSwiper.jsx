@@ -65,7 +65,10 @@ export default function MainSwiper() {
 
   return (
     <div>
-      <div className="main-swiper" id="gallery">
+      <div
+        className="main-swiper"
+        //  id="gallery"
+      >
         <div className="main-swiper-container">
           <Swiper
             onSwiper={(swiper) => {
