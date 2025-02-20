@@ -188,7 +188,6 @@ export default function Testimonial() {
                         ? "200px"
                         : "270px",
                     objectFit: "cover",
-                    transition: "transform 0.3s ease",
                     cursor: "pointer",
                   }}
                 />
@@ -218,7 +217,6 @@ export default function Testimonial() {
                         ? "200px"
                         : "270px",
                     objectFit: "cover",
-                    transition: "transform 0.3s ease",
                     cursor: "pointer",
                   }}
                 />
