@@ -1,6 +1,6 @@
 export default function Bottom() {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/9876543210", "_blank");
+    window.open("https://wa.me/81389 29049", "_blank");
   };
 
   return (
