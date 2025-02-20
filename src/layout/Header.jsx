@@ -69,6 +69,8 @@ export function Header() {
       ? sectionId.substring(1)
       : sectionId;
 
+    // console.log("Active section:", targetId);
+
     if (location.pathname !== "/") {
       navigate("/", {
         state: { scrollTo: targetId },
@@ -92,7 +94,7 @@ export function Header() {
 
   const handleWhatsAppRedirect = (e) => {
     e.preventDefault();
-    window.open("https://wa.me/+919876543210", "_blank");
+    window.open("https://wa.me/+918138929049", "_blank");
   };
 
   const isEnquiryPage = location.pathname === "/enquiry";
