@@ -113,6 +113,7 @@
 
         @include responsive.respond(smallPhone) {
           margin-right: 0; // Remove margin for column layout
+          margin-top: 0rem;
         }
       }
     }
@@ -136,7 +137,7 @@
 
       @include responsive.respond(smallPhone) {
         padding-top: 1rem;
-        margin-bottom: 2rem;
+        margin-bottom: 0rem;
       }
 
       &-copyright {

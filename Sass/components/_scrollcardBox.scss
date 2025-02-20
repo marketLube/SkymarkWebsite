@@ -170,11 +170,11 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-left: 2rem;
-
     @include responsive.respond(smallPhone) {
       font-size: 1.5rem;
       margin-left: 0rem;
       width: 100%;
+      // letter-spacing: 1px;
     }
 
     @include responsive.respond(phone) {
