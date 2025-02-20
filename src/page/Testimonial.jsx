@@ -29,7 +29,7 @@ const imgArray2 = [
 ];
 
 const titleArray = [
-  "They truly care about their students' success.",
+  "They truly care about their student's success.",
   "I'm now pursuing my master's abroad, all thanks to Skymark",
   "Skymark's professionalism and dedication were outstanding.",
   "Skymark's counselors were always available to answer my questions",
@@ -42,8 +42,27 @@ const titleArray = [
 export default function Testimonial() {
   const [swiper1, setSwiper1] = useState(null);
   const [swiper2, setSwiper2] = useState(null);
+  const [title, setTitle] = useState(titleArray[0]);
+  const [fadeIn, setFadeIn] = useState(true);
 
-  // Separate handlers for each swiper
+  useEffect(() => {
+    let currentIndex = 0;
+
+    const rotateTitle = () => {
+      setFadeIn(false);
+
+      setTimeout(() => {
+        currentIndex = (currentIndex + 1) % titleArray.length;
+        setTitle(titleArray[currentIndex]);
+        setFadeIn(true);
+      }, 300);
+    };
+
+    const intervalId = setInterval(rotateTitle, 3000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   const handleMouseEnterFirst = () => {
     if (swiper1) swiper1.autoplay.stop();
   };
@@ -138,12 +157,8 @@ export default function Testimonial() {
     onSwiper: setSwiper2,
   };
 
-  const [title, setTitle] = useState(titleArray[0]);
-  const [fadeIn, setFadeIn] = useState(true);
-  let i = 1;
-
   return (
-    <section className="testmonial">
+    <section className="testmonial" id="testimonials">
       <div className="testmonial-head">
         <h2 className={`title-animate ${fadeIn ? "fade-in" : "fade-out"}`}>
           {`"${title}"`}

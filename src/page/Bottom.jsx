@@ -4,7 +4,7 @@ export default function Bottom() {
   };
 
   return (
-    <section className="bottom">
+    <section className="bottom" id="contact">
       <div className="bottom-hello">hello</div>
       <div
         className="bottom-content"

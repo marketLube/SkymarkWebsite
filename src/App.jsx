@@ -31,6 +31,32 @@ function App() {
       } else {
         setShowEnrolled(true);
       }
+
+      // const sections = [
+      //   "home",
+      //   "about",
+      //   "process",
+      //   // "testimonials",
+      //   // "gallery",
+      //   // "contact",
+      // ];
+      // const currentPosition = window.scrollY + window.innerHeight / 2;
+
+      // for (const section of sections) {
+      //   const element = document.getElementById(section);
+      //   if (element) {
+      //     const { top, bottom } = element.getBoundingClientRect();
+      //     const elementPosition = window.scrollY + top;
+
+      //     if (
+      //       currentPosition >= elementPosition &&
+      //       currentPosition <= window.scrollY + bottom
+      //     ) {
+      //       window.location.hash = section;
+      //       break;
+      //     }
+      //   }
+      // }
     };
 
     window.addEventListener("scroll", handleScroll);
