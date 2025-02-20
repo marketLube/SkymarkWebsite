@@ -226,6 +226,15 @@
     @include responsive.respond(tablets) {
       margin-top: 9rem;
     }
+    @include responsive.respond(bigTablets) {
+      margin-top: 12rem;
+    }
+    @include responsive.respond(bigDesktop) {
+      margin-top: 6rem;
+    }
+    @include responsive.respond(desktop) {
+      margin-top: 6rem;
+    }
   }
 }
 @-webkit-keyframes anim {

@@ -3,6 +3,7 @@
 
 .home {
   height: 100vh;
+
   background-image: url("UpdatedUIsky-16.svg");
   background-size: cover;
   background-position: center;
@@ -26,6 +27,17 @@
     height: -moz-fit-content;
     height: fit-content;
   }
+  @include responsive.respond(bigDesktop) {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  @include responsive.respond(desktop) {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
 
   &-text {
     height: 35rem;

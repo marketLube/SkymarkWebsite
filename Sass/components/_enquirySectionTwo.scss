@@ -2,13 +2,19 @@
 @use "./../base/responive" as responsive;
 
 .enquire-section-two {
-  height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 
   @include responsive.respond(tablets) {
-    height: 85vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   @include responsive.respond(bigTablets) {
-    height: 80vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   @include responsive.respond(smallPhone) {
     height: -webkit-fit-content;
