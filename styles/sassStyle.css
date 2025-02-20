@@ -2784,7 +2784,7 @@ li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 5rem;
+  gap: 11rem;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -2813,7 +2813,7 @@ li a {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 3rem;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
   .enquary-image-text {

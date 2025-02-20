@@ -76,7 +76,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 5rem;
+  gap: 11rem;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -104,7 +104,7 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 3rem;
 
   @include responsive.respond(desktop) {
     font-size: 4rem;

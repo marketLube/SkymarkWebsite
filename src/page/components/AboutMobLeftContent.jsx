@@ -31,7 +31,7 @@ export default function AboutMobLeftContent({ content }) {
       <div className="about-scrolll-mob-left-title">
         <span>{content.title}</span>
       </div>
-      <BlackBtn style={{ marginBottom: "18px" }} onClick={handleRegisterNow}>
+      <BlackBtn style={{ marginBottom: "18px  " }} onClick={handleRegisterNow}>
         Register Now
       </BlackBtn>
       <div className="about-mob-para-container">
