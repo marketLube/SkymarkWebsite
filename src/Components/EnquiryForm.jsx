@@ -14,7 +14,7 @@ function EnquiryForm() {
   };
 
   const handleCallClick = () => {
-    window.location.href = "tel:+919605771771";
+    window.open("tel:+919605771771");
   };
 
   return (
