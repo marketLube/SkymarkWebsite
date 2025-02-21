@@ -13,34 +13,34 @@
   border: none;
 
   @include responsive.respond(smallPhone) {
-    padding: 0.4rem 0.8rem;
+    padding: 0.5rem 0.9rem;
     font-weight: 400;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     margin-bottom: 2rem;
   }
 
   @include responsive.respond(phone) {
     padding: 0.6rem 0.8rem;
     font-weight: 400;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin-bottom: 2rem;
   }
   @include responsive.respond(bigTablets) {
     padding: 0.6rem 0.8rem;
     font-weight: 400;
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     margin-bottom: 2rem;
   }
   @include responsive.respond(tablets) {
     padding: 0.6rem 1rem;
     font-weight: 400;
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     margin-bottom: 2rem;
   }
   @include responsive.respond(desktop) {
     padding: 0.6rem 1rem;
     font-weight: 400;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin-bottom: 2rem;
   }
   @include responsive.respond(bigDesktop) {
