@@ -1541,10 +1541,22 @@ li a {
     text-align: left;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .about-mob {
+    margin-bottom: 0;
+    padding: 6rem 2rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .about-mob {
+    margin-bottom: 0;
+    padding: 4rem 2rem;
+  }
+}
 @media only screen and (max-width: 575.98px) {
   .about-mob {
     margin-bottom: 0;
-    padding: 5rem 2rem;
+    padding: 4rem 2rem;
   }
 }
 
@@ -3795,6 +3807,11 @@ li a {
 .enquary-mob-form .enquary-form-row {
   margin-bottom: 1rem;
 }
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .enquary-mob-arrow {
+    font-size: 3.5rem;
+  }
+}
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .enquary-mob-arrow {
     font-size: 3.5rem;
@@ -3817,6 +3834,16 @@ li a {
   gap: 1rem;
   margin-top: 3rem;
 }
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .enquary-mob-image-text {
+    gap: 3rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .enquary-mob-image-text {
+    gap: 3rem;
+  }
+}
 .enquary-mob-image-text h2 {
   font-weight: 500;
   font-size: 2rem;
@@ -3834,6 +3861,11 @@ li a {
 @media only screen and (max-width: 575.98px) {
   .enquary-mob-image-text h3 {
     font-size: 2.7rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .enquary-mob-image-text h3 {
+    font-size: 5rem;
   }
 }
 .enquary-mob-icons {

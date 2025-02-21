@@ -6,7 +6,7 @@
   height: -moz-fit-content;
   height: fit-content;
   padding: 0 5rem;
-
+  // margin-top: 5rem;
   @include responsive.respond(smallPhone) {
     padding: 0 1rem;
   }
@@ -232,9 +232,17 @@
   @include responsive.respond(bigTablets) {
     text-align: left;
   }
+  @include responsive.respond(tablets) {
+    margin-bottom: 0;
+    padding: 6rem 2rem;
+  }
+  @include responsive.respond(phone) {
+    margin-bottom: 0;
+    padding: 4rem 2rem;
+  }
   @include responsive.respond(smallPhone) {
     margin-bottom: 0;
-    padding: 5rem 2rem;
+    padding: 4rem 2rem;
   }
 }
 .about-scroll-mob {
