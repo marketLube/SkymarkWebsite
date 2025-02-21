@@ -26,12 +26,12 @@ function App() {
       const threshold = documentHeight - window.innerHeight * 0.45;
 
       const sections = [
-        // "home",
+        "home",
         "about",
         "country",
         "process",
         "testimonials",
-        "gallery",
+        // "gallery",
         "contact",
         "footer",
       ];

@@ -14,7 +14,8 @@ function EnquiryForm() {
   };
 
   const handleCallClick = () => {
-    window.open("tel:+919605771771");
+    const phoneNumber = "+919605771771";
+    window.location.href = `tel:${phoneNumber}`;
   };
 
   return (

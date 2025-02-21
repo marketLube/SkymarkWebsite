@@ -48,6 +48,9 @@ export default function Home() {
       id="home"
       style={{
         backgroundImage: `url("https://res.cloudinary.com/ds07e7rod/image/upload/v1738835352/UpdatedUIsky-16_yjszlk.svg")`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center -1rem",
       }}
     >
       <div className="home-content">
