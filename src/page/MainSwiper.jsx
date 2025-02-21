@@ -75,7 +75,7 @@ export default function MainSwiper() {
             touchRatio={1.5}
             touchAngle={45}
             autoplay={
-              !isMobile && {
+              !isTab && {
                 delay: 1500,
                 disableOnInteraction: true,
                 pauseOnMouseEnter: true,
