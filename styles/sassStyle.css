@@ -2407,6 +2407,11 @@ li a {
   margin: 0 auto;
   cursor: pointer;
 }
+@media (max-width: 380px) {
+  .testmonial-head {
+    height: 5rem !important;
+  }
+}
 @media only screen and (max-width: 575.98px) {
   .testmonial-head {
     width: 100%;
@@ -2442,6 +2447,12 @@ li a {
   width: 80%;
   color: #024060;
   text-align: center;
+}
+@media (max-width: 380px) {
+  .testmonial-head h2 {
+    font-size: 1.4rem !important;
+    padding: 2rem;
+  }
 }
 @media only screen and (max-width: 575.98px) {
   .testmonial-head h2 {
@@ -4127,5 +4138,3 @@ li a {
   -ms-flex-pack: center;
   justify-content: center;
 }
-
-/*# sourceMappingURL=sassStyle.css.map */

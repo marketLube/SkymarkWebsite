@@ -45,6 +45,9 @@
     width: 100%;
     margin: 0 auto;
     cursor: pointer;
+    @media (max-width: 380px) {
+      height: 5rem !important;
+    }
     @include responsive.respond(smallPhone) {
       width: 100%;
       height: 9rem;
@@ -75,6 +78,10 @@
       width: 80%;
       color: variables.$color-blue;
       text-align: center;
+      @media (max-width: 380px) {
+        font-size: 1.4rem !important;
+        padding: 2rem;
+      }
 
       @include responsive.respond(smallPhone) {
         font-size: 1.7rem;
