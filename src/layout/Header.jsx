@@ -106,7 +106,6 @@ export function Header() {
             handleScrollToSection("process");
             setIsChecked(false);
           }}
-          // style={currentHash === "#process" ? { color: "#244ea2" } : {}}
         >
           Process
         </a>
