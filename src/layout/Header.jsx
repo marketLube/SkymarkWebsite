@@ -7,8 +7,6 @@ export function Header() {
   const [checked, setIsChecked] = useState(false);
   const [currentHash, setCurrentHash] = useState(window.location.hash);
 
-  console.log(currentHash, "checkedHash");
-
   useEffect(() => {
     if (location.pathname === "/" && location.state?.scrollTo) {
       const section = document.getElementById(location.state.scrollTo);
@@ -69,8 +67,6 @@ export function Header() {
     const targetId = sectionId.startsWith("#")
       ? sectionId.substring(1)
       : sectionId;
-
-    // console.log("Active section:", targetId);
 
     if (location.pathname !== "/") {
       navigate("/", {
@@ -328,12 +324,9 @@ export function Header() {
   useEffect(() => {
     const handleHashChange = () => {
       setCurrentHash(window.location.hash);
-      console.log("Current hash:", window.location.hash);
     };
 
     window.addEventListener("hashchange", handleHashChange);
-
-    console.log("Initial hash:", window.location.hash);
 
     return () => {
       window.removeEventListener("hashchange", handleHashChange);

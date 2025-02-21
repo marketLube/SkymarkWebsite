@@ -18,7 +18,6 @@ export default function AboutMobLeftContent({ content }) {
   }, [content]);
 
   const handleRegisterNow = () => {
-    console.log("Register Now");
     navigate("/enquiry");
   };
 
