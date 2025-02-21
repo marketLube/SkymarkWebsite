@@ -30,8 +30,9 @@
     background-color: white;
     padding: 2rem;
     border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     @include responsive.respond(tablets) {
-      margin: 0 5rem;
+      margin: 0 8rem;
     }
     @include responsive.respond(bigTablets) {
       margin: 0 12rem;
@@ -40,7 +41,7 @@
       margin: 0 1rem;
     }
     @include responsive.respond(smallPhone) {
-      margin: 0 0.5rem;
+      margin: 0 1.2rem;
     }
 
     & .enquary-form-row {
@@ -105,6 +106,10 @@
     }
 
     @include responsive.respond(bigTablets) {
+      justify-content: space-around;
+      padding: 0;
+    }
+    @include responsive.respond(tablets) {
       justify-content: space-around;
       padding: 0;
     }

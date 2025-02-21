@@ -164,7 +164,7 @@ export function Header() {
             fontWeight: 650,
             color: "white",
             borderRadius: "18px",
-            padding: "3px 16px",
+            padding: "8px 16px",
             border: "none",
           }}
         >
@@ -230,7 +230,7 @@ export function Header() {
             fontWeight: 650,
             color: "white",
             borderRadius: "18px",
-            padding: "3px 16px",
+            padding: "8px 16px",
             border: "none",
           }}
         >
@@ -297,7 +297,7 @@ export function Header() {
             background: "#244EA2",
             color: "white",
             border: "none",
-            padding: "8px 16px",
+            padding: "10px 16px",
             borderRadius: "18px",
             cursor: "pointer",
             fontSize: "1rem",
