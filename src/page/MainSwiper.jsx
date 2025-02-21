@@ -1,9 +1,9 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-
-// Import Swiper styles
 import "swiper/css";
+import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 
 export default function MainSwiper() {
   const swiperRef = React.useRef(null);
@@ -32,6 +32,18 @@ export default function MainSwiper() {
     setVisibleSlides(visibleIndexes);
   };
 
+  const goToNextSlide = () => {
+    if (swiperRef.current) {
+      swiperRef.current.slideNext();
+    }
+  };
+
+  const goToPrevSlide = () => {
+    if (swiperRef.current) {
+      swiperRef.current.slidePrev();
+    }
+  };
+
   return (
     <div id="gallery">
       {window.location.pathname !== "/enquiry" && (
@@ -39,6 +51,14 @@ export default function MainSwiper() {
       )}
       <div className="main-swiper">
         <div className="main-swiper-container">
+          <button
+            className="swiper-nav-btn prev"
+            onClick={goToPrevSlide}
+            aria-label="Previous slide"
+          >
+            <FaArrowLeft />
+          </button>
+
           <Swiper
             onSwiper={(swiper) => {
               swiperRef.current = swiper;
@@ -79,6 +99,10 @@ export default function MainSwiper() {
                 slidesPerView: 4,
               },
             }}
+            navigation={{
+              prevEl: ".swiper-nav-btn.prev",
+              nextEl: ".swiper-nav-btn.next",
+            }}
           >
             {videos.map((video, index) => (
               <SwiperSlide key={video.id}>
@@ -113,6 +137,14 @@ export default function MainSwiper() {
               </SwiperSlide>
             ))}
           </Swiper>
+
+          <button
+            className="swiper-nav-btn next"
+            onClick={goToNextSlide}
+            aria-label="Next slide"
+          >
+            <FaArrowRight />
+          </button>
         </div>
       </div>
       {!isTab && (

@@ -167,3 +167,37 @@
     margin-bottom: 0rem;
   }
 }
+
+.main-swiper-container {
+  position: relative;
+}
+
+.swiper-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  border: 1px solid black;
+}
+
+.swiper-nav-btn:hover {
+  background: #ffffff;
+}
+
+.swiper-nav-btn.prev {
+  left: 10px;
+}
+
+.swiper-nav-btn.next {
+  right: 10px;
+}
