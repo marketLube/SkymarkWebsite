@@ -6,7 +6,6 @@
   height: -moz-fit-content;
   height: fit-content;
   padding: 0 5rem;
-  // margin-top: 5rem;
   @include responsive.respond(smallPhone) {
     padding: 0 1rem;
   }
