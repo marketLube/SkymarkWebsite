@@ -110,11 +110,7 @@ export function Header() {
             handleScrollToSection("process");
             setIsChecked(false);
           }}
-          style={
-            currentHash === "#process"
-              ? { fontWeight: "800", color: "#244ea2" }
-              : {}
-          }
+          style={currentHash === "#process" ? { color: "#244ea2" } : {}}
         >
           Process
         </a>
@@ -127,11 +123,7 @@ export function Header() {
             handleScrollToSection("about");
             setIsChecked(false);
           }}
-          style={
-            currentHash === "#about"
-              ? { fontWeight: "800", color: "#244ea2" }
-              : {}
-          }
+          style={currentHash === "#about" ? { color: "#244ea2" } : {}}
         >
           Events
         </a>
@@ -140,11 +132,7 @@ export function Header() {
         <a
           className="navigation__link"
           onClick={handleWhatsAppRedirect}
-          style={
-            currentHash === "#contact"
-              ? { fontWeight: "800", color: "#244ea2" }
-              : {}
-          }
+          style={currentHash === "#contact" ? { color: "#244ea2" } : {}}
         >
           Contact
         </a>
@@ -181,11 +169,7 @@ export function Header() {
             e.preventDefault();
             handleScrollToSection("process");
           }}
-          style={
-            currentHash === "#process"
-              ? { fontWeight: "800", color: "#244ea2" }
-              : {}
-          }
+          style={currentHash === "#process" ? { color: "#244ea2" } : {}}
         >
           Process
         </a>
@@ -197,11 +181,7 @@ export function Header() {
             e.preventDefault();
             handleScrollToSection("about");
           }}
-          style={
-            currentHash === "#about"
-              ? { fontWeight: "800", color: "#244ea2" }
-              : {}
-          }
+          style={currentHash === "#about" ? { color: "#244ea2" } : {}}
         >
           Events
         </a>
@@ -210,11 +190,7 @@ export function Header() {
         <a
           className="navigation__link"
           onClick={handleWhatsAppRedirect}
-          style={
-            currentHash === "#contact"
-              ? { fontWeight: "800", color: "#244ea2" }
-              : {}
-          }
+          style={currentHash === "#contact" ? { color: "#244ea2" } : {}}
         >
           Contact
         </a>
@@ -249,11 +225,7 @@ export function Header() {
             e.preventDefault();
             handleScrollToSection("process");
           }}
-          style={
-            currentHash === "#process"
-              ? { fontWeight: "800", color: "#244ea2" }
-              : {}
-          }
+          style={currentHash === "#process" ? { color: "#244ea2" } : {}}
         >
           Process
         </a>
@@ -265,11 +237,7 @@ export function Header() {
             e.preventDefault();
             handleScrollToSection("about");
           }}
-          style={
-            currentHash === "#about"
-              ? { fontWeight: "800", color: "#244ea2" }
-              : {}
-          }
+          style={currentHash === "#about" ? { color: "#244ea2" } : {}}
         >
           Events
         </a>
@@ -278,11 +246,7 @@ export function Header() {
         <a
           href="#contact"
           onClick={handleWhatsAppRedirect}
-          style={
-            currentHash === "#contact"
-              ? { fontWeight: "800", color: "#244ea2" }
-              : {}
-          }
+          style={currentHash === "#contact" ? { color: "#244ea2" } : {}}
         >
           Contact
         </a>
@@ -316,11 +280,7 @@ export function Header() {
             e.preventDefault();
             handleScrollToSection("process");
           }}
-          style={
-            currentHash === "#process"
-              ? { fontWeight: "800", color: "#244ea2" }
-              : {}
-          }
+          style={currentHash === "#process" ? { color: "#244ea2" } : {}}
         >
           Process
         </a>
@@ -332,11 +292,7 @@ export function Header() {
             e.preventDefault();
             handleScrollToSection("about");
           }}
-          style={
-            currentHash === "#about"
-              ? { fontWeight: "800", color: "#244ea2" }
-              : {}
-          }
+          style={currentHash === "#about" ? { color: "#244ea2" } : {}}
         >
           Events
         </a>
@@ -345,11 +301,7 @@ export function Header() {
         <a
           href="#contact"
           onClick={handleWhatsAppRedirect}
-          style={
-            currentHash === "#contact"
-              ? { fontWeight: "800", color: "#244ea2" }
-              : {}
-          }
+          style={currentHash === "#contact" ? { color: "#244ea2" } : {}}
         >
           Contact
         </a>
