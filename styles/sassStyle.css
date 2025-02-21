@@ -793,6 +793,16 @@ li a {
     height: fit-content;
   }
 }
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .home {
+    height: fit-content;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .home {
+    height: fit-content;
+  }
+}
 .home-text {
   height: 35rem;
   width: 40rem;
