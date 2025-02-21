@@ -574,6 +574,12 @@ li a {
     height: 16rem;
   }
 }
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .footer {
+    padding: 0rem 5rem;
+    height: 16rem;
+  }
+}
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .footer {
     height: 15rem;
@@ -2221,14 +2227,14 @@ li a {
   .researchNew-header h2 {
     font-size: 2.5rem;
     max-width: 100%;
-    padding: 0 0.6rem;
+    padding: 0 1rem;
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .researchNew-header h2 {
     font-size: 3rem;
     max-width: 100%;
-    padding: 0 0.6rem;
+    padding: 0 5rem;
   }
 }
 

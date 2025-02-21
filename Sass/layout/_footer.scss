@@ -39,6 +39,10 @@
     padding: 0rem 3rem;
     height: 16rem;
   }
+  @include responsive.respond(bigDesktop) {
+    padding: 0rem 5rem;
+    height: 16rem;
+  }
   @include responsive.respond(bigTablets) {
     height: 15rem;
     padding: 0 5rem;
