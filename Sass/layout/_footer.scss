@@ -9,8 +9,8 @@
   height: 10px;
   background-color: variables.$color-blue;
   -webkit-transform-origin: left;
-      -ms-transform-origin: left;
-          transform-origin: left;
+  -ms-transform-origin: left;
+  transform-origin: left;
   border-radius: 8rem;
   z-index: 99999;
 }
@@ -49,11 +49,11 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     height: 100%;
     width: 100%;
     gap: 1rem;
@@ -61,14 +61,14 @@
     @include responsive.respond(smallPhone) {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
       -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
       -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
       gap: 1rem;
       padding-top: 2rem;
     }
@@ -77,8 +77,8 @@
 
     &-left {
       -webkit-box-flex: 1.55;
-          -ms-flex: 1.55;
-              flex: 1.55;
+      -ms-flex: 1.55;
+      flex: 1.55;
       height: 100%;
       padding: 3rem 0;
       @include responsive.respond(smallPhone) {
@@ -86,18 +86,18 @@
       }
       @include responsive.respond(phone) {
         -webkit-box-flex: 1;
-            -ms-flex: 1;
-                flex: 1;
+        -ms-flex: 1;
+        flex: 1;
       }
       @include responsive.respond(tablets) {
         -webkit-box-flex: 1;
-            -ms-flex: 1;
-                flex: 1;
+        -ms-flex: 1;
+        flex: 1;
       }
       @include responsive.respond(bigTablets) {
         -webkit-box-flex: 1;
-            -ms-flex: 1;
-                flex: 1;
+        -ms-flex: 1;
+        flex: 1;
       }
 
       & .branches {
@@ -106,16 +106,16 @@
         display: -ms-flexbox;
         display: flex;
         -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+        flex-wrap: wrap;
 
         @include responsive.respond(smallPhone) {
           font-size: 0.8rem;
           -webkit-box-align: center;
-              -ms-flex-align: center;
-                  align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
           -webkit-box-pack: center;
-              -ms-flex-pack: center;
-                  justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
           gap: 1rem;
         }
         @include responsive.respond(tablets) {
@@ -128,7 +128,9 @@
         @include responsive.respond(bigTablets) {
           margin-top: 2rem;
           width: 170%;
-
+        }
+        @include responsive.respond(desktop) {
+          width: 110%;
         }
       }
       & .branches span {
@@ -145,7 +147,6 @@
           margin-right: 1rem;
           color: rgb(95, 95, 95);
           margin-top: 1rem;
-
         }
 
         @include responsive.respond(smallPhone) {
@@ -157,31 +158,30 @@
 
     &-right {
       -webkit-box-flex: 0.45;
-          -ms-flex: 0.45;
-              flex: 0.45;
+      -ms-flex: 0.45;
+      flex: 0.45;
       height: 100%;
       padding: 3rem 0;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-pack: end;
-          -ms-flex-pack: end;
-              justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
       @include responsive.respond(phone) {
         -webkit-box-flex: 1;
-            -ms-flex: 1;
-                flex: 1;
+        -ms-flex: 1;
+        flex: 1;
       }
       @include responsive.respond(tablets) {
         -webkit-box-flex: 1;
-            -ms-flex: 1;
-                flex: 1;
-
+        -ms-flex: 1;
+        flex: 1;
       }
       @include responsive.respond(bigTablets) {
         -webkit-box-flex: 1;
-            -ms-flex: 1;
-                flex: 1;
+        -ms-flex: 1;
+        flex: 1;
       }
 
       @include responsive.respond(smallPhone) {
