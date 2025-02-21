@@ -72,7 +72,7 @@
       font-size: 3rem;
       font-weight: 500;
       margin: 0 auto;
-      width: 50%;
+      width: 80%;
       color: variables.$color-blue;
       text-align: center;
 
@@ -97,6 +97,16 @@
         width: 98%;
         padding: 3rem;
         font-size: 2.3rem;
+      }
+      @include responsive.respond(desktop) {
+        width: 88%;
+        padding: 3rem;
+        font-size: 3rem;
+      }
+      @include responsive.respond(bigDesktop) {
+        width: 90%;
+        padding: 3rem;
+        font-size: 3rem;
       }
     }
   }

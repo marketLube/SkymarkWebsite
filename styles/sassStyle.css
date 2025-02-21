@@ -2197,12 +2197,27 @@ li a {
   .researchNew-header h2 {
     font-size: 2rem;
     max-width: 100%;
+    padding: 0 0.6rem;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .researchNew-header h2 {
     font-size: 2.5rem;
     max-width: 100%;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .researchNew-header h2 {
+    font-size: 2.5rem;
+    max-width: 100%;
+    padding: 0 0.6rem;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .researchNew-header h2 {
+    font-size: 3rem;
+    max-width: 100%;
+    padding: 0 0.6rem;
   }
 }
 
@@ -2407,7 +2422,7 @@ li a {
   font-size: 3rem;
   font-weight: 500;
   margin: 0 auto;
-  width: 50%;
+  width: 80%;
   color: #024060;
   text-align: center;
 }
@@ -2439,6 +2454,20 @@ li a {
     width: 98%;
     padding: 3rem;
     font-size: 2.3rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .testmonial-head h2 {
+    width: 88%;
+    padding: 3rem;
+    font-size: 3rem;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .testmonial-head h2 {
+    width: 90%;
+    padding: 3rem;
+    font-size: 3rem;
   }
 }
 .testmonial-body {
