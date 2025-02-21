@@ -379,10 +379,8 @@ export function Header() {
       console.log("Current hash:", window.location.hash);
     };
 
-    // Listen for both regular hash changes and our custom event
     window.addEventListener("hashchange", handleHashChange);
 
-    // Initial console log
     console.log("Initial hash:", window.location.hash);
 
     return () => {
@@ -430,7 +428,6 @@ export function Header() {
             onChange={() => setIsChecked((prev) => !prev)}
           />
           <label
-            // onTouchEnd={() => setIsChecked((prev) => !prev)}
             htmlFor="navi__toggle"
             className="navigation__btn"
             aria-controls="navigationMenu"

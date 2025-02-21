@@ -217,7 +217,7 @@ ul {
 }
 @media only screen and (max-width: 575.98px) {
   .logo img {
-    height: 1rem;
+    height: 1.5rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -781,20 +781,6 @@ li a {
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
-  .home {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-}
-@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
-  .home {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-}
-@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
   .home {
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -3863,18 +3849,6 @@ li a {
 @media only screen and (max-width: 575.98px) {
   .enquary-mob-icons {
     gap: 0rem;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767.98px) {
-  .enquary-mob-icons {
-    justify-content: space-around;
-    gap: 0rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991.98px) {
-  .enquary-mob-icons {
-    justify-content: space-around;
-    padding: 0;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
