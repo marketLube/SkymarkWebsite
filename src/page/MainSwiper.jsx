@@ -91,6 +91,7 @@ export default function MainSwiper() {
               },
               768: {
                 slidesPerView: 2,
+                spaceBetween: 10,
               },
               960: {
                 slidesPerView: 2.5,
@@ -155,7 +156,7 @@ export default function MainSwiper() {
             fontWeight: "500",
             color: "#024060",
             textAlign: "center",
-            height: "8rem",
+            height: "11rem",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",

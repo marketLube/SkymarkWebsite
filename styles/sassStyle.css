@@ -2807,8 +2807,9 @@ li a {
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
+  z-index: 10000000000000;
   background: #ffffff;
-  border: none;
+  border: 1px solid black;
   border-radius: 50%;
   width: 35px;
   height: 35px;
@@ -2817,7 +2818,26 @@ li a {
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s;
-  border: 1px solid black;
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .swiper-nav-btn {
+    bottom: -50px;
+    transform: none;
+    position: absolute;
+    top: auto;
+    bottom: -50px;
+    transform: none;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .swiper-nav-btn {
+    bottom: -50px;
+    transform: none;
+    position: absolute;
+    top: auto;
+    bottom: -50px;
+    transform: none;
+  }
 }
 
 .swiper-nav-btn:hover {
@@ -2827,9 +2847,33 @@ li a {
 .swiper-nav-btn.prev {
   left: 10px;
 }
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .swiper-nav-btn.prev {
+    left: 50%;
+    transform: translateX(-60px);
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .swiper-nav-btn.prev {
+    left: 50%;
+    transform: translateX(-60px);
+  }
+}
 
 .swiper-nav-btn.next {
   right: 10px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .swiper-nav-btn.next {
+    right: 50%;
+    transform: translateX(25px);
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .swiper-nav-btn.next {
+    right: 50%;
+    transform: translateX(25px);
+  }
 }
 
 .bottom {
