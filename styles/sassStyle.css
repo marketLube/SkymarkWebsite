@@ -1403,7 +1403,7 @@ li a {
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
   .about-scroll-container-left-content-title {
     font-size: 5rem;
-    padding: 8% 0;
+    padding: 4% 0;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
@@ -1523,6 +1523,7 @@ li a {
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
   .about-para-container-right {
     font-size: 1.1rem;
+    line-height: 1.7;
   }
 }
 
@@ -4138,3 +4139,5 @@ li a {
   -ms-flex-pack: center;
   justify-content: center;
 }
+
+/*# sourceMappingURL=sassStyle.css.map */

@@ -3,10 +3,6 @@ import AboutLeftContent from "./components/AboutLeftContent";
 import AboutRIghtContent from "./components/AboutRIghtContent";
 import { useInView } from "motion/react";
 
-// import img0 from "../../src/assets/About/DSC00692.jpg";
-// import img1 from "../../src/assets/About/5000andcounting.jpeg";
-// import img2 from "../../src/assets/About/expandhorizon.png";
-
 const contentOne = {
   title: "The Powerful Team",
   description:

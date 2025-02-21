@@ -71,7 +71,7 @@
           }
           @include responsive.respond(desktop) {
             font-size: 5rem;
-            padding: 8% 0;
+            padding: 4% 0;
           }
 
           @include responsive.respond(bigTablets) {
@@ -191,6 +191,7 @@
       }
       @include responsive.respond(desktop) {
         font-size: 1.1rem;
+        line-height: 1.7;
       }
     }
   }
