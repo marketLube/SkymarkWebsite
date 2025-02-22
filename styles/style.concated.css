@@ -674,7 +674,7 @@ li a {
   .footer-content-left .branches {
     width: 205%;
   }
-  .footer-content-left .branches span {
+  .footer-content-left .branches a {
     margin-top: 0.5rem;
   }
 }
@@ -689,16 +689,17 @@ li a {
     width: 110%;
   }
 }
-.footer-content-left .branches span {
+.footer-content-left .branches a {
   background-color: #eeeeee;
   padding: 0.5rem 1.2rem;
   border-radius: 2rem;
   margin-right: 1rem;
   color: rgb(95, 95, 95);
   margin-top: 1rem;
+  text-decoration: none;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
-  .footer-content-left .branches span {
+  .footer-content-left .branches a {
     padding: 0.3rem 1.2rem;
     border-radius: 2rem;
     margin-right: 1rem;
@@ -707,7 +708,7 @@ li a {
   }
 }
 @media only screen and (max-width: 575.98px) {
-  .footer-content-left .branches span {
+  .footer-content-left .branches a {
     margin-right: 0;
     margin-top: 0rem;
   }

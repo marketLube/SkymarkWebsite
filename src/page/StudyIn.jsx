@@ -76,10 +76,15 @@ export default function StudyIn() {
         `calc(50vw - ${100 / 1.5 / 2}vw)`,
         `calc(-${(countries.length - 3) * (100 / 1.5)}vw)`,
       ];
+    } else if (screenWidth < 800) {
+      return [
+        `calc(50vw - ${100 / 2.5 / 2}vw)`,
+        `calc(-${(countries.length - 1.4) * (100 / 2.5)}vw)`,
+      ];
     } else if (screenWidth < 1024) {
       return [
         `calc(50vw - ${100 / 2.5 / 2}vw)`,
-        `calc(-${(countries.length - 1) * (100 / 2.5)}vw)`,
+        `calc(-${(countries.length - 1.8) * (100 / 2.5)}vw)`,
       ];
     } else if (screenWidth < 1200) {
       return [
@@ -89,7 +94,7 @@ export default function StudyIn() {
     }
     return [
       `calc(50vw - ${100 / 4 / 2}vw)`,
-      `calc(-${(countries.length - 1.2) * (100 / 4)}vw)`,
+      `calc(-${(countries.length - 1.5) * (100 / 4)}vw)`,
     ];
   };
 
