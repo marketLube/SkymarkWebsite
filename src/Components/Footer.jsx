@@ -13,12 +13,48 @@ export default function Footer() {
               alt="logo"
             />
             <div className="branches">
-              <span>Trivandrum</span>
-              <span>Kochi</span>
-              <span>Kannur</span>
-              <span>Kozhikode</span>
-              <span>Manjeri</span>
-              <span>Kottayam</span>
+              <a
+                href="https://maps.app.goo.gl/eBr97DPVbNmS4xa79"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Trivandrum
+              </a>
+              <a
+                href="https://maps.app.goo.gl/E3AZSo65zrHFAck8A"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Kochi
+              </a>
+              <a
+                href="https://maps.app.goo.gl/j227pCqL5bPfCiTF6"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Kannur
+              </a>
+              <a
+                href="https://maps.app.goo.gl/D4gCifH2TwcFSVVG7"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Kozhikode
+              </a>
+              <a
+                href="https://maps.app.goo.gl/zfv7ZnJ3zUu5UBVdA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Manjeri
+              </a>
+              <a
+                href="https://maps.app.goo.gl/4D5bkwNa1EQNyRDL9"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Kottayam
+              </a>
             </div>
           </div>
         </div>

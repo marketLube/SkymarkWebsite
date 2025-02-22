@@ -125,7 +125,7 @@
         @include responsive.respond(tablets) {
           width: 205%;
 
-          & span {
+          & a {
             margin-top: 0.5rem;
           }
         }
@@ -137,13 +137,14 @@
           width: 110%;
         }
       }
-      & .branches span {
+      & .branches a {
         background-color: #eeeeee;
         padding: 0.5rem 1.2rem;
         border-radius: 2rem;
         margin-right: 1rem;
         color: rgb(95, 95, 95);
         margin-top: 1rem;
+        text-decoration: none;
 
         @include responsive.respond(bigTablets) {
           padding: 0.3rem 1.2rem;
