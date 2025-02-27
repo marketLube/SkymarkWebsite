@@ -73,7 +73,7 @@ export default function Home() {
               <BlackBtn
                 style={{
                   padding: isTab ? "8px 12px" : "12px 24px",
-                  fontSize: isTab ? "14px" : "16px",
+                  fontSize: isTab ? "12px" : "14px",
                   backgroundColor: "#244EA2",
                   color: "#fff",
                   border: "none",
