@@ -13,7 +13,7 @@ nav {
   width: 40rem;
   background-color: white;
   border-radius: 3rem;
-  padding: 0rem 2rem;
+  padding: 0rem 0.7rem 0rem 2rem;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -24,13 +24,16 @@ nav {
     width: 30rem;
     height: 3rem;
     gap: 5rem;
+    padding: 0rem 2rem;
   }
   @include responsive.respond(phone) {
     height: 3rem;
     gap: 5rem;
+    padding: 0rem 2rem;
   }
   @include responsive.respond(phone) {
     width: 40rem;
+    padding: 0rem 2rem;
   }
 }
 
@@ -90,6 +93,7 @@ li {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  height: 3.5rem;
 
   @include responsive.respond(smallPhone) {
     display: none;

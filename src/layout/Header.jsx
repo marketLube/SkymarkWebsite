@@ -100,6 +100,7 @@ export function Header() {
     <>
       <li className="navigation__item">
         <a
+          href="#process"
           className="navigation__link"
           onClick={(e) => {
             e.preventDefault();
@@ -112,28 +113,29 @@ export function Header() {
       </li>
       <li className="navigation__item">
         <a
+          href="#about"
           className="navigation__link"
           onClick={(e) => {
             e.preventDefault();
             handleScrollToSection("about");
             setIsChecked(false);
           }}
-          // style={currentHash === "#about" ? { color: "#244ea2" } : {}}
         >
           Events
         </a>
       </li>
       <li className="navigation__item">
         <a
+          href="https://wa.me/+918138929049"
           className="navigation__link"
           onClick={handleWhatsAppRedirect}
-          // style={currentHash === "#contact" ? { color: "#244ea2" } : {}}
         >
           Contact
         </a>
       </li>
       <li className="navigation__item">
         <a
+          href="#home"
           onClick={(e) => {
             e.preventDefault();
             handleScrollToSection("home");
@@ -159,6 +161,7 @@ export function Header() {
     <>
       <li className="navigation__item">
         <a
+          href="#process"
           className="navigation__link"
           onClick={(e) => {
             e.preventDefault();
@@ -171,6 +174,7 @@ export function Header() {
       </li>
       <li className="navigation__item">
         <a
+          href="#about"
           className="navigation__link"
           onClick={(e) => {
             e.preventDefault();
@@ -183,6 +187,7 @@ export function Header() {
       </li>
       <li className="navigation__item">
         <a
+          href="https://wa.me/+918138929049"
           className="navigation__link"
           onClick={handleWhatsAppRedirect}
           style={currentHash === "#contact" ? { color: "#244ea2" } : {}}
@@ -191,7 +196,7 @@ export function Header() {
         </a>
       </li>
       <li className="navigation__item">
-        <a
+        <button
           onClick={handleEnquiryClick}
           style={{
             background: "#244EA2",
@@ -206,7 +211,7 @@ export function Header() {
           }}
         >
           Register
-        </a>
+        </button>
       </li>
     </>
   );
