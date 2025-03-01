@@ -111,7 +111,7 @@ export function Header() {
           Process
         </a>
       </li>
-      <li className="navigation__item">
+      {/* <li className="navigation__item">
         <a
           href="#about"
           className="navigation__link"
@@ -123,7 +123,7 @@ export function Header() {
         >
           Events
         </a>
-      </li>
+      </li> */}
       <li className="navigation__item">
         <a
           href="https://wa.me/+918138929049"
@@ -172,7 +172,7 @@ export function Header() {
           Process
         </a>
       </li>
-      <li className="navigation__item">
+      {/* <li className="navigation__item">
         <a
           href="#about"
           className="navigation__link"
@@ -184,7 +184,7 @@ export function Header() {
         >
           Events
         </a>
-      </li>
+      </li> */}
       <li className="navigation__item">
         <a
           href="https://wa.me/+918138929049"
@@ -230,7 +230,7 @@ export function Header() {
           Process
         </a>
       </li>
-      <li className="nav-item">
+      {/* <li className="nav-item">
         <a
           href="#about"
           onClick={(e) => {
@@ -241,7 +241,7 @@ export function Header() {
         >
           Events
         </a>
-      </li>
+      </li> */}
       <li className="nav-item">
         <a
           href="#contact"
@@ -285,7 +285,7 @@ export function Header() {
           Process
         </a>
       </li>
-      <li className="nav-item">
+      {/* <li className="nav-item">
         <a
           href="#about"
           onClick={(e) => {
@@ -296,7 +296,7 @@ export function Header() {
         >
           Events
         </a>
-      </li>
+      </li> */}
       <li className="nav-item">
         <a
           href="#contact"
