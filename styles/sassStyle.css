@@ -3779,6 +3779,16 @@ li a {
   gap: 10px;
   z-index: 100000000;
 }
+@media only screen and (max-width: 575.98px) {
+  .floating-button-container {
+    bottom: 10%;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .floating-button-container {
+    bottom: 10%;
+  }
+}
 
 .whatsapp-button,
 .call-button {
@@ -4157,5 +4167,3 @@ li a {
   -ms-flex-pack: center;
   justify-content: center;
 }
-
-/*# sourceMappingURL=sassStyle.css.map */

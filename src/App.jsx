@@ -14,10 +14,14 @@ import Bottom from "./page/Bottom";
 import AboutMob from "./page/AboutMob";
 import EnquiryForm from "./Components/EnquiryForm";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
+import { MdOutlinePhone } from "react-icons/md";
+import { useMediaQuery } from "react-responsive";
 
 function App() {
   const [showEnrolled, setShowEnrolled] = useState(true);
   const isMob = window.innerWidth <= 1150;
+  const isMobile = useMediaQuery({ maxWidth: 1199 });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,6 +61,23 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.me/8138929049");
+  };
+
+  const handleCallClick = () => {
+    const phoneNumber = "9605771771";
+    if (isMobile) {
+      const callLink = document.createElement("a");
+      callLink.href = `tel:${phoneNumber}`;
+      callLink.click();
+    } else {
+      const callLink = document.createElement("a");
+      callLink.href = `callto:${phoneNumber}`;
+      callLink.click();
+    }
+  };
+
   return (
     <BrowserRouter>
       <Header />
@@ -85,6 +106,15 @@ function App() {
           }
         />
       </Routes>
+      <div className="floating-button-container">
+        <button className="whatsapp-button" onClick={handleWhatsAppClick}>
+          <FaWhatsapp size={26} />
+        </button>
+
+        <button className="call-button" onClick={handleCallClick}>
+          <MdOutlinePhone size={26} />
+        </button>
+      </div>
     </BrowserRouter>
   );
 }

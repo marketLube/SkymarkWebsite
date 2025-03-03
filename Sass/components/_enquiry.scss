@@ -223,6 +223,13 @@
   display: flex;
   gap: 10px;
   z-index: 100000000;
+
+  @include responsive.respond(smallPhone) {
+    bottom: 10%;
+  }
+  @include responsive.respond(phone) {
+    bottom: 10%;
+  }
 }
 
 .whatsapp-button,
