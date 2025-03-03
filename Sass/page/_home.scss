@@ -112,6 +112,9 @@
     @include responsive.respond(phone) {
       font-size: 3rem;
     }
+    @include responsive.respond(tablets) {
+      font-size: 4rem;
+    }
 
     &-btn {
       display: -webkit-box;

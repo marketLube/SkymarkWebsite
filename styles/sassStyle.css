@@ -905,6 +905,11 @@ li a {
     font-size: 3rem;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .home-rightText {
+    font-size: 4rem;
+  }
+}
 .home-rightText-btn {
   display: -webkit-box;
   display: -ms-flexbox;
