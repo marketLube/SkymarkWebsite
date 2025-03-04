@@ -2060,7 +2060,7 @@ li a {
   .research-enrolled {
     font-size: 1rem;
     font-weight: 400;
-    margin-top: 5rem;
+    margin-top: 6rem;
     width: 67%;
     padding: 0.8rem 1rem;
     display: -webkit-box;
@@ -2375,6 +2375,54 @@ li a {
 .country-item.active p {
   font-weight: 600;
   color: #024060;
+}
+
+.floating-button-container {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  z-index: 100000000;
+}
+@media only screen and (max-width: 575.98px) {
+  .floating-button-container {
+    bottom: 12%;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .floating-button-container {
+    bottom: 12%;
+  }
+}
+
+.whatsapp-button,
+.call-button {
+  background: green;
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  outline: none;
+}
+
+.call-button {
+  background: blue;
 }
 
 .testmonial {
@@ -3781,12 +3829,12 @@ li a {
 }
 @media only screen and (max-width: 575.98px) {
   .floating-button-container {
-    bottom: 10%;
+    bottom: 12%;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .floating-button-container {
-    bottom: 10%;
+    bottom: 12%;
   }
 }
 

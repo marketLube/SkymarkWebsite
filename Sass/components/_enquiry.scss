@@ -225,10 +225,10 @@
   z-index: 100000000;
 
   @include responsive.respond(smallPhone) {
-    bottom: 10%;
+    bottom: 12%;
   }
   @include responsive.respond(phone) {
-    bottom: 10%;
+    bottom: 12%;
   }
 }
 
