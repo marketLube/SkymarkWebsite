@@ -6,7 +6,7 @@ export default function AboutRIghtContent({ refs = null, img = null }) {
   return (
     <article className="about-scroll-container-right-content" ref={refs}>
       <div className="img-container">
-        <img src={img} alt="about" />
+        <img src={img} alt="about" loading="lazy" />
       </div>
       {/* <div className="buttons">
         <BlackBtn

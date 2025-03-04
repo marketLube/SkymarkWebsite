@@ -38,7 +38,7 @@ export default function AboutMob() {
           <AboutMobRightContent
             refs={primeRef}
             img={
-              "https://res.cloudinary.com/ds07e7rod/image/upload/v1738834197/DSC00692_2_y6a1ku.jpg"
+              "https://res.cloudinary.com/dzuqczvb7/image/upload/v1741065568/skygroup_pccxgq.webp"
             }
           />
         </div>
@@ -47,7 +47,7 @@ export default function AboutMob() {
           <AboutMobRightContent
             refs={primeRef}
             img={
-              "https://res.cloudinary.com/ds07e7rod/image/upload/v1738834197/5000andcounting_zkcqpr.jpg"
+              "https://res.cloudinary.com/dzuqczvb7/image/upload/v1741065568/studyab_a7sz98.webp"
             }
           />
         </div>
@@ -56,7 +56,7 @@ export default function AboutMob() {
           <AboutMobRightContent
             refs={primeRef}
             img={
-              "https://res.cloudinary.com/ds07e7rod/image/upload/v1738834197/expandhorizon_wrtksz.png"
+              "https://res.cloudinary.com/dzuqczvb7/image/upload/v1741065568/thanks_arheo7.webp"
             }
           />
         </div>
@@ -65,7 +65,7 @@ export default function AboutMob() {
           <AboutMobRightContent
             refs={primeRef}
             img={
-              "https://res.cloudinary.com/ds07e7rod/image/upload/v1738834197/DSC00692_2_y6a1ku.jpg"
+              "https://res.cloudinary.com/dzuqczvb7/image/upload/v1741065568/skygroup_pccxgq.webp"
             }
           />
         </div>

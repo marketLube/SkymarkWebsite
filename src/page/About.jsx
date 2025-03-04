@@ -81,28 +81,28 @@ export default function About() {
           <AboutRIghtContent
             refs={primeRef}
             img={
-              "https://res.cloudinary.com/ds07e7rod/image/upload/v1738834197/DSC00692_2_y6a1ku.jpg"
+              "https://res.cloudinary.com/dzuqczvb7/image/upload/v1741065568/skygroup_pccxgq.webp"
             }
             style={{ objectPosition: "center" }}
           />
           <AboutRIghtContent
             refs={expandRef}
             img={
-              "https://res.cloudinary.com/ds07e7rod/image/upload/v1738834197/5000andcounting_zkcqpr.jpg"
+              "https://res.cloudinary.com/dzuqczvb7/image/upload/v1741065568/studyab_a7sz98.webp"
             }
             style={{ objectPosition: "center" }}
           />
           <AboutRIghtContent
             refs={countingRef}
             img={
-              "https://res.cloudinary.com/ds07e7rod/image/upload/v1738834197/expandhorizon_wrtksz.png"
+              "https://res.cloudinary.com/dzuqczvb7/image/upload/v1741065568/thanks_arheo7.webp"
             }
             style={{ objectPosition: "center" }}
           />
           <AboutRIghtContent
             refs={visionaryRef}
             img={
-              "https://res.cloudinary.com/ds07e7rod/image/upload/v1738834197/DSC00692_2_y6a1ku.jpg"
+              "https://res.cloudinary.com/dzuqczvb7/image/upload/v1741065568/skygroup_pccxgq.webp"
             }
             style={{ objectPosition: "center" }}
           />
