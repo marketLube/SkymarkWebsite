@@ -62,7 +62,7 @@ function App() {
   }, []);
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/8138929049");
+    window.open("https://wa.me/9605771771");
   };
 
   const handleCallClick = () => {
