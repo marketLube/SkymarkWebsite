@@ -227,6 +227,8 @@ export default function EnquireSectionOne() {
                 <option value="Australia">Australia</option>
                 <option value="New Zealand">New Zealand</option>
                 <option value="Ireland">Ireland</option>
+                <option value="Austria">Austria</option>
+                <option value="France ">France</option>
                 <option value="Other">Other</option>
               </select>
             </div>
