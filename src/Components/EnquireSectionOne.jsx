@@ -23,6 +23,7 @@ export default function EnquireSectionOne() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    console.log(data, "asjgdkjgkjsagdkjsag");
     if (data.Name.length < 2 || data.Name.length > 50) {
       toast.error("Name should be 2-50 characters");
       return;
@@ -39,9 +40,14 @@ export default function EnquireSectionOne() {
       return;
     }
 
-    const countryRegex = /^[A-Za-z\s]{2,56}$/;
-    if (!countryRegex.test(data.Country.trim())) {
-      toast.error("Please enter a valid country name");
+    // const countryRegex = /^[A-Za-z\s]{2,56}$/;
+    // if (!countryRegex.test(data.Country.trim())) {
+    //   toast.error("Please enter a valid country name");
+    //   return;
+    // }
+
+    if (!data.Country) {
+      toast.error("Please select a preferred country");
       return;
     }
 
@@ -199,20 +205,30 @@ export default function EnquireSectionOne() {
               />
             </div>
             <div className="enquary-form-row">
-              <input
-                type="text"
+              <select
                 name="country"
                 placeholder="Preferred Country"
                 value={data.Country}
                 onChange={(e) => {
                   const value = e.target.value;
-                  if (/^[A-Za-z\s]*$/.test(value)) {
-                    setData({ ...data, Country: value });
-                  }
+                  setData({ ...data, Country: value });
                 }}
                 minLength={2}
                 maxLength={56}
-              />
+                className="country-dropdown"
+              >
+                <option value="" disabled style={{ color: "gray" }}>
+                  Select Preferred Country
+                </option>
+                <option value="UK">UK</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="Germany">Germany</option>
+                <option value="Australia">Australia</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="Ireland">Ireland</option>
+                <option value="Other">Other</option>
+              </select>
             </div>
             <div className="enquary-form-row">
               <button
