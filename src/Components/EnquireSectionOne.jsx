@@ -85,7 +85,6 @@ export default function EnquireSectionOne() {
       console.log(data.Country, "asjgdkjgkjsagdkjsag");
 
       const skybookData = {
-        // leadId: `LEAD${Date.now()}`, // Generate unique lead ID
         leadSource: "Website",
         name: data.Name,
         email: "",
