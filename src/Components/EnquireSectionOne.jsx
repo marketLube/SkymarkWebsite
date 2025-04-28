@@ -40,12 +40,6 @@ export default function EnquireSectionOne() {
       return;
     }
 
-    // const countryRegex = /^[A-Za-z\s]{2,56}$/;
-    // if (!countryRegex.test(data.Country.trim())) {
-    //   toast.error("Please enter a valid country name");
-    //   return;
-    // }
-
     if (!data.Country) {
       toast.error("Please select a preferred country");
       return;
@@ -60,34 +54,54 @@ export default function EnquireSectionOne() {
       return;
     }
     setIsSubmitting(true);
-
     const loadingToast = toast.loading("Submitting...");
 
     try {
-      const formattedData = {
-        date: new Date().toLocaleDateString("en-GB", {
-          year: "numeric",
-          month: "2-digit",
-          day: "2-digit",
-        }),
-        name: data.Name,
-        contact: data.Contact,
-        location: data.Location,
+      // const formattedData = {
+      //   date: new Date().toLocaleDateString("en-GB", {
+      //     year: "numeric",
+      //     month: "2-digit",
+      //     day: "2-digit",
+      //   }),
+      //   name: data.Name,
+      //   contact: data.Contact,
+      //   location: data.Location,
 
-        country: data.Country,
+      //   country: data.Country,
+      // };
+
+      // await axios.post(
+      //   "https://api.sheetbest.com/sheets/afeac283-6b4f-4f3a-aca4-4ab2e077cf7e",
+      //   formattedData,
+      //   {
+      //     headers: {
+      //       "X-Api-Key":
+      //         "GXtnwu@Z7oxaFqm8QobrH_qpzscnsexCa0b!Fjv@rZ9YFR42sNIu4V%ACO2dcqV7",
+      //       "Content-Type": "application/json",
+      //     },
+      //   }
+      // );
+
+      console.log(data.Country, "asjgdkjgkjsagdkjsag");
+
+      const skybookData = {
+        // leadId: `LEAD${Date.now()}`, // Generate unique lead ID
+        leadSource: "Website",
+        name: data.Name,
+        email: "",
+        phone: data.Contact,
+        campaign: "Website Lead",
+        isStudent: false,
+        isSharedToUsers: true,
+        remark: "Website Lead",
+        countries: [data.Country],
       };
 
-      await axios.post(
-        "https://api.sheetbest.com/sheets/afeac283-6b4f-4f3a-aca4-4ab2e077cf7e",
-        formattedData,
-        {
-          headers: {
-            "X-Api-Key":
-              "GXtnwu@Z7oxaFqm8QobrH_qpzscnsexCa0b!Fjv@rZ9YFR42sNIu4V%ACO2dcqV7",
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      await axios.post("https://skybook.co.in/api/v2/lead-web", skybookData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
       toast.dismiss(loadingToast);
       toast.success("Thank you!");
@@ -99,7 +113,7 @@ export default function EnquireSectionOne() {
       console.error("Response status:", error.response?.status);
       toast.error(
         error.response?.data?.detail ||
-          "Error submitting form. Please check the sheet configuration."
+          "Error submitting form. Please try again later."
       );
     } finally {
       toast.dismiss(loadingToast);

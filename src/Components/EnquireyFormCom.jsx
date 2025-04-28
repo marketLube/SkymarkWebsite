@@ -58,29 +58,46 @@ export default function EnquiryFormCom() {
     const loadingToast = toast.loading("Submitting...");
 
     try {
-      const formattedData = {
-        date: new Date().toISOString().slice(0, 10),
+      // const formattedData = {
+      //   date: new Date().toISOString().slice(0, 10),
+      //   name: data.Name,
+      //   contact: data.Contact,
+      //   location: data.Location,
+      //   country: data.Country,
+      // };
+
+      // console.log("Submitting data:", formattedData);
+
+      // await axios.post(
+      //   "https://api.sheetbest.com/sheets/afeac283-6b4f-4f3a-aca4-4ab2e077cf7e",
+      //   formattedData,
+      //   {
+      //     headers: {
+      //       "X-Api-Key":
+      //         "GXtnwu@Z7oxaFqm8QobrH_qpzscnsexCa0b!Fjv@rZ9YFR42sNIu4V%ACO2dcqV7",
+      //       "Content-Type": "application/json",
+      //     },
+      //   }
+      // );
+
+      const skybookData = {
+        // leadId: `LEAD${Date.now()}`,
+        leadSource: "Website",
         name: data.Name,
-        contact: data.Contact,
-        location: data.Location,
-        country: data.Country,
+        email: "",
+        phone: data.Contact,
+        campaign: "Website Lead",
+        isStudent: false,
+        isSharedToUsers: true,
+        remark: "Website Lead",
+        countries: [data.Country],
       };
 
-      console.log("Submitting data:", formattedData);
-
-      await axios.post(
-        "https://api.sheetbest.com/sheets/afeac283-6b4f-4f3a-aca4-4ab2e077cf7e",
-        formattedData,
-        {
-          headers: {
-            "X-Api-Key":
-              "GXtnwu@Z7oxaFqm8QobrH_qpzscnsexCa0b!Fjv@rZ9YFR42sNIu4V%ACO2dcqV7",
-            "Content-Type": "application/json",
-          },
-        }
-      );
-
-      console.log("Data submitted successfully");
+      await axios.post("https://skybook.co.in/api/v2/lead-web", skybookData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
       toast.dismiss(loadingToast);
       toast.success("Thank you!");
