@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { GoArrowDownRight } from "react-icons/go";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
@@ -20,6 +20,42 @@ export default function EnquireSectionOne() {
   const [data, setData] = useState(values);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const [countries, setCountries] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchCountries = async () => {
+      try {
+        const response = await axios.get(
+          "https://skybook.co.in/api/v2/webbook-country"
+        );
+        setCountries(response.data.data);
+      } catch (error) {
+        if (error.response?.status === 401) {
+          try {
+            const fallbackResponse = await axios.get(
+              "https://skybook.co.in/api/v2/country"
+            );
+            setCountries(fallbackResponse.data.data);
+          } catch (fallbackError) {
+            console.error(
+              "Error fetching countries from fallback API:",
+              fallbackError
+            );
+            toast.error("Failed to load countries");
+          }
+        } else {
+          console.error("Error fetching countries:", error);
+          toast.error("Failed to load countries");
+        }
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchCountries();
+  }, []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -36,7 +72,7 @@ export default function EnquireSectionOne() {
 
     const locationRegex = /^[A-Za-z\s]{2,100}$/;
     if (!locationRegex.test(data.Location.trim())) {
-      toast.error("Please enter a valid location");
+      toast.error("Enter valid location");
       return;
     }
 
@@ -81,9 +117,6 @@ export default function EnquireSectionOne() {
       //     },
       //   }
       // );
-
-      console.log(data.Country, "asjgdkjgkjsagdkjsag");
-
       const skybookData = {
         leadSource: "Website",
         name: data.Name,
@@ -109,9 +142,8 @@ export default function EnquireSectionOne() {
     } catch (error) {
       console.error("Full error:", error);
       console.error("Response data:", error.response?.data);
-      console.error("Response status:", error.response?.status);
       toast.error(
-        error.response?.data?.detail ||
+        error.response.data.message ||
           "Error submitting form. Please try again later."
       );
     } finally {
@@ -229,20 +261,18 @@ export default function EnquireSectionOne() {
                 minLength={2}
                 maxLength={56}
                 className="country-dropdown"
+                disabled={isLoading}
               >
-                <option value="" disabled style={{ color: "gray" }}>
-                  Select Preferred Country
+                <option value="" disabled>
+                  {isLoading
+                    ? "Loading countries..."
+                    : "Select Preferred Country"}
                 </option>
-                <option value="UK">UK</option>
-                <option value="USA">USA</option>
-                <option value="Canada">Canada</option>
-                <option value="Germany">Germany</option>
-                <option value="Australia">Australia</option>
-                <option value="New Zealand">New Zealand</option>
-                <option value="Ireland">Ireland</option>
-                <option value="Austria">Austria</option>
-                <option value="France ">France</option>
-                <option value="Other">Other</option>
+                {countries.map((country) => (
+                  <option key={country.id} value={country.id}>
+                    {country.name}
+                  </option>
+                ))}
               </select>
             </div>
             <div className="enquary-form-row">

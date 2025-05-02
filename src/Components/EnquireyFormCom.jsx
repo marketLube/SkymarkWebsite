@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { createPortal } from "react-dom";
 
@@ -14,6 +14,42 @@ export default function EnquiryFormCom() {
 
   const [data, setData] = useState(initialValues);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [countries, setCountries] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchCountries = async () => {
+      try {
+        const response = await axios.get(
+          "https://skybook.co.in/api/v2/webbook-country"
+        );
+
+        setCountries(response.data.data);
+      } catch (error) {
+        if (error.response?.status === 401) {
+          try {
+            const fallbackResponse = await axios.get(
+              "https://skybook.co.in/api/v2/country"
+            );
+            setCountries(fallbackResponse.data.data);
+          } catch (fallbackError) {
+            console.error(
+              "Error fetching countries from fallback API:",
+              fallbackError
+            );
+            toast.error("Failed to load countries");
+          }
+        } else {
+          console.error("Error fetching countries:", error);
+          toast.error("Failed to load countries");
+        }
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchCountries();
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -200,20 +236,16 @@ export default function EnquiryFormCom() {
             minLength={2}
             maxLength={56}
             className="country-dropdown"
+            disabled={isLoading}
           >
             <option value="" disabled>
-              Select Preferred Country
+              {isLoading ? "Loading countries..." : "Select Preferred Country"}
             </option>
-            <option value="UK">UK</option>
-            <option value="USA">USA</option>
-            <option value="Canada">Canada</option>
-            <option value="Germany">Germany</option>
-            <option value="Australia">Australia</option>
-            <option value="New Zealand">New Zealand</option>
-            <option value="Ireland">Ireland</option>
-            <option value="Austria">Austria</option>
-            <option value="France ">France</option>
-            <option value="Other">Other</option>
+            {countries.map((country) => (
+              <option key={country.id} value={country.id}>
+                {country.name}
+              </option>
+            ))}
           </select>
         </div>
         <div className="enquary-form-row">
