@@ -45,7 +45,6 @@ export default function EnquireSectionOne() {
             toast.error("Failed to load countries");
           }
         } else {
-          console.error("Error fetching countries:", error);
           toast.error("Failed to load countries");
         }
       } finally {

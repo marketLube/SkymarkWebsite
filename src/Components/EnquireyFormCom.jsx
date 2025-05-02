@@ -151,7 +151,7 @@ export default function EnquiryFormCom() {
       );
     } finally {
       toast.dismiss(loadingToast);
-      setIsSubmitting(false); // Re-enable the button after request completes
+      setIsSubmitting(false);
     }
   };
 
