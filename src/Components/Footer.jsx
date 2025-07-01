@@ -1,4 +1,5 @@
 import { useScroll, motion } from "motion/react";
+import iasBadge from "../assets/icef.png";
 
 export default function Footer() {
   const { scrollYProgress } = useScroll();
@@ -8,10 +9,14 @@ export default function Footer() {
       <div className="footer-content">
         <div className="footer-content-left">
           <div className="footer-content-left-logo">
-            <img
-              src="https://res.cloudinary.com/ds07e7rod/image/upload/v1738836367/skymarkLogo_drgzcw.svg"
-              alt="logo"
-            />
+            <div style={{ display: "flex", alignItems: "end", gap: "40px" }}>
+              <img
+                src="https://res.cloudinary.com/ds07e7rod/image/upload/v1738836367/skymarkLogo_drgzcw.svg"
+                alt="logo"
+              />
+
+              <img src={iasBadge} alt="ias-badge" style={{ height: "30px" }} />
+            </div>
             <div className="branches">
               <a
                 href="https://maps.app.goo.gl/eBr97DPVbNmS4xa79"
