@@ -15,7 +15,7 @@ export default function Footer() {
                 alt="logo"
               />
 
-              <img src={iasBadge} alt="ias-badge" style={{ height: "30px" }} />
+              <img src={iasBadge} alt="icef-badge" style={{ height: "30px" }} />
             </div>
             <div className="branches">
               <a
