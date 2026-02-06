@@ -87,11 +87,11 @@ function App() {
           path="/"
           element={
             <div className="container">
-              {showEnrolled && (
+              {/* {showEnrolled && (
                 <div className="research-enrolled">
                   1,11,11,131 Students Enrolled
                 </div>
-              )}
+              )} */}
               <Main>
                 <Home />
                 {isMob ? <AboutMob /> : <About />}
