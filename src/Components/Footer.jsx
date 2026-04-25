@@ -1,5 +1,4 @@
 import { useScroll, motion } from "motion/react";
-import iasBadge from "../assets/icef.png";
 
 export default function Footer() {
   const { scrollYProgress } = useScroll();
@@ -15,7 +14,11 @@ export default function Footer() {
                 alt="logo"
               />
 
-              <img src={iasBadge} alt="icef-badge" style={{ height: "30px" }} />
+              <img
+                src="/ias-badge.png"
+                alt="IAS ID badge"
+                style={{ height: "36px", width: "auto" }}
+              />
             </div>
             <div className="branches">
               <a
