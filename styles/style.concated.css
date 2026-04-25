@@ -216,6 +216,15 @@ ul {
   }
 }
 
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+}
 .logo img {
   height: 2rem;
 }
@@ -227,6 +236,19 @@ ul {
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .logo img {
     height: 2rem;
+  }
+}
+.logo img.ias-credential-badge {
+  width: auto;
+  max-width: 9rem;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+@media only screen and (max-width: 575.98px) {
+  .logo img.ias-credential-badge {
+    max-width: 6.5rem;
   }
 }
 

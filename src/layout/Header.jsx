@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { IasCredentialBadge } from "../Components/IasCredentialBadge";
 
 export function Header() {
   const navigate = useNavigate();
@@ -365,6 +366,7 @@ export function Header() {
             src="https://res.cloudinary.com/ds07e7rod/image/upload/v1738836367/skymarkLogo_drgzcw.svg"
             alt="Logo of the website"
           />
+          <IasCredentialBadge variant="header" />
         </div>
 
         <div className="navigation">

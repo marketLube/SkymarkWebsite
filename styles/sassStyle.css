@@ -215,6 +215,15 @@ ul {
   }
 }
 
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+}
 .logo img {
   height: 2rem;
 }
@@ -227,6 +236,29 @@ ul {
   .logo img {
     height: 2rem;
   }
+}
+.logo img.ias-credential-badge {
+  width: auto;
+  max-width: 9rem;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+@media only screen and (max-width: 575.98px) {
+  .logo img.ias-credential-badge {
+    max-width: 6.5rem;
+  }
+}
+.logo .ias-credential-badge-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 li a {
@@ -715,62 +747,6 @@ li a {
     margin-right: 0;
     margin-top: 0rem;
   }
-}
-.footer-content-right {
-  -webkit-box-flex: 0.45;
-  -ms-flex: 0.45;
-  flex: 0.45;
-  height: 100%;
-  padding: 3rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-@media only screen and (min-width: 576px) and (max-width: 767.98px) {
-  .footer-content-right {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991.98px) {
-  .footer-content-right {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
-  .footer-content-right {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-  }
-}
-@media only screen and (max-width: 575.98px) {
-  .footer-content-right {
-    padding-top: 1rem;
-    margin-bottom: 0rem;
-  }
-}
-.footer-content-right-copyright {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 1.4rem;
-}
-
-.market-lube {
-  font-weight: 600;
-  text-decoration: underline;
-  color: #000;
-}
-.market-lube:hover {
-  color: blue;
 }
 
 .home {

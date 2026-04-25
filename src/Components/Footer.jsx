@@ -1,4 +1,5 @@
 import { useScroll, motion } from "motion/react";
+import { IasCredentialBadge } from "./IasCredentialBadge";
 
 export default function Footer() {
   const { scrollYProgress } = useScroll();
@@ -14,11 +15,7 @@ export default function Footer() {
                 alt="logo"
               />
 
-              <img
-                src="/ias-badge.png"
-                alt="IAS ID badge"
-                style={{ height: "36px", width: "auto" }}
-              />
+              <IasCredentialBadge variant="footer" />
             </div>
             <div className="branches">
               <a
@@ -64,19 +61,6 @@ export default function Footer() {
                 Kottayam
               </a>
             </div>
-          </div>
-        </div>
-        <div className="footer-content-right">
-          <div className="footer-content-right-copyright">
-            <span>Designed by</span>
-            <a
-              href="https://www.instagram.com/marketlube/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="market-lube"
-            >
-              Market Lube
-            </a>
           </div>
         </div>
       </div>
