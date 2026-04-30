@@ -1,5 +1,7 @@
-const id = import.meta.env.VITE_ICEF_IAS_ID;
-const t = id != null ? String(id).trim() : "";
+const DEFAULT_IAS_ID = "6630";
+
+const raw = import.meta.env.VITE_ICEF_IAS_ID ?? DEFAULT_IAS_ID;
+const t = String(raw).trim();
 
 export function getIasId() {
   if (!t) return null;
