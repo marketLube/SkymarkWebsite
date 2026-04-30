@@ -100,7 +100,7 @@ ul {
   }
 
   &__image {
-    height: 9rem;
+    height: 6.5rem;
     width: auto;
     display: block;
     -o-object-fit: contain;
@@ -109,16 +109,16 @@ ul {
     filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.18));
 
     @include responsive.respond(smallPhone) {
-      height: 5.25rem;
+      height: 4.25rem;
     }
     @include responsive.respond(phone) {
-      height: 6.5rem;
+      height: 5.5rem;
     }
     @include responsive.respond(tablets) {
-      height: 7.5rem;
+      height: 6rem;
     }
     @include responsive.respond(bigTablets) {
-      height: 8rem;
+      height: 6.5rem;
     }
   }
 }
