@@ -366,7 +366,6 @@ export function Header() {
             src="https://res.cloudinary.com/ds07e7rod/image/upload/v1738836367/skymarkLogo_drgzcw.svg"
             alt="Logo of the website"
           />
-          <IasCredentialBadge variant="header" />
         </div>
 
         <div className="navigation">
@@ -397,6 +396,7 @@ export function Header() {
 
         <ul className="nav-list">{desktopNavItems}</ul>
       </nav>
+      <IasCredentialBadge variant="header" />
     </header>
   );
 }
