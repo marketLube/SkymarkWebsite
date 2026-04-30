@@ -85,64 +85,40 @@ ul {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 0.55rem;
-  padding: 0.35rem 0.65rem;
-  background-color: #ffffff;
-  border-radius: 999px;
-  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   text-decoration: none;
-  color: #244ea2;
   z-index: 5;
+  -webkit-tap-highlight-color: transparent;
 
   @include responsive.respond(smallPhone) {
-    right: 0.65rem;
-    padding: 0.25rem 0.45rem;
-    gap: 0.4rem;
+    right: 0.5rem;
   }
   @include responsive.respond(phone) {
-    right: 1rem;
+    right: 0.75rem;
   }
   @include responsive.respond(tablets) {
-    right: 1.25rem;
-  }
-
-  &__label {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    line-height: 1;
-    font-weight: 700;
-    font-size: 0.78rem;
-    letter-spacing: 0.02em;
-    text-align: right;
-    color: #244ea2;
-
-    span:first-child {
-      font-size: 0.95rem;
-    }
-
-    @include responsive.respond(smallPhone) {
-      display: none;
-    }
+    right: 1rem;
   }
 
   &__image {
-    height: 4.25rem;
+    height: 9rem;
     width: auto;
     display: block;
     -o-object-fit: contain;
     object-fit: contain;
+    -webkit-filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.18));
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.18));
 
     @include responsive.respond(smallPhone) {
-      height: 3.25rem;
+      height: 5.25rem;
     }
     @include responsive.respond(phone) {
-      height: 3.75rem;
+      height: 6.5rem;
+    }
+    @include responsive.respond(tablets) {
+      height: 7.5rem;
+    }
+    @include responsive.respond(bigTablets) {
+      height: 8rem;
     }
   }
 }

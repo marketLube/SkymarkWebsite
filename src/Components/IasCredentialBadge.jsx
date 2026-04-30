@@ -38,10 +38,6 @@ export function IasCredentialBadge({ variant = "header" }) {
         aria-label="ICEF Verified – view our IAS profile"
         onClick={(e) => e.stopPropagation()}
       >
-        <span className="header-ias-credential__label" aria-hidden>
-          <span>ICEF</span>
-          <span>Verified</span>
-        </span>
         <img
           className="header-ias-credential__image"
           src={data.imageUrl}
