@@ -12,13 +12,30 @@ import "slick-carousel/slick/slick-theme.css";
 import MainSwiper from "./page/MainSwiper";
 import Bottom from "./page/Bottom";
 import AboutMob from "./page/AboutMob";
-import EnquiryForm from "./Components/EnquiryForm";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import EnquiryLanding from "./Components/landing/EnquiryLanding";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlinePhone } from "react-icons/md";
 import { useMediaQuery } from "react-responsive";
 
 //testingssss
+
+// The /enquiry landing page carries its own call and WhatsApp buttons.
+function FloatingContact({ onWhatsApp, onCall }) {
+  const { pathname } = useLocation();
+  if (pathname === "/enquiry") return null;
+  return (
+    <div className="floating-button-container">
+      <button className="whatsapp-button" onClick={onWhatsApp}>
+        <FaWhatsapp size={26} />
+      </button>
+
+      <button className="call-button" onClick={onCall}>
+        <MdOutlinePhone size={26} />
+      </button>
+    </div>
+  );
+}
 
 function App() {
   const [showEnrolled, setShowEnrolled] = useState(true);
@@ -64,7 +81,7 @@ function App() {
   }, []);
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/9605771771");
+    window.open("https://wa.me/919605771771");
   };
 
   const handleCallClick = () => {
@@ -84,7 +101,7 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/enquiry" element={<EnquiryForm />} />
+        <Route path="/enquiry" element={<EnquiryLanding />} />
         <Route
           path="/"
           element={
@@ -108,15 +125,10 @@ function App() {
           }
         />
       </Routes>
-      <div className="floating-button-container">
-        <button className="whatsapp-button" onClick={handleWhatsAppClick}>
-          <FaWhatsapp size={26} />
-        </button>
-
-        <button className="call-button" onClick={handleCallClick}>
-          <MdOutlinePhone size={26} />
-        </button>
-      </div>
+      <FloatingContact
+        onWhatsApp={handleWhatsAppClick}
+        onCall={handleCallClick}
+      />
     </BrowserRouter>
   );
 }

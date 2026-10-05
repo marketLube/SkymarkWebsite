@@ -97,68 +97,7 @@ export function Header() {
 
   const isEnquiryPage = location.pathname === "/enquiry";
 
-  const navigationItems = isEnquiryPage ? (
-    <>
-      <li className="navigation__item">
-        <a
-          href="#process"
-          className="navigation__link"
-          onClick={(e) => {
-            e.preventDefault();
-            handleScrollToSection("process");
-            setIsChecked(false);
-          }}
-        >
-          Process
-        </a>
-      </li>
-      {/* <li className="navigation__item">
-        <a
-          href="#about"
-          className="navigation__link"
-          onClick={(e) => {
-            e.preventDefault();
-            handleScrollToSection("about");
-            setIsChecked(false);
-          }}
-        >
-          Events
-        </a>
-      </li> */}
-      <li className="navigation__item">
-        <a
-          href="https://wa.me/+918138929049"
-          className="navigation__link"
-          onClick={handleWhatsAppRedirect}
-        >
-          Contact
-        </a>
-      </li>
-      <li className="navigation__item">
-        <a
-          href="#home"
-          onClick={(e) => {
-            e.preventDefault();
-            handleScrollToSection("home");
-            setIsChecked(false);
-          }}
-          style={{
-            background: "#244EA2",
-            display: "inline-block",
-            letterSpacing: "2px",
-            fontSize: "1rem",
-            fontWeight: 650,
-            color: "white",
-            borderRadius: "18px",
-            padding: "8px 16px",
-            border: "none",
-          }}
-        >
-          Home
-        </a>
-      </li>
-    </>
-  ) : (
+  const navigationItems = (
     <>
       <li className="navigation__item">
         <a
@@ -217,62 +156,7 @@ export function Header() {
     </>
   );
 
-  const desktopNavItems = isEnquiryPage ? (
-    <>
-      <li className="nav-item">
-        <a
-          href="#process"
-          onClick={(e) => {
-            e.preventDefault();
-            handleScrollToSection("process");
-          }}
-          // style={currentHash === "#process" ? { color: "#244ea2" } : {}}
-        >
-          Process
-        </a>
-      </li>
-      {/* <li className="nav-item">
-        <a
-          href="#about"
-          onClick={(e) => {
-            e.preventDefault();
-            handleScrollToSection("about");
-          }}
-          // style={currentHash === "#about" ? { color: "#244ea2" } : {}}
-        >
-          Events
-        </a>
-      </li> */}
-      <li className="nav-item">
-        <a
-          href="#contact"
-          onClick={handleWhatsAppRedirect}
-          // style={currentHash === "#contact" ? { color: "#244ea2" } : {}}
-        >
-          Contact
-        </a>
-      </li>
-      <li className="nav-item">
-        <button
-          onClick={(e) => {
-            e.preventDefault();
-            handleScrollToSection("home");
-          }}
-          style={{
-            background: "#244EA2",
-            color: "white",
-            border: "none",
-            padding: "10px 16px",
-            borderRadius: "18px",
-            cursor: "pointer",
-            fontSize: "1rem",
-          }}
-        >
-          Home
-        </button>
-      </li>
-    </>
-  ) : (
+  const desktopNavItems = (
     <>
       <li className="nav-item">
         <a
@@ -337,6 +221,9 @@ export function Header() {
       window.removeEventListener("hashchange", handleHashChange);
     };
   }, []);
+
+  // The /enquiry landing page renders its own header.
+  if (isEnquiryPage) return null;
 
   return (
     <header className="header">
