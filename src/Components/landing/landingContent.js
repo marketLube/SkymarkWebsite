@@ -14,7 +14,7 @@ export const WHATSAPP_URL = "https://wa.me/919605771771";
 
 // Public key of the Skymark Xale Web Form (CRM → Sources → the form → Share).
 // Empty = the card offers call / WhatsApp instead of the form.
-export const XALE_FORM_KEY = "wGNSWZA6B4rHnhaoVbw6JYnD";
+export const XALE_FORM_KEY = "";
 
 export const DESTINATIONS = [
   {
