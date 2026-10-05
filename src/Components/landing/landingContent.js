@@ -16,9 +16,14 @@ export const WHATSAPP_URL = "https://wa.me/919605771771";
 // Empty = the card offers call / WhatsApp instead of the form.
 export const XALE_FORM_KEY = "2m1mhGublbUzC0lFFriuDVxx";
 
+// The form's Country question is Skymark's Country custom field (id 25);
+// destination cards pre-select it with their countryOptionId.
+export const XALE_COUNTRY_FIELD = "cf25";
+
 export const DESTINATIONS = [
   {
     key: "uk",
+    countryOptionId: "629",
     name: "United Kingdom",
     short: "UK",
     flag: "v1738835138/union-jack_avutfg.webp",
@@ -26,6 +31,7 @@ export const DESTINATIONS = [
   },
   {
     key: "usa",
+    countryOptionId: "640",
     name: "United States",
     short: "USA",
     flag: "v1738835142/usa_lhn5ty.webp",
@@ -33,6 +39,7 @@ export const DESTINATIONS = [
   },
   {
     key: "canada",
+    countryOptionId: "637",
     name: "Canada",
     short: "Canada",
     flag: "v1738835144/canada_aacwta.webp",
@@ -40,6 +47,7 @@ export const DESTINATIONS = [
   },
   {
     key: "germany",
+    countryOptionId: null, // two options in the CRM: Germany Private / Public
     name: "Germany",
     short: "Germany",
     flag: "v1738835139/germany_ces0vq.webp",
@@ -47,6 +55,7 @@ export const DESTINATIONS = [
   },
   {
     key: "ireland",
+    countryOptionId: "633",
     name: "Ireland",
     short: "Ireland",
     flag: "v1738835137/ireland_ur0eeq.webp",
@@ -54,6 +63,7 @@ export const DESTINATIONS = [
   },
   {
     key: "australia",
+    countryOptionId: "638",
     name: "Australia",
     short: "Australia",
     flag: "v1738835138/australia_b0oz6o.webp",
@@ -61,6 +71,7 @@ export const DESTINATIONS = [
   },
   {
     key: "newzealand",
+    countryOptionId: "639",
     name: "New Zealand",
     short: "New Zealand",
     flag: "v1738835138/newZealand_dkqrdo.jpg",

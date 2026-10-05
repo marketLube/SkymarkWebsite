@@ -1,10 +1,17 @@
-import { useEffect, useRef, useState } from "react";
+import {
+  forwardRef,
+  useEffect,
+  useImperativeHandle,
+  useRef,
+  useState,
+} from "react";
 import { PiCheckCircleFill, PiPhone } from "react-icons/pi";
 import { FaWhatsapp } from "react-icons/fa";
 import {
   PHONE_DISPLAY,
   PHONE_TEL,
   WHATSAPP_URL,
+  XALE_COUNTRY_FIELD,
   XALE_FORM_KEY,
 } from "./landingContent";
 
@@ -12,6 +19,8 @@ import {
 // iframe; submissions land straight in the CRM. This card only frames it.
 const EMBED_SRC = "https://api.xale.in/api/v1/public/forms/embed.js";
 const SLOW_AFTER_MS = 8000;
+// Clears the fixed landing header when the form scrolls to a field.
+const SCROLL_OFFSET = "80";
 
 // Resolves once embed.js has run (it renders every [data-xale-form] on load).
 function loadXaleForms() {
@@ -54,8 +63,7 @@ function ContactFallback({ children }) {
   );
 }
 
-function XaleFormEmbed({ onSubmitted }) {
-  const hostRef = useRef(null);
+function XaleFormEmbed({ hostRef, onSubmitted }) {
   const onSubmittedRef = useRef(onSubmitted);
   onSubmittedRef.current = onSubmitted;
   const [status, setStatus] = useState("loading"); // loading | ready | failed
@@ -120,6 +128,7 @@ function XaleFormEmbed({ onSubmitted }) {
         data-xale-form={XALE_FORM_KEY}
         data-title="Talk to a counsellor"
         data-min-height="520"
+        data-scroll-offset={SCROLL_OFFSET}
       />
       {status !== "ready" && slow && (
         <p className="lp-embed-slow">
@@ -135,8 +144,21 @@ function XaleFormEmbed({ onSubmitted }) {
   );
 }
 
-export default function LeadForm() {
+const LeadForm = forwardRef(function LeadForm(_props, ref) {
   const [submitted, setSubmitted] = useState(false);
+  const hostRef = useRef(null);
+
+  useImperativeHandle(ref, () => ({
+    // Pre-selects the form's Country. The attribute covers an embed that
+    // hasn't loaded yet; XaleForms.prefill (newer embed.js only) covers a
+    // form that's already on screen and queues until its iframe is ready.
+    prefillCountry(optionId) {
+      const host = hostRef.current;
+      if (!host || !optionId) return;
+      host.setAttribute(`data-prefill-${XALE_COUNTRY_FIELD}`, optionId);
+      window.XaleForms?.prefill?.(host, { [XALE_COUNTRY_FIELD]: optionId });
+    },
+  }));
 
   if (submitted) {
     return (
@@ -180,10 +202,15 @@ export default function LeadForm() {
         </p>
       </div>
       {XALE_FORM_KEY ? (
-        <XaleFormEmbed onSubmitted={() => setSubmitted(true)} />
+        <XaleFormEmbed
+          hostRef={hostRef}
+          onSubmitted={() => setSubmitted(true)}
+        />
       ) : (
         <ContactFallback>Reach a counsellor directly:</ContactFallback>
       )}
     </div>
   );
-}
+});
+
+export default LeadForm;

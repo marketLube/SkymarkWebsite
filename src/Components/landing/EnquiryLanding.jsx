@@ -172,6 +172,7 @@ function VideoCard({ video, playing, onPlay }) {
 }
 
 export default function EnquiryLanding() {
+  const formRef = useRef(null);
   const formWrapRef = useRef(null);
   const [formInView, setFormInView] = useState(false);
   const [playingId, setPlayingId] = useState(null);
@@ -188,6 +189,11 @@ export default function EnquiryLanding() {
   }, []);
 
   const goToForm = () => scrollToId("enquire");
+
+  const pickDestination = (optionId) => {
+    formRef.current?.prefillCountry(optionId);
+    goToForm();
+  };
 
   return (
     <MotionConfig reducedMotion="user">
@@ -227,7 +233,7 @@ export default function EnquiryLanding() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
               >
-                <LeadForm />
+                <LeadForm ref={formRef} />
               </motion.div>
 
               <motion.div
@@ -276,7 +282,7 @@ export default function EnquiryLanding() {
               <ul className="lp-dest-grid">
                 {DESTINATIONS.map((d, i) => (
                   <Reveal as="li" key={d.key} delay={(i % 4) * 0.06}>
-                    <button type="button" className="lp-dest" onClick={goToForm}>
+                    <button type="button" className="lp-dest" onClick={() => pickDestination(d.countryOptionId)}>
                       <span className="lp-dest-flag">
                         <img
                           src={cld(d.flag, "f_auto,q_auto,w_480,h_300,c_fill")}
