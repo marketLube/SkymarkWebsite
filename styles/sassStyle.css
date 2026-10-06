@@ -4207,8 +4207,8 @@ li a {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 28px;
+  gap: 14px;
+  padding: 24px;
   border-radius: 24px;
   background: #fff;
   border: 1px solid rgba(10, 37, 64, 0.06);
@@ -4224,8 +4224,8 @@ li a {
   content: "";
   position: absolute;
   top: -1px;
-  left: 28px;
-  right: 28px;
+  left: 24px;
+  right: 24px;
   height: 3px;
   border-radius: 0 0 4px 4px;
   background: linear-gradient(90deg, var(--lp-green), var(--lp-blue));
@@ -4235,14 +4235,14 @@ li a {
 }
 
 .lp-form-title {
-  font-size: 1.45rem;
+  font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: -0.022em;
 }
 
 .lp-form-sub {
-  margin-top: 6px;
-  font-size: 14.5px;
+  margin-top: 4px;
+  font-size: 14px;
   line-height: 1.55;
   color: var(--lp-muted);
 }
@@ -4253,7 +4253,7 @@ li a {
 
 .lp-embed {
   position: relative;
-  margin: -12px -16px -16px;
+  margin: -4px -4px -14px;
 }
 
 .lp-embed-skeleton {
@@ -4262,8 +4262,8 @@ li a {
   z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  padding: 20px 16px;
+  gap: 14px;
+  padding: 4px 4px 14px;
   background: #fff;
   pointer-events: none;
 }
@@ -4271,7 +4271,7 @@ li a {
 .lp-skel-field {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .lp-skel-label,
@@ -4290,14 +4290,14 @@ li a {
 }
 
 .lp-skel-input {
-  height: 48px;
-  border-radius: 12px;
+  height: 42px;
+  border-radius: 16px;
 }
 
 .lp-skel-button {
-  margin-top: 6px;
-  height: 52px;
-  border-radius: 12px;
+  margin-top: 4px;
+  height: 48px;
+  border-radius: 16px;
   background-image: linear-gradient(90deg, #e2e9f7 0%, #eef3fc 40%, #e2e9f7 80%);
 }
 

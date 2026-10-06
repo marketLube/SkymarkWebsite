@@ -127,7 +127,8 @@ function XaleFormEmbed({ hostRef, onSubmitted }) {
         ref={hostRef}
         data-xale-form={XALE_FORM_KEY}
         data-title="Talk to a counsellor"
-        data-min-height="520"
+        data-size="compact"
+        data-min-height="400"
         data-scroll-offset={SCROLL_OFFSET}
       />
       {status !== "ready" && slow && (
