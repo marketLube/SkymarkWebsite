@@ -1457,6 +1457,22 @@
   }
 }
 
+.lp-footer-credit {
+  font-size: 13px;
+  color: var(--lp-muted);
+  white-space: nowrap;
+
+  strong {
+    font-weight: 600;
+    color: var(--lp-navy);
+  }
+
+  &:hover strong,
+  &:focus-visible strong {
+    text-decoration: underline;
+  }
+}
+
 // ── Floating contact ─────────────────────────────────────────────────
 .lp-fab {
   display: none;

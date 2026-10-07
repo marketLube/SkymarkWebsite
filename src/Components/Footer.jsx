@@ -63,6 +63,17 @@ export default function Footer() {
             </div>
           </div>
         </div>
+        <div className="footer-content-right">
+          <a
+            className="footer-credit"
+            href="https://www.xale.in/"
+            target="_blank"
+            rel="noopener"
+            title="Xale - CRM for study abroad consultancies"
+          >
+            Powered by <strong>Xale CRM</strong>
+          </a>
+        </div>
       </div>
       <motion.div
         style={{ scaleX: scrollYProgress }}

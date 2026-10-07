@@ -433,6 +433,15 @@ export default function EnquiryLanding() {
               © {new Date().getFullYear()} Skymark Education. Your trusted
               study abroad partner.
             </p>
+            <a
+              className="lp-footer-credit"
+              href="https://www.xale.in/"
+              target="_blank"
+              rel="noopener"
+              title="Xale - CRM for study abroad consultancies"
+            >
+              Powered by <strong>Xale CRM</strong>
+            </a>
           </div>
         </div>
 
