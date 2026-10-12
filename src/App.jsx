@@ -6,7 +6,6 @@ import { Main } from "./layout/Main";
 import About from "./page/About";
 import StudyIn from "./page/StudyIn";
 import ScrollCard from "./page/ScrollCard";
-import Testimonial from "./page/Testimonial";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import MainSwiper from "./page/MainSwiper";
@@ -53,7 +52,6 @@ function App() {
         "about",
         "country",
         "process",
-        "testimonials",
         // "gallery",
         "contact",
         "footer",
@@ -116,7 +114,6 @@ function App() {
                 {isMob ? <AboutMob /> : <About />}
                 <StudyIn />
                 <ScrollCard />
-                <Testimonial />
                 <MainSwiper />
                 <Bottom />
               </Main>
